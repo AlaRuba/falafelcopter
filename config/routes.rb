@@ -1,4 +1,7 @@
 Stealthmode::Application.routes.draw do
+  match "/" => 'login#main'
+  match "/login" => "login#main"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
