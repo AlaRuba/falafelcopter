@@ -1,4 +1,6 @@
 Stealthmode::Application.routes.draw do
+  get "questions/main"
+
   match "/" => 'login#main'
   match "/login" => "login#main"
 

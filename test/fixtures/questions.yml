@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ask: MyText
+  follows: 1
+  order: 1
+  a1: 1
+  a2: 1
+  a3: 1
+  a4: 1
+
+two:
+  ask: MyText
+  follows: 1
+  order: 1
+  a1: 1
+  a2: 1
+  a3: 1
+  a4: 1
