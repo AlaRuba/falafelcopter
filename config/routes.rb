@@ -1,8 +1,9 @@
 Stealthmode::Application.routes.draw do
-  get "questions/main"
 
   match "/" => 'login#main'
   match "/login" => "login#main"
+  match "/questions/main" => "questions#main"
+  match "/questions/add" => "questions#add"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
