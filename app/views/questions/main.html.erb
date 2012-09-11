@@ -3,18 +3,45 @@
     <input name="utf8" type="hidden" value="&#x2713;" />
     <input name="authenticity_token" type="hidden" value="f755bb0ed134b76c432144748a6d4b7a7ddf2b71" />
   </div>
-   <%= label_tag(:quest, "Question:") %>
+  <%= hidden_field_tag :follow, @follow%>
+  <% if @follow == "true"%>
+    This question is a follow-up to <%= @followUps[0][:question]%> if you answer <%= @followUps[0][:choice]%>.
+    <%= hidden_field_tag :follows, @followUps[0][:answerID]%>
+    <% @followUps.delete_at(0)%>
+    <% jsonString = @followUps.to_json%>
+    <%= hidden_field_tag :followUps, jsonString%>
+  <% else %>
+    <% hidden_field_tag 'follows', 0%>
+  <% end %>
+  <br>
+  <%= label_tag(:quest, "Question:") %>
   <%= text_field_tag(:quest) %>
   <br>
   Answer:
   <br>
   <%= text_field_tag(:answer1) %>
+  <div class="answer1_follow">
+    <%= radio_button_tag :answer1_follow, "yes" %> Yes
+    <%= radio_button_tag :answer1_follow, "no", true %> No
+  </div>
   <br>
   <%= text_field_tag(:answer2) %>
+  <div class="answer2_follow">
+    <%= radio_button_tag :answer2_follow, "yes" %> Yes
+    <%= radio_button_tag :answer2_follow, "no", true %> No
+  </div>
   <br>
   <%= text_field_tag(:answer3) %>
+  <div class="answer3_follow">
+    <%= radio_button_tag :answer3_follow, "yes" %> Yes
+    <%= radio_button_tag :answer3_follow, "no", true %> No
+  </div>
   <br>
   <%= text_field_tag(:answer4) %>
   <br>
+  <div class="answer4_follow">
+    <%= radio_button_tag :answer4_follow, "yes" %> Yes
+    <%= radio_button_tag :answer4_follow, "no", true %> No
+  </div>
   <%= submit_tag("Save") %>
 <% end %>
