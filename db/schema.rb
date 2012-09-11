@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120911033303) do
+ActiveRecord::Schema.define(:version => 20120911044831) do
 
   create_table "answers", :force => true do |t|
     t.integer  "question"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20120911033303) do
     t.integer  "followup"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.boolean  "hasfq"
   end
 
   create_table "questions", :force => true do |t|

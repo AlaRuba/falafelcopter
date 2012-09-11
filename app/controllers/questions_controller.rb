@@ -29,6 +29,7 @@ class QuestionsController < ApplicationController
       answer1.save
       question.a1 = answer1.id
       if params[:answer1_follow] == "yes"
+        answer1.hasfq = true
         followUp = Hash.new
         followUp[:question] = question.ask
         followUp[:answerID] = answer1.id
@@ -43,6 +44,7 @@ class QuestionsController < ApplicationController
   	 answer2.save
   	 question.a2 = answer2.id
      if params[:answer2_follow] == "yes"
+        answer2.hasfq = true
         followUp = Hash.new
         followUp[:question] = question.ask
         followUp[:answerID] = answer2.id
@@ -57,6 +59,7 @@ class QuestionsController < ApplicationController
   	 answer3.save
   	 question.a3 = answer3.id
      if params[:answer3_follow] == "yes"
+        answer3.hasfq = true
         followUp = Hash.new
         followUp[:qestion] = question.ask
         followUp[:answerID] = answer3.id
@@ -65,12 +68,14 @@ class QuestionsController < ApplicationController
       end
     end
     if (params[:answer4].length > 0) 
+
       answer4 = Answer.new
       answer4.reply = params[:answer4]
       answer4.question = question.id
       answer4.save
       question.a4 = answer4.id
       if params[:answer4_follow] == "yes"
+        answer4.hasfq = true
         followUp = Hash.new
         followUp[:question] = question.ask
         followUp[:answerID] = answer4.id
