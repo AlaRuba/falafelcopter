@@ -35,6 +35,8 @@ class QuestionsController < ApplicationController
         followUp[:answerID] = answer1.id
         followUp[:choice] = answer1.reply
         followUps = followUps.append(followUp)
+      else
+        answer1.hasfq = false
       end
     end
     if (params[:answer2].length > 0) 
@@ -50,6 +52,8 @@ class QuestionsController < ApplicationController
         followUp[:answerID] = answer2.id
         followUp[:choice] = answer2.reply
         followUps = followUps.append(followUp)
+      else
+        answer2.hasfq = false
       end
     end
     if (params[:answer3].length > 0) 
@@ -65,10 +69,11 @@ class QuestionsController < ApplicationController
         followUp[:answerID] = answer3.id
         followUp[:choice] = answer3.reply
         followUps = followUps.append(followUp)
+      else
+        answer3.hasfq = false
       end
     end
     if (params[:answer4].length > 0) 
-
       answer4 = Answer.new
       answer4.reply = params[:answer4]
       answer4.question = question.id
@@ -81,6 +86,8 @@ class QuestionsController < ApplicationController
         followUp[:answerID] = answer4.id
         followUp[:choice] = answer4.reply
         followUps = followUps.append(followUp)
+      else
+        answer4.hasfq = false
       end
     end
   	question.save
