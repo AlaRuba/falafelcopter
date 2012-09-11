@@ -15,12 +15,10 @@ class QuestionsController < ApplicationController
     question.follows = params[:follows]
   	question.ask = params[:quest]
   	question.save
-    logger.debug "START"
-    logger.debug "#{params[:followUps]}"
-    logger.debug "END"
     if params[:followUps] != nil
       followUps = JSON.parse(params[:followUps])
     else
+      question.follow = false
       followUps = Array.new
     end
     if (params[:answer1].length > 0) 
