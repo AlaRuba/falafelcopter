@@ -8,6 +8,7 @@ Stealthmode::Application.routes.draw do
 
   match "/" => 'login#main'
   match "/login" => "login#main"
+  match "/login/main" => "login#main"
   match "/questions/main" => "questions#main"
   match "/questions/add" => "questions#add"
 
