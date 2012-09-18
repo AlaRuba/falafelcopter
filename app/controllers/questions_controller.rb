@@ -9,7 +9,6 @@ class QuestionsController < ApplicationController
   end
 
   def add
-    	
     question = Question.new
     question.follow = params[:follow]
     question.follows = params[:follows]
@@ -26,10 +25,10 @@ class QuestionsController < ApplicationController
       answer1 = Answer.new
       answer1.reply = params[:answer1]
       answer1.question = question.id
-      answer1.save
       question.a1 = answer1.id
       if params[:answer1_follow] == "yes"
         answer1.hasfq = true
+        answer1.save
         followUp = Hash.new
         followUp[:question] = question.ask
         followUp[:answerID] = answer1.id
@@ -37,16 +36,17 @@ class QuestionsController < ApplicationController
         followUps = followUps.append(followUp)
       else
         answer1.hasfq = false
+        answer1.save
       end
     end
     if (params[:answer2].length > 0) 
   	 answer2 = Answer.new
   	 answer2.reply = params[:answer2]
   	 answer2.question = question.id
-  	 answer2.save
   	 question.a2 = answer2.id
      if params[:answer2_follow] == "yes"
         answer2.hasfq = true
+        answer2.save
         followUp = Hash.new
         followUp[:question] = question.ask
         followUp[:answerID] = answer2.id
@@ -54,16 +54,17 @@ class QuestionsController < ApplicationController
         followUps = followUps.append(followUp)
       else
         answer2.hasfq = false
+        answer2.save
       end
     end
     if (params[:answer3].length > 0) 
   	 answer3 = Answer.new
   	 answer3.reply = params[:answer3]
   	 answer3.question = question.id
-  	 answer3.save
   	 question.a3 = answer3.id
      if params[:answer3_follow] == "yes"
         answer3.hasfq = true
+        answer3.save
         followUp = Hash.new
         followUp[:qestion] = question.ask
         followUp[:answerID] = answer3.id
@@ -71,16 +72,17 @@ class QuestionsController < ApplicationController
         followUps = followUps.append(followUp)
       else
         answer3.hasfq = false
+        answer3.save
       end
     end
     if (params[:answer4].length > 0) 
       answer4 = Answer.new
       answer4.reply = params[:answer4]
       answer4.question = question.id
-      answer4.save
       question.a4 = answer4.id
       if params[:answer4_follow] == "yes"
         answer4.hasfq = true
+        answer4.save
         followUp = Hash.new
         followUp[:question] = question.ask
         followUp[:answerID] = answer4.id
@@ -88,6 +90,7 @@ class QuestionsController < ApplicationController
         followUps = followUps.append(followUp)
       else
         answer4.hasfq = false
+        answer4.save
       end
     end
   	question.save

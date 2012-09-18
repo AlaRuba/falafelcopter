@@ -1,5 +1,11 @@
 Stealthmode::Application.routes.draw do
 
+  get "survey/view"
+
+  get "survey/next"
+
+  get "survey/limit"
+
   match "/" => 'login#main'
   match "/login" => "login#main"
   match "/questions/main" => "questions#main"

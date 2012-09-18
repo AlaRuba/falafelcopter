@@ -1,0 +1,35 @@
+<%= @question.order %>
+<br>
+<%= @question.ask %>
+<br>
+<% if !@answers[0].nil?%>
+	<% if @answers[0].hasfq%>
+		<%= link_to @answers[0].reply, {:controller => "survey", :action => "view", :follow => true, :number => @number, :answer => @answers[0].id} %>
+	<% else %>
+		<%= link_to @answers[0].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[0].id} %>
+	<% end %>
+	<br>
+<% end %>
+<% if !@answers[1].nil?%>
+	<% if @answers[1].hasfq%>
+		<%= link_to @answers[1].reply, {:controller => "survey", :action => "view", :follow => true, :number => @number, :answer => @answers[1].id} %>
+	<% else %>
+		<%= link_to @answers[1].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[1].id} %>
+	<% end %>
+<% end %>
+<% if !@answers[2].nil?%>
+	<% if @answers[2].hasfq%>
+		<%= link_to @answers[2].reply, {:controller => "survey", :action => "view", :follow => true, :number => @number, :answer => @answers[2].id} %>
+	<% else %>
+		<%= link_to @answers[2].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[2].id} %>
+	<% end %>
+<% end %>
+<% if !@answers[3].nil?%>
+	<% if @answers[3].hasfq%>
+		<%= link_to @answers[3].reply, {:controller => "survey", :action => "view", :follow => true, :number => @number, :answer => @answers[3].id} %>
+	<% else %>
+		<%= link_to @answers[3].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[3].id} %>
+	<% end %>
+<% end %>
+
+
