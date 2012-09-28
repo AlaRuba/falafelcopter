@@ -20,32 +20,185 @@
   Order
   <%= text_field_tag(:order) %>
   <br>
-  Answer:
+  Answers:
   <br>
-  <br>
-  <%= text_field_tag(:answer1) %>
-  <div class="answer1_follow">
-    <%= radio_button_tag :answer1_follow, "yes" %> Has follow-up
-    <%= radio_button_tag :answer1_follow, "no", true %> No
-  </div>
-  <br>
+  <table>
+    <tr>
+      <td>
+      <br>
+      Answer 1
+      <%= text_field_tag(:answer1) %>
+      <div class="answer1_follow">
+        <%= radio_button_tag :answer1_follow, "yes" %> Has follow-up
+        <%= radio_button_tag :answer1_follow, "no", true %> No
+        <br>
+        <%= radio_button_tag :resource1_follow, "yes" %> Has resource
+        <%= radio_button_tag :resource1_follow, "no", true %> No
+      </div>
+      </td>
+      <td>
+      <div class="resource1_follow">
+      <br>
+      Name
+      <%= text_field_tag(:resource1_name) %>
+      <br>
+      Address Line 1
+      <%= text_field_tag(:resource1_address1) %>
+      <br>
+      Address Line 2
+      <%= text_field_tag(:resource1_address2) %>
+      <br>
+      City
+      <%= text_field_tag(:resource1_city) %>
+      <br>
+      Zipcode
+      <%= text_field_tag(:resource1_zip) %>
+      <br>
+      Phone Number
+      <%= text_field_tag :resource1_phone1, nil, :maxlength =>3  %>
+      <%= text_field_tag :resource1_phone2, nil, :maxlength =>3 %>
+      <%= text_field_tag :resource1_phone3, nil, :maxlength =>4  %>
+      <br>
+      Website
+      <%= text_field_tag(:resource1_website) %>
+      <br>
+      Optional Instructions
+      <%= text_area_tag(:resource1_area) %>
+    </div>
+    </td>
+    </tr>
+    <br>
+    <td>
+  Reply 2
   <%= text_field_tag(:answer2) %>
   <div class="answer2_follow">
     <%= radio_button_tag :answer2_follow, "yes" %> Has follow-up
     <%= radio_button_tag :answer2_follow, "no", true %> No
+    <br>
+    <%= radio_button_tag :resource2_follow, "yes" %> Has resource
+    <%= radio_button_tag :resource2_follow, "no", true %> No
   </div>
+    </td>
+    <td>
+  <div class="resource1_follow">
+    <br>
+    Name
+    <%= text_field_tag(:resource2_name) %>
+    <br>
+    Address Line 1
+    <%= text_field_tag(:resource2_address1) %>
+    <br>
+    Address Line 2
+    <%= text_field_tag(:resource2_address2) %>
+    <br>
+    City
+    <%= text_field_tag(:resource2_city) %>
+    <br>
+    Zipcode
+    <%= text_field_tag(:resource2_zip) %>
+    <br>
+    Phone Number
+    <%= text_field_tag :resource2_phone1, nil, :maxlength =>3  %>
+    <%= text_field_tag :resource2_phone2, nil, :maxlength =>3 %>
+    <%= text_field_tag :resource2_phone3, nil, :maxlength =>4  %>
+    <br>
+    Website
+    <%= text_field_tag(:resource2_website) %>
+    <br>
+    Optional Instructions
+    <%= text_area_tag(:resource2_area) %>
+  </div>
+    </td>
+  </tr>
   <br>
+  <tr>
+    <td>
+  Reply 3
   <%= text_field_tag(:answer3) %>
   <div class="answer3_follow">
     <%= radio_button_tag :answer3_follow, "yes" %> Has follow-up
     <%= radio_button_tag :answer3_follow, "no", true %> No
+    <br>
+    <%= radio_button_tag :resource3_follow, "yes" %> Has resource
+    <%= radio_button_tag :resource3_follow, "no", true %> No
   </div>
+    </td>
+    <td>
+  <div class="resource1_follow">
+    <br>
+    Name
+    <%= text_field_tag(:resource3_name) %>
+    <br>
+    Address Line 1
+    <%= text_field_tag(:resource3_address1) %>
+    <br>
+    Address Line 2
+    <%= text_field_tag(:resource3_address2) %>
+    <br>
+    City
+    <%= text_field_tag(:resource3_city) %>
+    <br>
+    Zipcode
+    <%= text_field_tag(:resource3_zip) %>
+    <br>
+    Phone Number
+    <%= text_field_tag :resource3_phone1, nil, :maxlength =>3  %>
+    <%= text_field_tag :resource3_phone2, nil, :maxlength =>3 %>
+    <%= text_field_tag :resource3_phone3, nil, :maxlength =>4  %>
+    <br>
+    Website
+    <%= text_field_tag(:resource3_website) %>
+    <br>
+    Optional Instructions
+    <%= text_area_tag(:resource3_area) %>
+  </div>
+    </td>
+    </tr>
+    <tr>
+    <td>
   <br>
+  Reply 4
   <%= text_field_tag(:answer4) %>
   <br>
   <div class="answer4_follow">
     <%= radio_button_tag :answer4_follow, "yes" %> Has follow-up
     <%= radio_button_tag :answer4_follow, "no", true %> No
+    <br>
+    <%= radio_button_tag :resource4_follow, "yes" %> Has resource
+    <%= radio_button_tag :resource4_follow, "no", true %> No
   </div>
+    </td>
+    <td>
+  <div class="resource1_follow">
+    <br>
+    Name
+    <%= text_field_tag(:resource4_name) %>
+    <br>
+    Address Line 1
+    <%= text_field_tag(:resource4_address1) %>
+    <br>
+    Address Line 2
+    <%= text_field_tag(:resource4_address2) %>
+    <br>
+    City
+    <%= text_field_tag(:resource4_city) %>
+    <br>
+    Zipcode
+    <%= text_field_tag(:resource4_zip) %>
+    <br>
+    Phone Number
+    <%= text_field_tag :resource4_phone1, nil, :maxlength =>3  %>
+    <%= text_field_tag :resource4_phone2, nil, :maxlength =>3 %>
+    <%= text_field_tag :resource4_phone3, nil, :maxlength =>4  %>
+    <br>
+    Website
+    <%= text_field_tag(:resource4_website) %>
+    <br>
+    Optional Instructions
+    <%= text_area_tag(:resource4_area) %>
+  </div>
+    </td>
+  </tr>
+</table>
   <%= submit_tag("Save") %>
 <% end %>

@@ -11,16 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120911044831) do
+ActiveRecord::Schema.define(:version => 20120928034357) do
 
   create_table "answers", :force => true do |t|
     t.integer  "question"
     t.string   "reply"
     t.integer  "resource"
     t.integer  "followup"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
     t.boolean  "hasfq"
+    t.boolean  "resource_bool"
   end
 
   create_table "questions", :force => true do |t|
@@ -34,6 +35,25 @@ ActiveRecord::Schema.define(:version => 20120911044831) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.boolean  "follow"
+  end
+
+  create_table "resources", :force => true do |t|
+    t.text     "name"
+    t.text     "address1"
+    t.text     "address2"
+    t.text     "city"
+    t.text     "zipcode"
+    t.integer  "phone1"
+    t.integer  "phone2"
+    t.integer  "phone3"
+    t.text     "website"
+    t.text     "instructions"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.integer  "answer_id"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.boolean  "gmaps"
   end
 
   create_table "sessions", :force => true do |t|
