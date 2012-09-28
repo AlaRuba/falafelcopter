@@ -1,0 +1,55 @@
+.answer_block{
+	font-size: 40px;
+	font-family:"Gotham", Arial, Verdana,sans-serif;
+	
+}
+.rounded_button{
+	border-width:1px;
+	border-style:solid;
+	border-color:#54A1C8;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px ;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+.login_button{
+	margin:10px;
+	left:50%;
+	background-color: #54A1C8;
+}
+.container{
+	top: 0; left: 0; width: 100%; height: 100%;
+    position: absolute; display: table
+}
+.centered{
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	min-height: 10em;
+}
+
+a.login_button:link {
+	font-size: 40px;
+	font-family:"Gotham", Arial, Verdana,sans-serif;
+	text-decoration:none;
+	color:#FEFFFE;
+}
+a.login_button:visited {
+	font-size: 40px;
+	font-family:"Gotham", Arial, Verdana,sans-serif;
+	text-decoration:none;
+	color:#FEFFFE;
+}
+a.login_button:hover {
+	font-size: 40px;
+	font-family:"Gotham", Arial, Verdana,sans-serif;
+	text-decoration:none;
+	color:#FEFFFE;
+}
+a.login_button:active {
+	font-size: 40px;
+	font-family:"Gotham", Arial, Verdana,sans-serif;
+	text-decoration:none;
+	color:#FEFFFE;
+}
+
