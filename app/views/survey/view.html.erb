@@ -3,8 +3,7 @@
 <%= @question.ask %>
 <br>
 <% if !@answers[0].nil?%>
-	<% if@answers[0].resource_boolean%>
-	<% elsif @answers[0].hasfq%>
+	<% if @answers[0].hasfq%>
 		<%= link_to @answers[0].reply, {:controller => "survey", :action => "view", :follow => true, :number => @number, :answer => @answers[0].id} %>
 	<% else %>
 		<%= link_to @answers[0].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[0].id} %>
