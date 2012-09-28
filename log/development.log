@@ -24802,3 +24802,71 @@ Served asset /questions.js - 304 Not Modified (0ms)
 
 Started GET "/assets/survey.js?body=1" for 127.0.0.1 at 2012-09-27 23:37:18 -0700
 Served asset /survey.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/login" for 127.0.0.1 at 2012-09-27 23:40:04 -0700
+Processing by LoginController#main as HTML
+  Rendered login/main.html.erb within layouts/application (7.9ms)
+Compiled application.js  (11ms)  (pid 9821)
+Completed 200 OK in 148ms (Views: 145.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2012-09-27 23:40:04 -0700
+Served asset /general.css - 200 OK (2ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-09-27 23:40:04 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2012-09-27 23:40:04 -0700
+Served asset /login.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-09-27 23:40:04 -0700
+Served asset /questions.css - 200 OK (1ms)
+
+
+Started GET "/assets/survey.css?body=1" for 127.0.0.1 at 2012-09-27 23:40:04 -0700
+Served asset /survey.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-27 23:40:04 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-27 23:40:04 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-09-27 23:40:04 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-09-27 23:40:04 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-09-27 23:40:04 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-09-27 23:40:04 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-09-27 23:40:04 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2012-09-27 23:40:04 -0700
+Served asset /login.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-09-27 23:40:04 -0700
+Served asset /questions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/survey.js?body=1" for 127.0.0.1 at 2012-09-27 23:40:04 -0700
+Served asset /survey.js - 304 Not Modified (1ms)
