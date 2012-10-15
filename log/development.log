@@ -36250,3 +36250,490 @@ Completed 200 OK in 8ms (Views: 8.2ms | ActiveRecord: 0.0ms)
 
 Started GET "/assets/survey_question.css?body=1" for 127.0.0.1 at 2012-10-14 23:41:31 -0700
 Served asset /survey_question.css - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/survey/limit" for 127.0.0.1 at 2012-10-14 23:16:58 -0700
+Processing by SurveyController#limit as HTML
+  Rendered survey/limit.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 486ms (Views: 479.9ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/survey_question.css?body=1" for 127.0.0.1 at 2012-10-14 23:16:59 -0700
+Served asset /survey_question.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-14 23:16:59 -0700
+Served asset /survey_questions.css - 404 Not Found (8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/Kristen/.rvm/gems/ruby-1.9.2-p318/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/survey/limit" for 127.0.0.1 at 2012-10-14 23:17:12 -0700
+Processing by SurveyController#limit as HTML
+  Rendered survey/limit.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 30ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/survey_question.css?body=1" for 127.0.0.1 at 2012-10-14 23:17:12 -0700
+Served asset /survey_question.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-14 23:17:12 -0700
+Served asset /survey_questions.css - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/Kristen/.rvm/gems/ruby-1.9.2-p318/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-14 23:17:24 -0700
+Processing by LoginController#main as HTML
+  Rendered login/main.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 93ms (Views: 92.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/survey_question.css?body=1" for 127.0.0.1 at 2012-10-14 23:17:24 -0700
+Served asset /survey_question.css - 304 Not Modified (0ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&number=0" for 127.0.0.1 at 2012-10-14 23:17:26 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 1[0m
+  Rendered survey/view.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 212ms (Views: 58.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/survey_question.css?body=1" for 127.0.0.1 at 2012-10-14 23:17:26 -0700
+Served asset /survey_question.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-14 23:17:26 -0700
+Served asset /survey_questions.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/Kristen/.rvm/gems/ruby-1.9.2-p318/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/survey/map?answer=1&number=1" for 127.0.0.1 at 2012-10-14 23:17:27 -0700
+Processing by SurveyController#map as HTML
+  Parameters: {"answer"=>"1", "number"=>"1"}
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 1
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 1[0m
+  Rendered survey/map.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 118ms (Views: 36.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/survey_question.css?body=1" for 127.0.0.1 at 2012-10-14 23:17:28 -0700
+Served asset /survey_question.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-14 23:17:28 -0700
+Served asset /survey_questions.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/Kristen/.rvm/gems/ruby-1.9.2-p318/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/survey/view?answer=1&follow=false&number=1" for 127.0.0.1 at 2012-10-14 23:17:29 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"1", "follow"=>"false", "number"=>"1"}
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f'
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f'[0m
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 2
+  Rendered survey/view.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 30ms (Views: 27.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/survey_question.css?body=1" for 127.0.0.1 at 2012-10-14 23:17:29 -0700
+Served asset /survey_question.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-14 23:17:29 -0700
+Served asset /survey_questions.css - 404 Not Found (55ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/Kristen/.rvm/gems/ruby-1.9.2-p318/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/survey/view?answer=3&follow=true&number=2" for 127.0.0.1 at 2012-10-14 23:17:32 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"3", "follow"=>"true", "number"=>"2"}
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."follows" = 3 AND "questions"."follow" = 't'[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."follows" = 3 AND "questions"."follow" = 't'
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 3[0m
+  Rendered survey/view.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 105ms (Views: 70.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/survey_question.css?body=1" for 127.0.0.1 at 2012-10-14 23:17:32 -0700
+Served asset /survey_question.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-14 23:17:32 -0700
+Served asset /survey_questions.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/Kristen/.rvm/gems/ruby-1.9.2-p318/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/survey/map?answer=5&number=2" for 127.0.0.1 at 2012-10-14 23:17:34 -0700
+Processing by SurveyController#map as HTML
+  Parameters: {"answer"=>"5", "number"=>"2"}
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 5
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 5[0m
+  Rendered survey/map.html.erb within layouts/application (133.3ms)
+Completed 200 OK in 192ms (Views: 189.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/survey_question.css?body=1" for 127.0.0.1 at 2012-10-14 23:17:34 -0700
+Served asset /survey_question.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-14 23:17:34 -0700
+Served asset /survey_questions.css - 404 Not Found (22ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/Kristen/.rvm/gems/ruby-1.9.2-p318/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/survey/view?answer=5&follow=false&number=2" for 127.0.0.1 at 2012-10-14 23:17:35 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"5", "follow"=>"false", "number"=>"2"}
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 3 AND "questions"."follow" = 'f'
+Redirected to http://localhost:3000/survey/limit
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/survey/limit" for 127.0.0.1 at 2012-10-14 23:17:35 -0700
+Processing by SurveyController#limit as HTML
+  Rendered survey/limit.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 52ms (Views: 51.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/survey_question.css?body=1" for 127.0.0.1 at 2012-10-14 23:17:35 -0700
+Served asset /survey_question.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-14 23:17:35 -0700
+Served asset /survey_questions.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/Kristen/.rvm/gems/ruby-1.9.2-p318/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" integer, "reply" varchar(255), "resource" integer, "followup" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "hasfq" boolean, "resource_bool" boolean) 
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "patients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "answers" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ask" text, "follows" integer, "order" integer, "a1" integer, "a2" integer, "a3" integer, "a4" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "follow" boolean, "category" varchar(255)) 
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "address1" text, "address2" text, "city" text, "zipcode" text, "phone1" integer, "phone2" integer, "phone3" integer, "website" text, "instructions" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "answer_id" integer, "latitude" float, "longitude" float, "gmaps" boolean) [0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35m (0.7ms)[0m  CREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_sessions_on_session_id')
+  [1m[36m (0.8ms)[0m  [1mCREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121015054857')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120907232722')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120907232921')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120910215729')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120911033303')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120911044831')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120927223527')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120927223652')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120927231337')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120928034357')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121015050901')
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateQuestions (20120907232722)
+Migrating to CreateAnswers (20120907232921)
+Migrating to AddFollowToQuestions (20120910215729)
+Migrating to AddSessionsTable (20120911033303)
+Migrating to AddHasfqToAnswers (20120911044831)
+Migrating to CreateResources (20120927223527)
+Migrating to AddAnswerIdToResources (20120927223652)
+Migrating to AddResourceBoolToAnswers (20120927231337)
+Migrating to AddGMapsToResources (20120928034357)
+Migrating to AddCategoryToQuestions (20121015050901)
+Migrating to CreatePatients (20121015054857)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("answers")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("patients")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("questions")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("resources")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("sessions")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_sessions_on_session_id')
