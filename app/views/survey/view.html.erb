@@ -1,51 +1,72 @@
-<%= @question.order %>
+<%= stylesheet_link_tag "survey_questions" %>
+<div class = "container">
+	<p class = "centered">
+		<div class = "question_number ">
+			<br>
+			<br>
+			<br>
+			<%= @question.order %>
+			<br>
+			<br>
+			<br>
+			<%= @question.ask %>
+		</div>
+		
+	</p>
+</div>
 <br>
-<%= @question.ask %>
-<br>
+<div class = "container">
+	<p class = "centered">
+		<br>
+		<br>
 <% if !@answers[0].nil?%>
 	<% if @answers[0].resource_bool%>
-		<%= link_to @answers[0].reply, {:controller => "survey", :action => "map", :number => @number, :answer => @answers[0].id} %>
+		<%= link_to @answers[0].reply, {:controller => "survey", :action => "map", :number => @number, :answer => @answers[0].id} , :class=> "rounded_button color_button answer_button"%>
 	<% else%>
 		<% if @answers[0].hasfq%>
-			<%= link_to @answers[0].reply, {:controller => "survey", :action => "view", :follow => true, :number => @number, :answer => @answers[0].id} %>
+			<%= link_to @answers[0].reply, {:controller => "survey", :action => "view", :follow => true, :number => @number, :answer => @answers[0].id} , :class=> "rounded_button color_button answer_button"%>
 		<% else %>
-			<%= link_to @answers[0].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[0].id} %>
+			<%= link_to @answers[0].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[0].id} , :class=> "rounded_button color_button answer_button"%>
 		<% end %>
 	<% end%>
 	<br>
 <% end %>
+<br>
 <% if !@answers[1].nil?%>
 	<% if @answers[1].resource_bool%>
-		<%= link_to @answers[1].reply, {:controller => "survey", :action => "map", :number => @number, :answer => @answers[1].id} %>
+		<%= link_to @answers[1].reply, {:controller => "survey", :action => "map", :number => @number, :answer => @answers[1].id} , :class=> "rounded_button color_button answer_button"%>
 	<% else%>
 		<% if @answers[1].hasfq%>
-			<%= link_to @answers[1].reply, {:controller => "survey", :action => "map", :follow => true, :number => @number, :answer => @answers[1].id} %>
+			<%= link_to @answers[1].reply, {:controller => "survey", :action => "map", :follow => true, :number => @number, :answer => @answers[1].id} , :class=> "rounded_button color_button answer_button"%>
 		<% else %>
-			<%= link_to @answers[1].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[1].id} %>
+			<%= link_to @answers[1].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[1].id} , :class=> "rounded_button color_button answer_button"%>
 		<% end %>
 	<% end %>
 <% end %>
+<br>
 <% if !@answers[2].nil?%>
 	<% if @answers[2].resource_bool%>
-		<%= link_to @answers[2].reply, {:controller => "survey", :action => "map", :number => @number, :answer => @answers[2].id} %>
+		<%= link_to @answers[2].reply, {:controller => "survey", :action => "map", :number => @number, :answer => @answers[2].id} , :class=> "rounded_button color_button answer_button"%>
 	<% else%>
 		<% if @answers[2].hasfq%>
-			<%= link_to @answers[2].reply, {:controller => "survey", :action => "map", :follow => true, :number => @number, :answer => @answers[2].id} %>
+			<%= link_to @answers[2].reply, {:controller => "survey", :action => "map", :follow => true, :number => @number, :answer => @answers[2].id} , :class=> "rounded_button color_button answer_button"%>
 		<% else %>
-			<%= link_to @answers[2].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[2].id} %>
+			<%= link_to @answers[2].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[2].id} , :class=> "rounded_button color_button answer_button"%>
 		<% end %>
 	<% end %>
 <% end %>
+<br>
 <% if !@answers[3].nil?%>
 	<% if @answers[3].resource_bool%>
-		<%= link_to @answers[3].reply, {:controller => "survey", :action => "map", :number => @number, :answer => @answers[3].id} %>
+		<%= link_to @answers[3].reply, {:controller => "survey", :action => "map", :number => @number, :answer => @answers[3].id} , :class=> "rounded_button color_button answer_button"%>
 	<% else%>
 		<% if @answers[3].hasfq%>
-			<%= link_to @answers[3].reply, {:controller => "survey", :action => "map", :follow => true, :number => @number, :answer => @answers[3].id} %>
+			<%= link_to @answers[3].reply, {:controller => "survey", :action => "map", :follow => true, :number => @number, :answer => @answers[3].id} , :class=> "rounded_button color_button answer_button"%>
 		<% else %>
-			<%= link_to @answers[3].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[3].id} %>
+			<%= link_to @answers[3].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[3].id} , :class=> "rounded_button color_button answer_button"%>
 		<% end %>
 	<% end%>
 <% end %>
-
+</p>
+</div>
 
