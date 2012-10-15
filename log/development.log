@@ -27649,3 +27649,39 @@ Started GET "/survey/limit" for 127.0.0.1 at 2012-10-07 21:14:15 -0700
 Processing by SurveyController#limit as HTML
   Rendered survey/limit.html.erb within layouts/application (0.0ms)
 Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-14 21:43:31 -0700
+Processing by LoginController#main as HTML
+  Rendered login/main.html.erb within layouts/application (29.5ms)
+Completed 200 OK in 154ms (Views: 151.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&number=0" for 127.0.0.1 at 2012-10-14 21:43:32 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0"}
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 1[0m
+  Rendered survey/view.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 42ms (Views: 17.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/survey/map?answer=1&number=1" for 127.0.0.1 at 2012-10-14 21:43:38 -0700
+Processing by SurveyController#map as HTML
+  Parameters: {"answer"=>"1", "number"=>"1"}
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 1
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 1[0m
+  Rendered survey/map.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 50ms (Views: 10.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/survey/map?answer=1&number=1" for 127.0.0.1 at 2012-10-14 21:43:51 -0700
+Processing by SurveyController#map as HTML
+  Parameters: {"answer"=>"1", "number"=>"1"}
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 1
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 1[0m
+  Rendered survey/map.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.3ms)

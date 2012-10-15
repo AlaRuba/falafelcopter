@@ -1,0 +1,10 @@
+<% if !@answer.nil?%>
+	<% if @answer.hasfq%>
+			<%= link_to "Next", {:controller => "survey", :action => "view", :follow => true, :number => @number, :answer => @answer.id} %>
+	<% else %>
+			<%= link_to "Next", {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answer.id} %>
+	<% end %>
+	<br>
+<% end %>
+<% image_src = "https://maps.googleapis.com/maps/api/staticmap?center=" + @address + "&zoom=14&size=300x300&markers=" + @address + "&sensor=false"%>
+<%= image_tag(image_src, alt: "Rails") %>
