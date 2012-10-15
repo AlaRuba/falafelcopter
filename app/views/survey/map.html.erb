@@ -1,10 +1,16 @@
+<div class = "container">
+	<p class = "centered">
+<%= stylesheet_link_tag "survey_questions" %>
 <% if !@answer.nil?%>
 	<% if @answer.hasfq%>
-			<%= link_to "Next", {:controller => "survey", :action => "view", :follow => true, :number => @number, :answer => @answer.id, :patient=>@patient_id} %>
+			<%= link_to "Next", {:controller => "survey", :action => "view", :follow => true, :number => @number, :answer => @answer.id, :patient=>@patient_id}, :class=> "rounded_button color_button answer_button" %>
 	<% else %>
-			<%= link_to "Next", {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answer.id, :patient=>@patient_id} %>
+			<%= link_to "Next", {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answer.id, :patient=>@patient_id}, :class=> "rounded_button color_button answer_button" %>
 	<% end %>
 	<br>
 <% end %>
+<br>
 <% image_src = "https://maps.googleapis.com/maps/api/staticmap?center=" + @address + "&zoom=14&size=300x300&markers=" + @address + "&sensor=false"%>
 <%= image_tag(image_src, alt: "Rails") %>
+</p>
+</div>
