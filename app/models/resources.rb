@@ -1,5 +1,5 @@
 class Resources < ActiveRecord::Base
-  attr_accessible :address1, :address2, :city, :instructions, :name, :phone1, :phone2, :phone3, :website, :zipcode
+  attr_accessible :address1, :address2, :city, :instructions, :name, :phone1, :phone2, :phone3, :website, :zipcode, :answer_id
   acts_as_gmappable
 
 	def gmaps4rails_address
