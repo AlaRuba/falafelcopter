@@ -1,8 +1,8 @@
 <% if !@answer.nil?%>
 	<% if @answer.hasfq%>
-			<%= link_to "Next", {:controller => "survey", :action => "view", :follow => true, :number => @number, :answer => @answer.id} %>
+			<%= link_to "Next", {:controller => "survey", :action => "view", :follow => true, :number => @number, :answer => @answer.id, :patient=>@patient_id} %>
 	<% else %>
-			<%= link_to "Next", {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answer.id} %>
+			<%= link_to "Next", {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answer.id, :patient=>@patient_id} %>
 	<% end %>
 	<br>
 <% end %>

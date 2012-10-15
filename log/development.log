@@ -27685,3 +27685,645 @@ Processing by SurveyController#map as HTML
   [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 1[0m
   Rendered survey/map.html.erb within layouts/application (0.5ms)
 Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.3ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateQuestions (20120907232722)
+Migrating to CreateAnswers (20120907232921)
+Migrating to AddFollowToQuestions (20120910215729)
+Migrating to AddSessionsTable (20120911033303)
+Migrating to AddHasfqToAnswers (20120911044831)
+Migrating to CreateResources (20120927223527)
+Migrating to AddAnswerIdToResources (20120927223652)
+Migrating to AddResourceBoolToAnswers (20120927231337)
+Migrating to AddGMapsToResources (20120928034357)
+Migrating to AddCategoryToQuestions (20121015050901)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.9ms)[0m  ALTER TABLE "questions" ADD "category" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121015050901')[0m
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("answers")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("questions")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("resources")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("sessions")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_sessions_on_session_id')
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-14 22:46:41 -0700
+Processing by LoginController#main as HTML
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant LoginController::Patient):
+  app/controllers/login_controller.rb:3:in `main'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.9ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateQuestions (20120907232722)
+Migrating to CreateAnswers (20120907232921)
+Migrating to AddFollowToQuestions (20120910215729)
+Migrating to AddSessionsTable (20120911033303)
+Migrating to AddHasfqToAnswers (20120911044831)
+Migrating to CreateResources (20120927223527)
+Migrating to AddAnswerIdToResources (20120927223652)
+Migrating to AddResourceBoolToAnswers (20120927231337)
+Migrating to AddGMapsToResources (20120928034357)
+Migrating to AddCategoryToQuestions (20121015050901)
+Migrating to Patients (20121015051825)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121015051825')
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("answers")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("questions")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("resources")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('index_sessions_on_updated_at')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_sessions_on_session_id')[0m
+Connecting to database specified by database.yml
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-14 22:47:07 -0700
+Processing by LoginController#main as HTML
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant LoginController::Patient):
+  app/controllers/login_controller.rb:3:in `main'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-14 22:49:24 -0700
+Processing by LoginController#main as HTML
+Completed 500 Internal Server Error in 39ms
+
+ActiveRecord::StatementInvalid (Could not find table 'patients'):
+  app/controllers/login_controller.rb:3:in `new'
+  app/controllers/login_controller.rb:3:in `main'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-14 22:49:26 -0700
+Processing by LoginController#main as HTML
+Completed 500 Internal Server Error in 0ms
+
+ActiveRecord::StatementInvalid (Could not find table 'patients'):
+  app/controllers/login_controller.rb:3:in `new'
+  app/controllers/login_controller.rb:3:in `main'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.1ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateQuestions (20120907232722)
+Migrating to CreateAnswers (20120907232921)
+Migrating to AddFollowToQuestions (20120910215729)
+Migrating to AddSessionsTable (20120911033303)
+Migrating to AddHasfqToAnswers (20120911044831)
+Migrating to CreateResources (20120927223527)
+Migrating to AddAnswerIdToResources (20120927223652)
+Migrating to AddResourceBoolToAnswers (20120927231337)
+Migrating to AddGMapsToResources (20120928034357)
+Migrating to AddCategoryToQuestions (20121015050901)
+Migrating to CreatePatients (20121015054857)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "patients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "answers" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121015054857')[0m
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("answers")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("patients")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("questions")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("resources")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_sessions_on_updated_at')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_sessions_on_session_id')[0m
+Connecting to database specified by database.yml
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-14 22:49:59 -0700
+Processing by LoginController#main as HTML
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.9ms)[0m  INSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)  [["answers", ""], ["created_at", Mon, 15 Oct 2012 05:49:59 UTC +00:00], ["updated_at", Mon, 15 Oct 2012 05:49:59 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 140ms (Views: 96.2ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&number=0&patient_id=1" for 127.0.0.1 at 2012-10-14 22:50:00 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient_id"=>"1"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" IS NULL
+Completed 500 Internal Server Error in 9ms
+
+NoMethodError (undefined method `answer' for nil:NilClass):
+  app/controllers/survey_controller.rb:7:in `view'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-14 22:51:05 -0700
+Processing by LoginController#main as HTML
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)  [["answers", "start"], ["created_at", Mon, 15 Oct 2012 05:51:05 UTC +00:00], ["updated_at", Mon, 15 Oct 2012 05:51:05 UTC +00:00]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 8.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&number=0&patient_id=2" for 127.0.0.1 at 2012-10-14 22:51:06 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient_id"=>"2"}
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" IS NULL
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `answer' for nil:NilClass):
+  app/controllers/survey_controller.rb:7:in `view'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.2ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&number=0&patient_id=2" for 127.0.0.1 at 2012-10-14 22:51:39 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient_id"=>"2"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = 0[0m
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `answer' for nil:NilClass):
+  app/controllers/survey_controller.rb:7:in `view'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.2ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&number=0&patient_id=2" for 127.0.0.1 at 2012-10-14 22:53:49 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient_id"=>"2"}
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 0]]
+Completed 500 Internal Server Error in 4ms
+
+ActiveRecord::RecordNotFound (Couldn't find Patient with id=0):
+  app/controllers/survey_controller.rb:5:in `view'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.2ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&number=0&patient_id=2" for 127.0.0.1 at 2012-10-14 22:54:20 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient_id"=>"2"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Patient with id=0):
+  app/controllers/survey_controller.rb:5:in `view'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-14 22:54:28 -0700
+Processing by LoginController#main as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["answers", "start"], ["created_at", Mon, 15 Oct 2012 05:54:28 UTC +00:00], ["updated_at", Mon, 15 Oct 2012 05:54:28 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  Rendered login/main.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 18ms (Views: 8.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&number=0&patient=3" for 127.0.0.1 at 2012-10-14 22:54:29 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"3"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `answer' for #<Patient:0x007fef0627d948>):
+  app/controllers/survey_controller.rb:6:in `view'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-14 22:54:54 -0700
+Processing by LoginController#main as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["answers", "start"], ["created_at", Mon, 15 Oct 2012 05:54:54 UTC +00:00], ["updated_at", Mon, 15 Oct 2012 05:54:54 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  Rendered login/main.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 18ms (Views: 7.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&number=0&patient=4" for 127.0.0.1 at 2012-10-14 22:54:55 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"4"}
+  [1m[36mPatient Load (0.2ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 1
+  Rendered survey/view.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 33ms (Views: 16.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/survey/map?answer=1&number=1" for 127.0.0.1 at 2012-10-14 22:55:11 -0700
+Processing by SurveyController#map as HTML
+  Parameters: {"answer"=>"1", "number"=>"1"}
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 1[0m
+  [1m[35mResources Load (0.1ms)[0m  SELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 1
+  Rendered survey/map.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 8.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/survey/view?answer=1&follow=false&number=1" for 127.0.0.1 at 2012-10-14 22:55:12 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"1", "follow"=>"false", "number"=>"1"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Patient with id=0):
+  app/controllers/survey_controller.rb:5:in `view'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (26.1ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (32.9ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&number=0&patient=4" for 127.0.0.1 at 2012-10-14 22:56:12 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"4"}
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 1[0m
+  Rendered survey/view.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 39ms (Views: 16.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/survey/map?answer=1&number=1&patient=4" for 127.0.0.1 at 2012-10-14 22:56:14 -0700
+Processing by SurveyController#map as HTML
+  Parameters: {"answer"=>"1", "number"=>"1", "patient"=>"4"}
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 1
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 1[0m
+  Rendered survey/map.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 6.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/survey/view?answer=1&follow=false&number=1&patient=4" for 127.0.0.1 at 2012-10-14 22:56:15 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"1", "follow"=>"false", "number"=>"1", "patient"=>"4"}
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f'[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f'
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 2[0m
+  Rendered survey/view.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&number=0&patient=4" for 127.0.0.1 at 2012-10-14 22:56:48 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"4"}
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 1[0m
+  Rendered survey/view.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/survey/map?answer=1&number=1&patient=4" for 127.0.0.1 at 2012-10-14 22:56:49 -0700
+Processing by SurveyController#map as HTML
+  Parameters: {"answer"=>"1", "number"=>"1", "patient"=>"4"}
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 1
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 1[0m
+  Rendered survey/map.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/survey/view?answer=1&follow=false&number=1&patient=4" for 127.0.0.1 at 2012-10-14 22:56:50 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"1", "follow"=>"false", "number"=>"1", "patient"=>"4"}
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f'[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f'
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 2[0m
+  Rendered survey/view.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/survey/view?answer=3&follow=true&number=2&patient=4" for 127.0.0.1 at 2012-10-14 22:56:57 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"3", "follow"=>"true", "number"=>"2", "patient"=>"4"}
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."follows" = 3 AND "questions"."follow" = 't'[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."follows" = 3 AND "questions"."follow" = 't'
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 3[0m
+  Rendered survey/view.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&number=0&patient=4" for 127.0.0.1 at 2012-10-14 22:58:30 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"4"}
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "patients" SET "answers" = 'start:cougar0', "updated_at" = '2012-10-15 05:58:30.442581' WHERE "patients"."id" = 4
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 1
+  Rendered survey/view.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 39ms (Views: 15.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/survey/map?answer=1&number=1&patient=4" for 127.0.0.1 at 2012-10-14 22:58:31 -0700
+Processing by SurveyController#map as HTML
+  Parameters: {"answer"=>"1", "number"=>"1", "patient"=>"4"}
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 1[0m
+  [1m[35mResources Load (0.1ms)[0m  SELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 1
+  Rendered survey/map.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 59ms (Views: 7.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/survey/view?answer=1&follow=false&number=1&patient=4" for 127.0.0.1 at 2012-10-14 22:58:32 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"1", "follow"=>"false", "number"=>"1", "patient"=>"4"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "patients" SET "answers" = 'start:cougar0:cougar1', "updated_at" = '2012-10-15 05:58:32.527234' WHERE "patients"."id" = 4[0m
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f'[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f'
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 2[0m
+  Rendered survey/view.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 14ms (Views: 8.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/survey/view?answer=3&follow=true&number=2&patient=4" for 127.0.0.1 at 2012-10-14 22:58:33 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"3", "follow"=>"true", "number"=>"2", "patient"=>"4"}
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "patients" SET "answers" = 'start:cougar0:cougar1:cougar3', "updated_at" = '2012-10-15 05:58:33.438541' WHERE "patients"."id" = 4
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."follows" = 3 AND "questions"."follow" = 't'
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."follows" = 3 AND "questions"."follow" = 't'[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 3
+  Rendered survey/view.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 13ms (Views: 7.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/survey/map?answer=5&number=2&patient=4" for 127.0.0.1 at 2012-10-14 22:58:34 -0700
+Processing by SurveyController#map as HTML
+  Parameters: {"answer"=>"5", "number"=>"2", "patient"=>"4"}
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 5[0m
+  [1m[35mResources Load (0.1ms)[0m  SELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 5
+  Rendered survey/map.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/survey/view?answer=5&follow=false&number=2&patient=4" for 127.0.0.1 at 2012-10-14 22:58:35 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"5", "follow"=>"false", "number"=>"2", "patient"=>"4"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "patients" SET "answers" = 'start:cougar0:cougar1:cougar3:cougar5', "updated_at" = '2012-10-15 05:58:35.178673' WHERE "patients"."id" = 4[0m
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 3 AND "questions"."follow" = 'f'[0m
+Redirected to http://localhost:3000/survey/limit?patient=4
+Completed 302 Found in 5ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/survey/limit?patient=4" for 127.0.0.1 at 2012-10-14 22:58:35 -0700
+Processing by SurveyController#limit as HTML
+  Parameters: {"patient"=>"4"}
+  Rendered survey/limit.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-14 22:59:08 -0700
+Processing by LoginController#main as HTML
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["answers", "start"], ["created_at", Mon, 15 Oct 2012 05:59:08 UTC +00:00], ["updated_at", Mon, 15 Oct 2012 05:59:08 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  Rendered login/main.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 18ms (Views: 8.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&number=0&patient=5" for 127.0.0.1 at 2012-10-14 22:59:09 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"5"}
+  [1m[36mPatient Load (0.2ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "patients" SET "answers" = 'start:0', "updated_at" = '2012-10-15 05:59:09.370764' WHERE "patients"."id" = 5[0m
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 1[0m
+  Rendered survey/view.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 61ms (Views: 14.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/survey/map?answer=1&number=1&patient=5" for 127.0.0.1 at 2012-10-14 22:59:10 -0700
+Processing by SurveyController#map as HTML
+  Parameters: {"answer"=>"1", "number"=>"1", "patient"=>"5"}
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 1
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 1[0m
+  Rendered survey/map.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 7.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/survey/view?answer=1&follow=false&number=1&patient=5" for 127.0.0.1 at 2012-10-14 22:59:11 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"1", "follow"=>"false", "number"=>"1", "patient"=>"5"}
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "patients" SET "answers" = 'start:0:1', "updated_at" = '2012-10-15 05:59:11.885015' WHERE "patients"."id" = 5
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f'
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f'[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 2
+  Rendered survey/view.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 16ms (Views: 10.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/survey/view?answer=3&follow=true&number=2&patient=5" for 127.0.0.1 at 2012-10-14 22:59:16 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"3", "follow"=>"true", "number"=>"2", "patient"=>"5"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "patients" SET "answers" = 'start:0:1:3', "updated_at" = '2012-10-15 05:59:16.698009' WHERE "patients"."id" = 5[0m
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."follows" = 3 AND "questions"."follow" = 't'[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."follows" = 3 AND "questions"."follow" = 't'
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 3[0m
+  Rendered survey/view.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 14ms (Views: 9.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/survey/map?answer=5&number=2&patient=5" for 127.0.0.1 at 2012-10-14 22:59:17 -0700
+Processing by SurveyController#map as HTML
+  Parameters: {"answer"=>"5", "number"=>"2", "patient"=>"5"}
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 5
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 5[0m
+  Rendered survey/map.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/survey/view?answer=5&follow=false&number=2&patient=5" for 127.0.0.1 at 2012-10-14 22:59:18 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"5", "follow"=>"false", "number"=>"2", "patient"=>"5"}
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "patients" SET "answers" = 'start:0:1:3:5', "updated_at" = '2012-10-15 05:59:18.879716' WHERE "patients"."id" = 5
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 3 AND "questions"."follow" = 'f'
+Redirected to http://localhost:3000/survey/limit?patient=5
+Completed 302 Found in 5ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/survey/limit?patient=5" for 127.0.0.1 at 2012-10-14 22:59:18 -0700
+Processing by SurveyController#limit as HTML
+  Parameters: {"patient"=>"5"}
+  Rendered survey/limit.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-14 23:06:49 -0700
+Processing by LoginController#main as HTML
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)  [["answers", ""], ["created_at", Mon, 15 Oct 2012 06:06:49 UTC +00:00], ["updated_at", Mon, 15 Oct 2012 06:06:49 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 16ms (Views: 7.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&number=0&patient=6" for 127.0.0.1 at 2012-10-14 23:06:50 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"6"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "patients" SET "answers" = ':0', "updated_at" = '2012-10-15 06:06:50.846507' WHERE "patients"."id" = 6
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 1
+  Rendered survey/view.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 34ms (Views: 14.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/survey/map?answer=1&number=1&patient=6" for 127.0.0.1 at 2012-10-14 23:06:52 -0700
+Processing by SurveyController#map as HTML
+  Parameters: {"answer"=>"1", "number"=>"1", "patient"=>"6"}
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 1[0m
+  [1m[35mResources Load (0.2ms)[0m  SELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 1
+  Rendered survey/map.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 27ms (Views: 9.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/survey/view?answer=1&follow=false&number=1&patient=6" for 127.0.0.1 at 2012-10-14 23:06:53 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"1", "follow"=>"false", "number"=>"1", "patient"=>"6"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "patients" SET "answers" = ':0:1', "updated_at" = '2012-10-15 06:06:53.061101' WHERE "patients"."id" = 6[0m
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f'[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f'
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 2[0m
+  Rendered survey/view.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 15ms (Views: 8.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/survey/view?answer=3&follow=true&number=2&patient=6" for 127.0.0.1 at 2012-10-14 23:06:54 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"3", "follow"=>"true", "number"=>"2", "patient"=>"6"}
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "patients" SET "answers" = ':0:1:3', "updated_at" = '2012-10-15 06:06:54.013741' WHERE "patients"."id" = 6
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."follows" = 3 AND "questions"."follow" = 't'
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."follows" = 3 AND "questions"."follow" = 't'[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 3
+  Rendered survey/view.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 36ms (Views: 31.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/survey/map?answer=5&number=2&patient=6" for 127.0.0.1 at 2012-10-14 23:07:35 -0700
+Processing by SurveyController#map as HTML
+  Parameters: {"answer"=>"5", "number"=>"2", "patient"=>"6"}
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 5[0m
+  [1m[35mResources Load (0.1ms)[0m  SELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 5
+  Rendered survey/map.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/survey/view?answer=5&follow=false&number=2&patient=6" for 127.0.0.1 at 2012-10-14 23:07:36 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"5", "follow"=>"false", "number"=>"2", "patient"=>"6"}
+  [1m[36mPatient Load (0.2ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "patients" SET "answers" = ':0:1:3:5', "updated_at" = '2012-10-15 06:07:36.380087' WHERE "patients"."id" = 6[0m
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 3 AND "questions"."follow" = 'f'[0m
+Redirected to http://localhost:3000/survey/limit?patient=6
+Completed 302 Found in 6ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/survey/limit?patient=6" for 127.0.0.1 at 2012-10-14 23:07:36 -0700
+Processing by SurveyController#limit as HTML
+  Parameters: {"patient"=>"6"}
+  Rendered survey/limit.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)

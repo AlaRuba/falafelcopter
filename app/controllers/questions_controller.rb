@@ -14,6 +14,7 @@ class QuestionsController < ApplicationController
     question.follows = params[:follows]
   	question.ask = params[:quest]
     question.order = params[:order]
+    question.category = params[:category]
   	question.save
     if params[:followUps] != nil
       followUps = JSON.parse(params[:followUps])

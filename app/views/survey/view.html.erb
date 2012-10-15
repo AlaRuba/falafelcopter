@@ -4,46 +4,46 @@
 <br>
 <% if !@answers[0].nil?%>
 	<% if @answers[0].resource_bool%>
-		<%= link_to @answers[0].reply, {:controller => "survey", :action => "map", :number => @number, :answer => @answers[0].id} %>
+		<%= link_to @answers[0].reply, {:controller => "survey", :action => "map", :number => @number, :answer => @answers[0].id, :patient => @patient_id} %>
 	<% else%>
 		<% if @answers[0].hasfq%>
-			<%= link_to @answers[0].reply, {:controller => "survey", :action => "view", :follow => true, :number => @number, :answer => @answers[0].id} %>
+			<%= link_to @answers[0].reply, {:controller => "survey", :action => "view", :follow => true, :number => @number, :answer => @answers[0].id, :patient => @patient_id} %>
 		<% else %>
-			<%= link_to @answers[0].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[0].id} %>
+			<%= link_to @answers[0].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[0].id, :patient => @patient_id} %>
 		<% end %>
 	<% end%>
 	<br>
 <% end %>
 <% if !@answers[1].nil?%>
 	<% if @answers[1].resource_bool%>
-		<%= link_to @answers[1].reply, {:controller => "survey", :action => "map", :number => @number, :answer => @answers[1].id} %>
+		<%= link_to @answers[1].reply, {:controller => "survey", :action => "map", :number => @number, :answer => @answers[1].id, :patient => @patient_id} %>
 	<% else%>
 		<% if @answers[1].hasfq%>
-			<%= link_to @answers[1].reply, {:controller => "survey", :action => "map", :follow => true, :number => @number, :answer => @answers[1].id} %>
+			<%= link_to @answers[1].reply, {:controller => "survey", :action => "map", :follow => true, :number => @number, :answer => @answers[1].id, :patient => @patient_id} %>
 		<% else %>
-			<%= link_to @answers[1].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[1].id} %>
+			<%= link_to @answers[1].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[1].id, :patient => @patient_id} %>
 		<% end %>
 	<% end %>
 <% end %>
 <% if !@answers[2].nil?%>
 	<% if @answers[2].resource_bool%>
-		<%= link_to @answers[2].reply, {:controller => "survey", :action => "map", :number => @number, :answer => @answers[2].id} %>
+		<%= link_to @answers[2].reply, {:controller => "survey", :action => "map", :number => @number, :answer => @answers[2].id, :patient => @patient_id} %>
 	<% else%>
 		<% if @answers[2].hasfq%>
-			<%= link_to @answers[2].reply, {:controller => "survey", :action => "map", :follow => true, :number => @number, :answer => @answers[2].id} %>
+			<%= link_to @answers[2].reply, {:controller => "survey", :action => "map", :follow => true, :number => @number, :answer => @answers[2].id, :patient => @patient_id} %>
 		<% else %>
-			<%= link_to @answers[2].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[2].id} %>
+			<%= link_to @answers[2].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[2].id, :patient => @patient_id} %>
 		<% end %>
 	<% end %>
 <% end %>
 <% if !@answers[3].nil?%>
 	<% if @answers[3].resource_bool%>
-		<%= link_to @answers[3].reply, {:controller => "survey", :action => "map", :number => @number, :answer => @answers[3].id} %>
+		<%= link_to @answers[3].reply, {:controller => "survey", :action => "map", :number => @number, :answer => @answers[3].id, :patient => @patient_id} %>
 	<% else%>
 		<% if @answers[3].hasfq%>
-			<%= link_to @answers[3].reply, {:controller => "survey", :action => "map", :follow => true, :number => @number, :answer => @answers[3].id} %>
+			<%= link_to @answers[3].reply, {:controller => "survey", :action => "map", :follow => true, :number => @number, :answer => @answers[3].id, :patient => @patient_id} %>
 		<% else %>
-			<%= link_to @answers[3].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[3].id} %>
+			<%= link_to @answers[3].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[3].id, :patient => @patient_id} %>
 		<% end %>
 	<% end%>
 <% end %>

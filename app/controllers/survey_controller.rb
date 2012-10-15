@@ -1,6 +1,13 @@
 class SurveyController < ApplicationController
   def view
   	@number = params[:number].to_i
+    id = params[:patient].to_i
+    @patient_id = id
+    patient = Patient.find(id)
+    answerSoFar = patient.answers
+    answerSoFar += ":" + params[:answer]
+    patient.answers = answerSoFar
+    patient.save
   	if params[:follow] == "false"
   		@number += 1
   		questionArr = nil
@@ -9,7 +16,7 @@ class SurveyController < ApplicationController
   			@question = questionArr[0]
   			@answers = Answer.where(:question => @question.id)
   		else
-  			redirect_to :controller => "survey", :action => "limit"
+  			redirect_to :controller => "survey", :action => "limit", :patient => params[:patient]
   		end
   	else
   		answer = params[:answer].to_i
@@ -19,7 +26,7 @@ class SurveyController < ApplicationController
   			@question = questionArr[0]
   			@answers = Answer.where(:question => @question.id)
   		else
-  			redirect_to :controller => "survey", :action => "limit"
+  			redirect_to :controller => "survey", :action => "limit", :patient => params[:patient]
   		end
   	end
   end
@@ -28,9 +35,11 @@ class SurveyController < ApplicationController
   end
 
   def limit
+    @patient = params[:patient]
   end
 
   def map
+    @patient_id = params[:patient]
     @number = params[:number].to_i
     answerArr = Answer.where(:id => params[:answer])
     @answer = answerArr[0]
