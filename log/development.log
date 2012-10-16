@@ -40868,3 +40868,1647 @@ Migrating to CreatePatients (20121015054857)
   [1m[35m (0.0ms)[0m  PRAGMA index_list("sessions")
   [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_sessions_on_updated_at')[0m
   [1m[35m (0.0ms)[0m  PRAGMA index_info('index_sessions_on_session_id')
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-15 22:57:58 -0700
+Processing by LoginController#main as HTML
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)  [["answers", ""], ["created_at", Tue, 16 Oct 2012 05:57:59 UTC +00:00], ["updated_at", Tue, 16 Oct 2012 05:57:59 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 23ms (Views: 13.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/questions/main?follow=false" for 127.0.0.1 at 2012-10-15 22:58:00 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false"}
+  Rendered questions/main.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/questions/add" for 127.0.0.1 at 2012-10-15 23:00:18 -0700
+Processing by QuestionsController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6UpbybE4+ATvJTgQphKO79hfWygVWiwqjy4K7SUX58E=", "follow"=>"false", "quest"=>"Do you and your family have a permanent and stable place to live?", "order"=>"1", "category"=>"Housing", "answer1"=>"Yes", "answer1_follow"=>"no", "resource1_follow"=>"no", "resource1_name"=>"", "resource1_address1"=>"", "resource1_address2"=>"", "resource1_city"=>"", "resource1_zip"=>"", "resource1_phone1"=>"", "resource1_phone2"=>"", "resource1_phone3"=>"", "resource1_website"=>"", "resource1_area"=>"", "answer2"=>"No", "answer2_follow"=>"yes", "resource2_follow"=>"no", "resource2_name"=>"", "resource2_address1"=>"", "resource2_address2"=>"", "resource2_city"=>"", "resource2_zip"=>"", "resource2_phone1"=>"", "resource2_phone2"=>"", "resource2_phone3"=>"", "resource2_website"=>"", "resource2_area"=>"", "answer3"=>"", "answer3_follow"=>"no", "resource3_follow"=>"no", "resource3_name"=>"", "resource3_address1"=>"", "resource3_address2"=>"", "resource3_city"=>"", "resource3_zip"=>"", "resource3_phone1"=>"", "resource3_phone2"=>"", "resource3_phone3"=>"", "resource3_website"=>"", "resource3_area"=>"", "answer4"=>"", "answer4_follow"=>"no", "resource4_follow"=>"no", "resource4_name"=>"", "resource4_address1"=>"", "resource4_address2"=>"", "resource4_city"=>"", "resource4_zip"=>"", "resource4_phone1"=>"", "resource4_phone2"=>"", "resource4_phone3"=>"", "resource4_website"=>"", "resource4_area"=>"", "commit"=>"Save"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "questions" ("a1", "a2", "a3", "a4", "ask", "category", "created_at", "follow", "follows", "order", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["a1", nil], ["a2", nil], ["a3", nil], ["a4", nil], ["ask", "Do you and your family have a permanent and stable place to live?"], ["category", "Housing"], ["created_at", Tue, 16 Oct 2012 06:00:18 UTC +00:00], ["follow", false], ["follows", nil], ["order", 1], ["updated_at", Tue, 16 Oct 2012 06:00:18 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Oct 2012 06:00:18 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 1], ["reply", "Yes"], ["resource", nil], ["resource_bool", false], ["updated_at", Tue, 16 Oct 2012 06:00:18 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Oct 2012 06:00:18 UTC +00:00], ["followup", nil], ["hasfq", true], ["question", 1], ["reply", "No"], ["resource", nil], ["resource_bool", nil], ["updated_at", Tue, 16 Oct 2012 06:00:18 UTC +00:00]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "answers" SET "resource_bool" = 'f', "updated_at" = '2012-10-16 06:00:18.324027' WHERE "answers"."id" = 2
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/questions/main?follow=true&followUps%5B%5D%5BanswerID%5D=2&followUps%5B%5D%5Bchoice%5D=No&followUps%5B%5D%5Bquestion%5D=Do+you+and+your+family+have+a+permanent+and+stable+place+to+live%3F
+Completed 302 Found in 48ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/questions/main?follow=true&followUps%5B%5D%5BanswerID%5D=2&followUps%5B%5D%5Bchoice%5D=No&followUps%5B%5D%5Bquestion%5D=Do+you+and+your+family+have+a+permanent+and+stable+place+to+live%3F" for 127.0.0.1 at 2012-10-15 23:00:18 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"true", "followUps"=>[{"answerID"=>"2", "choice"=>"No", "question"=>"Do you and your family have a permanent and stable place to live?"}]}
+  Rendered questions/main.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 40ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/questions/add" for 127.0.0.1 at 2012-10-15 23:03:55 -0700
+Processing by QuestionsController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XS/YDYJ3rr24uOG36J3l9AEMzgvToX2FUbcd3kNzqak=", "follow"=>"true", "follows"=>"2", "followUps"=>"[]", "quest"=>"Are you in immediate need of housing?", "order"=>"", "category"=>"Housing", "answer1"=>"Yes", "answer1_follow"=>"yes", "resource1_follow"=>"yes", "resource1_name"=>"Samaritan House", "resource1_address1"=>"401 Humboldt Street", "resource1_address2"=>"", "resource1_city"=>"San Mateo", "resource1_zip"=>"94401", "resource1_phone1"=>"650", "resource1_phone2"=>"347", "resource1_phone3"=>"3648", "resource1_website"=>"http://www.samaritanhouse.com/new/home/index.shtml", "resource1_area"=>"", "answer2"=>"No", "answer2_follow"=>"yes", "resource2_follow"=>"yes", "resource2_name"=>"Instructions", "resource2_address1"=>"none", "resource2_address2"=>"", "resource2_city"=>"", "resource2_zip"=>"", "resource2_phone1"=>"", "resource2_phone2"=>"", "resource2_phone3"=>"", "resource2_website"=>"", "resource2_area"=>"Your child's doctor and the Family Advocacy Program may be able to help your family. Please discuss this with your child's doctor. ", "answer3"=>"", "answer3_follow"=>"no", "resource3_follow"=>"no", "resource3_name"=>"", "resource3_address1"=>"", "resource3_address2"=>"", "resource3_city"=>"", "resource3_zip"=>"", "resource3_phone1"=>"", "resource3_phone2"=>"", "resource3_phone3"=>"", "resource3_website"=>"", "resource3_area"=>"", "answer4"=>"", "answer4_follow"=>"no", "resource4_follow"=>"no", "resource4_name"=>"", "resource4_address1"=>"", "resource4_address2"=>"", "resource4_city"=>"", "resource4_zip"=>"", "resource4_phone1"=>"", "resource4_phone2"=>"", "resource4_phone3"=>"", "resource4_website"=>"", "resource4_area"=>"", "commit"=>"Save"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "questions" ("a1", "a2", "a3", "a4", "ask", "category", "created_at", "follow", "follows", "order", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["a1", nil], ["a2", nil], ["a3", nil], ["a4", nil], ["ask", "Are you in immediate need of housing?"], ["category", "Housing"], ["created_at", Tue, 16 Oct 2012 06:03:55 UTC +00:00], ["follow", true], ["follows", 2], ["order", nil], ["updated_at", Tue, 16 Oct 2012 06:03:55 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Oct 2012 06:03:55 UTC +00:00], ["followup", nil], ["hasfq", true], ["question", 2], ["reply", "Yes"], ["resource", nil], ["resource_bool", nil], ["updated_at", Tue, 16 Oct 2012 06:03:55 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "answers" SET "resource_bool" = 't', "updated_at" = '2012-10-16 06:03:55.602847' WHERE "answers"."id" = 3[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "resources" ("address1", "address2", "answer_id", "city", "created_at", "gmaps", "instructions", "latitude", "longitude", "name", "phone1", "phone2", "phone3", "updated_at", "website", "zipcode") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["address1", "401 Humboldt Street"], ["address2", ""], ["answer_id", 3], ["city", "San Mateo"], ["created_at", Tue, 16 Oct 2012 06:03:56 UTC +00:00], ["gmaps", true], ["instructions", ""], ["latitude", 37.5775586], ["longitude", -122.3249127], ["name", "Samaritan House"], ["phone1", 650], ["phone2", 347], ["phone3", 3648], ["updated_at", Tue, 16 Oct 2012 06:03:56 UTC +00:00], ["website", "http://www.samaritanhouse.com/new/home/index.shtml"], ["zipcode", "94401"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Oct 2012 06:03:56 UTC +00:00], ["followup", nil], ["hasfq", true], ["question", 2], ["reply", "No"], ["resource", nil], ["resource_bool", nil], ["updated_at", Tue, 16 Oct 2012 06:03:56 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "answers" SET "resource_bool" = 't', "updated_at" = '2012-10-16 06:03:56.116820' WHERE "answers"."id" = 4
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "resources" ("address1", "address2", "answer_id", "city", "created_at", "gmaps", "instructions", "latitude", "longitude", "name", "phone1", "phone2", "phone3", "updated_at", "website", "zipcode") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address1", "none"], ["address2", ""], ["answer_id", 4], ["city", ""], ["created_at", Tue, 16 Oct 2012 06:03:56 UTC +00:00], ["gmaps", true], ["instructions", "Your child's doctor and the Family Advocacy Program may be able to help your family. Please discuss this with your child's doctor. "], ["latitude", 33.8499292], ["longitude", -88.4509873], ["name", "Instructions"], ["phone1", nil], ["phone2", nil], ["phone3", nil], ["updated_at", Tue, 16 Oct 2012 06:03:56 UTC +00:00], ["website", ""], ["zipcode", ""]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/questions/main?follow=true&followUps%5B%5D%5BanswerID%5D=3&followUps%5B%5D%5Bchoice%5D=Yes&followUps%5B%5D%5Bquestion%5D=Are+you+in+immediate+need+of+housing%3F&followUps%5B%5D%5BanswerID%5D=4&followUps%5B%5D%5Bchoice%5D=No&followUps%5B%5D%5Bquestion%5D=Are+you+in+immediate+need+of+housing%3F
+Completed 302 Found in 640ms (ActiveRecord: 11.3ms)
+
+
+Started GET "/questions/main?follow=true&followUps%5B%5D%5BanswerID%5D=3&followUps%5B%5D%5Bchoice%5D=Yes&followUps%5B%5D%5Bquestion%5D=Are+you+in+immediate+need+of+housing%3F&followUps%5B%5D%5BanswerID%5D=4&followUps%5B%5D%5Bchoice%5D=No&followUps%5B%5D%5Bquestion%5D=Are+you+in+immediate+need+of+housing%3F" for 127.0.0.1 at 2012-10-15 23:03:56 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"true", "followUps"=>[{"answerID"=>"3", "choice"=>"Yes", "question"=>"Are you in immediate need of housing?"}, {"answerID"=>"4", "choice"=>"No", "question"=>"Are you in immediate need of housing?"}]}
+  Rendered questions/main.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/questions/add" for 127.0.0.1 at 2012-10-15 23:05:13 -0700
+Processing by QuestionsController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZtQVvNxARDUK9NpBHvbUR+EXwD5asmgLHixOYfE3gRk=", "follow"=>"true", "follows"=>"3", "followUps"=>"[{\"answerID\":\"4\",\"choice\":\"No\",\"question\":\"Are you in immediate need of housing?\"}]", "quest"=>"Are you worried about eviction or foreclosure?", "order"=>"", "category"=>"Housing", "answer1"=>"Yes", "answer1_follow"=>"no", "resource1_follow"=>"yes", "resource1_name"=>"Instructions", "resource1_address1"=>"none", "resource1_address2"=>"", "resource1_city"=>"", "resource1_zip"=>"", "resource1_phone1"=>"", "resource1_phone2"=>"", "resource1_phone3"=>"", "resource1_website"=>"", "resource1_area"=>"The Family Advocacy Program may be able to help your family. Please discuss this with your child's doctor. ", "answer2"=>"No", "answer2_follow"=>"no", "resource2_follow"=>"no", "resource2_name"=>"", "resource2_address1"=>"", "resource2_address2"=>"", "resource2_city"=>"", "resource2_zip"=>"", "resource2_phone1"=>"", "resource2_phone2"=>"", "resource2_phone3"=>"", "resource2_website"=>"", "resource2_area"=>"", "answer3"=>"", "answer3_follow"=>"no", "resource3_follow"=>"no", "resource3_name"=>"", "resource3_address1"=>"", "resource3_address2"=>"", "resource3_city"=>"", "resource3_zip"=>"", "resource3_phone1"=>"", "resource3_phone2"=>"", "resource3_phone3"=>"", "resource3_website"=>"", "resource3_area"=>"", "answer4"=>"", "answer4_follow"=>"no", "resource4_follow"=>"no", "resource4_name"=>"", "resource4_address1"=>"", "resource4_address2"=>"", "resource4_city"=>"", "resource4_zip"=>"", "resource4_phone1"=>"", "resource4_phone2"=>"", "resource4_phone3"=>"", "resource4_website"=>"", "resource4_area"=>"", "commit"=>"Save"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "questions" ("a1", "a2", "a3", "a4", "ask", "category", "created_at", "follow", "follows", "order", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["a1", nil], ["a2", nil], ["a3", nil], ["a4", nil], ["ask", "Are you worried about eviction or foreclosure?"], ["category", "Housing"], ["created_at", Tue, 16 Oct 2012 06:05:13 UTC +00:00], ["follow", true], ["follows", 3], ["order", nil], ["updated_at", Tue, 16 Oct 2012 06:05:13 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Oct 2012 06:05:13 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 3], ["reply", "Yes"], ["resource", nil], ["resource_bool", true], ["updated_at", Tue, 16 Oct 2012 06:05:13 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "resources" ("address1", "address2", "answer_id", "city", "created_at", "gmaps", "instructions", "latitude", "longitude", "name", "phone1", "phone2", "phone3", "updated_at", "website", "zipcode") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["address1", "none"], ["address2", ""], ["answer_id", 5], ["city", ""], ["created_at", Tue, 16 Oct 2012 06:05:14 UTC +00:00], ["gmaps", true], ["instructions", "The Family Advocacy Program may be able to help your family. Please discuss this with your child's doctor. "], ["latitude", 33.8499292], ["longitude", -88.4509873], ["name", "Instructions"], ["phone1", nil], ["phone2", nil], ["phone3", nil], ["updated_at", Tue, 16 Oct 2012 06:05:14 UTC +00:00], ["website", ""], ["zipcode", ""]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Oct 2012 06:05:14 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 3], ["reply", "No"], ["resource", nil], ["resource_bool", false], ["updated_at", Tue, 16 Oct 2012 06:05:14 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/questions/main?follow=true&followUps%5B%5D%5BanswerID%5D=4&followUps%5B%5D%5Bchoice%5D=No&followUps%5B%5D%5Bquestion%5D=Are+you+in+immediate+need+of+housing%3F
+Completed 302 Found in 515ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/questions/main?follow=true&followUps%5B%5D%5BanswerID%5D=4&followUps%5B%5D%5Bchoice%5D=No&followUps%5B%5D%5Bquestion%5D=Are+you+in+immediate+need+of+housing%3F" for 127.0.0.1 at 2012-10-15 23:05:14 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"true", "followUps"=>[{"answerID"=>"4", "choice"=>"No", "question"=>"Are you in immediate need of housing?"}]}
+  Rendered questions/main.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/questions/add" for 127.0.0.1 at 2012-10-15 23:05:44 -0700
+Processing by QuestionsController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"crfSxfhQNh0oqgcEEDGa9TaGwvrWPrbBL+fUzgWxc3M=", "follow"=>"true", "follows"=>"4", "followUps"=>"[]", "quest"=>"Are you worried about eviction or foreclosure?", "order"=>"", "category"=>"Housing", "answer1"=>"Yes", "answer1_follow"=>"no", "resource1_follow"=>"yes", "resource1_name"=>"Instructions", "resource1_address1"=>"none", "resource1_address2"=>"", "resource1_city"=>"", "resource1_zip"=>"", "resource1_phone1"=>"", "resource1_phone2"=>"", "resource1_phone3"=>"", "resource1_website"=>"", "resource1_area"=>"The Family Advocacy Program may be able to help your family. Please discuss this with your child's doctor. ", "answer2"=>"No", "answer2_follow"=>"no", "resource2_follow"=>"no", "resource2_name"=>"", "resource2_address1"=>"", "resource2_address2"=>"", "resource2_city"=>"", "resource2_zip"=>"", "resource2_phone1"=>"", "resource2_phone2"=>"", "resource2_phone3"=>"", "resource2_website"=>"", "resource2_area"=>"", "answer3"=>"", "answer3_follow"=>"no", "resource3_follow"=>"no", "resource3_name"=>"", "resource3_address1"=>"", "resource3_address2"=>"", "resource3_city"=>"", "resource3_zip"=>"", "resource3_phone1"=>"", "resource3_phone2"=>"", "resource3_phone3"=>"", "resource3_website"=>"", "resource3_area"=>"", "answer4"=>"", "answer4_follow"=>"no", "resource4_follow"=>"no", "resource4_name"=>"", "resource4_address1"=>"", "resource4_address2"=>"", "resource4_city"=>"", "resource4_zip"=>"", "resource4_phone1"=>"", "resource4_phone2"=>"", "resource4_phone3"=>"", "resource4_website"=>"", "resource4_area"=>"", "commit"=>"Save"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "questions" ("a1", "a2", "a3", "a4", "ask", "category", "created_at", "follow", "follows", "order", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["a1", nil], ["a2", nil], ["a3", nil], ["a4", nil], ["ask", "Are you worried about eviction or foreclosure?"], ["category", "Housing"], ["created_at", Tue, 16 Oct 2012 06:05:44 UTC +00:00], ["follow", true], ["follows", 4], ["order", nil], ["updated_at", Tue, 16 Oct 2012 06:05:44 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Oct 2012 06:05:44 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 4], ["reply", "Yes"], ["resource", nil], ["resource_bool", true], ["updated_at", Tue, 16 Oct 2012 06:05:44 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "resources" ("address1", "address2", "answer_id", "city", "created_at", "gmaps", "instructions", "latitude", "longitude", "name", "phone1", "phone2", "phone3", "updated_at", "website", "zipcode") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["address1", "none"], ["address2", ""], ["answer_id", 7], ["city", ""], ["created_at", Tue, 16 Oct 2012 06:05:44 UTC +00:00], ["gmaps", true], ["instructions", "The Family Advocacy Program may be able to help your family. Please discuss this with your child's doctor. "], ["latitude", 33.8499292], ["longitude", -88.4509873], ["name", "Instructions"], ["phone1", nil], ["phone2", nil], ["phone3", nil], ["updated_at", Tue, 16 Oct 2012 06:05:44 UTC +00:00], ["website", ""], ["zipcode", ""]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Oct 2012 06:05:44 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 4], ["reply", "No"], ["resource", nil], ["resource_bool", false], ["updated_at", Tue, 16 Oct 2012 06:05:44 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/questions/main?follow=false
+Completed 302 Found in 170ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/questions/main?follow=false" for 127.0.0.1 at 2012-10-15 23:05:44 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false"}
+  Rendered questions/main.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 12ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-15 23:06:19 -0700
+Processing by LoginController#main as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)  [["answers", ""], ["created_at", Tue, 16 Oct 2012 06:06:19 UTC +00:00], ["updated_at", Tue, 16 Oct 2012 06:06:19 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-15 23:06:22 -0700
+Processing by LoginController#main as HTML
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["answers", ""], ["created_at", Tue, 16 Oct 2012 06:06:22 UTC +00:00], ["updated_at", Tue, 16 Oct 2012 06:06:22 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  Rendered login/main.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 14ms (Views: 9.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-15 23:06:24 -0700
+Processing by LoginController#main as HTML
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)  [["answers", ""], ["created_at", Tue, 16 Oct 2012 06:06:24 UTC +00:00], ["updated_at", Tue, 16 Oct 2012 06:06:24 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&number=0&patient=4" for 127.0.0.1 at 2012-10-15 23:06:27 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"4"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "patients" SET "answers" = ':0', "updated_at" = '2012-10-16 06:06:27.143295' WHERE "patients"."id" = 4
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 1
+  Rendered survey/view.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 23ms (Views: 18.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-15 23:06:27 -0700
+Served asset /survey_questions.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/survey/map?answer=2&follow=true&number=1&patient=4" for 127.0.0.1 at 2012-10-15 23:06:37 -0700
+Processing by SurveyController#map as HTML
+  Parameters: {"answer"=>"2", "follow"=>"true", "number"=>"1", "patient"=>"4"}
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 2[0m
+  [1m[35mResources Load (0.1ms)[0m  SELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 2
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `address1' for nil:NilClass):
+  app/controllers/survey_controller.rb:48:in `map'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.1ms)
+
+
+Started GET "/survey/map?answer=2&follow=true&number=1&patient=4" for 127.0.0.1 at 2012-10-15 23:07:43 -0700
+Processing by SurveyController#map as HTML
+  Parameters: {"answer"=>"2", "follow"=>"true", "number"=>"1", "patient"=>"4"}
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 2[0m
+  [1m[35mResources Load (0.1ms)[0m  SELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 2
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `address1' for nil:NilClass):
+  app/controllers/survey_controller.rb:48:in `map'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.9ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" integer, "reply" varchar(255), "resource" integer, "followup" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "hasfq" boolean, "resource_bool" boolean) 
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "patients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "answers" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ask" text, "follows" integer, "order" integer, "a1" integer, "a2" integer, "a3" integer, "a4" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "follow" boolean, "category" varchar(255)) 
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "address1" text, "address2" text, "city" text, "zipcode" text, "phone1" integer, "phone2" integer, "phone3" integer, "website" text, "instructions" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "answer_id" integer, "latitude" float, "longitude" float, "gmaps" boolean) [0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35m (0.9ms)[0m  CREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_sessions_on_session_id')
+  [1m[36m (0.8ms)[0m  [1mCREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121015054857')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120907232722')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120907232921')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120910215729')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120911033303')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120911044831')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120927223527')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120927223652')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120927231337')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120928034357')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121015050901')
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateQuestions (20120907232722)
+Migrating to CreateAnswers (20120907232921)
+Migrating to AddFollowToQuestions (20120910215729)
+Migrating to AddSessionsTable (20120911033303)
+Migrating to AddHasfqToAnswers (20120911044831)
+Migrating to CreateResources (20120927223527)
+Migrating to AddAnswerIdToResources (20120927223652)
+Migrating to AddResourceBoolToAnswers (20120927231337)
+Migrating to AddGMapsToResources (20120928034357)
+Migrating to AddCategoryToQuestions (20121015050901)
+Migrating to CreatePatients (20121015054857)
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("answers")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("patients")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("questions")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("resources")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("sessions")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_sessions_on_session_id')
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-15 23:09:22 -0700
+Processing by LoginController#main as HTML
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)  [["answers", ""], ["created_at", Tue, 16 Oct 2012 06:09:22 UTC +00:00], ["updated_at", Tue, 16 Oct 2012 06:09:22 UTC +00:00]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 11.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/questions/main?follow=false" for 127.0.0.1 at 2012-10-15 23:09:24 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false"}
+  Rendered questions/main.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-15 23:34:58 -0700
+Processing by LoginController#main as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["answers", ""], ["created_at", Tue, 16 Oct 2012 06:34:58 UTC +00:00], ["updated_at", Tue, 16 Oct 2012 06:34:58 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  Rendered login/main.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/questions/main?follow=false" for 127.0.0.1 at 2012-10-15 23:35:01 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false"}
+  Rendered questions/main.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/questions/add" for 127.0.0.1 at 2012-10-15 23:35:59 -0700
+Processing by QuestionsController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TDQyz8HrVfUBwHl8cr3zZNACU5rOGuEPhJ8CBILH17Y=", "follow"=>"false", "quest"=>"Do you and your family have a permanent and stable place to live?", "order"=>"4", "category"=>"Housing", "answer1"=>"Yes", "answer1_follow"=>"no", "resource1_follow"=>"no", "resource1_name"=>"", "resource1_address1"=>"", "resource1_address2"=>"", "resource1_city"=>"", "resource1_zip"=>"", "resource1_phone1"=>"", "resource1_phone2"=>"", "resource1_phone3"=>"", "resource1_website"=>"", "resource1_area"=>"", "answer2"=>"No", "answer2_follow"=>"yes", "resource2_follow"=>"no", "resource2_name"=>"", "resource2_address1"=>"", "resource2_address2"=>"", "resource2_city"=>"", "resource2_zip"=>"", "resource2_phone1"=>"", "resource2_phone2"=>"", "resource2_phone3"=>"", "resource2_website"=>"", "resource2_area"=>"", "answer3"=>"", "answer3_follow"=>"no", "resource3_follow"=>"no", "resource3_name"=>"", "resource3_address1"=>"", "resource3_address2"=>"", "resource3_city"=>"", "resource3_zip"=>"", "resource3_phone1"=>"", "resource3_phone2"=>"", "resource3_phone3"=>"", "resource3_website"=>"", "resource3_area"=>"", "answer4"=>"", "answer4_follow"=>"no", "resource4_follow"=>"no", "resource4_name"=>"", "resource4_address1"=>"", "resource4_address2"=>"", "resource4_city"=>"", "resource4_zip"=>"", "resource4_phone1"=>"", "resource4_phone2"=>"", "resource4_phone3"=>"", "resource4_website"=>"", "resource4_area"=>"", "commit"=>"Save"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "questions" ("a1", "a2", "a3", "a4", "ask", "category", "created_at", "follow", "follows", "order", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["a1", nil], ["a2", nil], ["a3", nil], ["a4", nil], ["ask", "Do you and your family have a permanent and stable place to live?"], ["category", "Housing"], ["created_at", Tue, 16 Oct 2012 06:35:59 UTC +00:00], ["follow", false], ["follows", nil], ["order", 4], ["updated_at", Tue, 16 Oct 2012 06:35:59 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Oct 2012 06:35:59 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 1], ["reply", "Yes"], ["resource", nil], ["resource_bool", false], ["updated_at", Tue, 16 Oct 2012 06:35:59 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Oct 2012 06:35:59 UTC +00:00], ["followup", nil], ["hasfq", true], ["question", 1], ["reply", "No"], ["resource", nil], ["resource_bool", nil], ["updated_at", Tue, 16 Oct 2012 06:35:59 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "answers" SET "resource_bool" = 'f', "updated_at" = '2012-10-16 06:35:59.104150' WHERE "answers"."id" = 2[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/questions/main?follow=true&followUps%5B%5D%5BanswerID%5D=2&followUps%5B%5D%5Bchoice%5D=No&followUps%5B%5D%5Bquestion%5D=Do+you+and+your+family+have+a+permanent+and+stable+place+to+live%3F
+Completed 302 Found in 42ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/questions/main?follow=true&followUps%5B%5D%5BanswerID%5D=2&followUps%5B%5D%5Bchoice%5D=No&followUps%5B%5D%5Bquestion%5D=Do+you+and+your+family+have+a+permanent+and+stable+place+to+live%3F" for 127.0.0.1 at 2012-10-15 23:35:59 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"true", "followUps"=>[{"answerID"=>"2", "choice"=>"No", "question"=>"Do you and your family have a permanent and stable place to live?"}]}
+  Rendered questions/main.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/questions/add" for 127.0.0.1 at 2012-10-15 23:40:07 -0700
+Processing by QuestionsController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0qgioqL+tRqLUvjshTHlf5Zt4et4YsbGCoDFEo+hDsQ=", "follow"=>"true", "follows"=>"2", "followUps"=>"[]", "quest"=>"Are you in immediate need of housing?", "order"=>"", "category"=>"Housing", "answer1"=>"Yes", "answer1_follow"=>"yes", "resource1_follow"=>"yes", "resource1_name"=>"Samaritan House", "resource1_address1"=>"401 Humboldt Street", "resource1_address2"=>"", "resource1_city"=>"San Mateo", "resource1_zip"=>"94401", "resource1_phone1"=>"650", "resource1_phone2"=>"347", "resource1_phone3"=>"3648", "resource1_website"=>"http://www.samaritanhouse.com/new/home/index.shtml", "resource1_area"=>"", "answer2"=>"No", "answer2_follow"=>"yes", "resource2_follow"=>"yes", "resource2_name"=>"Instructions", "resource2_address1"=>"none", "resource2_address2"=>"", "resource2_city"=>"", "resource2_zip"=>"", "resource2_phone1"=>"", "resource2_phone2"=>"", "resource2_phone3"=>"", "resource2_website"=>"", "resource2_area"=>"Your child's doctor and the Family Advocacy Program may be able to help your family. Please discuss this with your child's doctor. ", "answer3"=>"", "answer3_follow"=>"no", "resource3_follow"=>"no", "resource3_name"=>"", "resource3_address1"=>"", "resource3_address2"=>"", "resource3_city"=>"", "resource3_zip"=>"", "resource3_phone1"=>"", "resource3_phone2"=>"", "resource3_phone3"=>"", "resource3_website"=>"", "resource3_area"=>"", "answer4"=>"", "answer4_follow"=>"no", "resource4_follow"=>"no", "resource4_name"=>"", "resource4_address1"=>"", "resource4_address2"=>"", "resource4_city"=>"", "resource4_zip"=>"", "resource4_phone1"=>"", "resource4_phone2"=>"", "resource4_phone3"=>"", "resource4_website"=>"", "resource4_area"=>"", "commit"=>"Save"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "questions" ("a1", "a2", "a3", "a4", "ask", "category", "created_at", "follow", "follows", "order", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["a1", nil], ["a2", nil], ["a3", nil], ["a4", nil], ["ask", "Are you in immediate need of housing?"], ["category", "Housing"], ["created_at", Tue, 16 Oct 2012 06:40:07 UTC +00:00], ["follow", true], ["follows", 2], ["order", nil], ["updated_at", Tue, 16 Oct 2012 06:40:07 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Oct 2012 06:40:07 UTC +00:00], ["followup", nil], ["hasfq", true], ["question", 2], ["reply", "Yes"], ["resource", nil], ["resource_bool", nil], ["updated_at", Tue, 16 Oct 2012 06:40:07 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "answers" SET "resource_bool" = 't', "updated_at" = '2012-10-16 06:40:07.067596' WHERE "answers"."id" = 3
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "resources" ("address1", "address2", "answer_id", "city", "created_at", "gmaps", "instructions", "latitude", "longitude", "name", "phone1", "phone2", "phone3", "updated_at", "website", "zipcode") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address1", "401 Humboldt Street"], ["address2", ""], ["answer_id", 3], ["city", "San Mateo"], ["created_at", Tue, 16 Oct 2012 06:40:07 UTC +00:00], ["gmaps", true], ["instructions", ""], ["latitude", 37.5775586], ["longitude", -122.3249127], ["name", "Samaritan House"], ["phone1", 650], ["phone2", 347], ["phone3", 3648], ["updated_at", Tue, 16 Oct 2012 06:40:07 UTC +00:00], ["website", "http://www.samaritanhouse.com/new/home/index.shtml"], ["zipcode", "94401"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Oct 2012 06:40:07 UTC +00:00], ["followup", nil], ["hasfq", true], ["question", 2], ["reply", "No"], ["resource", nil], ["resource_bool", nil], ["updated_at", Tue, 16 Oct 2012 06:40:07 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "answers" SET "resource_bool" = 't', "updated_at" = '2012-10-16 06:40:07.592277' WHERE "answers"."id" = 4[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "resources" ("address1", "address2", "answer_id", "city", "created_at", "gmaps", "instructions", "latitude", "longitude", "name", "phone1", "phone2", "phone3", "updated_at", "website", "zipcode") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["address1", "none"], ["address2", ""], ["answer_id", 4], ["city", ""], ["created_at", Tue, 16 Oct 2012 06:40:07 UTC +00:00], ["gmaps", true], ["instructions", "Your child's doctor and the Family Advocacy Program may be able to help your family. Please discuss this with your child's doctor. "], ["latitude", 33.8499292], ["longitude", -88.4509873], ["name", "Instructions"], ["phone1", nil], ["phone2", nil], ["phone3", nil], ["updated_at", Tue, 16 Oct 2012 06:40:07 UTC +00:00], ["website", ""], ["zipcode", ""]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/questions/main?follow=true&followUps%5B%5D%5BanswerID%5D=3&followUps%5B%5D%5Bchoice%5D=Yes&followUps%5B%5D%5Bquestion%5D=Are+you+in+immediate+need+of+housing%3F&followUps%5B%5D%5BanswerID%5D=4&followUps%5B%5D%5Bchoice%5D=No&followUps%5B%5D%5Bquestion%5D=Are+you+in+immediate+need+of+housing%3F
+Completed 302 Found in 647ms (ActiveRecord: 12.6ms)
+
+
+Started GET "/questions/main?follow=true&followUps%5B%5D%5BanswerID%5D=3&followUps%5B%5D%5Bchoice%5D=Yes&followUps%5B%5D%5Bquestion%5D=Are+you+in+immediate+need+of+housing%3F&followUps%5B%5D%5BanswerID%5D=4&followUps%5B%5D%5Bchoice%5D=No&followUps%5B%5D%5Bquestion%5D=Are+you+in+immediate+need+of+housing%3F" for 127.0.0.1 at 2012-10-15 23:40:07 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"true", "followUps"=>[{"answerID"=>"3", "choice"=>"Yes", "question"=>"Are you in immediate need of housing?"}, {"answerID"=>"4", "choice"=>"No", "question"=>"Are you in immediate need of housing?"}]}
+  Rendered questions/main.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/questions/add" for 127.0.0.1 at 2012-10-15 23:43:59 -0700
+Processing by QuestionsController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hTXWAdKfIqL52VfH9npnRQQWPMadTZKbjAlETgmXKL0=", "follow"=>"true", "follows"=>"3", "followUps"=>"[{\"answerID\":\"4\",\"choice\":\"No\",\"question\":\"Are you in immediate need of housing?\"}]", "quest"=>"Are you worried about eviction or foreclosure?", "order"=>"", "category"=>"Housing", "answer1"=>"Yes", "answer1_follow"=>"no", "resource1_follow"=>"yes", "resource1_name"=>"Instructions", "resource1_address1"=>"none", "resource1_address2"=>"", "resource1_city"=>"", "resource1_zip"=>"", "resource1_phone1"=>"", "resource1_phone2"=>"", "resource1_phone3"=>"", "resource1_website"=>"", "resource1_area"=>"The Family Advocacy Program may be able to help your family. Please discuss this with your child's doctor. ", "answer2"=>"No", "answer2_follow"=>"no", "resource2_follow"=>"no", "resource2_name"=>"", "resource2_address1"=>"", "resource2_address2"=>"", "resource2_city"=>"", "resource2_zip"=>"", "resource2_phone1"=>"", "resource2_phone2"=>"", "resource2_phone3"=>"", "resource2_website"=>"", "resource2_area"=>"", "answer3"=>"", "answer3_follow"=>"no", "resource3_follow"=>"no", "resource3_name"=>"", "resource3_address1"=>"", "resource3_address2"=>"", "resource3_city"=>"", "resource3_zip"=>"", "resource3_phone1"=>"", "resource3_phone2"=>"", "resource3_phone3"=>"", "resource3_website"=>"", "resource3_area"=>"", "answer4"=>"", "answer4_follow"=>"no", "resource4_follow"=>"no", "resource4_name"=>"", "resource4_address1"=>"", "resource4_address2"=>"", "resource4_city"=>"", "resource4_zip"=>"", "resource4_phone1"=>"", "resource4_phone2"=>"", "resource4_phone3"=>"", "resource4_website"=>"", "resource4_area"=>"", "commit"=>"Save"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("a1", "a2", "a3", "a4", "ask", "category", "created_at", "follow", "follows", "order", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["a1", nil], ["a2", nil], ["a3", nil], ["a4", nil], ["ask", "Are you worried about eviction or foreclosure?"], ["category", "Housing"], ["created_at", Tue, 16 Oct 2012 06:43:59 UTC +00:00], ["follow", true], ["follows", 3], ["order", nil], ["updated_at", Tue, 16 Oct 2012 06:43:59 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Oct 2012 06:43:59 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 3], ["reply", "Yes"], ["resource", nil], ["resource_bool", true], ["updated_at", Tue, 16 Oct 2012 06:43:59 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "resources" ("address1", "address2", "answer_id", "city", "created_at", "gmaps", "instructions", "latitude", "longitude", "name", "phone1", "phone2", "phone3", "updated_at", "website", "zipcode") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address1", "none"], ["address2", ""], ["answer_id", 5], ["city", ""], ["created_at", Tue, 16 Oct 2012 06:44:00 UTC +00:00], ["gmaps", true], ["instructions", "The Family Advocacy Program may be able to help your family. Please discuss this with your child's doctor. "], ["latitude", 33.8499292], ["longitude", -88.4509873], ["name", "Instructions"], ["phone1", nil], ["phone2", nil], ["phone3", nil], ["updated_at", Tue, 16 Oct 2012 06:44:00 UTC +00:00], ["website", ""], ["zipcode", ""]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Oct 2012 06:44:00 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 3], ["reply", "No"], ["resource", nil], ["resource_bool", false], ["updated_at", Tue, 16 Oct 2012 06:44:00 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/questions/main?follow=true&followUps%5B%5D%5BanswerID%5D=4&followUps%5B%5D%5Bchoice%5D=No&followUps%5B%5D%5Bquestion%5D=Are+you+in+immediate+need+of+housing%3F
+Completed 302 Found in 482ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/questions/main?follow=true&followUps%5B%5D%5BanswerID%5D=4&followUps%5B%5D%5Bchoice%5D=No&followUps%5B%5D%5Bquestion%5D=Are+you+in+immediate+need+of+housing%3F" for 127.0.0.1 at 2012-10-15 23:44:00 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"true", "followUps"=>[{"answerID"=>"4", "choice"=>"No", "question"=>"Are you in immediate need of housing?"}]}
+  Rendered questions/main.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/questions/add" for 127.0.0.1 at 2012-10-15 23:44:44 -0700
+Processing by QuestionsController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SFZye7DTwvapZqbvtTc3b39vkZ+xTN2Uu9ID/BTyoww=", "follow"=>"true", "follows"=>"4", "followUps"=>"[]", "quest"=>"Are you worried about eviction or foreclosure?", "order"=>"", "category"=>"Housing", "answer1"=>"Yes", "answer1_follow"=>"no", "resource1_follow"=>"yes", "resource1_name"=>"Instructions", "resource1_address1"=>"none", "resource1_address2"=>"", "resource1_city"=>"", "resource1_zip"=>"", "resource1_phone1"=>"", "resource1_phone2"=>"", "resource1_phone3"=>"", "resource1_website"=>"", "resource1_area"=>"The Family Advocacy Program may be able to help your family. Please discuss this with your child's doctor. ", "answer2"=>"No", "answer2_follow"=>"no", "resource2_follow"=>"no", "resource2_name"=>"", "resource2_address1"=>"", "resource2_address2"=>"", "resource2_city"=>"", "resource2_zip"=>"", "resource2_phone1"=>"", "resource2_phone2"=>"", "resource2_phone3"=>"", "resource2_website"=>"", "resource2_area"=>"", "answer3"=>"", "answer3_follow"=>"no", "resource3_follow"=>"no", "resource3_name"=>"", "resource3_address1"=>"", "resource3_address2"=>"", "resource3_city"=>"", "resource3_zip"=>"", "resource3_phone1"=>"", "resource3_phone2"=>"", "resource3_phone3"=>"", "resource3_website"=>"", "resource3_area"=>"", "answer4"=>"", "answer4_follow"=>"no", "resource4_follow"=>"no", "resource4_name"=>"", "resource4_address1"=>"", "resource4_address2"=>"", "resource4_city"=>"", "resource4_zip"=>"", "resource4_phone1"=>"", "resource4_phone2"=>"", "resource4_phone3"=>"", "resource4_website"=>"", "resource4_area"=>"", "commit"=>"Save"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "questions" ("a1", "a2", "a3", "a4", "ask", "category", "created_at", "follow", "follows", "order", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["a1", nil], ["a2", nil], ["a3", nil], ["a4", nil], ["ask", "Are you worried about eviction or foreclosure?"], ["category", "Housing"], ["created_at", Tue, 16 Oct 2012 06:44:44 UTC +00:00], ["follow", true], ["follows", 4], ["order", nil], ["updated_at", Tue, 16 Oct 2012 06:44:44 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Oct 2012 06:44:44 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 4], ["reply", "Yes"], ["resource", nil], ["resource_bool", true], ["updated_at", Tue, 16 Oct 2012 06:44:44 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "resources" ("address1", "address2", "answer_id", "city", "created_at", "gmaps", "instructions", "latitude", "longitude", "name", "phone1", "phone2", "phone3", "updated_at", "website", "zipcode") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address1", "none"], ["address2", ""], ["answer_id", 7], ["city", ""], ["created_at", Tue, 16 Oct 2012 06:44:44 UTC +00:00], ["gmaps", true], ["instructions", "The Family Advocacy Program may be able to help your family. Please discuss this with your child's doctor. "], ["latitude", 33.8499292], ["longitude", -88.4509873], ["name", "Instructions"], ["phone1", nil], ["phone2", nil], ["phone3", nil], ["updated_at", Tue, 16 Oct 2012 06:44:44 UTC +00:00], ["website", ""], ["zipcode", ""]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Oct 2012 06:44:44 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 4], ["reply", "No"], ["resource", nil], ["resource_bool", false], ["updated_at", Tue, 16 Oct 2012 06:44:44 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/questions/main?follow=false
+Completed 302 Found in 145ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/questions/main?follow=false" for 127.0.0.1 at 2012-10-15 23:44:44 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false"}
+  Rendered questions/main.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 11ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-15 23:44:50 -0700
+Processing by LoginController#main as HTML
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["answers", ""], ["created_at", Tue, 16 Oct 2012 06:44:50 UTC +00:00], ["updated_at", Tue, 16 Oct 2012 06:44:50 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  Rendered login/main.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&number=0&patient=3" for 127.0.0.1 at 2012-10-15 23:44:51 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"3"}
+  [1m[36mPatient Load (0.2ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "patients" SET "answers" = ':0', "updated_at" = '2012-10-16 06:44:51.575509' WHERE "patients"."id" = 3[0m
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'[0m
+Redirected to http://localhost:3000/survey/limit?patient=3
+Completed 302 Found in 6ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/survey/limit?patient=3" for 127.0.0.1 at 2012-10-15 23:44:51 -0700
+Processing by SurveyController#limit as HTML
+  Parameters: {"patient"=>"3"}
+  Rendered survey/limit.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-15 23:44:51 -0700
+Served asset /survey_questions.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&number=0&patient=3" for 127.0.0.1 at 2012-10-15 23:44:54 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"3"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "patients" SET "answers" = ':0:0', "updated_at" = '2012-10-16 06:44:54.849661' WHERE "patients"."id" = 3
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'
+Redirected to http://localhost:3000/survey/limit?patient=3
+Completed 302 Found in 6ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/survey/limit?patient=3" for 127.0.0.1 at 2012-10-15 23:44:54 -0700
+Processing by SurveyController#limit as HTML
+  Parameters: {"patient"=>"3"}
+  Rendered survey/limit.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-15 23:44:54 -0700
+Served asset /survey_questions.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&number=0&patient=3" for 127.0.0.1 at 2012-10-15 23:45:39 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"3"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "patients" SET "answers" = ':0:0:0', "updated_at" = '2012-10-16 06:45:39.788755' WHERE "patients"."id" = 3[0m
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'[0m
+Redirected to http://localhost:3000/survey/limit?patient=3
+Completed 302 Found in 6ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/survey/limit?patient=3" for 127.0.0.1 at 2012-10-15 23:45:39 -0700
+Processing by SurveyController#limit as HTML
+  Parameters: {"patient"=>"3"}
+  Rendered survey/limit.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-15 23:45:39 -0700
+Served asset /survey_questions.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&number=0&patient=3" for 127.0.0.1 at 2012-10-15 23:50:07 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"3"}
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  UPDATE "patients" SET "answers" = ':0:0:0:0', "updated_at" = '2012-10-16 06:50:07.486175' WHERE "patients"."id" = 3
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1
+Redirected to http://localhost:3000/survey/limit?patient=3
+Completed 302 Found in 16ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/survey/limit?patient=3" for 127.0.0.1 at 2012-10-15 23:50:07 -0700
+Processing by SurveyController#limit as HTML
+  Parameters: {"patient"=>"3"}
+  Rendered survey/limit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-15 23:50:07 -0700
+Served asset /survey_questions.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&number=0&patient=3" for 127.0.0.1 at 2012-10-15 23:50:09 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"3"}
+  [1m[36mPatient Load (0.2ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "patients" SET "answers" = ':0:0:0:0:0', "updated_at" = '2012-10-16 06:50:09.945968' WHERE "patients"."id" = 3[0m
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1[0m
+Redirected to http://localhost:3000/survey/limit?patient=3
+Completed 302 Found in 6ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/survey/limit?patient=3" for 127.0.0.1 at 2012-10-15 23:50:09 -0700
+Processing by SurveyController#limit as HTML
+  Parameters: {"patient"=>"3"}
+  Rendered survey/limit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 13ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-15 23:50:09 -0700
+Served asset /survey_questions.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-15 23:50:32 -0700
+Processing by LoginController#main as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["answers", ""], ["created_at", Tue, 16 Oct 2012 06:50:32 UTC +00:00], ["updated_at", Tue, 16 Oct 2012 06:50:32 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  Rendered login/main.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 21ms (Views: 17.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&number=0&patient=3" for 127.0.0.1 at 2012-10-15 23:51:27 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"3"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "patients" SET "answers" = ':0:0:0:0:0:0', "updated_at" = '2012-10-16 06:51:27.554439' WHERE "patients"."id" = 3[0m
+  [1m[35m (2.0ms)[0m  commit transaction
+Order number: 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'[0m
+Redirected to http://localhost:3000/survey/limit?patient=3
+Completed 302 Found in 16ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/survey/limit?patient=3" for 127.0.0.1 at 2012-10-15 23:51:27 -0700
+Processing by SurveyController#limit as HTML
+  Parameters: {"patient"=>"3"}
+  Rendered survey/limit.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 14ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-15 23:51:27 -0700
+Served asset /survey_questions.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&number=0&patient=4" for 127.0.0.1 at 2012-10-15 23:54:35 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"4"}
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "patients" SET "answers" = ':0', "updated_at" = '2012-10-16 06:54:35.374876' WHERE "patients"."id" = 4
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Order number: 1
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 1
+  Rendered survey/view.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 39ms (Views: 23.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-15 23:54:35 -0700
+Served asset /survey_questions.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/survey/view?answer=1&follow=false&number=1&patient=4" for 127.0.0.1 at 2012-10-15 23:54:36 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"1", "follow"=>"false", "number"=>"1", "patient"=>"4"}
+  [1m[36mPatient Load (0.2ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "patients" SET "answers" = ':0:1', "updated_at" = '2012-10-16 06:54:36.598367' WHERE "patients"."id" = 4[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+Order number: 2
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f'[0m
+Redirected to http://localhost:3000/survey/limit?patient=4
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/survey/limit?patient=4" for 127.0.0.1 at 2012-10-15 23:54:36 -0700
+Processing by SurveyController#limit as HTML
+  Parameters: {"patient"=>"4"}
+  Rendered survey/limit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 12ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-15 23:54:36 -0700
+Served asset /survey_questions.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/survey/view?answer=1&follow=false&number=1&patient=4" for 127.0.0.1 at 2012-10-15 23:54:49 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"1", "follow"=>"false", "number"=>"1", "patient"=>"4"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "patients" SET "answers" = ':0:1:1', "updated_at" = '2012-10-16 06:54:49.237912' WHERE "patients"."id" = 4
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Order number: 2
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f'
+Redirected to http://localhost:3000/survey/limit?patient=4
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/survey/limit?patient=4" for 127.0.0.1 at 2012-10-15 23:54:49 -0700
+Processing by SurveyController#limit as HTML
+  Parameters: {"patient"=>"4"}
+  Rendered survey/limit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-15 23:54:49 -0700
+Served asset /survey_questions.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/survey/map?answer=2&follow=true&number=1&patient=4" for 127.0.0.1 at 2012-10-15 23:54:52 -0700
+Processing by SurveyController#map as HTML
+  Parameters: {"answer"=>"2", "follow"=>"true", "number"=>"1", "patient"=>"4"}
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 2[0m
+  [1m[35mResources Load (0.1ms)[0m  SELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 2
+Completed 500 Internal Server Error in 7ms
+
+NoMethodError (undefined method `address1' for nil:NilClass):
+  app/controllers/survey_controller.rb:49:in `map'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.3ms)
+
+
+Started GET "/survey/map?answer=2&follow=true&number=1&patient=4" for 127.0.0.1 at 2012-10-15 23:57:31 -0700
+Processing by SurveyController#map as HTML
+  Parameters: {"answer"=>"2", "follow"=>"true", "number"=>"1", "patient"=>"4"}
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 2[0m
+  [1m[35mResources Load (0.2ms)[0m  SELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 2
+Completed 500 Internal Server Error in 15ms
+
+NoMethodError (undefined method `address1' for nil:NilClass):
+  app/controllers/survey_controller.rb:50:in `map'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.2ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&number=0&patient=4" for 127.0.0.1 at 2012-10-15 23:59:59 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"4"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mUPDATE "patients" SET "answers" = ':0:1:1:0', "updated_at" = '2012-10-16 06:59:59.194789' WHERE "patients"."id" = 4[0m
+  [1m[35m (1.1ms)[0m  commit transaction
+Order number: 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 1[0m
+  Rendered survey/view.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 69ms (Views: 43.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-15 23:59:59 -0700
+Served asset /survey_questions.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/survey/map?answer=2&follow=true&number=1&patient=4" for 127.0.0.1 at 2012-10-16 00:00:00 -0700
+Processing by SurveyController#map as HTML
+  Parameters: {"answer"=>"2", "follow"=>"true", "number"=>"1", "patient"=>"4"}
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 2
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 2[0m
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `address1' for nil:NilClass):
+  app/controllers/survey_controller.rb:50:in `map'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.3ms)
+
+
+Started GET "/survey/map?answer=2&follow=true&number=1&patient=4" for 127.0.0.1 at 2012-10-16 00:01:20 -0700
+Processing by SurveyController#map as HTML
+  Parameters: {"answer"=>"2", "follow"=>"true", "number"=>"1", "patient"=>"4"}
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 2
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 2[0m
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `address1' for nil:NilClass):
+  app/controllers/survey_controller.rb:50:in `map'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.4ms)
+
+
+Started GET "/survey/map?answer=2&follow=true&number=1&patient=4" for 127.0.0.1 at 2012-10-16 00:01:25 -0700
+Processing by SurveyController#map as HTML
+  Parameters: {"answer"=>"2", "follow"=>"true", "number"=>"1", "patient"=>"4"}
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 2
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 2[0m
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `address1' for nil:NilClass):
+  app/controllers/survey_controller.rb:50:in `map'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-16 00:01:53 -0700
+Processing by LoginController#main as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["answers", ""], ["created_at", Tue, 16 Oct 2012 07:01:53 UTC +00:00], ["updated_at", Tue, 16 Oct 2012 07:01:53 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  Rendered login/main.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 21ms (Views: 15.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-16 00:03:56 -0700
+Processing by LoginController#main as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)  [["answers", ""], ["created_at", Tue, 16 Oct 2012 07:03:56 UTC +00:00], ["updated_at", Tue, 16 Oct 2012 07:03:56 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 14ms (Views: 10.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&number=0&patient=6" for 127.0.0.1 at 2012-10-16 00:03:57 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"6"}
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "patients" SET "answers" = ':0', "updated_at" = '2012-10-16 07:03:57.183363' WHERE "patients"."id" = 6
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Order number: 1
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f'[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 1
+  Rendered survey/view.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 21ms (Views: 15.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-16 00:03:57 -0700
+Served asset /survey_questions.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/survey/view?answer=2&follow=true&number=1&patient=6" for 127.0.0.1 at 2012-10-16 00:03:57 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"2", "follow"=>"true", "number"=>"1", "patient"=>"6"}
+  [1m[36mPatient Load (0.2ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "patients" SET "answers" = ':0:2', "updated_at" = '2012-10-16 07:03:57.793566' WHERE "patients"."id" = 6[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+Order number: 2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."follows" = 2 AND "questions"."follow" = 't'[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."follows" = 2 AND "questions"."follow" = 't'
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 2[0m
+  Rendered survey/view.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 20ms (Views: 13.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-16 00:03:57 -0700
+Served asset /survey_questions.css - 404 Not Found (36ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/survey/map?answer=3&number=1&patient=6" for 127.0.0.1 at 2012-10-16 00:04:01 -0700
+Processing by SurveyController#map as HTML
+  Parameters: {"answer"=>"3", "number"=>"1", "patient"=>"6"}
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 3
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 3[0m
+  Rendered survey/map.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 34ms (Views: 16.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-16 00:04:01 -0700
+Served asset /survey_questions.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/survey/view?answer=2&follow=true&number=1&patient=6" for 127.0.0.1 at 2012-10-16 00:04:07 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"2", "follow"=>"true", "number"=>"1", "patient"=>"6"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "patients" SET "answers" = ':0:2:2', "updated_at" = '2012-10-16 07:04:07.492961' WHERE "patients"."id" = 6
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Order number: 2
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."follows" = 2 AND "questions"."follow" = 't'
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."follows" = 2 AND "questions"."follow" = 't'[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 2
+  Rendered survey/view.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 23ms (Views: 15.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-16 00:04:07 -0700
+Served asset /survey_questions.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/survey/view?answer=2&follow=true&number=1&patient=6" for 127.0.0.1 at 2012-10-16 00:04:12 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"2", "follow"=>"true", "number"=>"1", "patient"=>"6"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "patients" SET "answers" = ':0:2:2:2', "updated_at" = '2012-10-16 07:04:12.881256' WHERE "patients"."id" = 6[0m
+  [1m[35m (1.8ms)[0m  commit transaction
+Order number: 2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."follows" = 2 AND "questions"."follow" = 't'[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."follows" = 2 AND "questions"."follow" = 't'
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 2[0m
+  Rendered survey/view.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 22ms (Views: 15.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-16 00:04:12 -0700
+Served asset /survey_questions.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/survey/map?answer=3&number=1&patient=6" for 127.0.0.1 at 2012-10-16 00:04:15 -0700
+Processing by SurveyController#map as HTML
+  Parameters: {"answer"=>"3", "number"=>"1", "patient"=>"6"}
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 3
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 3[0m
+  Rendered survey/map.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-16 00:04:15 -0700
+Served asset /survey_questions.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/survey/view?answer=3&follow=true&number=1&patient=6" for 127.0.0.1 at 2012-10-16 00:04:17 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"3", "follow"=>"true", "number"=>"1", "patient"=>"6"}
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "patients" SET "answers" = ':0:2:2:2:3', "updated_at" = '2012-10-16 07:04:17.245386' WHERE "patients"."id" = 6
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Order number: 3
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."follows" = 3 AND "questions"."follow" = 't'
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."follows" = 3 AND "questions"."follow" = 't'[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 3
+  Rendered survey/view.html.erb within layouts/application (40.7ms)
+Completed 200 OK in 55ms (Views: 48.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-16 00:04:17 -0700
+Served asset /survey_questions.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/survey/map?answer=5&number=1&patient=6" for 127.0.0.1 at 2012-10-16 00:04:20 -0700
+Processing by SurveyController#map as HTML
+  Parameters: {"answer"=>"5", "number"=>"1", "patient"=>"6"}
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 5[0m
+  [1m[35mResources Load (0.1ms)[0m  SELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 5
+  Rendered survey/map.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-16 00:04:20 -0700
+Served asset /survey_questions.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/survey/view?answer=5&follow=false&number=1&patient=6" for 127.0.0.1 at 2012-10-16 00:04:21 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"5", "follow"=>"false", "number"=>"1", "patient"=>"6"}
+  [1m[36mPatient Load (0.2ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "patients" SET "answers" = ':0:2:2:2:3:5', "updated_at" = '2012-10-16 07:04:21.636661' WHERE "patients"."id" = 6[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+Order number: 2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f'[0m
+Redirected to http://localhost:3000/survey/limit?patient=6
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/survey/limit?patient=6" for 127.0.0.1 at 2012-10-16 00:04:21 -0700
+Processing by SurveyController#limit as HTML
+  Parameters: {"patient"=>"6"}
+  Rendered survey/limit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-16 00:04:21 -0700
+Served asset /survey_questions.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)

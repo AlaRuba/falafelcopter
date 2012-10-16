@@ -11,6 +11,7 @@ class SurveyController < ApplicationController
   	if params[:follow] == "false"
   		@number += 1
   		questionArr = nil
+      logger.debug "Order number: #{@number}"
   		questionArr = Question.where(:order => @number, :follow => false)
   		if questionArr.any?
   			@question = questionArr[0]
@@ -20,6 +21,7 @@ class SurveyController < ApplicationController
   		end
   	else
   		answer = params[:answer].to_i
+      logger.debug "Order number: #{answer}"
   		questionArr = nil
   		questionArr = Question.where(:follows => answer, :follow => true)
   		if questionArr.any?
