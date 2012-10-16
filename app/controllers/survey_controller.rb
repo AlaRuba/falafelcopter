@@ -46,5 +46,6 @@ class SurveyController < ApplicationController
     resourceArr = Resources.where(:answer_id => @answer.id)
     @resource = resourceArr[0]
     @address = @resource.address1.gsub(' ', '+') + ',' + @resource.address2.gsub(' ', '+') + ',' + @resource.city.gsub(' ', '+') + ',' + @resource.zipcode
+    @name  = @resource.name
   end
 end

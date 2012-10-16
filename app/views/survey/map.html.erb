@@ -14,5 +14,6 @@
 
 <% image_src = "https://maps.googleapis.com/maps/api/staticmap?center=" + @address + "&zoom=14&size=300x300&markers=" + @address + "&sensor=false"%>
 <%= image_tag(image_src, alt: "Rails") %>
+Name: <%= @name%>
 </p>
 </div>
