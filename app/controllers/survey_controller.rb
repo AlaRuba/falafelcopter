@@ -47,5 +47,6 @@ class SurveyController < ApplicationController
     @resource = resourceArr[0]
     @address = @resource.address1.gsub(' ', '+') + ',' + @resource.address2.gsub(' ', '+') + ',' + @resource.city.gsub(' ', '+') + ',' + @resource.zipcode
     @name  = @resource.name
+    @website = @resource.website
   end
 end
