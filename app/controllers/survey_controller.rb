@@ -1,5 +1,6 @@
 class SurveyController < ApplicationController
   def view
+    @language = params[:language]
   	@number = params[:number].to_i
     id = params[:patient].to_i
     @patient_id = id
@@ -12,25 +13,30 @@ class SurveyController < ApplicationController
   		@number += 1
   		questionArr = nil
       logger.debug "Order number: #{@number}"
-  		questionArr = Question.where(:order => @number, :follow => false)
+  		questionArr = Question.where(:order => @number, :follow => false, :language => @language)
   		if questionArr.any?
   			@question = questionArr[0]
   			@answers = Answer.where(:question => @question.id)
   		else
-  			redirect_to :controller => "survey", :action => "limit", :patient => params[:patient]
+  			redirect_to :controller => "survey", :action => "limit", :patient => params[:patient], :language => params[:language]
   		end
   	else
   		answer = params[:answer].to_i
       logger.debug "Order number: #{answer}"
   		questionArr = nil
-  		questionArr = Question.where(:follows => answer, :follow => true)
+  		questionArr = Question.where(:follows => answer, :follow => true, :language => @language)
   		if questionArr.any?
   			@question = questionArr[0]
   			@answers = Answer.where(:question => @question.id)
   		else
-  			redirect_to :controller => "survey", :action => "limit", :patient => params[:patient]
+  			redirect_to :controller => "survey", :action => "limit", :patient => params[:patient], :language => params[:language]
   		end
   	end
+  end
+
+  def language
+    id = params[:patient].to_i
+    @patient_id = id
   end
 
   def next
@@ -38,6 +44,7 @@ class SurveyController < ApplicationController
 
   def limit
     @patient = params[:patient]
+    
   end
 
   def map

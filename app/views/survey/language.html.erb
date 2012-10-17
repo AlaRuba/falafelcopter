@@ -1,0 +1,8 @@
+<%= stylesheet_link_tag "general"%>
+<div class="container">
+	<br>
+	<p class="centered">
+		<%= link_to "English", {:controller => "survey", :action => "view", :number => 0, :follow => false, :answer => 0, :patient => @patient_id, :language => "English"}  , :class=> "rounded_button login_button"%>
+		<%= link_to "Spanish", {:controller => "survey", :action => "view", :number => 0, :follow => false, :answer => 0, :patient => @patient_id, :language => "Spanish"} , :class=> "rounded_button login_button"%>
+	</p>
+</div>

@@ -42773,3 +42773,1508 @@ Processing by LoginController#main as HTML
   [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
   Rendered login/main.html.erb within layouts/application (2.1ms)
 Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 2.3ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateQuestions (20120907232722)
+Migrating to CreateAnswers (20120907232921)
+Migrating to AddFollowToQuestions (20120910215729)
+Migrating to AddSessionsTable (20120911033303)
+Migrating to AddHasfqToAnswers (20120911044831)
+Migrating to CreateResources (20120927223527)
+Migrating to AddAnswerIdToResources (20120927223652)
+Migrating to AddResourceBoolToAnswers (20120927231337)
+Migrating to AddGMapsToResources (20120928034357)
+Migrating to AddCategoryToQuestions (20121015050901)
+Migrating to CreatePatients (20121015054857)
+Migrating to AddLanguageToQuestions (20121017071025)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  ALTER TABLE "questions" ADD "language" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121017071025')[0m
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("answers")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("patients")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("questions")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("resources")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('index_sessions_on_updated_at')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_sessions_on_session_id')[0m
+Connecting to database specified by database.yml
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-17 00:20:57 -0700
+Processing by LoginController#main as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (6.1ms)[0m  INSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)  [["answers", ""], ["created_at", Wed, 17 Oct 2012 07:20:57 UTC +00:00], ["updated_at", Wed, 17 Oct 2012 07:20:57 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 163ms (Views: 111.9ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/questions/main?follow=false" for 127.0.0.1 at 2012-10-17 00:20:58 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false"}
+  Rendered questions/main.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-17 00:22:03 -0700
+Processing by LoginController#main as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["answers", ""], ["created_at", Wed, 17 Oct 2012 07:22:03 UTC +00:00], ["updated_at", Wed, 17 Oct 2012 07:22:03 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  Rendered login/main.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 22ms
+
+ActionController::RoutingError (No route matches {:controller=>"questions", :action=>"language"}):
+  app/views/login/main.html.erb:5:in `_app_views_login_main_html_erb__351353730823054949_70299863774320'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-17 00:22:08 -0700
+Processing by LoginController#main as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)  [["answers", ""], ["created_at", Wed, 17 Oct 2012 07:22:08 UTC +00:00], ["updated_at", Wed, 17 Oct 2012 07:22:08 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionController::RoutingError (No route matches {:controller=>"questions", :action=>"language"}):
+  app/views/login/main.html.erb:5:in `_app_views_login_main_html_erb__351353730823054949_70299863774320'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-17 00:23:35 -0700
+Processing by LoginController#main as HTML
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["answers", ""], ["created_at", Wed, 17 Oct 2012 07:23:35 UTC +00:00], ["updated_at", Wed, 17 Oct 2012 07:23:35 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  Rendered login/main.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 20ms (Views: 9.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/questions/language" for 127.0.0.1 at 2012-10-17 00:24:13 -0700
+
+AbstractController::ActionNotFound (The action 'language' could not be found for QuestionsController):
+  actionpack (3.2.8) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.8) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__4380716017329910438__call__2885077051403583004__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-17 00:24:53 -0700
+Processing by LoginController#main as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)  [["answers", ""], ["created_at", Wed, 17 Oct 2012 07:24:53 UTC +00:00], ["updated_at", Wed, 17 Oct 2012 07:24:53 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 27ms (Views: 14.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/questions/language" for 127.0.0.1 at 2012-10-17 00:24:54 -0700
+Processing by QuestionsController#language as HTML
+  Rendered questions/language.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 44ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-10-17 00:24:59 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/main?follow=false&language=Spanish" for 127.0.0.1 at 2012-10-17 00:25:03 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"Spanish"}
+  Rendered questions/main.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-10-17 00:25:52 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 11ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-10-17 00:29:29 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-10-17 00:30:53 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+ERROR: compiling _app_views_questions_main_html_erb___2473201409467826041_70299874585880 RAISED /Users/alaruba/stealthmode/app/views/questions/main.html.erb:19: syntax error, unexpected '<'
+  <br>
+   ^
+/Users/alaruba/stealthmode/app/views/questions/main.html.erb:21: syntax error, unexpected '(', expecting ')'
+...('  ');@output_buffer.append= ( text_field_tag(:quest) );@ou...
+...                               ^
+Function body:           def _app_views_questions_main_html_erb___2473201409467826041_70299874585880(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "questions/main";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.append=  form_tag("/questions/add", :method => "post") do @output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <div style="margin:0;padding:0">
+    <input name="utf8" type="hidden" value="&#x2713;" />
+    <input name="authenticity_token" type="hidden" value="f755bb0ed134b76c432144748a6d4b7a7ddf2b71" />
+  </div>
+  ');@output_buffer.append= ( hidden_field_tag :follow, @follow);@output_buffer.safe_concat('
+');   if @follow == "true"
+@output_buffer.safe_concat('    This question is a follow-up to ');@output_buffer.append= ( @followUps[0][:question]);@output_buffer.safe_concat(' if you answer ');@output_buffer.append= ( @followUps[0][:choice]);@output_buffer.safe_concat('.
+    ');@output_buffer.append= ( hidden_field_tag :follows, @followUps[0][:answerID]);@output_buffer.safe_concat('
+');     @followUps.delete_at(0)
+     jsonString = @followUps.to_json
+@output_buffer.safe_concat('    ');@output_buffer.append= ( hidden_field_tag :followUps, jsonString);@output_buffer.safe_concat('
+');   else 
+     hidden_field_tag 'follows', 0
+   end 
+@output_buffer.safe_concat('  <br>
+  ');@output_buffer.append= ( hidden_field_tag :language, @language);@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( @language>
+  <br>
+  <%= label_tag(:quest, "Question:") );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( text_field_tag(:quest) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <br>
+  Order
+  ');@output_buffer.append= ( text_field_tag(:order) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <br>
+  Category
+  ');@output_buffer.append= ( text_field_tag(:category) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <br>
+
+  Answers:
+  <br>
+  <table>
+    <tr>
+      <td>
+      <br>
+      Answer 1
+      ');@output_buffer.append= ( text_field_tag(:answer1) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      <div class="answer1_follow">
+        ');@output_buffer.append= ( radio_button_tag :answer1_follow, "yes" );@output_buffer.safe_concat(' Has follow-up
+        ');@output_buffer.append= ( radio_button_tag :answer1_follow, "no", true );@output_buffer.safe_concat(' No
+        <br>
+        ');@output_buffer.append= ( radio_button_tag :resource1_follow, "yes" );@output_buffer.safe_concat(' Has resource
+        ');@output_buffer.append= ( radio_button_tag :resource1_follow, "no", true );@output_buffer.safe_concat(' No
+      </div>
+      </td>
+      <td>
+      <div class="resource1_follow">
+      <br>
+      Name
+      ');@output_buffer.append= ( text_field_tag(:resource1_name) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      <br>
+      Address Line 1
+      ');@output_buffer.append= ( text_field_tag(:resource1_address1) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      <br>
+      Address Line 2
+      ');@output_buffer.append= ( text_field_tag(:resource1_address2) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      <br>
+      City
+      ');@output_buffer.append= ( text_field_tag(:resource1_city) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      <br>
+      Zipcode
+      ');@output_buffer.append= ( text_field_tag(:resource1_zip) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      <br>
+      Phone Number
+      ');@output_buffer.append= ( text_field_tag :resource1_phone1, nil, :maxlength =>3  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      ');@output_buffer.append= ( text_field_tag :resource1_phone2, nil, :maxlength =>3 );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      ');@output_buffer.append= ( text_field_tag :resource1_phone3, nil, :maxlength =>4  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      <br>
+      Website
+      ');@output_buffer.append= ( text_field_tag(:resource1_website) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      <br>
+      Optional Instructions
+      ');@output_buffer.append= ( text_area_tag(:resource1_area) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </div>
+    </td>
+    </tr>
+    <br>
+    <td>
+  Answer 2
+  ');@output_buffer.append= ( text_field_tag(:answer2) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <div class="answer2_follow">
+    ');@output_buffer.append= ( radio_button_tag :answer2_follow, "yes" );@output_buffer.safe_concat(' Has follow-up
+    ');@output_buffer.append= ( radio_button_tag :answer2_follow, "no", true );@output_buffer.safe_concat(' No
+    <br>
+    ');@output_buffer.append= ( radio_button_tag :resource2_follow, "yes" );@output_buffer.safe_concat(' Has resource
+    ');@output_buffer.append= ( radio_button_tag :resource2_follow, "no", true );@output_buffer.safe_concat(' No
+  </div>
+    </td>
+    <td>
+  <div class="resource1_follow">
+    <br>
+    Name
+    ');@output_buffer.append= ( text_field_tag(:resource2_name) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Address Line 1
+    ');@output_buffer.append= ( text_field_tag(:resource2_address1) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Address Line 2
+    ');@output_buffer.append= ( text_field_tag(:resource2_address2) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    City
+    ');@output_buffer.append= ( text_field_tag(:resource2_city) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Zipcode
+    ');@output_buffer.append= ( text_field_tag(:resource2_zip) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Phone Number
+    ');@output_buffer.append= ( text_field_tag :resource2_phone1, nil, :maxlength =>3  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( text_field_tag :resource2_phone2, nil, :maxlength =>3 );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( text_field_tag :resource2_phone3, nil, :maxlength =>4  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Website
+    ');@output_buffer.append= ( text_field_tag(:resource2_website) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Optional Instructions
+    ');@output_buffer.append= ( text_area_tag(:resource2_area) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+    </td>
+  </tr>
+  <br>
+  <tr>
+    <td>
+  Answer 3
+  ');@output_buffer.append= ( text_field_tag(:answer3) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <div class="answer3_follow">
+    ');@output_buffer.append= ( radio_button_tag :answer3_follow, "yes" );@output_buffer.safe_concat(' Has follow-up
+    ');@output_buffer.append= ( radio_button_tag :answer3_follow, "no", true );@output_buffer.safe_concat(' No
+    <br>
+    ');@output_buffer.append= ( radio_button_tag :resource3_follow, "yes" );@output_buffer.safe_concat(' Has resource
+    ');@output_buffer.append= ( radio_button_tag :resource3_follow, "no", true );@output_buffer.safe_concat(' No
+  </div>
+    </td>
+    <td>
+  <div class="resource1_follow">
+    <br>
+    Name
+    ');@output_buffer.append= ( text_field_tag(:resource3_name) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Address Line 1
+    ');@output_buffer.append= ( text_field_tag(:resource3_address1) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Address Line 2
+    ');@output_buffer.append= ( text_field_tag(:resource3_address2) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    City
+    ');@output_buffer.append= ( text_field_tag(:resource3_city) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Zipcode
+    ');@output_buffer.append= ( text_field_tag(:resource3_zip) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Phone Number
+    ');@output_buffer.append= ( text_field_tag :resource3_phone1, nil, :maxlength =>3  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( text_field_tag :resource3_phone2, nil, :maxlength =>3 );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( text_field_tag :resource3_phone3, nil, :maxlength =>4  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Website
+    ');@output_buffer.append= ( text_field_tag(:resource3_website) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Optional Instructions
+    ');@output_buffer.append= ( text_area_tag(:resource3_area) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+    </td>
+    </tr>
+    <tr>
+    <td>
+  <br>
+  Answer 4
+  ');@output_buffer.append= ( text_field_tag(:answer4) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <br>
+  <div class="answer4_follow">
+    ');@output_buffer.append= ( radio_button_tag :answer4_follow, "yes" );@output_buffer.safe_concat(' Has follow-up
+    ');@output_buffer.append= ( radio_button_tag :answer4_follow, "no", true );@output_buffer.safe_concat(' No
+    <br>
+    ');@output_buffer.append= ( radio_button_tag :resource4_follow, "yes" );@output_buffer.safe_concat(' Has resource
+    ');@output_buffer.append= ( radio_button_tag :resource4_follow, "no", true );@output_buffer.safe_concat(' No
+  </div>
+    </td>
+    <td>
+  <div class="resource1_follow">
+    <br>
+    Name
+    ');@output_buffer.append= ( text_field_tag(:resource4_name) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Address Line 1
+    ');@output_buffer.append= ( text_field_tag(:resource4_address1) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Address Line 2
+    ');@output_buffer.append= ( text_field_tag(:resource4_address2) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    City
+    ');@output_buffer.append= ( text_field_tag(:resource4_city) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Zipcode
+    ');@output_buffer.append= ( text_field_tag(:resource4_zip) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Phone Number
+    ');@output_buffer.append= ( text_field_tag :resource4_phone1, nil, :maxlength =>3  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( text_field_tag :resource4_phone2, nil, :maxlength =>3 );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( text_field_tag :resource4_phone3, nil, :maxlength =>4  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Website
+    ');@output_buffer.append= ( text_field_tag(:resource4_website) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Optional Instructions
+    ');@output_buffer.append= ( text_area_tag(:resource4_area) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+    </td>
+  </tr>
+</table>
+  ');@output_buffer.append= ( submit_tag("Save") );@output_buffer.safe_concat('
+'); end ;@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/template.rb:297:in `module_eval'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/template.rb:297:in `compile'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/template.rb:232:in `compile!'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/template.rb:144:in `block in render'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/notifications.rb:125:in `instrument'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/template.rb:143:in `render'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/notifications.rb:123:in `instrument'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/abstract_controller/rendering.rb:88:in `render'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/alaruba/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.8/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/callbacks.rb:414:in `_run__1307854934509155019__process_action__3165095446960494474__callbacks'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/notifications.rb:123:in `instrument'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.8/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/abstract_controller/base.rb:121:in `process'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal.rb:203:in `dispatch'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal.rb:246:in `block in action'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/routing/route_set.rb:600:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/cookies.rb:339:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.8/lib/active_record/query_cache.rb:64:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/callbacks.rb:405:in `_run__4380716017329910438__call__2885077051403583004__callbacks'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.8/lib/rails/rack/logger.rb:26:in `call_app'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.8/lib/rails/rack/logger.rb:16:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/static.rb:62:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.8/lib/rails/engine.rb:479:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.8/lib/rails/application.rb:223:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/thin-1.4.1/lib/thin/connection.rb:80:in `block in pre_process'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/thin-1.4.1/lib/thin/connection.rb:78:in `catch'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/thin-1.4.1/lib/thin/connection.rb:78:in `pre_process'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/thin-1.4.1/lib/thin/connection.rb:53:in `process'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/thin-1.4.1/lib/thin/connection.rb:38:in `receive_data'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/eventmachine-0.12.10/lib/eventmachine.rb:256:in `run_machine'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/eventmachine-0.12.10/lib/eventmachine.rb:256:in `run'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/thin-1.4.1/lib/thin/backends/base.rb:63:in `start'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/thin-1.4.1/lib/thin/server.rb:159:in `start'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/handler/thin.rb:13:in `run'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/server.rb:265:in `start'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.8/lib/rails/commands/server.rb:70:in `start'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.8/lib/rails/commands.rb:55:in `block in <top (required)>'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.8/lib/rails/commands.rb:50:in `tap'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.8/lib/rails/commands.rb:50:in `<top (required)>'
+script/rails:6:in `require'
+script/rails:6:in `<main>'
+  Rendered questions/main.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (/Users/alaruba/stealthmode/app/views/questions/main.html.erb:19: syntax error, unexpected '<'
+  <br>
+   ^
+/Users/alaruba/stealthmode/app/views/questions/main.html.erb:21: syntax error, unexpected '(', expecting ')'
+...('  ');@output_buffer.append= ( text_field_tag(:quest) );@ou...
+...                               ^):
+    16:   <br>
+    17:   <%= hidden_field_tag :language, @language%>
+    18:   <%= @language>
+    19:   <br>
+    20:   <%= label_tag(:quest, "Question:") %>
+    21:   <%= text_field_tag(:quest) %>
+    22:   <br>
+  actionpack (3.2.8) lib/action_view/template.rb:297:in `module_eval'
+  actionpack (3.2.8) lib/action_view/template.rb:297:in `compile'
+  actionpack (3.2.8) lib/action_view/template.rb:244:in `block in compile!'
+  <internal:prelude>:10:in `synchronize'
+  actionpack (3.2.8) lib/action_view/template.rb:232:in `compile!'
+  actionpack (3.2.8) lib/action_view/template.rb:144:in `block in render'
+  activesupport (3.2.8) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.8) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.8) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.8) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.8) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/alaruba/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:414:in `_run__1307854934509155019__process_action__3165095446960494474__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.8) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__4380716017329910438__call__2885077051403583004__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-10-17 00:31:08 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 39ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/main?follow=false&language=Spanish" for 127.0.0.1 at 2012-10-17 00:31:50 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"Spanish"}
+  Rendered questions/main.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-10-17 00:32:02 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-10-17 00:32:54 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-10-17 00:33:19 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 19ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/main?follow=false&language=Spanish" for 127.0.0.1 at 2012-10-17 00:33:24 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"Spanish"}
+  Rendered questions/main.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/language" for 127.0.0.1 at 2012-10-17 00:33:35 -0700
+Processing by QuestionsController#language as HTML
+  Rendered questions/language.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-10-17 00:33:35 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-10-17 00:34:43 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-17 00:41:00 -0700
+Processing by LoginController#main as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["answers", ""], ["created_at", Wed, 17 Oct 2012 07:41:00 UTC +00:00], ["updated_at", Wed, 17 Oct 2012 07:41:00 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  Rendered login/main.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 18ms (Views: 8.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/survey/language?answer=0&follow=false&number=0&patient=14" for 127.0.0.1 at 2012-10-17 00:41:01 -0700
+Processing by SurveyController#language as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"14"}
+  Rendered survey/language.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 15ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-17 00:47:10 -0700
+Processing by LoginController#main as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)  [["answers", ""], ["created_at", Wed, 17 Oct 2012 07:47:10 UTC +00:00], ["updated_at", Wed, 17 Oct 2012 07:47:10 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 32ms (Views: 18.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/survey/language?answer=0&follow=false&number=0&patient=15" for 127.0.0.1 at 2012-10-17 00:47:12 -0700
+Processing by SurveyController#language as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"15"}
+  Rendered survey/language.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&language=English&number=0" for 127.0.0.1 at 2012-10-17 00:47:12 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "language"=>"English", "number"=>"0"}
+  [1m[35mPatient Load (0.3ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 0]]
+Completed 500 Internal Server Error in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Patient with id=0):
+  app/controllers/survey_controller.rb:7:in `view'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.5ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (4.7ms)[0m  CREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" integer, "reply" varchar(255), "resource" integer, "followup" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "hasfq" boolean, "resource_bool" boolean) 
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "patients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "answers" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ask" text, "follows" integer, "order" integer, "a1" integer, "a2" integer, "a3" integer, "a4" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "follow" boolean, "category" varchar(255), "language" varchar(255)) 
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "address1" text, "address2" text, "city" text, "zipcode" text, "phone1" integer, "phone2" integer, "phone3" integer, "website" text, "instructions" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "answer_id" integer, "latitude" float, "longitude" float, "gmaps" boolean) [0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35m (0.8ms)[0m  CREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")
+  [1m[36m (1.6ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('index_sessions_on_session_id')
+  [1m[36m (2.3ms)[0m  [1mCREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")[0m
+  [1m[35m (2.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (5.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121017071025')
+  [1m[36m (2.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120907232722')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120907232921')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120910215729')[0m
+  [1m[35m (3.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120911033303')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120911044831')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120927223527')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120927223652')[0m
+  [1m[35m (1.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120927231337')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120928034357')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121015050901')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121015054857')[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateQuestions (20120907232722)
+Migrating to CreateAnswers (20120907232921)
+Migrating to AddFollowToQuestions (20120910215729)
+Migrating to AddSessionsTable (20120911033303)
+Migrating to AddHasfqToAnswers (20120911044831)
+Migrating to CreateResources (20120927223527)
+Migrating to AddAnswerIdToResources (20120927223652)
+Migrating to AddResourceBoolToAnswers (20120927231337)
+Migrating to AddGMapsToResources (20120928034357)
+Migrating to AddCategoryToQuestions (20121015050901)
+Migrating to CreatePatients (20121015054857)
+Migrating to AddLanguageToQuestions (20121017071025)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("answers")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("patients")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("questions")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("resources")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("sessions")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_sessions_on_session_id')
+
+
+Started GET "/survey/language?answer=0&follow=false&number=0&patient=15" for 127.0.0.1 at 2012-10-17 00:47:47 -0700
+Processing by SurveyController#language as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"15"}
+  Rendered survey/language.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 14ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&language=English&number=0" for 127.0.0.1 at 2012-10-17 00:47:49 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "language"=>"English", "number"=>"0"}
+  [1m[36mPatient Load (0.2ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 500 Internal Server Error in 7ms
+
+ActiveRecord::RecordNotFound (Couldn't find Patient with id=0):
+  app/controllers/survey_controller.rb:7:in `view'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-17 00:48:10 -0700
+Processing by LoginController#main as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["answers", ""], ["created_at", Wed, 17 Oct 2012 07:48:10 UTC +00:00], ["updated_at", Wed, 17 Oct 2012 07:48:10 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  Rendered login/main.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 40ms (Views: 8.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/survey/language?answer=0&follow=false&number=0&patient=1" for 127.0.0.1 at 2012-10-17 00:48:12 -0700
+Processing by SurveyController#language as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"1"}
+  Rendered survey/language.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&language=English&number=0" for 127.0.0.1 at 2012-10-17 00:48:13 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "language"=>"English", "number"=>"0"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Patient with id=0):
+  app/controllers/survey_controller.rb:7:in `view'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-17 00:48:50 -0700
+Processing by LoginController#main as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["answers", ""], ["created_at", Wed, 17 Oct 2012 07:48:50 UTC +00:00], ["updated_at", Wed, 17 Oct 2012 07:48:50 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  Rendered login/main.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 12ms (Views: 7.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/survey/language?answer=0&follow=false&number=0&patient=2" for 127.0.0.1 at 2012-10-17 00:48:52 -0700
+Processing by SurveyController#language as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"2"}
+  Rendered survey/language.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-17 00:49:45 -0700
+Processing by LoginController#main as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)  [["answers", ""], ["created_at", Wed, 17 Oct 2012 07:49:45 UTC +00:00], ["updated_at", Wed, 17 Oct 2012 07:49:45 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 28ms (Views: 13.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/survey/language?answer=0&follow=false&number=0&patient=3" for 127.0.0.1 at 2012-10-17 00:49:46 -0700
+Processing by SurveyController#language as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"3"}
+  Rendered survey/language.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&language=English&number=0&patient=3" for 127.0.0.1 at 2012-10-17 00:49:47 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "language"=>"English", "number"=>"0", "patient"=>"3"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "patients" SET "answers" = ':0', "updated_at" = '2012-10-17 07:49:47.636454' WHERE "patients"."id" = 3
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Order number: 1
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'
+Redirected to http://localhost:3000/survey/limit?language=English&patient=3
+Completed 302 Found in 51ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/survey/limit?language=English&patient=3" for 127.0.0.1 at 2012-10-17 00:49:47 -0700
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"3"}
+  Rendered survey/limit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-17 00:49:47 -0700
+Served asset /survey_questions.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&language=Spanish&number=0&patient=3" for 127.0.0.1 at 2012-10-17 00:49:50 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "language"=>"Spanish", "number"=>"0", "patient"=>"3"}
+  [1m[36mPatient Load (0.2ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "patients" SET "answers" = ':0:0', "updated_at" = '2012-10-17 07:49:50.076898' WHERE "patients"."id" = 3[0m
+  [1m[35m (1.9ms)[0m  commit transaction
+Order number: 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'Spanish'[0m
+Redirected to http://localhost:3000/survey/limit?language=Spanish&patient=3
+Completed 302 Found in 7ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/survey/limit?language=Spanish&patient=3" for 127.0.0.1 at 2012-10-17 00:49:50 -0700
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"Spanish", "patient"=>"3"}
+  Rendered survey/limit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 17ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-17 00:49:50 -0700
+Served asset /survey_questions.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/questions/language" for 127.0.0.1 at 2012-10-17 00:49:54 -0700
+Processing by QuestionsController#language as HTML
+  Rendered questions/language.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/survey/language?answer=0&follow=false&number=0&patient=3" for 127.0.0.1 at 2012-10-17 00:50:09 -0700
+Processing by SurveyController#language as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"3"}
+  Rendered survey/language.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&language=Spanish&number=0&patient=3" for 127.0.0.1 at 2012-10-17 00:50:10 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "language"=>"Spanish", "number"=>"0", "patient"=>"3"}
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "patients" SET "answers" = ':0:0:0', "updated_at" = '2012-10-17 07:50:10.386717' WHERE "patients"."id" = 3
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Order number: 1
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'Spanish'
+Redirected to http://localhost:3000/survey/limit?language=Spanish&patient=3
+Completed 302 Found in 5ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/survey/limit?language=Spanish&patient=3" for 127.0.0.1 at 2012-10-17 00:50:10 -0700
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"Spanish", "patient"=>"3"}
+  Rendered survey/limit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-17 00:50:10 -0700
+Served asset /survey_questions.css - 404 Not Found (31ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&language=English&number=0&patient=3" for 127.0.0.1 at 2012-10-17 00:50:14 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "language"=>"English", "number"=>"0", "patient"=>"3"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "patients" SET "answers" = ':0:0:0:0', "updated_at" = '2012-10-17 07:50:14.467169' WHERE "patients"."id" = 3[0m
+  [1m[35m (2.7ms)[0m  commit transaction
+Order number: 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'[0m
+Redirected to http://localhost:3000/survey/limit?language=English&patient=3
+Completed 302 Found in 7ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/survey/limit?language=English&patient=3" for 127.0.0.1 at 2012-10-17 00:50:14 -0700
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"3"}
+  Rendered survey/limit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-17 00:50:14 -0700
+Served asset /survey_questions.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/questions/language" for 127.0.0.1 at 2012-10-17 00:50:18 -0700
+Processing by QuestionsController#language as HTML
+  Rendered questions/language.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 11ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-10-17 00:50:18 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/main?follow=false&language=Spanish" for 127.0.0.1 at 2012-10-17 00:50:22 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"Spanish"}
+  Rendered questions/main.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 11ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-10-17 00:50:29 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/questions/add" for 127.0.0.1 at 2012-10-17 00:51:03 -0700
+Processing by QuestionsController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BMyf2OeV1vbD1/xpTyUR8phbPx4GD0gbap38E1VCTKY=", "follow"=>"false", "language"=>"English", "quest"=>"Is Cabernet better than Merlot", "order"=>"1", "category"=>"Wine", "answer1"=>"Yes", "answer1_follow"=>"no", "resource1_follow"=>"no", "resource1_name"=>"", "resource1_address1"=>"", "resource1_address2"=>"", "resource1_city"=>"", "resource1_zip"=>"", "resource1_phone1"=>"", "resource1_phone2"=>"", "resource1_phone3"=>"", "resource1_website"=>"", "resource1_area"=>"", "answer2"=>"No", "answer2_follow"=>"no", "resource2_follow"=>"no", "resource2_name"=>"", "resource2_address1"=>"", "resource2_address2"=>"", "resource2_city"=>"", "resource2_zip"=>"", "resource2_phone1"=>"", "resource2_phone2"=>"", "resource2_phone3"=>"", "resource2_website"=>"", "resource2_area"=>"", "answer3"=>"", "answer3_follow"=>"no", "resource3_follow"=>"no", "resource3_name"=>"", "resource3_address1"=>"", "resource3_address2"=>"", "resource3_city"=>"", "resource3_zip"=>"", "resource3_phone1"=>"", "resource3_phone2"=>"", "resource3_phone3"=>"", "resource3_website"=>"", "resource3_area"=>"", "answer4"=>"", "answer4_follow"=>"no", "resource4_follow"=>"no", "resource4_name"=>"", "resource4_address1"=>"", "resource4_address2"=>"", "resource4_city"=>"", "resource4_zip"=>"", "resource4_phone1"=>"", "resource4_phone2"=>"", "resource4_phone3"=>"", "resource4_website"=>"", "resource4_area"=>"", "commit"=>"Save"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "questions" ("a1", "a2", "a3", "a4", "ask", "category", "created_at", "follow", "follows", "language", "order", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["a1", nil], ["a2", nil], ["a3", nil], ["a4", nil], ["ask", "Is Cabernet better than Merlot"], ["category", "Wine"], ["created_at", Wed, 17 Oct 2012 07:51:03 UTC +00:00], ["follow", false], ["follows", nil], ["language", "English"], ["order", 1], ["updated_at", Wed, 17 Oct 2012 07:51:03 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 17 Oct 2012 07:51:03 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 1], ["reply", "Yes"], ["resource", nil], ["resource_bool", false], ["updated_at", Wed, 17 Oct 2012 07:51:03 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 17 Oct 2012 07:51:03 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 1], ["reply", "No"], ["resource", nil], ["resource_bool", false], ["updated_at", Wed, 17 Oct 2012 07:51:03 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/questions/main?follow=false&language=English
+Completed 302 Found in 62ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-10-17 00:51:03 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/main?follow=false&language=Spanish" for 127.0.0.1 at 2012-10-17 00:51:07 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"Spanish"}
+  Rendered questions/main.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/questions/add" for 127.0.0.1 at 2012-10-17 00:51:29 -0700
+Processing by QuestionsController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6iBbuRZ2K8oT9WdBowNeufIgiPpRxuPcVgLbDkDH20U=", "follow"=>"false", "language"=>"Spanish", "quest"=>"Dove tutti?", "order"=>"1", "category"=>"Casa", "answer1"=>"A Casa", "answer1_follow"=>"no", "resource1_follow"=>"no", "resource1_name"=>"", "resource1_address1"=>"", "resource1_address2"=>"", "resource1_city"=>"", "resource1_zip"=>"", "resource1_phone1"=>"", "resource1_phone2"=>"", "resource1_phone3"=>"", "resource1_website"=>"", "resource1_area"=>"", "answer2"=>"a fiume", "answer2_follow"=>"no", "resource2_follow"=>"no", "resource2_name"=>"", "resource2_address1"=>"", "resource2_address2"=>"", "resource2_city"=>"", "resource2_zip"=>"", "resource2_phone1"=>"", "resource2_phone2"=>"", "resource2_phone3"=>"", "resource2_website"=>"", "resource2_area"=>"", "answer3"=>"", "answer3_follow"=>"no", "resource3_follow"=>"no", "resource3_name"=>"", "resource3_address1"=>"", "resource3_address2"=>"", "resource3_city"=>"", "resource3_zip"=>"", "resource3_phone1"=>"", "resource3_phone2"=>"", "resource3_phone3"=>"", "resource3_website"=>"", "resource3_area"=>"", "answer4"=>"", "answer4_follow"=>"no", "resource4_follow"=>"no", "resource4_name"=>"", "resource4_address1"=>"", "resource4_address2"=>"", "resource4_city"=>"", "resource4_zip"=>"", "resource4_phone1"=>"", "resource4_phone2"=>"", "resource4_phone3"=>"", "resource4_website"=>"", "resource4_area"=>"", "commit"=>"Save"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("a1", "a2", "a3", "a4", "ask", "category", "created_at", "follow", "follows", "language", "order", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["a1", nil], ["a2", nil], ["a3", nil], ["a4", nil], ["ask", "Dove tutti?"], ["category", "Casa"], ["created_at", Wed, 17 Oct 2012 07:51:29 UTC +00:00], ["follow", false], ["follows", nil], ["language", "Spanish"], ["order", 1], ["updated_at", Wed, 17 Oct 2012 07:51:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 17 Oct 2012 07:51:29 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 2], ["reply", "A Casa"], ["resource", nil], ["resource_bool", false], ["updated_at", Wed, 17 Oct 2012 07:51:29 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 17 Oct 2012 07:51:29 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 2], ["reply", "a fiume"], ["resource", nil], ["resource_bool", false], ["updated_at", Wed, 17 Oct 2012 07:51:29 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/questions/main?follow=false&language=Spanish
+Completed 302 Found in 11ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/questions/main?follow=false&language=Spanish" for 127.0.0.1 at 2012-10-17 00:51:29 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"Spanish"}
+  Rendered questions/main.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 15ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/main?follow=false&language=Spanish" for 127.0.0.1 at 2012-10-17 00:51:34 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"Spanish"}
+  Rendered questions/main.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/survey/language?answer=0&follow=false&number=0&patient=3" for 127.0.0.1 at 2012-10-17 00:51:39 -0700
+Processing by SurveyController#language as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"3"}
+  Rendered survey/language.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&language=Spanish&number=0&patient=3" for 127.0.0.1 at 2012-10-17 00:51:40 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "language"=>"Spanish", "number"=>"0", "patient"=>"3"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "patients" SET "answers" = ':0:0:0:0:0', "updated_at" = '2012-10-17 07:51:40.044664' WHERE "patients"."id" = 3
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Order number: 1
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'Spanish'
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'Spanish'[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 2
+  Rendered survey/view.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 20ms (Views: 13.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-17 00:51:40 -0700
+Served asset /survey_questions.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/survey/view?answer=3&follow=false&language=Spanish&number=1&patient=3" for 127.0.0.1 at 2012-10-17 00:51:41 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"3", "follow"=>"false", "language"=>"Spanish", "number"=>"1", "patient"=>"3"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "patients" SET "answers" = ':0:0:0:0:0:3', "updated_at" = '2012-10-17 07:51:41.615183' WHERE "patients"."id" = 3[0m
+  [1m[35m (1.0ms)[0m  commit transaction
+Order number: 2
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f' AND "questions"."language" = 'Spanish'[0m
+Redirected to http://localhost:3000/survey/limit?language=Spanish&patient=3
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/survey/limit?language=Spanish&patient=3" for 127.0.0.1 at 2012-10-17 00:51:41 -0700
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"Spanish", "patient"=>"3"}
+  Rendered survey/limit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 11ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-17 00:51:41 -0700
+Served asset /survey_questions.css - 404 Not Found (34ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&language=English&number=0&patient=3" for 127.0.0.1 at 2012-10-17 00:51:45 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "language"=>"English", "number"=>"0", "patient"=>"3"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "patients" SET "answers" = ':0:0:0:0:0:3:0', "updated_at" = '2012-10-17 07:51:45.259599' WHERE "patients"."id" = 3
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Order number: 1
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 1
+  Rendered survey/view.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 20ms (Views: 13.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-17 00:51:45 -0700
+Served asset /survey_questions.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/survey/view?answer=1&follow=false&language=English&number=1&patient=3" for 127.0.0.1 at 2012-10-17 00:51:47 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"1", "follow"=>"false", "language"=>"English", "number"=>"1", "patient"=>"3"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "patients" SET "answers" = ':0:0:0:0:0:3:0:1', "updated_at" = '2012-10-17 07:51:47.795669' WHERE "patients"."id" = 3[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+Order number: 2
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'[0m
+Redirected to http://localhost:3000/survey/limit?language=English&patient=3
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/survey/limit?language=English&patient=3" for 127.0.0.1 at 2012-10-17 00:51:47 -0700
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"3"}
+  Rendered survey/limit.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-10-17 00:51:47 -0700
+Served asset /survey_questions.css - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)

@@ -4,17 +4,24 @@ class QuestionsController < ApplicationController
   @masterFollow = nil
 
   def main
+    @language = params[:language]
     @follow = params[:follow]
     @followUps = params[:followUps]
   end
 
+  def language
+    
+  end
+
   def add
+    @language = params[:language]
     question = Question.new
     question.follow = params[:follow]
     question.follows = params[:follows]
   	question.ask = params[:quest]
     question.order = params[:order]
     question.category = params[:category]
+    question.language = params[:language]
   	question.save
     if params[:followUps] != nil
       followUps = JSON.parse(params[:followUps])
@@ -178,10 +185,10 @@ class QuestionsController < ApplicationController
   	question.save
     if (followUps.length > 0)
       @masterFollow = followUps
-      redirect_to :controller => "questions", :action => "main", :followUps => followUps, :follow =>true 
+      redirect_to :controller => "questions", :action => "main", :followUps => followUps, :follow =>true, :language => @language 
     else
       @masterFollow = nil
-      redirect_to :controller => "questions", :action => "main", :follow => false
+      redirect_to :controller => "questions", :action => "main", :follow => false, :language => @language 
     end
   end
 end
