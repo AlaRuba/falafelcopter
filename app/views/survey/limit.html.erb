@@ -1,18 +1,14 @@
 <%= stylesheet_link_tag "survey_questions" %>
+
 <div class = "question_body">
 <p>
-	Thank you for participating in the Family Advocacy Program Application. Based on your responses, you may find these resources helpful. If you have any additional questions or concerns about resources, please contact the Family Advocacy Program:
+Thank you for participating in the Family Advocacy Program Application.
+ 
+Please ask the Research Assistant to print the final page resource page.
+ 
+Based on your responses, you may find these resources helpful.
 
 Telephone: (650) 517-8904
-
-E-mail: fguzman@legalaidsmc.org
-
-Peninsula Family Advocacy Program of 
-Legal Aid Society of San Mateo County
-The Natalie Lanam Justice Center
-Sobrato Center for Nonprofits - Redwood Shores
-330 Twin Dolphin Drive, Suite 123 
-Redwood City, CA 94065
 </p>
 <br>
 Date:
@@ -20,7 +16,10 @@ Date:
 <table>
 	<tr>
 		<td>
-			Resource Description
+			Resource
+		</td>
+		<td>
+			Description
 		</td>
 		<td>
 			Contact Info
@@ -28,6 +27,54 @@ Date:
 		<td>
 			Did I Contact Them?
 		</td>
+		<td>
+		</td>
 	</tr>
+	<% @numbers.each do |index|%>
+	<% id = Integer(index)%>
+	<% answer = Answer.find(id)%>
+		<%if answer.resource_bool == true%>
+		<%resourceArr = Resources.where(:answer_id => answer.id)%>
+    	<%resource = resourceArr[0]%>
+		<tr>
+			<td>
+				<%=resource.name%>
+			</td>
+			<td>
+				<%=resource.instructions%>
+			</td>
+			<td>
+				(<%=resource.phone1%>)<%=resource.phone2%>-<%=resource.phone3%>
+			</td>
+			<td>
+				Y
+			</td>
+			<td>
+				N
+			</td>
+		</tr>
+		<% address = resource.address1.gsub(' ', '+') + ',' + resource.address2.gsub(' ', '+') + ',' + resource.city.gsub(' ', '+') + ',' + resource.zipcode%>
+		<% if address.length > 10%>
+		<tr>
+			<td>
+				<% image_src = "https://maps.googleapis.com/maps/api/staticmap?center=" + address + "&zoom=14&size=300x300&markers=" + address + "&sensor=false"%>
+				<%= image_tag(image_src, alt: "Rails") %>
+			</td>
+		</tr>
+		<%end%>
+		<%end%>
+	<%end%>
 </table>
+<p>
+If you have any additional questions or concerns about resources, please contact the Family Advocacy Program:
+<br>
+<br>
+Telephone: (650) 517-8904
+<br>
+<br>
+E-mail: fguzman@legalaidsmc.org
+<br>
+<br>
+Peninsula Family Advocacy Program of Legal Aid Society of San Mateo County The Natalie Lanam Justice Center Sobrato Center for Nonprofits - Redwood Shores 330 Twin Dolphin Drive, Suite 123 Redwood City, CA 94065
+</p>
 </div>

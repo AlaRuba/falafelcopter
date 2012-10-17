@@ -44,7 +44,11 @@ class SurveyController < ApplicationController
 
   def limit
     @patient = params[:patient]
-    
+    history = Patient.find(@patient)
+    answers = history.answers
+    @numbers = answers.split(%r{:\s*})
+    @numbers.delete("0")
+    @numbers.delete("")
   end
 
   def map
