@@ -44,7 +44,10 @@ Date:
 				<%=resource.instructions%>
 			</td>
 			<td>
-				(<%=resource.phone1%>)<%=resource.phone2%>-<%=resource.phone3%>
+				<% phone = "("+resource.phone1+")"+resource.phone2+"-"+resource.phone3%>
+				<% if phone.length > 3%>
+					<%=phone%>
+				<%end%>
 			</td>
 			<td>
 				Y
