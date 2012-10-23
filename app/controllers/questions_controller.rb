@@ -13,6 +13,12 @@ class QuestionsController < ApplicationController
     
   end
 
+  def edit
+  end
+
+  def change
+  end
+
   def add
     @language = params[:language]
     question = Question.new

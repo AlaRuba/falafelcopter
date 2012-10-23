@@ -46671,3 +46671,130 @@ ActionController::RoutingError (No route matches [GET] "/assets/survey_questions
 
 
   Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-22 21:19:35 -0700
+Processing by LoginController#main as HTML
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (7.2ms)[0m  INSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)  [["answers", ""], ["created_at", Tue, 23 Oct 2012 04:19:35 UTC +00:00], ["updated_at", Tue, 23 Oct 2012 04:19:35 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 171ms (Views: 117.0ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/questions/language" for 127.0.0.1 at 2012-10-22 21:19:36 -0700
+Processing by QuestionsController#language as HTML
+  Rendered questions/language.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/language" for 127.0.0.1 at 2012-10-22 21:22:14 -0700
+Processing by QuestionsController#language as HTML
+  Rendered questions/language.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/edit" for 127.0.0.1 at 2012-10-22 21:22:16 -0700
+Processing by QuestionsController#edit as HTML
+  Rendered questions/edit.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::User):
+    2: <div class="container">
+    3: 	<br>
+    4: 	<p class="centered">
+    5: 		<%User.find_each do |user|%>
+    6: 			<%= link_to user.question, {:controller => "questions", :action => "change"} , :class=> "rounded_button login_button"%>
+    7: 			<br>
+    8: 		<%end%>
+  app/views/questions/edit.html.erb:5:in `_app_views_questions_edit_html_erb___2606800433922938624_70113160806480'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.3ms)
+
+
+Started GET "/questions/edit" for 127.0.0.1 at 2012-10-22 21:22:35 -0700
+Processing by QuestionsController#edit as HTML
+  Rendered questions/edit.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Users):
+    2: <div class="container">
+    3: 	<br>
+    4: 	<p class="centered">
+    5: 		<%Users.find_each do |user|%>
+    6: 			<%= link_to user.question, {:controller => "questions", :action => "change"} , :class=> "rounded_button login_button"%>
+    7: 			<br>
+    8: 		<%end%>
+  app/views/questions/edit.html.erb:5:in `_app_views_questions_edit_html_erb___2606800433922938624_70113161897400'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/questions/edit" for 127.0.0.1 at 2012-10-22 21:23:09 -0700
+Processing by QuestionsController#edit as HTML
+  Rendered questions/edit.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Users):
+    2: <div class="container">
+    3: 	<br>
+    4: 	<p class="centered">
+    5: 		<%Users.find_each do |user|%>
+    6: 			<%= link_to user.question, {:controller => "questions", :action => "change"} , :class=> "rounded_button login_button"%>
+    7: 			<br>
+    8: 		<%end%>
+  app/views/questions/edit.html.erb:5:in `_app_views_questions_edit_html_erb___2606800433922938624_70113161897400'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/questions/edit" for 127.0.0.1 at 2012-10-22 21:24:15 -0700
+Processing by QuestionsController#edit as HTML
+  Rendered questions/edit.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Questions):
+    2: <div class="container">
+    3: 	<br>
+    4: 	<p class="centered">
+    5: 		<%Questions.find_each do |q|%>
+    6: 			<%= link_to q.ask, {:controller => "questions", :action => "change"} , :class=> "rounded_button login_button"%>
+    7: 			<br>
+    8: 		<%end%>
+  app/views/questions/edit.html.erb:5:in `_app_views_questions_edit_html_erb___2606800433922938624_70113142056740'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/questions/edit" for 127.0.0.1 at 2012-10-22 21:24:33 -0700
+Processing by QuestionsController#edit as HTML
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" >= 0) ORDER BY "questions"."id" ASC LIMIT 1000
+  Rendered questions/edit.html.erb within layouts/application (13.8ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionController::RoutingError (No route matches {:controller=>"questions", :action=>"change"}):
+  app/views/questions/edit.html.erb:6:in `block in _app_views_questions_edit_html_erb___2606800433922938624_70113148711940'
+  app/views/questions/edit.html.erb:5:in `_app_views_questions_edit_html_erb___2606800433922938624_70113148711940'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/questions/edit" for 127.0.0.1 at 2012-10-22 21:25:08 -0700
+Processing by QuestionsController#edit as HTML
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" >= 0) ORDER BY "questions"."id" ASC LIMIT 1000[0m
+  Rendered questions/edit.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 42ms (Views: 41.7ms | ActiveRecord: 0.5ms)
