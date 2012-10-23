@@ -14,6 +14,8 @@ Stealthmode::Application.routes.draw do
   match "/questions/language" => "questions#language"
   match "/questions/language" => "questions#change"
   match "/questions/edit" => "questions#edit"
+  match "/questions/delete" => "questions#delete"
+  match "/questions/save" => "questions#save"
   match "/survey/language" => "survey#language"
   match "/survey/map" => "survey#map"
 

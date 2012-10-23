@@ -16,7 +16,19 @@ class QuestionsController < ApplicationController
   def edit
   end
 
+  def save
+    
+  end
+
   def change
+    id = params[:id].to_i
+    question = Question.find(id)
+  end
+
+  def delete
+    id = params[:id].to_i
+    Question.destroy(id)
+    redirect_to :controller => "questions", :action => "edit",
   end
 
   def add
