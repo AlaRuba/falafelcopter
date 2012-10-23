@@ -3,7 +3,7 @@
 	<br>
 	<p>
 		<%Question.find_each do |q|%>
-			<%= q.order%> Language: <%= q.language%> Questions:<%= link_to q.ask, {:controller => "questions", :action => "change"}%>
+			Question Number: <%= q.order%> Language: <%= q.language%> Questions:<%= link_to q.ask, {:controller => "questions", :action => "change"}%>
 			<br>
 			<br>
 			<br>
