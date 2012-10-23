@@ -3,24 +3,21 @@
     <input name="utf8" type="hidden" value="&#x2713;" />
     <input name="authenticity_token" type="hidden" value="f755bb0ed134b76c432144748a6d4b7a7ddf2b71" />
   </div>
-  <%= hidden_field_tag :follow, question.follow%>
+  <%= hidden_field_tag :id, @question.id%>
   <% if @follow == "true"%>
-    This question is a follow-up to <%= question.follows%>
-    <%= hidden_field_tag :followUps, question.follows%>
+    This question is a follow-up to <%= @question.follows%>
+    <%= hidden_field_tag :followUps, @question.follows%>
   <% else %>
-    <% hidden_field_tag 'follows', question.follows%>
+    <% hidden_field_tag 'follows', @question.follows%>
   <% end %>
-  <br>
-  <%= hidden_field_tag :language, @language%>
+  
   <br>
   <%= label_tag(:quest, "Question:") %>
-  <%= text_field_tag(:quest), question.ask %>
+  <%= text_field_tag(:quest, @question.ask) %>
   <br>
   Order
-  <%= text_field_tag(:order), question.order %>
+  <%= text_field_tag(:order, @question.order) %>
   <br>
-  Category
-  <%= text_field_tag(:category), question.category %>
   <br>
 
   Answers:
@@ -30,7 +27,7 @@
       <td>
       <br>
       Answer 1
-      <%= text_field_tag(:answer1), question.answer1 %>
+      <%= text_field_tag(:answer1) %>
       <div class="answer1_follow">
         <%= radio_button_tag :answer1_follow, "yes" %> Has follow-up
         <%= radio_button_tag :answer1_follow, "no", true %> No
@@ -73,7 +70,7 @@
     <br>
     <td>
   Answer 2
-  <%= text_field_tag(:answer2), question.answer2 %>
+  <%= text_field_tag(:answer2) %>
   <div class="answer2_follow">
     <%= radio_button_tag :answer2_follow, "yes" %> Has follow-up
     <%= radio_button_tag :answer2_follow, "no", true %> No
@@ -117,7 +114,7 @@
   <tr>
     <td>
   Answer 3
-  <%= text_field_tag(:answer3), question.answer3 %>
+  <%= text_field_tag(:answer3)  %>
   <div class="answer3_follow">
     <%= radio_button_tag :answer3_follow, "yes" %> Has follow-up
     <%= radio_button_tag :answer3_follow, "no", true %> No
@@ -161,7 +158,7 @@
     <td>
   <br>
   Answer 4
-  <%= text_field_tag(:answer4), question.answer4 %>
+  <%= text_field_tag(:answer4) %>
   <br>
   <div class="answer4_follow">
     <%= radio_button_tag :answer4_follow, "yes" %> Has follow-up

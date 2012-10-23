@@ -36,7 +36,7 @@
 		<% else %>
 			<%= link_to @answers[1].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[1].id, :patient => @patient_id, :language => @language} , :class=> "rounded_button color_button answer_button" %>
 		<% end %>
-
+	<br>
 <% end %>
 <br>
 <% if !@answers[2].nil?%>
@@ -46,7 +46,7 @@
 		<% else %>
 			<%= link_to @answers[2].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[2].id, :patient => @patient_id, :language => @language}, :class=> "rounded_button color_button answer_button" %>
 		<% end %>
-
+	<br>
 <% end %>
 <br>
 <% if !@answers[3].nil?%>
@@ -56,7 +56,7 @@
 		<% else %>
 			<%= link_to @answers[3].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[3].id, :patient => @patient_id, :language => @language}, :class=> "rounded_button color_button answer_button" %>
 		<% end %>
-	
+	<br>
 <% end %>
 </p>
 </div>
