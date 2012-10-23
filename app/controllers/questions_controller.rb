@@ -17,8 +17,16 @@ class QuestionsController < ApplicationController
   end
 
   def save
+
     id = params[:id].to_i
     question = Question.find(id)
+
+    answerArr = Answer.where("question = ?", question.id)
+    if answerArr.any?
+      answerArr.each do |a|
+        Answer.destroy(a.id)
+      end
+    end
     newAttr = Hash.new
 
     newAttr[:ask] = params[:quest]
@@ -186,12 +194,6 @@ class QuestionsController < ApplicationController
   def change
     id = params[:id].to_i
     @question = Question.find(id)
-    answerArr = Answer.where("question = ?", @question.id)
-    if answerArr.any?
-      answerArr.each do |a|
-        Answer.destroy(a.id)
-      end
-    end
   end
 
   def delete
