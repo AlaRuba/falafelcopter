@@ -3,7 +3,7 @@
 	<br>
 	<p class="centered">
 		<%Question.find_each do |q|%>
-			<%= link_to q.ask, {:controller => "questions", :action => "change"} , :class=> "rounded_button login_button"%>
+			<%= link_to q.ask, {:controller => "questions", :action => "change"}%>
 			<br>
 			<br>
 			<br>
