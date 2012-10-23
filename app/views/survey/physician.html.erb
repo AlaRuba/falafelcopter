@@ -1,6 +1,7 @@
 <%= stylesheet_link_tag "survey_questions" %>
 
 <div class = "question_body">
+<%= @answers%>
 <p>
 Thank you for participating in the Family Advocacy Program Application.
  
@@ -22,9 +23,6 @@ Date:
 			Description
 		</td>
 		<td>
-			Contact Info
-		</td>
-		<td>
 			Did I Contact Them?
 		</td>
 		<td>
@@ -44,27 +42,12 @@ Date:
 				<%=resource.instructions%>
 			</td>
 			<td>
-				<% phone = "("+String(resource.phone1)+")"+String(resource.phone2)+"-"+String(resource.phone3)%>
-				<% if phone.length > 3%>
-					<%=phone%>
-				<% end %>
-			</td>
-			<td>
 				Y
 			</td>
 			<td>
 				N
 			</td>
 		</tr>
-		<% address = resource.address1.gsub(' ', '+') + ',' + resource.address2.gsub(' ', '+') + ',' + resource.city.gsub(' ', '+') + ',' + resource.zipcode%>
-		<% if address.length > 10%>
-		<tr>
-			<td>
-				<% image_src = "https://maps.googleapis.com/maps/api/staticmap?center=" + address + "&zoom=14&size=300x300&markers=" + address + "&sensor=false"%>
-				<%= image_tag(image_src, alt: "Rails") %>
-			</td>
-		</tr>
-		<%end%>
 		<%end%>
 	<%end%>
 </table>
@@ -79,8 +62,5 @@ E-mail: fguzman@legalaidsmc.org
 <br>
 <br>
 Peninsula Family Advocacy Program of Legal Aid Society of San Mateo County The Natalie Lanam Justice Center Sobrato Center for Nonprofits - Redwood Shores 330 Twin Dolphin Drive, Suite 123 Redwood City, CA 94065
-</p>
-<p>
-	<%= link_to "Physician", {:controller => "survey", :action => "physician", :patient => @patient, :language => @language} , :class=> "rounded_button login_button"%>
 </p>
 </div>

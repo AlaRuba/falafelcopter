@@ -1,4 +1,15 @@
 class SurveyController < ApplicationController
+
+  def physician
+    @patient = params[:patient]
+    @language = params[:language]
+    history = Patient.find(@patient)
+    answers = history.answers
+    @numbers = answers.split(%r{:\s*})
+    @numbers.delete("0")
+    @numbers.delete("")
+  end
+
   def view
     @language = params[:language]
   	@number = params[:number].to_i
@@ -44,6 +55,7 @@ class SurveyController < ApplicationController
 
   def limit
     @patient = params[:patient]
+    @language = params[:language]
     history = Patient.find(@patient)
     answers = history.answers
     @numbers = answers.split(%r{:\s*})
