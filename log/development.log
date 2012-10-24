@@ -53456,3 +53456,29 @@ ActionController::RoutingError (No route matches [GET] "/assets/survey_questions
 
 
   Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-23 00:10:31 -0700
+Processing by LoginController#main as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["answers", ""], ["created_at", Tue, 23 Oct 2012 07:10:31 UTC +00:00], ["updated_at", Tue, 23 Oct 2012 07:10:31 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  Rendered login/main.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 13ms (Views: 8.9ms | ActiveRecord: 2.4ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-23 19:18:31 -0700
+Processing by LoginController#main as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (7.2ms)[0m  INSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)  [["answers", ""], ["created_at", Wed, 24 Oct 2012 02:18:31 UTC +00:00], ["updated_at", Wed, 24 Oct 2012 02:18:31 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 157ms (Views: 98.2ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/survey/language?answer=0&follow=false&number=0&patient=15" for 127.0.0.1 at 2012-10-23 19:18:37 -0700
+Processing by SurveyController#language as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"15"}
+  Rendered survey/language.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 9ms (Views: 9.2ms | ActiveRecord: 0.0ms)
