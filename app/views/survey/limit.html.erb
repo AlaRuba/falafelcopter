@@ -29,12 +29,12 @@ Please ask the Research Assistant to print the final page resource page.
 	<!-- ROW 1-->
 	<% address = resource.address1.gsub(' ', '+') + ',' + resource.address2.gsub(' ', '+') + ',' + resource.city.gsub(' ', '+') + ',' + resource.zipcode%>
 	<% categories = []%>
+	<% question = Question.find(Integer(answer.question))%>
 	<%if resource.name == "Instructions"%>
 	<%categories.push(question.category)%>
 	<%else%>
 	<tr>
 		<!-- RUBY 3-->
-		<% question = Question.find(Integer(answer.question))%>
 		
 			
 		<td>
