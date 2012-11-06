@@ -16,11 +16,11 @@ Date:
 <table>
 	<!-- HEADER ROW-->
 	<tr>
-		<td class = "table_header">Map</td>
+		<td class = "table_header">Category</td>
 		<td class = "table_header">Resource</td>
-		<td class = "table_header">Description</td>
+		<td class = "table_header">Map</td>
 		<td class = "table_header">Contact Info</td>
-		<td class = "table_header">Did I Contact Them?</td>
+		<td class = "table_header">Description</td>
 	</tr>
 	<!-- RUBY 1-->
 	<% @numbers.each do |index|%>
@@ -35,19 +35,29 @@ Date:
 			
 	<tr>
 		<!-- RUBY 3-->
-			<% if address.length > 10%>
-		<td class = "image">
+		<td>
+			<%=resource.category%>
+		</td>
+		<td><%=resource.name%></td>
 			
+		<td class = "image">
+			<% if address.length > 10%>
 			<% image_src = "https://maps.googleapis.com/maps/api/staticmap?center=" + address + "&zoom=14&size=300x300&markers=" + address + "&sensor=false"%>
 			<%= image_tag(image_src, alt: "Rails", :class=> "left") %>
-			
+			<br>
+			<%= resource.address1%>
+			<br>
+			<%= resource.address2%>
+			<br>
+			<%= resource.city%>
+			<%end%>
 		</td>
-		<%end%>
-		<td><%=resource.name%></td>
-		<td><%=resource.instructions%></td>
 		<td><% phone = "("+String(resource.phone1)+")"+String(resource.phone2)+"-"+String(resource.phone3)%>
 			<% if phone.length > 3%><%=phone%><% end %>
 		</td>
+		
+		<td><%=resource.instructions%></td>
+		
 		<td class = "centered_text">Y</td>	
 	</tr>
 	<!-- ROW 2-->	

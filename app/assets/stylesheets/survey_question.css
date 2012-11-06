@@ -4,7 +4,7 @@
 	text-align: center;
 }
 .question_body{
-font-size: 200px;
+font-size: 20px;
 	font-family:"Gotham", Arial, Verdana,sans-serif;
 	text-align: left;
 	padding-left: 20px;
@@ -14,17 +14,17 @@ font-size: 200px;
 	width: 50%;
 }
 .rounded_button{
-	border-width:100px;
+	border-width:10px;
 	border-style:solid;
 	border-color:#54A1C8;
-	border-top-right-radius: 100px;
-	border-top-left-radius: 100px ;
-	border-bottom-right-radius: 100px;
-	border-bottom-left-radius: 100px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px ;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
 
 }
 .color_button{
-	margin:200px;
+	margin:20px;
 	left:30%;
 	background-color: #54A1C8;
 }
@@ -40,7 +40,7 @@ font-size: 200px;
 }
 
 .question_button {
-	font-size: 200px;
+	font-size: 20px;
 	font-family:"Gotham", Arial, Verdana,sans-serif;
 	text-decoration:none;
 	color:#FEFFFE;
@@ -48,26 +48,26 @@ font-size: 200px;
 
 a.answer_button:link {
 	padding: 5px;
-	margin: 200px;
-	font-size: 200px;
+	margin: 20px;
+	font-size: 20px;
 	font-family:"Gotham", Arial, Verdana,sans-serif;
 	text-decoration:none;
 	color:#FEFFFE;
 }
 a.answer_button:visited {
-	font-size: 200px;
+	font-size: 20px;
 	font-family:"Gotham", Arial, Verdana,sans-serif;
 	text-decoration:none;
 	color:#FEFFFE;
 }
 a.answer_button:hover {
-	font-size: 250px;
+	font-size: 25px;
 	font-family:"Gotham", Arial, Verdana,sans-serif;
 	text-decoration:none;
 	color:#FEFFFE;
 }
 a.answer_button:active {
-	font-size: 300px;
+	font-size: 30px;
 	font-family:"Gotham", Arial, Verdana,sans-serif;
 	text-decoration:none;
 	color:#FEFFFE;
