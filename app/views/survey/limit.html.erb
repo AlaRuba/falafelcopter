@@ -19,6 +19,7 @@ Please ask the Research Assistant to print the final page resource page.
 		<td class = "table_header">Description</td>
 	</tr>
 	<!-- RUBY 1-->
+
 	<% categories = Set.new[]%>
 	<%categorical = ""%>
 	<% @numbers.each do |index|%>
@@ -34,7 +35,9 @@ Please ask the Research Assistant to print the final page resource page.
 			<% question = Question.find(Integer(answer.question))%>
 	
 			<%if resource.name == "Instructions"%>
+				<% if categories.include? question.category == false%>
 				<%categories.push(question.category)%>
+				<%end%>
 			<%else%>
 				<tr>
 					<!-- RUBY 3-->
