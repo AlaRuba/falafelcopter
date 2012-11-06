@@ -16,6 +16,7 @@ Telephone: (650) 517-8904
 <table>
 	<!-- HEADER ROW-->
 	<tr>
+		<td class = "table_header">Check</td>
 		<td class = "table_header">Category</td>
 		<td class = "table_header">Resource</td>
 		<td class = "table_header">Description</td>
@@ -46,8 +47,9 @@ Telephone: (650) 517-8904
 				<%answers.push(resource.name)%>
 				<tr>
 					<!-- RUBY 3-->
-					
-						
+					<td>
+						<input type="checkbox">
+					</td>
 					<td>
 						
 						<%= question.category%>
@@ -63,7 +65,6 @@ Telephone: (650) 517-8904
 					<td class = "dashed_line"></td>
 					<td class = "dashed_line"></td>
 					<td class = "dashed_line"></td>
-					<td class = "dashed_line"></td>
 				</tr>
 				<%end%>
 			<%end%>
@@ -74,6 +75,9 @@ Telephone: (650) 517-8904
 	<%end%>
 	<% if categorical.length > 0%>
 		<tr>
+			<td>
+				<input type="checkbox">
+			</td>
 			<td>
 				<%= categorical%>
 			</td>
