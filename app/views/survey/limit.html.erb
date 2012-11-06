@@ -22,6 +22,7 @@ Please ask the Research Assistant to print the final page resource page.
 
 	<% categories = []%>
 	<%categorical = ""%>
+	<%answers = []%>
 	<% @numbers.each do |index|%>
 		<% id = Integer(index)%>
 		<% answer = Answer.find(id)%>
@@ -39,6 +40,8 @@ Please ask the Research Assistant to print the final page resource page.
 				<%categories.push(question.category)%>
 				<%end%>
 			<%else%>
+				<%if !answers.include?resource.name%>
+				<%answers.push(resource.name)%>
 				<tr>
 					<!-- RUBY 3-->
 					
@@ -76,6 +79,7 @@ Please ask the Research Assistant to print the final page resource page.
 					<td class = "dashed_line"></td>
 					<td class = "dashed_line"></td>
 				</tr>
+				<%end%>
 			<%end%>
 		<%end%>
 	<%end%>
