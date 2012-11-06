@@ -24,7 +24,7 @@ font-size: 20px;
 
 }
 .color_button{
-	margin:200px;
+	margin:20px;
 	left:30%;
 	background-color: #54A1C8;
 }
@@ -40,7 +40,7 @@ font-size: 20px;
 }
 
 .question_button {
-	font-size: 20px;
+	font-size: 200px;
 	font-family:"Gotham", Arial, Verdana,sans-serif;
 	text-decoration:none;
 	color:#FEFFFE;
