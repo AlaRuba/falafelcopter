@@ -1,0 +1,154 @@
+Connecting to database specified by database.yml
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-24 02:44:28 -0700
+Processing by LoginController#main as HTML
+Completed 500 Internal Server Error in 41ms
+
+ActiveRecord::StatementInvalid (Could not find table 'patients'):
+  app/controllers/login_controller.rb:3:in `new'
+  app/controllers/login_controller.rb:3:in `main'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.7ms)
+Connecting to database specified by database.yml
+  [1m[36m (2.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" integer, "reply" varchar(255), "resource" integer, "followup" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "hasfq" boolean, "resource_bool" boolean) 
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "patients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "answers" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ask" text, "follows" integer, "order" integer, "a1" integer, "a2" integer, "a3" integer, "a4" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "follow" boolean, "category" varchar(255), "language" varchar(255)) 
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "address1" text, "address2" text, "city" text, "zipcode" text, "phone1" integer, "phone2" integer, "phone3" integer, "website" text, "instructions" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "answer_id" integer, "latitude" float, "longitude" float, "gmaps" boolean) [0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35m (0.9ms)[0m  CREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_sessions_on_session_id')
+  [1m[36m (0.9ms)[0m  [1mCREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121017071025')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120907232722')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120907232921')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120910215729')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120911033303')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120911044831')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120927223527')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120927223652')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120927231337')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120928034357')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121015050901')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121015054857')[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateQuestions (20120907232722)
+Migrating to CreateAnswers (20120907232921)
+Migrating to AddFollowToQuestions (20120910215729)
+Migrating to AddSessionsTable (20120911033303)
+Migrating to AddHasfqToAnswers (20120911044831)
+Migrating to CreateResources (20120927223527)
+Migrating to AddAnswerIdToResources (20120927223652)
+Migrating to AddResourceBoolToAnswers (20120927231337)
+Migrating to AddGMapsToResources (20120928034357)
+Migrating to AddCategoryToQuestions (20121015050901)
+Migrating to CreatePatients (20121015054857)
+Migrating to AddLanguageToQuestions (20121017071025)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("answers")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("patients")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("questions")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("resources")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("sessions")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_sessions_on_session_id')
+Connecting to database specified by database.yml
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-24 02:44:51 -0700
+Processing by LoginController#main as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (8.0ms)[0m  INSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)  [["answers", ""], ["created_at", Wed, 24 Oct 2012 09:44:51 UTC +00:00], ["updated_at", Wed, 24 Oct 2012 09:44:51 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (6.2ms)
+Compiled application.js  (36ms)  (pid 1238)
+Completed 200 OK in 143ms (Views: 95.8ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-10-24 02:44:51 -0700
+Served asset /limit_page.css - 200 OK (2ms)
+
+
+Started GET "/survey/language?answer=0&follow=false&number=0&patient=1" for 127.0.0.1 at 2012-10-24 02:44:53 -0700
+Processing by SurveyController#language as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"1"}
+  Rendered survey/language.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&language=English&number=0&patient=1" for 127.0.0.1 at 2012-10-24 02:44:54 -0700
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "language"=>"English", "number"=>"0", "patient"=>"1"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "patients" SET "answers" = ':0', "updated_at" = '2012-10-24 09:44:54.690961' WHERE "patients"."id" = 1
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Order number: 1
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'
+Redirected to http://localhost:3000/survey/limit?language=English&patient=1
+Completed 302 Found in 15ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/survey/limit?language=English&patient=1" for 127.0.0.1 at 2012-10-24 02:44:54 -0700
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"1"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered survey/limit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/login" for 127.0.0.1 at 2012-11-05 21:55:43 -0800
+Processing by LoginController#main as HTML
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (7.7ms)[0m  INSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)  [["answers", ""], ["created_at", Tue, 06 Nov 2012 05:55:43 UTC +00:00], ["updated_at", Tue, 06 Nov 2012 05:55:43 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (9.2ms)
+Compiled survey_question.css  (0ms)  (pid 3671)
+Compiled application.css  (1ms)  (pid 3671)
+Completed 200 OK in 166ms (Views: 111.4ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-11-05 21:55:43 -0800
+Served asset /limit_page.css - 200 OK (2ms)
+
+
+Started GET "/survey/language?answer=0&follow=false&number=0&patient=2" for 127.0.0.1 at 2012-11-05 21:55:46 -0800
+Processing by SurveyController#language as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"2"}
+  Rendered survey/language.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&language=English&number=0&patient=2" for 127.0.0.1 at 2012-11-05 21:55:47 -0800
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "language"=>"English", "number"=>"0", "patient"=>"2"}
+  [1m[35mPatient Load (0.3ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "patients" SET "answers" = ':0', "updated_at" = '2012-11-06 05:55:47.578314' WHERE "patients"."id" = 2
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Order number: 1
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'
+Redirected to http://localhost:3000/survey/limit?language=English&patient=2
+Completed 302 Found in 18ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/survey/limit?language=English&patient=2" for 127.0.0.1 at 2012-11-05 21:55:47 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"2"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered survey/limit.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.1ms)
