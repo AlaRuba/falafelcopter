@@ -29,7 +29,7 @@ Please ask the Research Assistant to print the final page resource page.
 	<!-- ROW 1-->
 	<% address = resource.address1.gsub(' ', '+') + ',' + resource.address2.gsub(' ', '+') + ',' + resource.city.gsub(' ', '+') + ',' + resource.zipcode%>
 	<% categories = []%>
-	<%if resouce.name == "Instructions"%>
+	<%if resource.name == "Instructions"%>
 	<%categories.push(question.category)%>
 	<%else%>
 	<tr>
