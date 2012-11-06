@@ -40,7 +40,7 @@ font-size: 20px;
 }
 
 .question_button {
-	font-size: 200px;
+	font-size: 20px;
 	font-family:"Gotham", Arial, Verdana,sans-serif;
 	text-decoration:none;
 	color:#FEFFFE;
@@ -48,26 +48,26 @@ font-size: 20px;
 
 a.answer_button:link {
 	padding: 5px;
-	margin: 20px;
-	font-size: 20px;
+	margin: 200px;
+	font-size: 200px;
 	font-family:"Gotham", Arial, Verdana,sans-serif;
 	text-decoration:none;
 	color:#FEFFFE;
 }
 a.answer_button:visited {
-	font-size: 20px;
+	font-size: 200px;
 	font-family:"Gotham", Arial, Verdana,sans-serif;
 	text-decoration:none;
 	color:#FEFFFE;
 }
 a.answer_button:hover {
-	font-size: 25px;
+	font-size: 250px;
 	font-family:"Gotham", Arial, Verdana,sans-serif;
 	text-decoration:none;
 	color:#FEFFFE;
 }
 a.answer_button:active {
-	font-size: 30px;
+	font-size: 300px;
 	font-family:"Gotham", Arial, Verdana,sans-serif;
 	text-decoration:none;
 	color:#FEFFFE;
