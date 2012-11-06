@@ -35,9 +35,9 @@ Please ask the Research Assistant to print the final page resource page.
 			<% question = Question.find(Integer(answer.question))%>
 	
 			<%if resource.name == "Instructions"%>
-				<% if categories.include? question.category == false%>
+				
 				<%categories.push(question.category)%>
-				<%end%>
+				
 			<%else%>
 				<tr>
 					<!-- RUBY 3-->
