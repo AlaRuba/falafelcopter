@@ -14,17 +14,17 @@ font-size: 20px;
 	width: 50%;
 }
 .rounded_button{
-	border-width:10px;
+	border-width:100px;
 	border-style:solid;
 	border-color:#54A1C8;
-	border-top-right-radius: 10px;
-	border-top-left-radius: 10px ;
-	border-bottom-right-radius: 10px;
-	border-bottom-left-radius: 10px;
+	border-top-right-radius: 100px;
+	border-top-left-radius: 100px ;
+	border-bottom-right-radius: 100px;
+	border-bottom-left-radius: 100px;
 
 }
 .color_button{
-	margin:20px;
+	margin:200px;
 	left:30%;
 	background-color: #54A1C8;
 }
@@ -40,7 +40,7 @@ font-size: 20px;
 }
 
 .question_button {
-	font-size: 20px;
+	font-size: 200px;
 	font-family:"Gotham", Arial, Verdana,sans-serif;
 	text-decoration:none;
 	color:#FEFFFE;
