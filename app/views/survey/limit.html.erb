@@ -19,7 +19,7 @@ Please ask the Research Assistant to print the final page resource page.
 		<td class = "table_header">Description</td>
 	</tr>
 	<!-- RUBY 1-->
-	<% categories = []%>
+	<% categories = Set.new[]%>
 	<%categorical = ""%>
 	<% @numbers.each do |index|%>
 		<% id = Integer(index)%>
@@ -65,17 +65,15 @@ Please ask the Research Assistant to print the final page resource page.
 					<td><%=resource.instructions%></td>
 					
 				</tr>
+				<!-- ROW 2-->	
+				<tr>
+					<td class = "dashed_line"></td>
+					<td class = "dashed_line"></td>
+					<td class = "dashed_line"></td>
+					<td class = "dashed_line"></td>
+					<td class = "dashed_line"></td>
+				</tr>
 			<%end%>
-
-	<!-- ROW 2-->	
-	<tr>
-		<td class = "dashed_line"></td>
-		<td class = "dashed_line"></td>
-		<td class = "dashed_line"></td>
-		<td class = "dashed_line"></td>
-		<td class = "dashed_line"></td>
-	</tr>
-		
 		<%end%>
 	<%end%>
 	<% categories.each do |c|%>
