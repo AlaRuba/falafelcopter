@@ -28,11 +28,17 @@ Please ask the Research Assistant to print the final page resource page.
     <%resource = resourceArr[0]%>
 	<!-- ROW 1-->
 	<% address = resource.address1.gsub(' ', '+') + ',' + resource.address2.gsub(' ', '+') + ',' + resource.city.gsub(' ', '+') + ',' + resource.zipcode%>
-			
+	<% categories = []%>
+	<%if resouce.name == "Instructions"%>
+	<%categories.push(question.category)%>
+	<%else%>
 	<tr>
 		<!-- RUBY 3-->
+		<% question = Question.find(Integer(answer.question))%>
+		
+			
 		<td>
-			<% question = Question.find(Integer(answer.question))%>
+			
 			<%= question.category%>
 		</td>
 		<td><%=resource.name%></td>
@@ -54,7 +60,31 @@ Please ask the Research Assistant to print the final page resource page.
 		</td>
 		
 		<td><%=resource.instructions%></td>
+		
 	</tr>
+	<%end%>
+	<%categorical = ""%>
+	<% categories.each do |c|%>
+		<%categorical += c + ", "%>
+	<%end%>
+	<% if categorical.length > 0%>
+		<tr>
+			<td>
+				<%= categorical%>
+			</td>
+			<td>
+				Instructions
+			</td>
+			<td>
+			</td>
+			<td>
+			</td>
+			<td>
+				The Family Advocacy Program may be able to help you and your family. Please discuss this with your child's doctor.
+			</td>
+		</tr>
+	<%end%>
+
 	<!-- ROW 2-->	
 	<tr>
 		<td class = "dashed_line"></td>
