@@ -12,43 +12,78 @@ Based on your responses, you may find these resources helpful.
 Telephone: (650) 517-8904
 </p>
 <br>
-Date:
-<br>
+
 <table>
+	<!-- HEADER ROW-->
 	<tr>
-		<td>
-			Resource
-		</td>
-		<td>
-			Description
-		</td>
-		<td>
-			Did I Contact Them?
-		</td>
-		<td>
-		</td>
+		<td class = "table_header">Category</td>
+		<td class = "table_header">Resource</td>
+		<td class = "table_header">Description</td>
 	</tr>
+	<!-- RUBY 1-->
+
+	<% categories = []%>
+	<%categorical = ""%>
+	<%answers = []%>
 	<% @numbers.each do |index|%>
-	<% id = Integer(index)%>
-	<% answer = Answer.find(id)%>
+		<% id = Integer(index)%>
+		<% answer = Answer.find(id)%>
+		<!-- RUBY 2-->
 		<%if answer.resource_bool == true%>
-		<%resourceArr = Resources.where(:answer_id => answer.id)%>
-    	<%resource = resourceArr[0]%>
+			<%resourceArr = Resources.where(:answer_id => answer.id)%>
+		    <%resource = resourceArr[0]%>
+			<!-- ROW 1-->
+			<% address = resource.address1.gsub(' ', '+') + ',' + resource.address2.gsub(' ', '+') + ',' + resource.city.gsub(' ', '+') + ',' + resource.zipcode%>
+			
+			<% question = Question.find(Integer(answer.question))%>
+	
+			<%if resource.name == "Instructions"%>
+				<% if !categories.include? question.category%>
+				<%categories.push(question.category)%>
+				<%end%>
+			<%else%>
+				<%if !answers.include?resource.name%>
+				<%answers.push(resource.name)%>
+				<tr>
+					<!-- RUBY 3-->
+					
+						
+					<td>
+						
+						<%= question.category%>
+					</td>
+					<td><%=resource.name%></td>
+					
+					<td><%=resource.instructions%></td>
+					
+				</tr>
+				<!-- ROW 2-->	
+				<tr>
+					<td class = "dashed_line"></td>
+					<td class = "dashed_line"></td>
+					<td class = "dashed_line"></td>
+					<td class = "dashed_line"></td>
+					<td class = "dashed_line"></td>
+				</tr>
+				<%end%>
+			<%end%>
+		<%end%>
+	<%end%>
+	<% categories.each do |c|%>
+		<%categorical += c + ", "%>
+	<%end%>
+	<% if categorical.length > 0%>
 		<tr>
 			<td>
-				<%=resource.name%>
+				<%= categorical%>
 			</td>
 			<td>
-				<%=resource.instructions%>
+				Instructions
 			</td>
 			<td>
-				Y
-			</td>
-			<td>
-				N
+				The Family Advocacy Program may be able to help you and your family. Please discuss this with your child's doctor.
 			</td>
 		</tr>
-		<%end%>
 	<%end%>
 </table>
 <p>
