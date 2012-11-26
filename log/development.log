@@ -645,3 +645,4 @@ Migrating to AddTimeToSessions (20121126183413)
   [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_sessions_on_updated_at')[0m
   [1m[35m (0.0ms)[0m  PRAGMA index_info('index_sessions_on_session_id')
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
