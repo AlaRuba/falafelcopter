@@ -45,6 +45,9 @@ class QuestionsController < ApplicationController
         followUp[:question] = question.ask
         followUp[:answerID] = answer1.id
         followUp[:choice] = answer1.reply
+        followUps = followUps
+        if (followUps.nil?)
+          followUps = Array.new
         followUps = followUps.append(followUp)
       else
         answer1.hasfq = false
@@ -84,6 +87,9 @@ class QuestionsController < ApplicationController
         followUp[:question] = question.ask
         followUp[:answerID] = answer2.id
         followUp[:choice] = answer2.reply
+        followUps = followUps
+        if (followUps.nil?)
+          followUps = Array.new
         followUps = followUps.append(followUp)
       else
         answer2.hasfq = false
@@ -123,6 +129,9 @@ class QuestionsController < ApplicationController
         followUp[:qestion] = question.ask
         followUp[:answerID] = answer3.id
         followUp[:choice] = answer3.reply
+        followUps = followUps
+        if (followUps.nil?)
+          followUps = Array.new
         followUps = followUps.append(followUp)
       else
         answer3.hasfq = false
@@ -161,6 +170,9 @@ class QuestionsController < ApplicationController
         followUp[:question] = question.ask
         followUp[:answerID] = answer4.id
         followUp[:choice] = answer4.reply
+        followUps = followUps
+        if (followUps.nil?)
+          followUps = Array.new
         followUps = followUps.append(followUp)
       else
         answer4.hasfq = false
