@@ -48,6 +48,7 @@ class QuestionsController < ApplicationController
         followUps = followUps
         if (followUps.nil?)
           followUps = Array.new
+        end
         followUps = followUps.append(followUp)
       else
         answer1.hasfq = false
@@ -90,6 +91,7 @@ class QuestionsController < ApplicationController
         followUps = followUps
         if (followUps.nil?)
           followUps = Array.new
+        end
         followUps = followUps.append(followUp)
       else
         answer2.hasfq = false
@@ -132,6 +134,7 @@ class QuestionsController < ApplicationController
         followUps = followUps
         if (followUps.nil?)
           followUps = Array.new
+        end
         followUps = followUps.append(followUp)
       else
         answer3.hasfq = false
@@ -173,6 +176,7 @@ class QuestionsController < ApplicationController
         followUps = followUps
         if (followUps.nil?)
           followUps = Array.new
+        end
         followUps = followUps.append(followUp)
       else
         answer4.hasfq = false
