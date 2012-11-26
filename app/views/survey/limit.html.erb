@@ -67,6 +67,7 @@ Please ask the Research Assistant to print the final page resource page.
 					</td>
 					<td><% phone = "("+String(resource.phone1)+")"+String(resource.phone2)+"-"+String(resource.phone3)%>
 						<% if phone.length > 3%><%=phone%><% end %>
+						<% if resource.website > 3%><%=resource.website%><% end %>
 					</td>
 					
 					<td><%=resource.instructions%></td>
