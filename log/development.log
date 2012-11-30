@@ -666,3 +666,5 @@ Migrating to AddRecordToSessions (20121126184350)
   [1m[35m (0.2ms)[0m  ALTER TABLE "sessions" ADD "start_time" datetime
 SQLite3::SQLException: duplicate column name: start_time: ALTER TABLE "sessions" ADD "start_time" datetime
   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
