@@ -668,3 +668,401 @@ SQLite3::SQLException: duplicate column name: start_time: ALTER TABLE "sessions"
   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateQuestions (20120907232722)
+Migrating to CreateAnswers (20120907232921)
+Migrating to AddFollowToQuestions (20120910215729)
+Migrating to AddSessionsTable (20120911033303)
+Migrating to AddHasfqToAnswers (20120911044831)
+Migrating to CreateResources (20120927223527)
+Migrating to AddAnswerIdToResources (20120927223652)
+Migrating to AddResourceBoolToAnswers (20120927231337)
+Migrating to AddGMapsToResources (20120928034357)
+Migrating to AddCategoryToQuestions (20121015050901)
+Migrating to CreatePatients (20121015054857)
+Migrating to AddLanguageToQuestions (20121017071025)
+Migrating to RemoveTimeFromSessions (20121130192803)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TEMPORARY TABLE "altered_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "start_time" datetime, "end" datetime) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_sessions_on_updated_at')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_sessions")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_sessions_on_updated_at" ON "altered_sessions" ("updated_at")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_sessions")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_sessions_on_updated_at')[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "temp_index_altered_sessions_on_session_id" ON "altered_sessions" ("session_id")
+  [1m[36m (1.4ms)[0m  [1mSELECT * FROM "sessions"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (1, 'df8115700756e0ad1478cb3478cd2470', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF5QkNEVHYwTVVKMDJWeHFrYWcv
+RFJma1Vldmx1V1RMZzNpVElYVndmK3hjPQY7AEY=
+', '2012-10-24 09:44:51.851155', '2012-10-24 09:44:51.851155', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (2, '128bcb74eecffdeeb5aa8e23c25f8645', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFzUDZnY1h4L0t3NzB3WlZ4U2hn
+OUgrcWtla0dwNE5UVWs2M2dkZVlZR0R3PQY7AEY=
+', '2012-10-24 09:44:53.355668', '2012-10-24 09:44:53.355668', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (3, '90cd64ed1986d386e9ad65b6cece2ef3', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFZbFAxeWcvUWV5NFFEbnY3UDdI
+TXFKdW1OT2M4T2hhNzJpQ1JrZDMrSy8wPQY7AEY=
+', '2012-10-24 09:44:54.720682', '2012-10-24 09:44:54.720682', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (4, 'a843bb4d7ca201e1231aa279e9e9b2d7', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFYQ3hkWml1amZqSzErbzZxWlg2
+Uzl5dlVMVEVFZ01SdVdFQjNETTBWMkFZPQY7AEY=
+', '2012-11-06 05:55:43.404189', '2012-11-06 05:55:43.404189', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (5, '862131bbfb9b05be8b147b8ec07ac0a7', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFINzBwWDFTSXkyOTB0R2JKV1A3
+NUU5VXV2dGxTZ2JmZjJKQXdVb1dLL2prPQY7AEY=
+', '2012-11-06 05:55:46.630982', '2012-11-06 05:55:46.630982', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (6, '477cd2191ff42c2b02ccfd1ab3885319', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF1YUdFMHNLdUFqNkFXdUdoUVZt
+RlA5L1JERUVYK3drK0trbGs2SEFUeVdrPQY7AEY=
+', '2012-11-06 05:55:47.636717', '2012-11-06 05:55:47.636717', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (7, '7da98e6bc220963edf8fb1b3afd5400c', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjExNE1KMnB0MWRXUXgyRHpWOGJW
+Ri9KbjVtcUllQk9UN0FGMk5xM3lWd20wPQY7AEY=
+', '2012-11-06 06:08:09.381433', '2012-11-06 06:08:09.381433', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (8, 'f1fddfd4ba097df4b8dbbff382de7233', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFnVExYbDRaK2RldFF2VU1IV2tp
+enFsblExV040ZnhxU3IxYm9EVk1ydGJRPQY7AEY=
+', '2012-11-06 06:09:19.492883', '2012-11-06 06:09:19.492883', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (9, 'ad9daecf8c4fb0fea479a6034694dd55', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFpT2RYUkR5QzFnVmRna3hENU9q
+V1Iwb3FsRVBBZUpIT05jSWU4Q1Z2bFY4PQY7AEY=
+', '2012-11-06 06:09:22.382259', '2012-11-06 06:09:22.382259', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (10, '846bede571c679a92e54a9fa0ca77d13', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFvMTd0SWkxdDdJVU96YW9hd2VM
+Mk00b1E2MDRZcHpBcTlVU0IvenJ6YnhnPQY7AEY=
+', '2012-11-06 06:09:24.698829', '2012-11-06 06:09:24.698829', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (11, 'c7040cd87f87112f6e7b36fc096eb775', 'BAh7AA==
+', '2012-11-06 06:09:40.421473', '2012-11-06 06:09:40.421473', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (12, 'b0ceaf43d3431190e51a08476ce1e809', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFKZUpsZmwzQ2pLV0tQVmp2TjVU
+NGN6ZGRVVXo0Wlp6SDdPTXRuRVFEZy9VPQY7AEY=
+', '2012-11-06 06:09:40.439936', '2012-11-06 06:09:40.439936', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (13, 'de7a2a73a84ab264f28b8e510eb37488', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFCdDdjbUFldUowVk1VTkVaU25r
+RE9sNHozR0dxTC9BZGczWXJGTVhXV1FrPQY7AEY=
+', '2012-11-06 06:09:43.085469', '2012-11-06 06:09:43.085469', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (14, '2f3ec5e9a97aac98a6290f173a2cf44f', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFUQ3gyKzQ3WjVGUloyanU3aDdC
+MWQraS9sWDBlSkVMTWFZSWJVelJUVWJzPQY7AEY=
+', '2012-11-06 06:09:44.006855', '2012-11-06 06:09:44.006855', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (15, '922ae39a393a273b0ddad91bc99d778c', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjE4L0drVzZRTHZVQjlmZkNtTzQ5
+OXVNMlNkY2FpM0pnOGtteENwV2g1YzE0PQY7AEY=
+', '2012-11-06 06:09:44.764076', '2012-11-06 06:09:44.764076', NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (16, 'ba4ba37106f1543a5f570a7dab815124', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjE3aEtXNEpVc012UCtFQmZDWnd4
+UjFSbzRvTWkyUGgyRTR3UDBMcHZTMnpnPQY7AEY=
+', '2012-11-06 06:12:39.329797', '2012-11-06 06:12:39.329797', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (17, '1953e042645da685a12ee88bc0de74ab', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFHNk1IUjBrWDlwRnVlQXRyZFZX
+bkxGcGpxWklWWFZzR3M0TkttejAyT1JJPQY7AEY=
+', '2012-11-06 06:12:40.362045', '2012-11-06 06:12:40.362045', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (18, 'a750e55c9c4e78f55275530647284c7d', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFBTFd0ZEUraE9nTFlQVzlNcUM5
+cWhSWXNtWE1GOTJlSHFydnhucDE0amU4PQY7AEY=
+', '2012-11-06 06:31:47.082099', '2012-11-06 06:31:47.082099', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (19, 'c17adb85eec65bf18b8b00f8cefc2368', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF3N1RFbW9NVUUvcjRLSnR3Sk9T
+TFhNQk4rTHR0SmE2cTMyVGZTUnN0QjFFPQY7AEY=
+', '2012-11-06 06:31:48.638095', '2012-11-06 06:31:48.638095', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (20, 'b355866fe67551cce407f329366b73ea', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjE0UWdmS0tIT0h5S0ExWmFKSnp3
+Z1NLMTBMemduMXlnLzdaa2ltSGI1NnhrPQY7AEY=
+', '2012-11-06 06:31:49.354315', '2012-11-06 06:31:49.354315', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (21, 'e25b02af7b067491c3c656e503191336', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFDVEo3OFJmSmlGbWpkMzJMdzRY
+Mi94YUUrQjlLUlB2bWNVaEs4dTVMZnN3PQY7AEY=
+', '2012-11-06 06:31:50.087990', '2012-11-06 06:31:50.087990', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (22, '4a1be434c7b435be4708d2e33731982b', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF1Z1pzNlNaVnRROTkwSnFhL3Nj
+NHBUSis5Tis1Y1pPTHdFMVhsdkNxamFRPQY7AEY=
+', '2012-11-06 06:31:56.709888', '2012-11-06 06:31:56.709888', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (23, 'c1d3e5ba2a3c8cedd07b7c38a3cf2c50', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFlMTd2SUZ2ZHMxQXh0bFd1aCtY
+ZFo0bzZoZEFZME0rOWd3SWptSkFHekowPQY7AEY=
+', '2012-11-06 06:31:57.432063', '2012-11-06 06:31:57.432063', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (24, '5538a53bab7c151658d48275beb11cff', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFSbE5BdVp1UGo0VGNLd0JGaTlv
+bkpzS3VMbHFPZWxsYWExa0ViN1ZKVVNvPQY7AEY=
+', '2012-11-06 07:02:28.114385', '2012-11-06 07:02:28.114385', NULL, NULL)[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (25, 'a4ac7db3da633cf23a46772c1c5071bd', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFBdnUrS243TExXRVNiWXZSajJv
+eVhpNXF1OXZXRi9jcUswZHlwczhlTXZ3PQY7AEY=
+', '2012-11-06 07:02:30.101795', '2012-11-06 07:02:30.101795', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (26, 'ce15815eeaeae3bb0bdf0a4b3a06a4b6', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF3MnhRZGFoOFNnbkJtVzRSQjJJ
+K1gvUTJDbVc2cGdhZnAvWllGaXZVOVg4PQY7AEY=
+', '2012-11-06 07:02:32.348562', '2012-11-06 07:02:32.348562', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start_time","end") VALUES (27, '88fe29c523e623ffaf5a6b71faa0d44e', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFwam9NNWdjOHJNOFlRdCs0UGFt
+OUJleU9mcGllVnZLZjJsK0JneGFsMHUwPQY7AEY=
+', '2012-11-06 07:02:33.778509', '2012-11-06 07:02:33.778509', NULL, NULL)
+  [1m[36m (1.6ms)[0m  [1mDROP TABLE "sessions"[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "end" datetime) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("altered_sessions")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('temp_index_altered_sessions_on_session_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_sessions_on_updated_at')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("sessions")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("sessions")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "altered_sessions"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (1, 'df8115700756e0ad1478cb3478cd2470', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF5QkNEVHYwTVVKMDJWeHFrYWcv
+RFJma1Vldmx1V1RMZzNpVElYVndmK3hjPQY7AEY=
+', '2012-10-24 09:44:51.851155', '2012-10-24 09:44:51.851155', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (2, '128bcb74eecffdeeb5aa8e23c25f8645', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFzUDZnY1h4L0t3NzB3WlZ4U2hn
+OUgrcWtla0dwNE5UVWs2M2dkZVlZR0R3PQY7AEY=
+', '2012-10-24 09:44:53.355668', '2012-10-24 09:44:53.355668', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (3, '90cd64ed1986d386e9ad65b6cece2ef3', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFZbFAxeWcvUWV5NFFEbnY3UDdI
+TXFKdW1OT2M4T2hhNzJpQ1JrZDMrSy8wPQY7AEY=
+', '2012-10-24 09:44:54.720682', '2012-10-24 09:44:54.720682', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (4, 'a843bb4d7ca201e1231aa279e9e9b2d7', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFYQ3hkWml1amZqSzErbzZxWlg2
+Uzl5dlVMVEVFZ01SdVdFQjNETTBWMkFZPQY7AEY=
+', '2012-11-06 05:55:43.404189', '2012-11-06 05:55:43.404189', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (5, '862131bbfb9b05be8b147b8ec07ac0a7', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFINzBwWDFTSXkyOTB0R2JKV1A3
+NUU5VXV2dGxTZ2JmZjJKQXdVb1dLL2prPQY7AEY=
+', '2012-11-06 05:55:46.630982', '2012-11-06 05:55:46.630982', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (6, '477cd2191ff42c2b02ccfd1ab3885319', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF1YUdFMHNLdUFqNkFXdUdoUVZt
+RlA5L1JERUVYK3drK0trbGs2SEFUeVdrPQY7AEY=
+', '2012-11-06 05:55:47.636717', '2012-11-06 05:55:47.636717', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (7, '7da98e6bc220963edf8fb1b3afd5400c', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjExNE1KMnB0MWRXUXgyRHpWOGJW
+Ri9KbjVtcUllQk9UN0FGMk5xM3lWd20wPQY7AEY=
+', '2012-11-06 06:08:09.381433', '2012-11-06 06:08:09.381433', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (8, 'f1fddfd4ba097df4b8dbbff382de7233', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFnVExYbDRaK2RldFF2VU1IV2tp
+enFsblExV040ZnhxU3IxYm9EVk1ydGJRPQY7AEY=
+', '2012-11-06 06:09:19.492883', '2012-11-06 06:09:19.492883', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (9, 'ad9daecf8c4fb0fea479a6034694dd55', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFpT2RYUkR5QzFnVmRna3hENU9q
+V1Iwb3FsRVBBZUpIT05jSWU4Q1Z2bFY4PQY7AEY=
+', '2012-11-06 06:09:22.382259', '2012-11-06 06:09:22.382259', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (10, '846bede571c679a92e54a9fa0ca77d13', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFvMTd0SWkxdDdJVU96YW9hd2VM
+Mk00b1E2MDRZcHpBcTlVU0IvenJ6YnhnPQY7AEY=
+', '2012-11-06 06:09:24.698829', '2012-11-06 06:09:24.698829', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (11, 'c7040cd87f87112f6e7b36fc096eb775', 'BAh7AA==
+', '2012-11-06 06:09:40.421473', '2012-11-06 06:09:40.421473', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (12, 'b0ceaf43d3431190e51a08476ce1e809', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFKZUpsZmwzQ2pLV0tQVmp2TjVU
+NGN6ZGRVVXo0Wlp6SDdPTXRuRVFEZy9VPQY7AEY=
+', '2012-11-06 06:09:40.439936', '2012-11-06 06:09:40.439936', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (13, 'de7a2a73a84ab264f28b8e510eb37488', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFCdDdjbUFldUowVk1VTkVaU25r
+RE9sNHozR0dxTC9BZGczWXJGTVhXV1FrPQY7AEY=
+', '2012-11-06 06:09:43.085469', '2012-11-06 06:09:43.085469', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (14, '2f3ec5e9a97aac98a6290f173a2cf44f', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFUQ3gyKzQ3WjVGUloyanU3aDdC
+MWQraS9sWDBlSkVMTWFZSWJVelJUVWJzPQY7AEY=
+', '2012-11-06 06:09:44.006855', '2012-11-06 06:09:44.006855', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (15, '922ae39a393a273b0ddad91bc99d778c', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjE4L0drVzZRTHZVQjlmZkNtTzQ5
+OXVNMlNkY2FpM0pnOGtteENwV2g1YzE0PQY7AEY=
+', '2012-11-06 06:09:44.764076', '2012-11-06 06:09:44.764076', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (16, 'ba4ba37106f1543a5f570a7dab815124', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjE3aEtXNEpVc012UCtFQmZDWnd4
+UjFSbzRvTWkyUGgyRTR3UDBMcHZTMnpnPQY7AEY=
+', '2012-11-06 06:12:39.329797', '2012-11-06 06:12:39.329797', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (17, '1953e042645da685a12ee88bc0de74ab', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFHNk1IUjBrWDlwRnVlQXRyZFZX
+bkxGcGpxWklWWFZzR3M0TkttejAyT1JJPQY7AEY=
+', '2012-11-06 06:12:40.362045', '2012-11-06 06:12:40.362045', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (18, 'a750e55c9c4e78f55275530647284c7d', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFBTFd0ZEUraE9nTFlQVzlNcUM5
+cWhSWXNtWE1GOTJlSHFydnhucDE0amU4PQY7AEY=
+', '2012-11-06 06:31:47.082099', '2012-11-06 06:31:47.082099', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (19, 'c17adb85eec65bf18b8b00f8cefc2368', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF3N1RFbW9NVUUvcjRLSnR3Sk9T
+TFhNQk4rTHR0SmE2cTMyVGZTUnN0QjFFPQY7AEY=
+', '2012-11-06 06:31:48.638095', '2012-11-06 06:31:48.638095', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (20, 'b355866fe67551cce407f329366b73ea', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjE0UWdmS0tIT0h5S0ExWmFKSnp3
+Z1NLMTBMemduMXlnLzdaa2ltSGI1NnhrPQY7AEY=
+', '2012-11-06 06:31:49.354315', '2012-11-06 06:31:49.354315', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (21, 'e25b02af7b067491c3c656e503191336', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFDVEo3OFJmSmlGbWpkMzJMdzRY
+Mi94YUUrQjlLUlB2bWNVaEs4dTVMZnN3PQY7AEY=
+', '2012-11-06 06:31:50.087990', '2012-11-06 06:31:50.087990', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (22, '4a1be434c7b435be4708d2e33731982b', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF1Z1pzNlNaVnRROTkwSnFhL3Nj
+NHBUSis5Tis1Y1pPTHdFMVhsdkNxamFRPQY7AEY=
+', '2012-11-06 06:31:56.709888', '2012-11-06 06:31:56.709888', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (23, 'c1d3e5ba2a3c8cedd07b7c38a3cf2c50', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFlMTd2SUZ2ZHMxQXh0bFd1aCtY
+ZFo0bzZoZEFZME0rOWd3SWptSkFHekowPQY7AEY=
+', '2012-11-06 06:31:57.432063', '2012-11-06 06:31:57.432063', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (24, '5538a53bab7c151658d48275beb11cff', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFSbE5BdVp1UGo0VGNLd0JGaTlv
+bkpzS3VMbHFPZWxsYWExa0ViN1ZKVVNvPQY7AEY=
+', '2012-11-06 07:02:28.114385', '2012-11-06 07:02:28.114385', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (25, 'a4ac7db3da633cf23a46772c1c5071bd', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFBdnUrS243TExXRVNiWXZSajJv
+eVhpNXF1OXZXRi9jcUswZHlwczhlTXZ3PQY7AEY=
+', '2012-11-06 07:02:30.101795', '2012-11-06 07:02:30.101795', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (26, 'ce15815eeaeae3bb0bdf0a4b3a06a4b6', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF3MnhRZGFoOFNnbkJtVzRSQjJJ
+K1gvUTJDbVc2cGdhZnAvWllGaXZVOVg4PQY7AEY=
+', '2012-11-06 07:02:32.348562', '2012-11-06 07:02:32.348562', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (27, '88fe29c523e623ffaf5a6b71faa0d44e', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFwam9NNWdjOHJNOFlRdCs0UGFt
+OUJleU9mcGllVnZLZjJsK0JneGFsMHUwPQY7AEY=
+', '2012-11-06 07:02:33.778509', '2012-11-06 07:02:33.778509', NULL)
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "altered_sessions"[0m
+  [1m[35m (0.1ms)[0m  CREATE TEMPORARY TABLE "altered_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "end" datetime) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_sessions_on_updated_at')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_sessions")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_sessions_on_updated_at" ON "altered_sessions" ("updated_at")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_sessions")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_sessions_on_updated_at')[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "temp_index_altered_sessions_on_session_id" ON "altered_sessions" ("session_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "sessions"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (1, 'df8115700756e0ad1478cb3478cd2470', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF5QkNEVHYwTVVKMDJWeHFrYWcv
+RFJma1Vldmx1V1RMZzNpVElYVndmK3hjPQY7AEY=
+', '2012-10-24 09:44:51.851155', '2012-10-24 09:44:51.851155', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (2, '128bcb74eecffdeeb5aa8e23c25f8645', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFzUDZnY1h4L0t3NzB3WlZ4U2hn
+OUgrcWtla0dwNE5UVWs2M2dkZVlZR0R3PQY7AEY=
+', '2012-10-24 09:44:53.355668', '2012-10-24 09:44:53.355668', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (3, '90cd64ed1986d386e9ad65b6cece2ef3', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFZbFAxeWcvUWV5NFFEbnY3UDdI
+TXFKdW1OT2M4T2hhNzJpQ1JrZDMrSy8wPQY7AEY=
+', '2012-10-24 09:44:54.720682', '2012-10-24 09:44:54.720682', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (4, 'a843bb4d7ca201e1231aa279e9e9b2d7', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFYQ3hkWml1amZqSzErbzZxWlg2
+Uzl5dlVMVEVFZ01SdVdFQjNETTBWMkFZPQY7AEY=
+', '2012-11-06 05:55:43.404189', '2012-11-06 05:55:43.404189', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (5, '862131bbfb9b05be8b147b8ec07ac0a7', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFINzBwWDFTSXkyOTB0R2JKV1A3
+NUU5VXV2dGxTZ2JmZjJKQXdVb1dLL2prPQY7AEY=
+', '2012-11-06 05:55:46.630982', '2012-11-06 05:55:46.630982', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (6, '477cd2191ff42c2b02ccfd1ab3885319', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF1YUdFMHNLdUFqNkFXdUdoUVZt
+RlA5L1JERUVYK3drK0trbGs2SEFUeVdrPQY7AEY=
+', '2012-11-06 05:55:47.636717', '2012-11-06 05:55:47.636717', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (7, '7da98e6bc220963edf8fb1b3afd5400c', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjExNE1KMnB0MWRXUXgyRHpWOGJW
+Ri9KbjVtcUllQk9UN0FGMk5xM3lWd20wPQY7AEY=
+', '2012-11-06 06:08:09.381433', '2012-11-06 06:08:09.381433', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (8, 'f1fddfd4ba097df4b8dbbff382de7233', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFnVExYbDRaK2RldFF2VU1IV2tp
+enFsblExV040ZnhxU3IxYm9EVk1ydGJRPQY7AEY=
+', '2012-11-06 06:09:19.492883', '2012-11-06 06:09:19.492883', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (9, 'ad9daecf8c4fb0fea479a6034694dd55', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFpT2RYUkR5QzFnVmRna3hENU9q
+V1Iwb3FsRVBBZUpIT05jSWU4Q1Z2bFY4PQY7AEY=
+', '2012-11-06 06:09:22.382259', '2012-11-06 06:09:22.382259', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (10, '846bede571c679a92e54a9fa0ca77d13', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFvMTd0SWkxdDdJVU96YW9hd2VM
+Mk00b1E2MDRZcHpBcTlVU0IvenJ6YnhnPQY7AEY=
+', '2012-11-06 06:09:24.698829', '2012-11-06 06:09:24.698829', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (11, 'c7040cd87f87112f6e7b36fc096eb775', 'BAh7AA==
+', '2012-11-06 06:09:40.421473', '2012-11-06 06:09:40.421473', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (12, 'b0ceaf43d3431190e51a08476ce1e809', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFKZUpsZmwzQ2pLV0tQVmp2TjVU
+NGN6ZGRVVXo0Wlp6SDdPTXRuRVFEZy9VPQY7AEY=
+', '2012-11-06 06:09:40.439936', '2012-11-06 06:09:40.439936', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (13, 'de7a2a73a84ab264f28b8e510eb37488', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFCdDdjbUFldUowVk1VTkVaU25r
+RE9sNHozR0dxTC9BZGczWXJGTVhXV1FrPQY7AEY=
+', '2012-11-06 06:09:43.085469', '2012-11-06 06:09:43.085469', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (14, '2f3ec5e9a97aac98a6290f173a2cf44f', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFUQ3gyKzQ3WjVGUloyanU3aDdC
+MWQraS9sWDBlSkVMTWFZSWJVelJUVWJzPQY7AEY=
+', '2012-11-06 06:09:44.006855', '2012-11-06 06:09:44.006855', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (15, '922ae39a393a273b0ddad91bc99d778c', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjE4L0drVzZRTHZVQjlmZkNtTzQ5
+OXVNMlNkY2FpM0pnOGtteENwV2g1YzE0PQY7AEY=
+', '2012-11-06 06:09:44.764076', '2012-11-06 06:09:44.764076', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (16, 'ba4ba37106f1543a5f570a7dab815124', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjE3aEtXNEpVc012UCtFQmZDWnd4
+UjFSbzRvTWkyUGgyRTR3UDBMcHZTMnpnPQY7AEY=
+', '2012-11-06 06:12:39.329797', '2012-11-06 06:12:39.329797', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (17, '1953e042645da685a12ee88bc0de74ab', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFHNk1IUjBrWDlwRnVlQXRyZFZX
+bkxGcGpxWklWWFZzR3M0TkttejAyT1JJPQY7AEY=
+', '2012-11-06 06:12:40.362045', '2012-11-06 06:12:40.362045', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (18, 'a750e55c9c4e78f55275530647284c7d', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFBTFd0ZEUraE9nTFlQVzlNcUM5
+cWhSWXNtWE1GOTJlSHFydnhucDE0amU4PQY7AEY=
+', '2012-11-06 06:31:47.082099', '2012-11-06 06:31:47.082099', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (19, 'c17adb85eec65bf18b8b00f8cefc2368', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF3N1RFbW9NVUUvcjRLSnR3Sk9T
+TFhNQk4rTHR0SmE2cTMyVGZTUnN0QjFFPQY7AEY=
+', '2012-11-06 06:31:48.638095', '2012-11-06 06:31:48.638095', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (20, 'b355866fe67551cce407f329366b73ea', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjE0UWdmS0tIT0h5S0ExWmFKSnp3
+Z1NLMTBMemduMXlnLzdaa2ltSGI1NnhrPQY7AEY=
+', '2012-11-06 06:31:49.354315', '2012-11-06 06:31:49.354315', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (21, 'e25b02af7b067491c3c656e503191336', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFDVEo3OFJmSmlGbWpkMzJMdzRY
+Mi94YUUrQjlLUlB2bWNVaEs4dTVMZnN3PQY7AEY=
+', '2012-11-06 06:31:50.087990', '2012-11-06 06:31:50.087990', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (22, '4a1be434c7b435be4708d2e33731982b', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF1Z1pzNlNaVnRROTkwSnFhL3Nj
+NHBUSis5Tis1Y1pPTHdFMVhsdkNxamFRPQY7AEY=
+', '2012-11-06 06:31:56.709888', '2012-11-06 06:31:56.709888', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (23, 'c1d3e5ba2a3c8cedd07b7c38a3cf2c50', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFlMTd2SUZ2ZHMxQXh0bFd1aCtY
+ZFo0bzZoZEFZME0rOWd3SWptSkFHekowPQY7AEY=
+', '2012-11-06 06:31:57.432063', '2012-11-06 06:31:57.432063', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (24, '5538a53bab7c151658d48275beb11cff', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFSbE5BdVp1UGo0VGNLd0JGaTlv
+bkpzS3VMbHFPZWxsYWExa0ViN1ZKVVNvPQY7AEY=
+', '2012-11-06 07:02:28.114385', '2012-11-06 07:02:28.114385', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (25, 'a4ac7db3da633cf23a46772c1c5071bd', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFBdnUrS243TExXRVNiWXZSajJv
+eVhpNXF1OXZXRi9jcUswZHlwczhlTXZ3PQY7AEY=
+', '2012-11-06 07:02:30.101795', '2012-11-06 07:02:30.101795', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (26, 'ce15815eeaeae3bb0bdf0a4b3a06a4b6', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF3MnhRZGFoOFNnbkJtVzRSQjJJ
+K1gvUTJDbVc2cGdhZnAvWllGaXZVOVg4PQY7AEY=
+', '2012-11-06 07:02:32.348562', '2012-11-06 07:02:32.348562', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","end") VALUES (27, '88fe29c523e623ffaf5a6b71faa0d44e', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFwam9NNWdjOHJNOFlRdCs0UGFt
+OUJleU9mcGllVnZLZjJsK0JneGFsMHUwPQY7AEY=
+', '2012-11-06 07:02:33.778509', '2012-11-06 07:02:33.778509', NULL)
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "sessions"[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("altered_sessions")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('temp_index_altered_sessions_on_session_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_sessions_on_updated_at')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("sessions")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("sessions")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")
+  [1m[36m (0.2ms)[0m  [1mSELECT * FROM "altered_sessions"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (1, 'df8115700756e0ad1478cb3478cd2470', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF5QkNEVHYwTVVKMDJWeHFrYWcv
+RFJma1Vldmx1V1RMZzNpVElYVndmK3hjPQY7AEY=
+', '2012-10-24 09:44:51.851155', '2012-10-24 09:44:51.851155')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (2, '128bcb74eecffdeeb5aa8e23c25f8645', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFzUDZnY1h4L0t3NzB3WlZ4U2hn
+OUgrcWtla0dwNE5UVWs2M2dkZVlZR0R3PQY7AEY=
+', '2012-10-24 09:44:53.355668', '2012-10-24 09:44:53.355668')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (3, '90cd64ed1986d386e9ad65b6cece2ef3', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFZbFAxeWcvUWV5NFFEbnY3UDdI
+TXFKdW1OT2M4T2hhNzJpQ1JrZDMrSy8wPQY7AEY=
+', '2012-10-24 09:44:54.720682', '2012-10-24 09:44:54.720682')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (4, 'a843bb4d7ca201e1231aa279e9e9b2d7', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFYQ3hkWml1amZqSzErbzZxWlg2
+Uzl5dlVMVEVFZ01SdVdFQjNETTBWMkFZPQY7AEY=
+', '2012-11-06 05:55:43.404189', '2012-11-06 05:55:43.404189')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (5, '862131bbfb9b05be8b147b8ec07ac0a7', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFINzBwWDFTSXkyOTB0R2JKV1A3
+NUU5VXV2dGxTZ2JmZjJKQXdVb1dLL2prPQY7AEY=
+', '2012-11-06 05:55:46.630982', '2012-11-06 05:55:46.630982')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (6, '477cd2191ff42c2b02ccfd1ab3885319', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF1YUdFMHNLdUFqNkFXdUdoUVZt
+RlA5L1JERUVYK3drK0trbGs2SEFUeVdrPQY7AEY=
+', '2012-11-06 05:55:47.636717', '2012-11-06 05:55:47.636717')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (7, '7da98e6bc220963edf8fb1b3afd5400c', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjExNE1KMnB0MWRXUXgyRHpWOGJW
+Ri9KbjVtcUllQk9UN0FGMk5xM3lWd20wPQY7AEY=
+', '2012-11-06 06:08:09.381433', '2012-11-06 06:08:09.381433')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (8, 'f1fddfd4ba097df4b8dbbff382de7233', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFnVExYbDRaK2RldFF2VU1IV2tp
+enFsblExV040ZnhxU3IxYm9EVk1ydGJRPQY7AEY=
+', '2012-11-06 06:09:19.492883', '2012-11-06 06:09:19.492883')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (9, 'ad9daecf8c4fb0fea479a6034694dd55', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFpT2RYUkR5QzFnVmRna3hENU9q
+V1Iwb3FsRVBBZUpIT05jSWU4Q1Z2bFY4PQY7AEY=
+', '2012-11-06 06:09:22.382259', '2012-11-06 06:09:22.382259')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (10, '846bede571c679a92e54a9fa0ca77d13', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFvMTd0SWkxdDdJVU96YW9hd2VM
+Mk00b1E2MDRZcHpBcTlVU0IvenJ6YnhnPQY7AEY=
+', '2012-11-06 06:09:24.698829', '2012-11-06 06:09:24.698829')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (11, 'c7040cd87f87112f6e7b36fc096eb775', 'BAh7AA==
+', '2012-11-06 06:09:40.421473', '2012-11-06 06:09:40.421473')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (12, 'b0ceaf43d3431190e51a08476ce1e809', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFKZUpsZmwzQ2pLV0tQVmp2TjVU
+NGN6ZGRVVXo0Wlp6SDdPTXRuRVFEZy9VPQY7AEY=
+', '2012-11-06 06:09:40.439936', '2012-11-06 06:09:40.439936')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (13, 'de7a2a73a84ab264f28b8e510eb37488', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFCdDdjbUFldUowVk1VTkVaU25r
+RE9sNHozR0dxTC9BZGczWXJGTVhXV1FrPQY7AEY=
+', '2012-11-06 06:09:43.085469', '2012-11-06 06:09:43.085469')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (14, '2f3ec5e9a97aac98a6290f173a2cf44f', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFUQ3gyKzQ3WjVGUloyanU3aDdC
+MWQraS9sWDBlSkVMTWFZSWJVelJUVWJzPQY7AEY=
+', '2012-11-06 06:09:44.006855', '2012-11-06 06:09:44.006855')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (15, '922ae39a393a273b0ddad91bc99d778c', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjE4L0drVzZRTHZVQjlmZkNtTzQ5
+OXVNMlNkY2FpM0pnOGtteENwV2g1YzE0PQY7AEY=
+', '2012-11-06 06:09:44.764076', '2012-11-06 06:09:44.764076')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (16, 'ba4ba37106f1543a5f570a7dab815124', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjE3aEtXNEpVc012UCtFQmZDWnd4
+UjFSbzRvTWkyUGgyRTR3UDBMcHZTMnpnPQY7AEY=
+', '2012-11-06 06:12:39.329797', '2012-11-06 06:12:39.329797')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (17, '1953e042645da685a12ee88bc0de74ab', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFHNk1IUjBrWDlwRnVlQXRyZFZX
+bkxGcGpxWklWWFZzR3M0TkttejAyT1JJPQY7AEY=
+', '2012-11-06 06:12:40.362045', '2012-11-06 06:12:40.362045')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (18, 'a750e55c9c4e78f55275530647284c7d', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFBTFd0ZEUraE9nTFlQVzlNcUM5
+cWhSWXNtWE1GOTJlSHFydnhucDE0amU4PQY7AEY=
+', '2012-11-06 06:31:47.082099', '2012-11-06 06:31:47.082099')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (19, 'c17adb85eec65bf18b8b00f8cefc2368', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF3N1RFbW9NVUUvcjRLSnR3Sk9T
+TFhNQk4rTHR0SmE2cTMyVGZTUnN0QjFFPQY7AEY=
+', '2012-11-06 06:31:48.638095', '2012-11-06 06:31:48.638095')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (20, 'b355866fe67551cce407f329366b73ea', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjE0UWdmS0tIT0h5S0ExWmFKSnp3
+Z1NLMTBMemduMXlnLzdaa2ltSGI1NnhrPQY7AEY=
+', '2012-11-06 06:31:49.354315', '2012-11-06 06:31:49.354315')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (21, 'e25b02af7b067491c3c656e503191336', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFDVEo3OFJmSmlGbWpkMzJMdzRY
+Mi94YUUrQjlLUlB2bWNVaEs4dTVMZnN3PQY7AEY=
+', '2012-11-06 06:31:50.087990', '2012-11-06 06:31:50.087990')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (22, '4a1be434c7b435be4708d2e33731982b', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF1Z1pzNlNaVnRROTkwSnFhL3Nj
+NHBUSis5Tis1Y1pPTHdFMVhsdkNxamFRPQY7AEY=
+', '2012-11-06 06:31:56.709888', '2012-11-06 06:31:56.709888')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (23, 'c1d3e5ba2a3c8cedd07b7c38a3cf2c50', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFlMTd2SUZ2ZHMxQXh0bFd1aCtY
+ZFo0bzZoZEFZME0rOWd3SWptSkFHekowPQY7AEY=
+', '2012-11-06 06:31:57.432063', '2012-11-06 06:31:57.432063')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (24, '5538a53bab7c151658d48275beb11cff', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFSbE5BdVp1UGo0VGNLd0JGaTlv
+bkpzS3VMbHFPZWxsYWExa0ViN1ZKVVNvPQY7AEY=
+', '2012-11-06 07:02:28.114385', '2012-11-06 07:02:28.114385')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (25, 'a4ac7db3da633cf23a46772c1c5071bd', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFBdnUrS243TExXRVNiWXZSajJv
+eVhpNXF1OXZXRi9jcUswZHlwczhlTXZ3PQY7AEY=
+', '2012-11-06 07:02:30.101795', '2012-11-06 07:02:30.101795')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (26, 'ce15815eeaeae3bb0bdf0a4b3a06a4b6', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF3MnhRZGFoOFNnbkJtVzRSQjJJ
+K1gvUTJDbVc2cGdhZnAvWllGaXZVOVg4PQY7AEY=
+', '2012-11-06 07:02:32.348562', '2012-11-06 07:02:32.348562')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at") VALUES (27, '88fe29c523e623ffaf5a6b71faa0d44e', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFwam9NNWdjOHJNOFlRdCs0UGFt
+OUJleU9mcGllVnZLZjJsK0JneGFsMHUwPQY7AEY=
+', '2012-11-06 07:02:33.778509', '2012-11-06 07:02:33.778509')
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "altered_sessions"[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121130192803')
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Migrating to AddTimeToSessions (20121130192829)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "sessions" ADD "start" integer[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "sessions" ADD "end" integer
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121130192829')[0m
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("answers")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("patients")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("questions")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("resources")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_sessions_on_updated_at')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_sessions_on_session_id')[0m
