@@ -1250,3 +1250,2054 @@ Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.0ms)
 
 Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 13:46:12 -0800
 Served asset /limit_page.css - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/login" for 127.0.0.1 at 2012-12-01 14:04:56 -0800
+Processing by LoginController#main as HTML
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.2ms)[0m  INSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)  [["answers", ""], ["created_at", Sat, 01 Dec 2012 22:04:56 UTC +00:00], ["updated_at", Sat, 01 Dec 2012 22:04:56 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 114ms (Views: 71.0ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:04:56 -0800
+Served asset /limit_page.css - 304 Not Modified (2ms)
+
+
+Started GET "/questions/language" for 127.0.0.1 at 2012-12-01 14:04:58 -0800
+Processing by QuestionsController#language as HTML
+  Rendered questions/language.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:04:58 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-12-01 14:04:59 -0800
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:04:59 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/survey/language?answer=0&follow=false&number=0&patient=9" for 127.0.0.1 at 2012-12-01 14:05:03 -0800
+Processing by SurveyController#language as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"9"}
+  Rendered survey/language.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:05:03 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&language=English&number=0&patient=9" for 127.0.0.1 at 2012-12-01 14:05:04 -0800
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "language"=>"English", "number"=>"0", "patient"=>"9"}
+  [1m[35mPatient Load (0.3ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "patients" SET "answers" = ':0', "updated_at" = '2012-12-01 22:05:04.311754' WHERE "patients"."id" = 9
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+Order number: 1
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 1
+  Rendered survey/view.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 74ms (Views: 20.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:05:04 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-12-01 14:05:04 -0800
+Served asset /survey_questions.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/survey/view?answer=1&follow=false&language=English&number=1&patient=9" for 127.0.0.1 at 2012-12-01 14:05:05 -0800
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"1", "follow"=>"false", "language"=>"English", "number"=>"1", "patient"=>"9"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "patients" SET "answers" = ':0:1', "updated_at" = '2012-12-01 22:05:05.542236' WHERE "patients"."id" = 9[0m
+  [1m[35m (1.9ms)[0m  commit transaction
+Order number: 2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'[0m
+Redirected to http://localhost:3000/survey/limit?language=English&patient=9
+Completed 302 Found in 5ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/survey/limit?language=English&patient=9" for 127.0.0.1 at 2012-12-01 14:05:05 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"9"}
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", "9"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered survey/limit.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:05:05 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/questions/language" for 127.0.0.1 at 2012-12-01 14:05:09 -0800
+Processing by QuestionsController#language as HTML
+  Rendered questions/language.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:05:09 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-12-01 14:05:10 -0800
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 14ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:05:10 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started POST "/questions/add" for 127.0.0.1 at 2012-12-01 14:05:42 -0800
+Processing by QuestionsController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FuqIMSZvCzH9Orc+acZ+1Se/0xtgMi8o1xugkW76N8E=", "follow"=>"false", "language"=>"English", "quest"=>"What day is it?", "order"=>"2", "category"=>"Day", "answer1"=>"Monday", "answer1_follow"=>"no", "resource1_follow"=>"no", "resource1_name"=>"", "resource1_address1"=>"", "resource1_address2"=>"", "resource1_city"=>"", "resource1_zip"=>"", "resource1_phone1"=>"", "resource1_phone2"=>"", "resource1_phone3"=>"", "resource1_website"=>"", "resource1_area"=>"", "answer2"=>"Tuesday", "answer2_follow"=>"no", "resource2_follow"=>"no", "resource2_name"=>"", "resource2_address1"=>"", "resource2_address2"=>"", "resource2_city"=>"", "resource2_zip"=>"", "resource2_phone1"=>"", "resource2_phone2"=>"", "resource2_phone3"=>"", "resource2_website"=>"", "resource2_area"=>"", "answer3"=>"Wednesday", "answer3_follow"=>"no", "resource3_follow"=>"no", "resource3_name"=>"", "resource3_address1"=>"", "resource3_address2"=>"", "resource3_city"=>"", "resource3_zip"=>"", "resource3_phone1"=>"", "resource3_phone2"=>"", "resource3_phone3"=>"", "resource3_website"=>"", "resource3_area"=>"", "answer4"=>"Thursday", "answer4_follow"=>"no", "resource4_follow"=>"no", "resource4_name"=>"", "resource4_address1"=>"", "resource4_address2"=>"", "resource4_city"=>"", "resource4_zip"=>"", "resource4_phone1"=>"", "resource4_phone2"=>"", "resource4_phone3"=>"", "resource4_website"=>"", "resource4_area"=>"", "answer5"=>"Friday", "answer5_follow"=>"no", "resource5_follow"=>"no", "resource5_name"=>"", "resource5_address1"=>"", "resource5_address2"=>"", "resource5_city"=>"", "resource5_zip"=>"", "resource5_phone1"=>"", "resource5_phone2"=>"", "resource5_phone3"=>"", "resource5_website"=>"", "resource5_area"=>"", "answer6"=>"Saturday", "answer6_follow"=>"no", "resource6_follow"=>"no", "resource6_name"=>"", "resource6_address1"=>"", "resource6_address2"=>"", "resource6_city"=>"", "resource6_zip"=>"", "resource6_phone1"=>"", "resource6_phone2"=>"", "resource6_phone3"=>"", "resource6_website"=>"", "resource6_area"=>"", "answer7"=>"Sunday", "answer7_follow"=>"no", "resource7_follow"=>"no", "resource7_name"=>"", "resource7_address1"=>"", "resource7_address2"=>"", "resource7_city"=>"", "resource7_zip"=>"", "resource7_phone1"=>"", "resource7_phone2"=>"", "resource7_phone3"=>"", "resource7_website"=>"", "resource7_area"=>"", "answer8"=>"A Day", "answer8_follow"=>"no", "resource8_follow"=>"no", "resource8_name"=>"", "resource8_address1"=>"", "resource8_address2"=>"", "resource8_city"=>"", "resource8_zip"=>"", "resource8_phone1"=>"", "resource8_phone2"=>"", "resource8_phone3"=>"", "resource8_website"=>"", "resource8_area"=>"", "commit"=>"Save"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "questions" ("a1", "a2", "a3", "a4", "ask", "category", "created_at", "follow", "follows", "language", "order", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["a1", nil], ["a2", nil], ["a3", nil], ["a4", nil], ["ask", "What day is it?"], ["category", "Day"], ["created_at", Sat, 01 Dec 2012 22:05:42 UTC +00:00], ["follow", false], ["follows", nil], ["language", "English"], ["order", 2], ["updated_at", Sat, 01 Dec 2012 22:05:42 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 01 Dec 2012 22:05:42 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 2], ["reply", "Monday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:05:42 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 01 Dec 2012 22:05:42 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 2], ["reply", "Tuesday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:05:42 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 01 Dec 2012 22:05:42 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 2], ["reply", "Wednesday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:05:42 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 01 Dec 2012 22:05:42 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 2], ["reply", "Thursday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:05:42 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/questions/main?follow=false&language=English
+Completed 302 Found in 19ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-12-01 14:05:42 -0800
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 14ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:05:42 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-12-01 14:05:45 -0800
+Processing by LoginController#main as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)  [["answers", ""], ["created_at", Sat, 01 Dec 2012 22:05:45 UTC +00:00], ["updated_at", Sat, 01 Dec 2012 22:05:45 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:05:45 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/survey/language?answer=0&follow=false&number=0&patient=10" for 127.0.0.1 at 2012-12-01 14:05:46 -0800
+Processing by SurveyController#language as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"10"}
+  Rendered survey/language.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:05:46 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&language=English&number=0&patient=10" for 127.0.0.1 at 2012-12-01 14:05:47 -0800
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "language"=>"English", "number"=>"0", "patient"=>"10"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "patients" SET "answers" = ':0', "updated_at" = '2012-12-01 22:05:47.345730' WHERE "patients"."id" = 10
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+Order number: 1
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 1
+  Rendered survey/view.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 18ms (Views: 12.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:05:47 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-12-01 14:05:47 -0800
+Served asset /survey_questions.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/survey/view?answer=1&follow=false&language=English&number=1&patient=10" for 127.0.0.1 at 2012-12-01 14:05:48 -0800
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"1", "follow"=>"false", "language"=>"English", "number"=>"1", "patient"=>"10"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "patients" SET "answers" = ':0:1', "updated_at" = '2012-12-01 22:05:48.152328' WHERE "patients"."id" = 10[0m
+  [1m[35m (2.0ms)[0m  commit transaction
+Order number: 2
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 2[0m
+  Rendered survey/view.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 20ms (Views: 14.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:05:48 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-12-01 14:05:48 -0800
+Served asset /survey_questions.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateQuestions (20120907232722)
+Migrating to CreateAnswers (20120907232921)
+Migrating to AddFollowToQuestions (20120910215729)
+Migrating to AddSessionsTable (20120911033303)
+Migrating to AddHasfqToAnswers (20120911044831)
+Migrating to CreateResources (20120927223527)
+Migrating to AddAnswerIdToResources (20120927223652)
+Migrating to AddResourceBoolToAnswers (20120927231337)
+Migrating to AddGMapsToResources (20120928034357)
+Migrating to AddCategoryToQuestions (20121015050901)
+Migrating to CreatePatients (20121015054857)
+Migrating to AddLanguageToQuestions (20121017071025)
+Migrating to RemoveStartTimeFromSessions (20121201210338)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TEMPORARY TABLE "altered_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "start" integer, "end" integer, "start_time" integer, "end_time" integer) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_sessions_on_updated_at')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_sessions")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_sessions_on_updated_at" ON "altered_sessions" ("updated_at")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_sessions")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_sessions_on_updated_at')[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "temp_index_altered_sessions_on_session_id" ON "altered_sessions" ("session_id")
+  [1m[36m (0.3ms)[0m  [1mSELECT * FROM "sessions"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (1, 'df8115700756e0ad1478cb3478cd2470', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF5QkNEVHYwTVVKMDJWeHFrYWcv
+RFJma1Vldmx1V1RMZzNpVElYVndmK3hjPQY7AEY=
+', '2012-10-24 09:44:51.851155', '2012-10-24 09:44:51.851155', NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (2, '128bcb74eecffdeeb5aa8e23c25f8645', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFzUDZnY1h4L0t3NzB3WlZ4U2hn
+OUgrcWtla0dwNE5UVWs2M2dkZVlZR0R3PQY7AEY=
+', '2012-10-24 09:44:53.355668', '2012-10-24 09:44:53.355668', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (3, '90cd64ed1986d386e9ad65b6cece2ef3', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFZbFAxeWcvUWV5NFFEbnY3UDdI
+TXFKdW1OT2M4T2hhNzJpQ1JrZDMrSy8wPQY7AEY=
+', '2012-10-24 09:44:54.720682', '2012-10-24 09:44:54.720682', NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (4, 'a843bb4d7ca201e1231aa279e9e9b2d7', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFYQ3hkWml1amZqSzErbzZxWlg2
+Uzl5dlVMVEVFZ01SdVdFQjNETTBWMkFZPQY7AEY=
+', '2012-11-06 05:55:43.404189', '2012-11-06 05:55:43.404189', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (5, '862131bbfb9b05be8b147b8ec07ac0a7', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFINzBwWDFTSXkyOTB0R2JKV1A3
+NUU5VXV2dGxTZ2JmZjJKQXdVb1dLL2prPQY7AEY=
+', '2012-11-06 05:55:46.630982', '2012-11-06 05:55:46.630982', NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (6, '477cd2191ff42c2b02ccfd1ab3885319', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF1YUdFMHNLdUFqNkFXdUdoUVZt
+RlA5L1JERUVYK3drK0trbGs2SEFUeVdrPQY7AEY=
+', '2012-11-06 05:55:47.636717', '2012-11-06 05:55:47.636717', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (7, '7da98e6bc220963edf8fb1b3afd5400c', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjExNE1KMnB0MWRXUXgyRHpWOGJW
+Ri9KbjVtcUllQk9UN0FGMk5xM3lWd20wPQY7AEY=
+', '2012-11-06 06:08:09.381433', '2012-11-06 06:08:09.381433', NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (8, 'f1fddfd4ba097df4b8dbbff382de7233', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFnVExYbDRaK2RldFF2VU1IV2tp
+enFsblExV040ZnhxU3IxYm9EVk1ydGJRPQY7AEY=
+', '2012-11-06 06:09:19.492883', '2012-11-06 06:09:19.492883', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (9, 'ad9daecf8c4fb0fea479a6034694dd55', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFpT2RYUkR5QzFnVmRna3hENU9q
+V1Iwb3FsRVBBZUpIT05jSWU4Q1Z2bFY4PQY7AEY=
+', '2012-11-06 06:09:22.382259', '2012-11-06 06:09:22.382259', NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (10, '846bede571c679a92e54a9fa0ca77d13', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFvMTd0SWkxdDdJVU96YW9hd2VM
+Mk00b1E2MDRZcHpBcTlVU0IvenJ6YnhnPQY7AEY=
+', '2012-11-06 06:09:24.698829', '2012-11-06 06:09:24.698829', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (11, 'c7040cd87f87112f6e7b36fc096eb775', 'BAh7AA==
+', '2012-11-06 06:09:40.421473', '2012-11-06 06:09:40.421473', NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (12, 'b0ceaf43d3431190e51a08476ce1e809', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFKZUpsZmwzQ2pLV0tQVmp2TjVU
+NGN6ZGRVVXo0Wlp6SDdPTXRuRVFEZy9VPQY7AEY=
+', '2012-11-06 06:09:40.439936', '2012-11-06 06:09:40.439936', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (13, 'de7a2a73a84ab264f28b8e510eb37488', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFCdDdjbUFldUowVk1VTkVaU25r
+RE9sNHozR0dxTC9BZGczWXJGTVhXV1FrPQY7AEY=
+', '2012-11-06 06:09:43.085469', '2012-11-06 06:09:43.085469', NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (14, '2f3ec5e9a97aac98a6290f173a2cf44f', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFUQ3gyKzQ3WjVGUloyanU3aDdC
+MWQraS9sWDBlSkVMTWFZSWJVelJUVWJzPQY7AEY=
+', '2012-11-06 06:09:44.006855', '2012-11-06 06:09:44.006855', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (15, '922ae39a393a273b0ddad91bc99d778c', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjE4L0drVzZRTHZVQjlmZkNtTzQ5
+OXVNMlNkY2FpM0pnOGtteENwV2g1YzE0PQY7AEY=
+', '2012-11-06 06:09:44.764076', '2012-11-06 06:09:44.764076', NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (16, 'ba4ba37106f1543a5f570a7dab815124', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjE3aEtXNEpVc012UCtFQmZDWnd4
+UjFSbzRvTWkyUGgyRTR3UDBMcHZTMnpnPQY7AEY=
+', '2012-11-06 06:12:39.329797', '2012-11-06 06:12:39.329797', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (17, '1953e042645da685a12ee88bc0de74ab', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFHNk1IUjBrWDlwRnVlQXRyZFZX
+bkxGcGpxWklWWFZzR3M0TkttejAyT1JJPQY7AEY=
+', '2012-11-06 06:12:40.362045', '2012-11-06 06:12:40.362045', NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (18, 'a750e55c9c4e78f55275530647284c7d', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFBTFd0ZEUraE9nTFlQVzlNcUM5
+cWhSWXNtWE1GOTJlSHFydnhucDE0amU4PQY7AEY=
+', '2012-11-06 06:31:47.082099', '2012-11-06 06:31:47.082099', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (19, 'c17adb85eec65bf18b8b00f8cefc2368', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF3N1RFbW9NVUUvcjRLSnR3Sk9T
+TFhNQk4rTHR0SmE2cTMyVGZTUnN0QjFFPQY7AEY=
+', '2012-11-06 06:31:48.638095', '2012-11-06 06:31:48.638095', NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (20, 'b355866fe67551cce407f329366b73ea', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjE0UWdmS0tIT0h5S0ExWmFKSnp3
+Z1NLMTBMemduMXlnLzdaa2ltSGI1NnhrPQY7AEY=
+', '2012-11-06 06:31:49.354315', '2012-11-06 06:31:49.354315', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (21, 'e25b02af7b067491c3c656e503191336', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFDVEo3OFJmSmlGbWpkMzJMdzRY
+Mi94YUUrQjlLUlB2bWNVaEs4dTVMZnN3PQY7AEY=
+', '2012-11-06 06:31:50.087990', '2012-11-06 06:31:50.087990', NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (22, '4a1be434c7b435be4708d2e33731982b', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF1Z1pzNlNaVnRROTkwSnFhL3Nj
+NHBUSis5Tis1Y1pPTHdFMVhsdkNxamFRPQY7AEY=
+', '2012-11-06 06:31:56.709888', '2012-11-06 06:31:56.709888', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (23, 'c1d3e5ba2a3c8cedd07b7c38a3cf2c50', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFlMTd2SUZ2ZHMxQXh0bFd1aCtY
+ZFo0bzZoZEFZME0rOWd3SWptSkFHekowPQY7AEY=
+', '2012-11-06 06:31:57.432063', '2012-11-06 06:31:57.432063', NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (24, '5538a53bab7c151658d48275beb11cff', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFSbE5BdVp1UGo0VGNLd0JGaTlv
+bkpzS3VMbHFPZWxsYWExa0ViN1ZKVVNvPQY7AEY=
+', '2012-11-06 07:02:28.114385', '2012-11-06 07:02:28.114385', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (25, 'a4ac7db3da633cf23a46772c1c5071bd', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFBdnUrS243TExXRVNiWXZSajJv
+eVhpNXF1OXZXRi9jcUswZHlwczhlTXZ3PQY7AEY=
+', '2012-11-06 07:02:30.101795', '2012-11-06 07:02:30.101795', NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (26, 'ce15815eeaeae3bb0bdf0a4b3a06a4b6', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF3MnhRZGFoOFNnbkJtVzRSQjJJ
+K1gvUTJDbVc2cGdhZnAvWllGaXZVOVg4PQY7AEY=
+', '2012-11-06 07:02:32.348562', '2012-11-06 07:02:32.348562', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (27, '88fe29c523e623ffaf5a6b71faa0d44e', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFwam9NNWdjOHJNOFlRdCs0UGFt
+OUJleU9mcGllVnZLZjJsK0JneGFsMHUwPQY7AEY=
+', '2012-11-06 07:02:33.778509', '2012-11-06 07:02:33.778509', NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (28, '0fdedf58fb43508dd67beaa6cd869ebf', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjE4elFoYXltbUlJZ1pNZmN0U1Rm
+aUkrRGQxQzBHNzYrcE53Q1ZIeCs1bkhBPQY7AEY=
+', '2012-12-01 21:31:14.405155', '2012-12-01 21:31:14.405155', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (29, 'cb43721bc9461f51c9161df2130fade8', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFKU21lMVVrN0tkSDZjekxHQi9X
+N0x1cGJaYUw0SEpBWkp1bDFJdC9ReUtRPQY7AEY=
+', '2012-12-01 21:46:10.233295', '2012-12-01 21:46:10.233295', NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (30, 'f73ce33469e06ea521ce94db2941774a', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjE0eG5nd0k0ajJXQTNIVlp4K3BU
+YVczZGRoNGtLNTVXU1c2dllCZjE0NGpzPQY7AEY=
+', '2012-12-01 21:46:11.608096', '2012-12-01 21:46:11.608096', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (31, '88e01aa6d8d1f03dffad9ff5f59d0763', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjEyNXdzODUyTzRSU2RmSlhZMFc1
+UmVaNXdSVnp6WDh1dEZNZnZYU1NIUlY4PQY7AEY=
+', '2012-12-01 21:46:12.321991', '2012-12-01 21:46:12.321991', NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (32, 'acc3670a20120d029f14361f508e3edb', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFvT3diRjVlejVxdnU2Zlhacitk
+MmQ4ckpFUXVhUkdJclJEc3g1Sko4RXN3PQY7AEY=
+', '2012-12-01 22:04:56.860871', '2012-12-01 22:04:56.860871', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (33, '3282e4499948d79bbd3369d052487a2f', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjEyVUs1MUdLRTR1alNCYWtlZlRz
+Y0tlRDZQNTZVekl2d3c0YlozMDk0MVpBPQY7AEY=
+', '2012-12-01 22:04:58.261126', '2012-12-01 22:04:58.261126', NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (34, 'a1f541e64dc3bd021527da2dbf682f86', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFiL2ZSbGdhNDNwd2tlRlBVT2NS
+aEtqNm9JZVRBMDlRdndjMzdzUHlidUhvPQY7AEY=
+', '2012-12-01 22:04:59.089562', '2012-12-01 22:04:59.089562', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (35, '3832fe6d19d2f4c457c597efa9b78c6f', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFRQlRkcW12TGRybHlPUk1PZEww
+d1hUVWFURFU4WDM0SnlMbzB4OWcySzdNPQY7AEY=
+', '2012-12-01 22:05:03.446909', '2012-12-01 22:05:03.446909', NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (36, '78a15f5aea0f5bc12f3e640dab11849e', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFkYkdoUHFic0FEN1kwVjhDWmZv
+RzNSSnJIMERHSnhCYUhvVXEzMWkwMzR3PQY7AEY=
+', '2012-12-01 22:05:04.382966', '2012-12-01 22:05:04.382966', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (37, '8fa5186250509c46a100a8f673d13cdc', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFsNk1HQUw0WlJYMjVjMDdwTm5E
+S2IvMU1wSkZTSGgwSVg2Q3liNFpadTRZPQY7AEY=
+', '2012-12-01 22:05:05.569439', '2012-12-01 22:05:05.569439', NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (38, 'd10a48ae1df1f961f15ed06c797642f8', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFweFJaUDg2d2ZGZ21yY3M3ZEt4
+MjhGU2UzQzY5OFB6UHdoZE5Oc3E1UWN3PQY7AEY=
+', '2012-12-01 22:05:09.454836', '2012-12-01 22:05:09.454836', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (39, '5a60b3a3642d4f0c65afc0d5b45713a8', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFGdXFJTVNadkN6SDlPcmMrYWNa
+KzFTZS8weHRnTWk4bzF4dWdrVzc2TjhFPQY7AEY=
+', '2012-12-01 22:05:10.338296', '2012-12-01 22:05:10.338296', NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (40, '7f9849ef9087e7c35f6b3997025f6562', 'BAh7AA==
+', '2012-12-01 22:05:42.729444', '2012-12-01 22:05:42.729444', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (41, '792dd15f322de88c043aaa7e4e1d88f7', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFYdjBHR2RPQXIzQlFYVWNBdVVG
+QmQvM2NORVpUTnUwUGY4VnFveWFxbVl3PQY7AEY=
+', '2012-12-01 22:05:42.753048', '2012-12-01 22:05:42.753048', NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (42, '1955870699411444522efa51adeccfb4', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFFeG41c2dLaStJTllsRytjazRn
+VHh4V1VHcUY4eVpmZ1NkV1B4eEtSTXhRPQY7AEY=
+', '2012-12-01 22:05:45.119290', '2012-12-01 22:05:45.119290', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (43, '7a1211f64b5d03599f2c07c9c12db8f2', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFiUjdLU3pSSFFYY29ZVVZsMUJS
+TW9ncU5RL3pUSzVqS1N5MnJJbDRkWlNvPQY7AEY=
+', '2012-12-01 22:05:46.242718', '2012-12-01 22:05:46.242718', NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (44, '646160248d13d9ebfc60124926b9e91a', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF1a25vSjFsOXVIdkJaSkZBY0No
+R1l0Wm9zb3Z3cDU3VnlzVEVnWndSKy9jPQY7AEY=
+', '2012-12-01 22:05:47.363130', '2012-12-01 22:05:47.363130', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_sessions" ("id","session_id","data","created_at","updated_at","start","end","start_time","end_time") VALUES (45, 'e2ad12229604891c74eb2ea4d0e35c6c', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF2NDNpRy9Zc0VxbG5RTVMxT3Ex
+aDA3T1pwVGVPOWNKSVFGYi9FSFQyR0ZzPQY7AEY=
+', '2012-12-01 22:05:48.171834', '2012-12-01 22:05:48.171834', NULL, NULL, NULL, NULL)
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "sessions"[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "start" integer, "end" integer, "end_time" integer) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("altered_sessions")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('temp_index_altered_sessions_on_session_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('temp_index_altered_sessions_on_updated_at')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("sessions")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("sessions")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")
+  [1m[36m (0.2ms)[0m  [1mSELECT * FROM "altered_sessions"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (1, 'df8115700756e0ad1478cb3478cd2470', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF5QkNEVHYwTVVKMDJWeHFrYWcv
+RFJma1Vldmx1V1RMZzNpVElYVndmK3hjPQY7AEY=
+', '2012-10-24 09:44:51.851155', '2012-10-24 09:44:51.851155', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (2, '128bcb74eecffdeeb5aa8e23c25f8645', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFzUDZnY1h4L0t3NzB3WlZ4U2hn
+OUgrcWtla0dwNE5UVWs2M2dkZVlZR0R3PQY7AEY=
+', '2012-10-24 09:44:53.355668', '2012-10-24 09:44:53.355668', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (3, '90cd64ed1986d386e9ad65b6cece2ef3', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFZbFAxeWcvUWV5NFFEbnY3UDdI
+TXFKdW1OT2M4T2hhNzJpQ1JrZDMrSy8wPQY7AEY=
+', '2012-10-24 09:44:54.720682', '2012-10-24 09:44:54.720682', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (4, 'a843bb4d7ca201e1231aa279e9e9b2d7', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFYQ3hkWml1amZqSzErbzZxWlg2
+Uzl5dlVMVEVFZ01SdVdFQjNETTBWMkFZPQY7AEY=
+', '2012-11-06 05:55:43.404189', '2012-11-06 05:55:43.404189', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (5, '862131bbfb9b05be8b147b8ec07ac0a7', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFINzBwWDFTSXkyOTB0R2JKV1A3
+NUU5VXV2dGxTZ2JmZjJKQXdVb1dLL2prPQY7AEY=
+', '2012-11-06 05:55:46.630982', '2012-11-06 05:55:46.630982', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (6, '477cd2191ff42c2b02ccfd1ab3885319', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF1YUdFMHNLdUFqNkFXdUdoUVZt
+RlA5L1JERUVYK3drK0trbGs2SEFUeVdrPQY7AEY=
+', '2012-11-06 05:55:47.636717', '2012-11-06 05:55:47.636717', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (7, '7da98e6bc220963edf8fb1b3afd5400c', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjExNE1KMnB0MWRXUXgyRHpWOGJW
+Ri9KbjVtcUllQk9UN0FGMk5xM3lWd20wPQY7AEY=
+', '2012-11-06 06:08:09.381433', '2012-11-06 06:08:09.381433', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (8, 'f1fddfd4ba097df4b8dbbff382de7233', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFnVExYbDRaK2RldFF2VU1IV2tp
+enFsblExV040ZnhxU3IxYm9EVk1ydGJRPQY7AEY=
+', '2012-11-06 06:09:19.492883', '2012-11-06 06:09:19.492883', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (9, 'ad9daecf8c4fb0fea479a6034694dd55', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFpT2RYUkR5QzFnVmRna3hENU9q
+V1Iwb3FsRVBBZUpIT05jSWU4Q1Z2bFY4PQY7AEY=
+', '2012-11-06 06:09:22.382259', '2012-11-06 06:09:22.382259', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (10, '846bede571c679a92e54a9fa0ca77d13', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFvMTd0SWkxdDdJVU96YW9hd2VM
+Mk00b1E2MDRZcHpBcTlVU0IvenJ6YnhnPQY7AEY=
+', '2012-11-06 06:09:24.698829', '2012-11-06 06:09:24.698829', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (11, 'c7040cd87f87112f6e7b36fc096eb775', 'BAh7AA==
+', '2012-11-06 06:09:40.421473', '2012-11-06 06:09:40.421473', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (12, 'b0ceaf43d3431190e51a08476ce1e809', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFKZUpsZmwzQ2pLV0tQVmp2TjVU
+NGN6ZGRVVXo0Wlp6SDdPTXRuRVFEZy9VPQY7AEY=
+', '2012-11-06 06:09:40.439936', '2012-11-06 06:09:40.439936', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (13, 'de7a2a73a84ab264f28b8e510eb37488', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFCdDdjbUFldUowVk1VTkVaU25r
+RE9sNHozR0dxTC9BZGczWXJGTVhXV1FrPQY7AEY=
+', '2012-11-06 06:09:43.085469', '2012-11-06 06:09:43.085469', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (14, '2f3ec5e9a97aac98a6290f173a2cf44f', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFUQ3gyKzQ3WjVGUloyanU3aDdC
+MWQraS9sWDBlSkVMTWFZSWJVelJUVWJzPQY7AEY=
+', '2012-11-06 06:09:44.006855', '2012-11-06 06:09:44.006855', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (15, '922ae39a393a273b0ddad91bc99d778c', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjE4L0drVzZRTHZVQjlmZkNtTzQ5
+OXVNMlNkY2FpM0pnOGtteENwV2g1YzE0PQY7AEY=
+', '2012-11-06 06:09:44.764076', '2012-11-06 06:09:44.764076', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (16, 'ba4ba37106f1543a5f570a7dab815124', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjE3aEtXNEpVc012UCtFQmZDWnd4
+UjFSbzRvTWkyUGgyRTR3UDBMcHZTMnpnPQY7AEY=
+', '2012-11-06 06:12:39.329797', '2012-11-06 06:12:39.329797', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (17, '1953e042645da685a12ee88bc0de74ab', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFHNk1IUjBrWDlwRnVlQXRyZFZX
+bkxGcGpxWklWWFZzR3M0TkttejAyT1JJPQY7AEY=
+', '2012-11-06 06:12:40.362045', '2012-11-06 06:12:40.362045', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (18, 'a750e55c9c4e78f55275530647284c7d', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFBTFd0ZEUraE9nTFlQVzlNcUM5
+cWhSWXNtWE1GOTJlSHFydnhucDE0amU4PQY7AEY=
+', '2012-11-06 06:31:47.082099', '2012-11-06 06:31:47.082099', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (19, 'c17adb85eec65bf18b8b00f8cefc2368', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF3N1RFbW9NVUUvcjRLSnR3Sk9T
+TFhNQk4rTHR0SmE2cTMyVGZTUnN0QjFFPQY7AEY=
+', '2012-11-06 06:31:48.638095', '2012-11-06 06:31:48.638095', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (20, 'b355866fe67551cce407f329366b73ea', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjE0UWdmS0tIT0h5S0ExWmFKSnp3
+Z1NLMTBMemduMXlnLzdaa2ltSGI1NnhrPQY7AEY=
+', '2012-11-06 06:31:49.354315', '2012-11-06 06:31:49.354315', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (21, 'e25b02af7b067491c3c656e503191336', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFDVEo3OFJmSmlGbWpkMzJMdzRY
+Mi94YUUrQjlLUlB2bWNVaEs4dTVMZnN3PQY7AEY=
+', '2012-11-06 06:31:50.087990', '2012-11-06 06:31:50.087990', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (22, '4a1be434c7b435be4708d2e33731982b', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF1Z1pzNlNaVnRROTkwSnFhL3Nj
+NHBUSis5Tis1Y1pPTHdFMVhsdkNxamFRPQY7AEY=
+', '2012-11-06 06:31:56.709888', '2012-11-06 06:31:56.709888', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (23, 'c1d3e5ba2a3c8cedd07b7c38a3cf2c50', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFlMTd2SUZ2ZHMxQXh0bFd1aCtY
+ZFo0bzZoZEFZME0rOWd3SWptSkFHekowPQY7AEY=
+', '2012-11-06 06:31:57.432063', '2012-11-06 06:31:57.432063', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (24, '5538a53bab7c151658d48275beb11cff', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFSbE5BdVp1UGo0VGNLd0JGaTlv
+bkpzS3VMbHFPZWxsYWExa0ViN1ZKVVNvPQY7AEY=
+', '2012-11-06 07:02:28.114385', '2012-11-06 07:02:28.114385', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (25, 'a4ac7db3da633cf23a46772c1c5071bd', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFBdnUrS243TExXRVNiWXZSajJv
+eVhpNXF1OXZXRi9jcUswZHlwczhlTXZ3PQY7AEY=
+', '2012-11-06 07:02:30.101795', '2012-11-06 07:02:30.101795', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (26, 'ce15815eeaeae3bb0bdf0a4b3a06a4b6', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF3MnhRZGFoOFNnbkJtVzRSQjJJ
+K1gvUTJDbVc2cGdhZnAvWllGaXZVOVg4PQY7AEY=
+', '2012-11-06 07:02:32.348562', '2012-11-06 07:02:32.348562', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (27, '88fe29c523e623ffaf5a6b71faa0d44e', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFwam9NNWdjOHJNOFlRdCs0UGFt
+OUJleU9mcGllVnZLZjJsK0JneGFsMHUwPQY7AEY=
+', '2012-11-06 07:02:33.778509', '2012-11-06 07:02:33.778509', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (28, '0fdedf58fb43508dd67beaa6cd869ebf', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjE4elFoYXltbUlJZ1pNZmN0U1Rm
+aUkrRGQxQzBHNzYrcE53Q1ZIeCs1bkhBPQY7AEY=
+', '2012-12-01 21:31:14.405155', '2012-12-01 21:31:14.405155', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (29, 'cb43721bc9461f51c9161df2130fade8', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFKU21lMVVrN0tkSDZjekxHQi9X
+N0x1cGJaYUw0SEpBWkp1bDFJdC9ReUtRPQY7AEY=
+', '2012-12-01 21:46:10.233295', '2012-12-01 21:46:10.233295', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (30, 'f73ce33469e06ea521ce94db2941774a', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjE0eG5nd0k0ajJXQTNIVlp4K3BU
+YVczZGRoNGtLNTVXU1c2dllCZjE0NGpzPQY7AEY=
+', '2012-12-01 21:46:11.608096', '2012-12-01 21:46:11.608096', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (31, '88e01aa6d8d1f03dffad9ff5f59d0763', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjEyNXdzODUyTzRSU2RmSlhZMFc1
+UmVaNXdSVnp6WDh1dEZNZnZYU1NIUlY4PQY7AEY=
+', '2012-12-01 21:46:12.321991', '2012-12-01 21:46:12.321991', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (32, 'acc3670a20120d029f14361f508e3edb', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFvT3diRjVlejVxdnU2Zlhacitk
+MmQ4ckpFUXVhUkdJclJEc3g1Sko4RXN3PQY7AEY=
+', '2012-12-01 22:04:56.860871', '2012-12-01 22:04:56.860871', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (33, '3282e4499948d79bbd3369d052487a2f', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjEyVUs1MUdLRTR1alNCYWtlZlRz
+Y0tlRDZQNTZVekl2d3c0YlozMDk0MVpBPQY7AEY=
+', '2012-12-01 22:04:58.261126', '2012-12-01 22:04:58.261126', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (34, 'a1f541e64dc3bd021527da2dbf682f86', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFiL2ZSbGdhNDNwd2tlRlBVT2NS
+aEtqNm9JZVRBMDlRdndjMzdzUHlidUhvPQY7AEY=
+', '2012-12-01 22:04:59.089562', '2012-12-01 22:04:59.089562', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (35, '3832fe6d19d2f4c457c597efa9b78c6f', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFRQlRkcW12TGRybHlPUk1PZEww
+d1hUVWFURFU4WDM0SnlMbzB4OWcySzdNPQY7AEY=
+', '2012-12-01 22:05:03.446909', '2012-12-01 22:05:03.446909', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (36, '78a15f5aea0f5bc12f3e640dab11849e', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFkYkdoUHFic0FEN1kwVjhDWmZv
+RzNSSnJIMERHSnhCYUhvVXEzMWkwMzR3PQY7AEY=
+', '2012-12-01 22:05:04.382966', '2012-12-01 22:05:04.382966', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (37, '8fa5186250509c46a100a8f673d13cdc', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFsNk1HQUw0WlJYMjVjMDdwTm5E
+S2IvMU1wSkZTSGgwSVg2Q3liNFpadTRZPQY7AEY=
+', '2012-12-01 22:05:05.569439', '2012-12-01 22:05:05.569439', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (38, 'd10a48ae1df1f961f15ed06c797642f8', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFweFJaUDg2d2ZGZ21yY3M3ZEt4
+MjhGU2UzQzY5OFB6UHdoZE5Oc3E1UWN3PQY7AEY=
+', '2012-12-01 22:05:09.454836', '2012-12-01 22:05:09.454836', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (39, '5a60b3a3642d4f0c65afc0d5b45713a8', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFGdXFJTVNadkN6SDlPcmMrYWNa
+KzFTZS8weHRnTWk4bzF4dWdrVzc2TjhFPQY7AEY=
+', '2012-12-01 22:05:10.338296', '2012-12-01 22:05:10.338296', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (40, '7f9849ef9087e7c35f6b3997025f6562', 'BAh7AA==
+', '2012-12-01 22:05:42.729444', '2012-12-01 22:05:42.729444', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (41, '792dd15f322de88c043aaa7e4e1d88f7', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFYdjBHR2RPQXIzQlFYVWNBdVVG
+QmQvM2NORVpUTnUwUGY4VnFveWFxbVl3PQY7AEY=
+', '2012-12-01 22:05:42.753048', '2012-12-01 22:05:42.753048', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (42, '1955870699411444522efa51adeccfb4', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFFeG41c2dLaStJTllsRytjazRn
+VHh4V1VHcUY4eVpmZ1NkV1B4eEtSTXhRPQY7AEY=
+', '2012-12-01 22:05:45.119290', '2012-12-01 22:05:45.119290', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (43, '7a1211f64b5d03599f2c07c9c12db8f2', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFiUjdLU3pSSFFYY29ZVVZsMUJS
+TW9ncU5RL3pUSzVqS1N5MnJJbDRkWlNvPQY7AEY=
+', '2012-12-01 22:05:46.242718', '2012-12-01 22:05:46.242718', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (44, '646160248d13d9ebfc60124926b9e91a', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF1a25vSjFsOXVIdkJaSkZBY0No
+R1l0Wm9zb3Z3cDU3VnlzVEVnWndSKy9jPQY7AEY=
+', '2012-12-01 22:05:47.363130', '2012-12-01 22:05:47.363130', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "sessions" ("id","session_id","data","created_at","updated_at","start","end","end_time") VALUES (45, 'e2ad12229604891c74eb2ea4d0e35c6c', 'BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjF2NDNpRy9Zc0VxbG5RTVMxT3Ex
+aDA3T1pwVGVPOWNKSVFGYi9FSFQyR0ZzPQY7AEY=
+', '2012-12-01 22:05:48.171834', '2012-12-01 22:05:48.171834', NULL, NULL, NULL)
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "altered_sessions"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121201210338')
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Migrating to AddStuffToSessions (20121201210736)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "sessions" ADD "entry" integer[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "sessions" ADD "exit" integer
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121201210736')[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to AddTimeToPatients (20121201211629)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "patients" ADD "entry" integer
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "patients" ADD "exit" integer[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121201211629')
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Migrating to AddNewQuestionsToQuestions (20121201213906)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "questions" ADD "a5" integer[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "questions" ADD "a6" integer
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "questions" ADD "a7" integer[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "questions" ADD "a8" integer
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121201213906')[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("answers")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("patients")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("questions")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("resources")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_sessions_on_updated_at')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_sessions_on_session_id')[0m
+
+
+Started GET "/questions/language" for 127.0.0.1 at 2012-12-01 14:06:36 -0800
+Processing by QuestionsController#language as HTML
+  Rendered questions/language.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: table sessions has no column named start_time: INSERT INTO "sessions" ("created_at", "data", "end", "end_time", "session_id", "start", "start_time", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)):
+  sqlite3 (1.3.6) lib/sqlite3/database.rb:91:in `initialize'
+  sqlite3 (1.3.6) lib/sqlite3/database.rb:91:in `new'
+  sqlite3 (1.3.6) lib/sqlite3/database.rb:91:in `prepare'
+  activerecord (3.2.8) lib/active_record/connection_adapters/sqlite_adapter.rb:253:in `block in exec_query'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract_adapter.rb:280:in `block in log'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract_adapter.rb:275:in `log'
+  activerecord (3.2.8) lib/active_record/connection_adapters/sqlite_adapter.rb:242:in `exec_query'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/database_statements.rb:63:in `exec_insert'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/database_statements.rb:90:in `insert'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/query_cache.rb:14:in `insert'
+  activerecord (3.2.8) lib/active_record/relation.rb:66:in `insert'
+  activerecord (3.2.8) lib/active_record/persistence.rb:366:in `create'
+  activerecord (3.2.8) lib/active_record/timestamp.rb:57:in `create'
+  activerecord (3.2.8) lib/active_record/callbacks.rb:268:in `block in create'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:403:in `_run__889082435399587303__create__1971655940130251363__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_create_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  activerecord (3.2.8) lib/active_record/callbacks.rb:268:in `create'
+  activerecord (3.2.8) lib/active_record/persistence.rb:347:in `create_or_update'
+  activerecord (3.2.8) lib/active_record/callbacks.rb:264:in `block in create_or_update'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:425:in `_run__889082435399587303__save__1971655940130251363__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_save_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  activerecord (3.2.8) lib/active_record/callbacks.rb:264:in `create_or_update'
+  activerecord (3.2.8) lib/active_record/persistence.rb:84:in `save'
+  activerecord (3.2.8) lib/active_record/validations.rb:50:in `save'
+  activerecord (3.2.8) lib/active_record/attribute_methods/dirty.rb:22:in `save'
+  activerecord (3.2.8) lib/active_record/transactions.rb:241:in `block (2 levels) in save'
+  activerecord (3.2.8) lib/active_record/transactions.rb:295:in `block in with_transaction_returning_status'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/database_statements.rb:192:in `transaction'
+  activerecord (3.2.8) lib/active_record/transactions.rb:208:in `transaction'
+  activerecord (3.2.8) lib/active_record/transactions.rb:293:in `with_transaction_returning_status'
+  activerecord (3.2.8) lib/active_record/transactions.rb:241:in `block in save'
+  activerecord (3.2.8) lib/active_record/transactions.rb:252:in `rollback_active_record_state!'
+  activerecord (3.2.8) lib/active_record/transactions.rb:240:in `save'
+  activerecord (3.2.8) lib/active_record/session_store.rb:323:in `block in set_session'
+  activesupport (3.2.8) lib/active_support/benchmarkable.rb:50:in `silence'
+  activerecord (3.2.8) lib/active_record/session_store.rb:320:in `set_session'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:322:in `commit_session'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:206:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__2110867110362501278__call__1971655940130251363__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-12-01 14:06:44 -0800
+Processing by LoginController#main as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "patients" ("answers", "created_at", "entry", "exit", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["answers", ""], ["created_at", Sat, 01 Dec 2012 22:06:44 UTC +00:00], ["entry", nil], ["exit", nil], ["updated_at", Sat, 01 Dec 2012 22:06:44 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  Rendered login/main.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 9.2ms | ActiveRecord: 2.9ms)
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: table sessions has no column named start_time: INSERT INTO "sessions" ("created_at", "data", "end", "end_time", "session_id", "start", "start_time", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)):
+  sqlite3 (1.3.6) lib/sqlite3/database.rb:91:in `initialize'
+  sqlite3 (1.3.6) lib/sqlite3/database.rb:91:in `new'
+  sqlite3 (1.3.6) lib/sqlite3/database.rb:91:in `prepare'
+  activerecord (3.2.8) lib/active_record/connection_adapters/sqlite_adapter.rb:253:in `block in exec_query'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract_adapter.rb:280:in `block in log'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract_adapter.rb:275:in `log'
+  activerecord (3.2.8) lib/active_record/connection_adapters/sqlite_adapter.rb:242:in `exec_query'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/database_statements.rb:63:in `exec_insert'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/database_statements.rb:90:in `insert'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/query_cache.rb:14:in `insert'
+  activerecord (3.2.8) lib/active_record/relation.rb:66:in `insert'
+  activerecord (3.2.8) lib/active_record/persistence.rb:366:in `create'
+  activerecord (3.2.8) lib/active_record/timestamp.rb:57:in `create'
+  activerecord (3.2.8) lib/active_record/callbacks.rb:268:in `block in create'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:403:in `_run__889082435399587303__create__1971655940130251363__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_create_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  activerecord (3.2.8) lib/active_record/callbacks.rb:268:in `create'
+  activerecord (3.2.8) lib/active_record/persistence.rb:347:in `create_or_update'
+  activerecord (3.2.8) lib/active_record/callbacks.rb:264:in `block in create_or_update'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:425:in `_run__889082435399587303__save__1971655940130251363__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_save_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  activerecord (3.2.8) lib/active_record/callbacks.rb:264:in `create_or_update'
+  activerecord (3.2.8) lib/active_record/persistence.rb:84:in `save'
+  activerecord (3.2.8) lib/active_record/validations.rb:50:in `save'
+  activerecord (3.2.8) lib/active_record/attribute_methods/dirty.rb:22:in `save'
+  activerecord (3.2.8) lib/active_record/transactions.rb:241:in `block (2 levels) in save'
+  activerecord (3.2.8) lib/active_record/transactions.rb:295:in `block in with_transaction_returning_status'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/database_statements.rb:192:in `transaction'
+  activerecord (3.2.8) lib/active_record/transactions.rb:208:in `transaction'
+  activerecord (3.2.8) lib/active_record/transactions.rb:293:in `with_transaction_returning_status'
+  activerecord (3.2.8) lib/active_record/transactions.rb:241:in `block in save'
+  activerecord (3.2.8) lib/active_record/transactions.rb:252:in `rollback_active_record_state!'
+  activerecord (3.2.8) lib/active_record/transactions.rb:240:in `save'
+  activerecord (3.2.8) lib/active_record/session_store.rb:323:in `block in set_session'
+  activesupport (3.2.8) lib/active_support/benchmarkable.rb:50:in `silence'
+  activerecord (3.2.8) lib/active_record/session_store.rb:320:in `set_session'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:322:in `commit_session'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:206:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__2110867110362501278__call__1971655940130251363__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-12-01 14:06:46 -0800
+Processing by LoginController#main as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "patients" ("answers", "created_at", "entry", "exit", "updated_at") VALUES (?, ?, ?, ?, ?)  [["answers", ""], ["created_at", Sat, 01 Dec 2012 22:06:46 UTC +00:00], ["entry", nil], ["exit", nil], ["updated_at", Sat, 01 Dec 2012 22:06:46 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 1.1ms)
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: table sessions has no column named start_time: INSERT INTO "sessions" ("created_at", "data", "end", "end_time", "session_id", "start", "start_time", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)):
+  sqlite3 (1.3.6) lib/sqlite3/database.rb:91:in `initialize'
+  sqlite3 (1.3.6) lib/sqlite3/database.rb:91:in `new'
+  sqlite3 (1.3.6) lib/sqlite3/database.rb:91:in `prepare'
+  activerecord (3.2.8) lib/active_record/connection_adapters/sqlite_adapter.rb:253:in `block in exec_query'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract_adapter.rb:280:in `block in log'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract_adapter.rb:275:in `log'
+  activerecord (3.2.8) lib/active_record/connection_adapters/sqlite_adapter.rb:242:in `exec_query'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/database_statements.rb:63:in `exec_insert'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/database_statements.rb:90:in `insert'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/query_cache.rb:14:in `insert'
+  activerecord (3.2.8) lib/active_record/relation.rb:66:in `insert'
+  activerecord (3.2.8) lib/active_record/persistence.rb:366:in `create'
+  activerecord (3.2.8) lib/active_record/timestamp.rb:57:in `create'
+  activerecord (3.2.8) lib/active_record/callbacks.rb:268:in `block in create'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:403:in `_run__889082435399587303__create__1971655940130251363__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_create_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  activerecord (3.2.8) lib/active_record/callbacks.rb:268:in `create'
+  activerecord (3.2.8) lib/active_record/persistence.rb:347:in `create_or_update'
+  activerecord (3.2.8) lib/active_record/callbacks.rb:264:in `block in create_or_update'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:425:in `_run__889082435399587303__save__1971655940130251363__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_save_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  activerecord (3.2.8) lib/active_record/callbacks.rb:264:in `create_or_update'
+  activerecord (3.2.8) lib/active_record/persistence.rb:84:in `save'
+  activerecord (3.2.8) lib/active_record/validations.rb:50:in `save'
+  activerecord (3.2.8) lib/active_record/attribute_methods/dirty.rb:22:in `save'
+  activerecord (3.2.8) lib/active_record/transactions.rb:241:in `block (2 levels) in save'
+  activerecord (3.2.8) lib/active_record/transactions.rb:295:in `block in with_transaction_returning_status'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/database_statements.rb:192:in `transaction'
+  activerecord (3.2.8) lib/active_record/transactions.rb:208:in `transaction'
+  activerecord (3.2.8) lib/active_record/transactions.rb:293:in `with_transaction_returning_status'
+  activerecord (3.2.8) lib/active_record/transactions.rb:241:in `block in save'
+  activerecord (3.2.8) lib/active_record/transactions.rb:252:in `rollback_active_record_state!'
+  activerecord (3.2.8) lib/active_record/transactions.rb:240:in `save'
+  activerecord (3.2.8) lib/active_record/session_store.rb:323:in `block in set_session'
+  activesupport (3.2.8) lib/active_support/benchmarkable.rb:50:in `silence'
+  activerecord (3.2.8) lib/active_record/session_store.rb:320:in `set_session'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:322:in `commit_session'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:206:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__2110867110362501278__call__1971655940130251363__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateQuestions (20120907232722)
+Migrating to CreateAnswers (20120907232921)
+Migrating to AddFollowToQuestions (20120910215729)
+Migrating to AddSessionsTable (20120911033303)
+Migrating to AddHasfqToAnswers (20120911044831)
+Migrating to CreateResources (20120927223527)
+Migrating to AddAnswerIdToResources (20120927223652)
+Migrating to AddResourceBoolToAnswers (20120927231337)
+Migrating to AddGMapsToResources (20120928034357)
+Migrating to AddCategoryToQuestions (20121015050901)
+Migrating to CreatePatients (20121015054857)
+Migrating to AddLanguageToQuestions (20121017071025)
+Migrating to AddStuffToSessions (20121201210736)
+Migrating to AddTimeToPatients (20121201211629)
+Migrating to AddNewQuestionsToQuestions (20121201213906)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("answers")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("patients")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("questions")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("resources")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("sessions")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_sessions_on_session_id')
+
+
+Started GET "/login" for 127.0.0.1 at 2012-12-01 14:08:28 -0800
+Processing by LoginController#main as HTML
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.3ms)[0m  INSERT INTO "patients" ("answers", "created_at", "entry", "exit", "updated_at") VALUES (?, ?, ?, ?, ?)  [["answers", ""], ["created_at", Sat, 01 Dec 2012 22:08:28 UTC +00:00], ["entry", nil], ["exit", nil], ["updated_at", Sat, 01 Dec 2012 22:08:28 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 118ms (Views: 70.9ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:08:29 -0800
+Served asset /limit_page.css - 304 Not Modified (2ms)
+
+
+Started GET "/questions/language" for 127.0.0.1 at 2012-12-01 14:08:30 -0800
+Processing by QuestionsController#language as HTML
+  Rendered questions/language.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:08:30 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-12-01 14:08:31 -0800
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:08:31 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/questions/edit" for 127.0.0.1 at 2012-12-01 14:08:39 -0800
+Processing by QuestionsController#edit as HTML
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" >= 0) ORDER BY "questions"."id" ASC LIMIT 1000
+  Rendered questions/edit.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 49ms (Views: 48.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:08:39 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/questions/delete?id=2" for 127.0.0.1 at 2012-12-01 14:08:40 -0800
+Processing by QuestionsController#delete as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 2]]
+  [1m[35m (2.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/questions/edit
+Completed 302 Found in 6ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/questions/edit" for 127.0.0.1 at 2012-12-01 14:08:40 -0800
+Processing by QuestionsController#edit as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" >= 0) ORDER BY "questions"."id" ASC LIMIT 1000[0m
+  Rendered questions/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 10ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:08:40 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-12-01 14:08:43 -0800
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 15ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:08:43 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started POST "/questions/add" for 127.0.0.1 at 2012-12-01 14:09:09 -0800
+Processing by QuestionsController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nNgDJY6PaQOZDbBTH9SOxYsYbw/HjsQogkFChQhfOxo=", "follow"=>"false", "language"=>"English", "quest"=>"What day is it?", "order"=>"2", "category"=>"", "answer1"=>"Monday", "answer1_follow"=>"no", "resource1_follow"=>"no", "resource1_name"=>"", "resource1_address1"=>"", "resource1_address2"=>"", "resource1_city"=>"", "resource1_zip"=>"", "resource1_phone1"=>"", "resource1_phone2"=>"", "resource1_phone3"=>"", "resource1_website"=>"", "resource1_area"=>"", "answer2"=>"Tuesday", "answer2_follow"=>"no", "resource2_follow"=>"no", "resource2_name"=>"", "resource2_address1"=>"", "resource2_address2"=>"", "resource2_city"=>"", "resource2_zip"=>"", "resource2_phone1"=>"", "resource2_phone2"=>"", "resource2_phone3"=>"", "resource2_website"=>"", "resource2_area"=>"", "answer3"=>"Wednesday", "answer3_follow"=>"no", "resource3_follow"=>"no", "resource3_name"=>"", "resource3_address1"=>"", "resource3_address2"=>"", "resource3_city"=>"", "resource3_zip"=>"", "resource3_phone1"=>"", "resource3_phone2"=>"", "resource3_phone3"=>"", "resource3_website"=>"", "resource3_area"=>"", "answer4"=>"Thursday", "answer4_follow"=>"no", "resource4_follow"=>"no", "resource4_name"=>"", "resource4_address1"=>"", "resource4_address2"=>"", "resource4_city"=>"", "resource4_zip"=>"", "resource4_phone1"=>"", "resource4_phone2"=>"", "resource4_phone3"=>"", "resource4_website"=>"", "resource4_area"=>"", "answer5"=>"Friday", "answer5_follow"=>"no", "resource5_follow"=>"no", "resource5_name"=>"", "resource5_address1"=>"", "resource5_address2"=>"", "resource5_city"=>"", "resource5_zip"=>"", "resource5_phone1"=>"", "resource5_phone2"=>"", "resource5_phone3"=>"", "resource5_website"=>"", "resource5_area"=>"", "answer6"=>"Saturday", "answer6_follow"=>"no", "resource6_follow"=>"no", "resource6_name"=>"", "resource6_address1"=>"", "resource6_address2"=>"", "resource6_city"=>"", "resource6_zip"=>"", "resource6_phone1"=>"", "resource6_phone2"=>"", "resource6_phone3"=>"", "resource6_website"=>"", "resource6_area"=>"", "answer7"=>"Sunday", "answer7_follow"=>"no", "resource7_follow"=>"no", "resource7_name"=>"", "resource7_address1"=>"", "resource7_address2"=>"", "resource7_city"=>"", "resource7_zip"=>"", "resource7_phone1"=>"", "resource7_phone2"=>"", "resource7_phone3"=>"", "resource7_website"=>"", "resource7_area"=>"", "answer8"=>"A Day", "answer8_follow"=>"no", "resource8_follow"=>"no", "resource8_name"=>"", "resource8_address1"=>"", "resource8_address2"=>"", "resource8_city"=>"", "resource8_zip"=>"", "resource8_phone1"=>"", "resource8_phone2"=>"", "resource8_phone3"=>"", "resource8_website"=>"", "resource8_area"=>"", "commit"=>"Save"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "questions" ("a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8", "ask", "category", "created_at", "follow", "follows", "language", "order", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["a1", nil], ["a2", nil], ["a3", nil], ["a4", nil], ["a5", nil], ["a6", nil], ["a7", nil], ["a8", nil], ["ask", "What day is it?"], ["category", ""], ["created_at", Sat, 01 Dec 2012 22:09:09 UTC +00:00], ["follow", false], ["follows", nil], ["language", "English"], ["order", 2], ["updated_at", Sat, 01 Dec 2012 22:09:09 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 01 Dec 2012 22:09:09 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 3], ["reply", "Monday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:09:09 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 01 Dec 2012 22:09:09 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 3], ["reply", "Tuesday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:09:09 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 01 Dec 2012 22:09:09 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 3], ["reply", "Wednesday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:09:09 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 01 Dec 2012 22:09:09 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 3], ["reply", "Thursday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:09:09 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/questions/main?follow=false&language=English
+Completed 302 Found in 35ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-12-01 14:09:09 -0800
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:09:09 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-12-01 14:09:11 -0800
+Processing by LoginController#main as HTML
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "patients" ("answers", "created_at", "entry", "exit", "updated_at") VALUES (?, ?, ?, ?, ?)  [["answers", ""], ["created_at", Sat, 01 Dec 2012 22:09:11 UTC +00:00], ["entry", nil], ["exit", nil], ["updated_at", Sat, 01 Dec 2012 22:09:11 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:09:11 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/survey/language?answer=0&follow=false&number=0&patient=14" for 127.0.0.1 at 2012-12-01 14:09:12 -0800
+Processing by SurveyController#language as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"14"}
+  Rendered survey/language.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:09:12 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&language=English&number=0&patient=14" for 127.0.0.1 at 2012-12-01 14:09:13 -0800
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "language"=>"English", "number"=>"0", "patient"=>"14"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "patients" SET "answers" = ':0', "updated_at" = '2012-12-01 22:09:13.645428' WHERE "patients"."id" = 14
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Order number: 1
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 1
+  Rendered survey/view.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 21ms (Views: 15.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:09:13 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-12-01 14:09:13 -0800
+Served asset /survey_questions.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/survey/view?answer=1&follow=false&language=English&number=1&patient=14" for 127.0.0.1 at 2012-12-01 14:09:14 -0800
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"1", "follow"=>"false", "language"=>"English", "number"=>"1", "patient"=>"14"}
+  [1m[36mPatient Load (0.2ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "patients" SET "answers" = ':0:1', "updated_at" = '2012-12-01 22:09:14.403639' WHERE "patients"."id" = 14[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+Order number: 2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 3[0m
+  Rendered survey/view.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 20ms (Views: 15.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:09:14 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-12-01 14:09:14 -0800
+Served asset /survey_questions.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateQuestions (20120907232722)
+Migrating to CreateAnswers (20120907232921)
+Migrating to AddFollowToQuestions (20120910215729)
+Migrating to AddSessionsTable (20120911033303)
+Migrating to AddHasfqToAnswers (20120911044831)
+Migrating to CreateResources (20120927223527)
+Migrating to AddAnswerIdToResources (20120927223652)
+Migrating to AddResourceBoolToAnswers (20120927231337)
+Migrating to AddGMapsToResources (20120928034357)
+Migrating to AddCategoryToQuestions (20121015050901)
+Migrating to CreatePatients (20121015054857)
+Migrating to AddLanguageToQuestions (20121017071025)
+Migrating to AddStuffToSessions (20121201210736)
+Migrating to AddTimeToPatients (20121201211629)
+Migrating to AddNewQuestionsToQuestions (20121201213906)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("answers")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("patients")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("questions")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("resources")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("sessions")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_sessions_on_session_id')
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (6.9ms)[0m  CREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" integer, "reply" varchar(255), "resource" integer, "followup" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "hasfq" boolean, "resource_bool" boolean) 
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "patients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "answers" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "entry" integer, "exit" integer) [0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ask" text, "follows" integer, "order" integer, "a1" integer, "a2" integer, "a3" integer, "a4" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "follow" boolean, "category" varchar(255), "language" varchar(255), "a5" integer, "a6" integer, "a7" integer, "a8" integer) 
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "address1" text, "address2" text, "city" text, "zipcode" text, "phone1" integer, "phone2" integer, "phone3" integer, "website" text, "instructions" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "answer_id" integer, "latitude" float, "longitude" float, "gmaps" boolean) [0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "start" integer, "end" integer, "end_time" integer, "entry" integer, "exit" integer) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35m (0.9ms)[0m  CREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_sessions_on_session_id')
+  [1m[36m (0.8ms)[0m  [1mCREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121201213906')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120907232722')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120907232921')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120910215729')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120911033303')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120911044831')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120927223527')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120927223652')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120927231337')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120928034357')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121015050901')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121015054857')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121017071025')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121201210736')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121201211629')
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateQuestions (20120907232722)
+Migrating to CreateAnswers (20120907232921)
+Migrating to AddFollowToQuestions (20120910215729)
+Migrating to AddSessionsTable (20120911033303)
+Migrating to AddHasfqToAnswers (20120911044831)
+Migrating to CreateResources (20120927223527)
+Migrating to AddAnswerIdToResources (20120927223652)
+Migrating to AddResourceBoolToAnswers (20120927231337)
+Migrating to AddGMapsToResources (20120928034357)
+Migrating to AddCategoryToQuestions (20121015050901)
+Migrating to CreatePatients (20121015054857)
+Migrating to AddLanguageToQuestions (20121017071025)
+Migrating to AddStuffToSessions (20121201210736)
+Migrating to AddTimeToPatients (20121201211629)
+Migrating to AddNewQuestionsToQuestions (20121201213906)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("answers")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("patients")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("questions")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("resources")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("sessions")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_sessions_on_session_id')
+
+
+Started GET "/questions/language" for 127.0.0.1 at 2012-12-01 14:13:02 -0800
+Processing by QuestionsController#language as HTML
+  Rendered questions/language.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:13:02 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-12-01 14:13:03 -0800
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 15ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:13:03 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started POST "/questions/add" for 127.0.0.1 at 2012-12-01 14:13:25 -0800
+Processing by QuestionsController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ORCnlKnhVIye2QYKhUMCDSOnWHigG39p/e2rHJ2aNeE=", "follow"=>"false", "language"=>"English", "quest"=>"What day is it?", "order"=>"1", "category"=>"", "answer1"=>"Monday", "answer1_follow"=>"no", "resource1_follow"=>"no", "resource1_name"=>"", "resource1_address1"=>"", "resource1_address2"=>"", "resource1_city"=>"", "resource1_zip"=>"", "resource1_phone1"=>"", "resource1_phone2"=>"", "resource1_phone3"=>"", "resource1_website"=>"", "resource1_area"=>"", "answer2"=>"Tuesday", "answer2_follow"=>"no", "resource2_follow"=>"no", "resource2_name"=>"", "resource2_address1"=>"", "resource2_address2"=>"", "resource2_city"=>"", "resource2_zip"=>"", "resource2_phone1"=>"", "resource2_phone2"=>"", "resource2_phone3"=>"", "resource2_website"=>"", "resource2_area"=>"", "answer3"=>"Wednesday", "answer3_follow"=>"no", "resource3_follow"=>"no", "resource3_name"=>"", "resource3_address1"=>"", "resource3_address2"=>"", "resource3_city"=>"", "resource3_zip"=>"", "resource3_phone1"=>"", "resource3_phone2"=>"", "resource3_phone3"=>"", "resource3_website"=>"", "resource3_area"=>"", "answer4"=>"Thursday", "answer4_follow"=>"no", "resource4_follow"=>"no", "resource4_name"=>"", "resource4_address1"=>"", "resource4_address2"=>"", "resource4_city"=>"", "resource4_zip"=>"", "resource4_phone1"=>"", "resource4_phone2"=>"", "resource4_phone3"=>"", "resource4_website"=>"", "resource4_area"=>"", "answer5"=>"Friday", "answer5_follow"=>"no", "resource5_follow"=>"no", "resource5_name"=>"", "resource5_address1"=>"", "resource5_address2"=>"", "resource5_city"=>"", "resource5_zip"=>"", "resource5_phone1"=>"", "resource5_phone2"=>"", "resource5_phone3"=>"", "resource5_website"=>"", "resource5_area"=>"", "answer6"=>"Saturday", "answer6_follow"=>"no", "resource6_follow"=>"no", "resource6_name"=>"", "resource6_address1"=>"", "resource6_address2"=>"", "resource6_city"=>"", "resource6_zip"=>"", "resource6_phone1"=>"", "resource6_phone2"=>"", "resource6_phone3"=>"", "resource6_website"=>"", "resource6_area"=>"", "answer7"=>"Sunday", "answer7_follow"=>"no", "resource7_follow"=>"no", "resource7_name"=>"", "resource7_address1"=>"", "resource7_address2"=>"", "resource7_city"=>"", "resource7_zip"=>"", "resource7_phone1"=>"", "resource7_phone2"=>"", "resource7_phone3"=>"", "resource7_website"=>"", "resource7_area"=>"", "answer8"=>"", "answer8_follow"=>"no", "resource8_follow"=>"no", "resource8_name"=>"", "resource8_address1"=>"", "resource8_address2"=>"", "resource8_city"=>"", "resource8_zip"=>"", "resource8_phone1"=>"", "resource8_phone2"=>"", "resource8_phone3"=>"", "resource8_website"=>"", "resource8_area"=>"", "commit"=>"Save"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "questions" ("a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8", "ask", "category", "created_at", "follow", "follows", "language", "order", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["a1", nil], ["a2", nil], ["a3", nil], ["a4", nil], ["a5", nil], ["a6", nil], ["a7", nil], ["a8", nil], ["ask", "What day is it?"], ["category", ""], ["created_at", Sat, 01 Dec 2012 22:13:25 UTC +00:00], ["follow", false], ["follows", nil], ["language", "English"], ["order", 1], ["updated_at", Sat, 01 Dec 2012 22:13:25 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 01 Dec 2012 22:13:25 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 1], ["reply", "Monday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:13:25 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 01 Dec 2012 22:13:25 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 1], ["reply", "Tuesday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:13:25 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 01 Dec 2012 22:13:25 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 1], ["reply", "Wednesday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:13:25 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 01 Dec 2012 22:13:25 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 1], ["reply", "Thursday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:13:25 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/questions/main?follow=false&language=English
+Completed 302 Found in 53ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-12-01 14:13:25 -0800
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:13:25 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-12-01 14:13:27 -0800
+Processing by LoginController#main as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "patients" ("answers", "created_at", "entry", "exit", "updated_at") VALUES (?, ?, ?, ?, ?)  [["answers", ""], ["created_at", Sat, 01 Dec 2012 22:13:28 UTC +00:00], ["entry", nil], ["exit", nil], ["updated_at", Sat, 01 Dec 2012 22:13:28 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 11.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:13:28 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/survey/language?answer=0&follow=false&number=0&patient=1" for 127.0.0.1 at 2012-12-01 14:13:29 -0800
+Processing by SurveyController#language as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"1"}
+  Rendered survey/language.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:13:29 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&language=English&number=0&patient=1" for 127.0.0.1 at 2012-12-01 14:13:29 -0800
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "language"=>"English", "number"=>"0", "patient"=>"1"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "patients" SET "answers" = ':0', "updated_at" = '2012-12-01 22:13:29.803437' WHERE "patients"."id" = 1
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Order number: 1
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 1
+  Rendered survey/view.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 20ms (Views: 13.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:13:29 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-12-01 14:13:29 -0800
+Served asset /survey_questions.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateQuestions (20120907232722)
+Migrating to CreateAnswers (20120907232921)
+Migrating to AddFollowToQuestions (20120910215729)
+Migrating to AddSessionsTable (20120911033303)
+Migrating to AddHasfqToAnswers (20120911044831)
+Migrating to CreateResources (20120927223527)
+Migrating to AddAnswerIdToResources (20120927223652)
+Migrating to AddResourceBoolToAnswers (20120927231337)
+Migrating to AddGMapsToResources (20120928034357)
+Migrating to AddCategoryToQuestions (20121015050901)
+Migrating to CreatePatients (20121015054857)
+Migrating to AddLanguageToQuestions (20121017071025)
+Migrating to AddStuffToSessions (20121201210736)
+Migrating to AddTimeToPatients (20121201211629)
+Migrating to AddNewQuestionsToQuestions (20121201213906)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("answers")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("patients")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("questions")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("resources")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("sessions")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_sessions_on_session_id')
+
+
+Started GET "/login" for 127.0.0.1 at 2012-12-01 14:18:19 -0800
+Processing by LoginController#main as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "patients" ("answers", "created_at", "entry", "exit", "updated_at") VALUES (?, ?, ?, ?, ?)  [["answers", ""], ["created_at", Sat, 01 Dec 2012 22:18:19 UTC +00:00], ["entry", nil], ["exit", nil], ["updated_at", Sat, 01 Dec 2012 22:18:19 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 26ms (Views: 10.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:18:20 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/questions/language" for 127.0.0.1 at 2012-12-01 14:18:21 -0800
+Processing by QuestionsController#language as HTML
+  Rendered questions/language.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:18:21 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/questions/edit" for 127.0.0.1 at 2012-12-01 14:18:21 -0800
+Processing by QuestionsController#edit as HTML
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" >= 0) ORDER BY "questions"."id" ASC LIMIT 1000
+  Rendered questions/edit.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 48ms (Views: 47.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:18:21 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/questions/delete?id=1" for 127.0.0.1 at 2012-12-01 14:18:23 -0800
+Processing by QuestionsController#delete as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/questions/edit
+Completed 302 Found in 5ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/questions/edit" for 127.0.0.1 at 2012-12-01 14:18:23 -0800
+Processing by QuestionsController#edit as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" >= 0) ORDER BY "questions"."id" ASC LIMIT 1000[0m
+  Rendered questions/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:18:23 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-12-01 14:18:26 -0800
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:18:26 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started POST "/questions/add" for 127.0.0.1 at 2012-12-01 14:18:40 -0800
+Processing by QuestionsController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5ZG7uo0r4tTHZv4Z2ZrmtpyFGxXr3a8LeL0Fw2cFu7w=", "follow"=>"false", "language"=>"English", "quest"=>"What day is it?", "order"=>"1", "category"=>"", "answer1"=>"Yes", "answer1_follow"=>"no", "resource1_follow"=>"no", "resource1_name"=>"", "resource1_address1"=>"", "resource1_address2"=>"", "resource1_city"=>"", "resource1_zip"=>"", "resource1_phone1"=>"", "resource1_phone2"=>"", "resource1_phone3"=>"", "resource1_website"=>"", "resource1_area"=>"", "answer2"=>"No", "answer2_follow"=>"no", "resource2_follow"=>"no", "resource2_name"=>"", "resource2_address1"=>"", "resource2_address2"=>"", "resource2_city"=>"", "resource2_zip"=>"", "resource2_phone1"=>"", "resource2_phone2"=>"", "resource2_phone3"=>"", "resource2_website"=>"", "resource2_area"=>"", "answer3"=>"Monday", "answer3_follow"=>"no", "resource3_follow"=>"no", "resource3_name"=>"", "resource3_address1"=>"", "resource3_address2"=>"", "resource3_city"=>"", "resource3_zip"=>"", "resource3_phone1"=>"", "resource3_phone2"=>"", "resource3_phone3"=>"", "resource3_website"=>"", "resource3_area"=>"", "answer4"=>"Tuesdya", "answer4_follow"=>"no", "resource4_follow"=>"no", "resource4_name"=>"", "resource4_address1"=>"", "resource4_address2"=>"", "resource4_city"=>"", "resource4_zip"=>"", "resource4_phone1"=>"", "resource4_phone2"=>"", "resource4_phone3"=>"", "resource4_website"=>"", "resource4_area"=>"", "answer5"=>"ADsaf", "answer5_follow"=>"no", "resource5_follow"=>"no", "resource5_name"=>"", "resource5_address1"=>"", "resource5_address2"=>"", "resource5_city"=>"", "resource5_zip"=>"", "resource5_phone1"=>"", "resource5_phone2"=>"", "resource5_phone3"=>"", "resource5_website"=>"", "resource5_area"=>"", "answer6"=>"", "answer6_follow"=>"no", "resource6_follow"=>"no", "resource6_name"=>"", "resource6_address1"=>"", "resource6_address2"=>"", "resource6_city"=>"", "resource6_zip"=>"", "resource6_phone1"=>"", "resource6_phone2"=>"", "resource6_phone3"=>"", "resource6_website"=>"", "resource6_area"=>"", "answer7"=>"", "answer7_follow"=>"no", "resource7_follow"=>"no", "resource7_name"=>"", "resource7_address1"=>"", "resource7_address2"=>"", "resource7_city"=>"", "resource7_zip"=>"", "resource7_phone1"=>"", "resource7_phone2"=>"", "resource7_phone3"=>"", "resource7_website"=>"", "resource7_area"=>"", "answer8"=>"", "answer8_follow"=>"no", "resource8_follow"=>"no", "resource8_name"=>"", "resource8_address1"=>"", "resource8_address2"=>"", "resource8_city"=>"", "resource8_zip"=>"", "resource8_phone1"=>"", "resource8_phone2"=>"", "resource8_phone3"=>"", "resource8_website"=>"", "resource8_area"=>"", "commit"=>"Save"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "questions" ("a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8", "ask", "category", "created_at", "follow", "follows", "language", "order", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["a1", nil], ["a2", nil], ["a3", nil], ["a4", nil], ["a5", nil], ["a6", nil], ["a7", nil], ["a8", nil], ["ask", "What day is it?"], ["category", ""], ["created_at", Sat, 01 Dec 2012 22:18:40 UTC +00:00], ["follow", false], ["follows", nil], ["language", "English"], ["order", 1], ["updated_at", Sat, 01 Dec 2012 22:18:40 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 01 Dec 2012 22:18:40 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 2], ["reply", "Yes"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:18:40 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 01 Dec 2012 22:18:40 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 2], ["reply", "No"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:18:40 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 01 Dec 2012 22:18:40 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 2], ["reply", "Monday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:18:40 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 01 Dec 2012 22:18:40 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 2], ["reply", "Tuesdya"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:18:40 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/questions/main?follow=false&language=English
+Completed 302 Found in 28ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-12-01 14:18:40 -0800
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:18:40 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-12-01 14:24:19 -0800
+Processing by LoginController#main as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "patients" ("answers", "created_at", "entry", "exit", "updated_at") VALUES (?, ?, ?, ?, ?)  [["answers", ""], ["created_at", Sat, 01 Dec 2012 22:24:19 UTC +00:00], ["entry", nil], ["exit", nil], ["updated_at", Sat, 01 Dec 2012 22:24:19 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 58ms (Views: 12.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:24:19 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/questions/language" for 127.0.0.1 at 2012-12-01 14:24:20 -0800
+Processing by QuestionsController#language as HTML
+  Rendered questions/language.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:24:20 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-12-01 14:24:26 -0800
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:24:26 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started POST "/questions/add" for 127.0.0.1 at 2012-12-01 14:24:53 -0800
+Processing by QuestionsController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T1ekPei44vMt5jMhCYmgDYsGhkymPLg1wjCEJEkOXZQ=", "follow"=>"false", "language"=>"English", "quest"=>"What day is it?", "order"=>"1", "category"=>"", "answer1"=>"Monday", "answer1_follow"=>"no", "resource1_follow"=>"no", "resource1_name"=>"", "resource1_address1"=>"", "resource1_address2"=>"", "resource1_city"=>"", "resource1_zip"=>"", "resource1_phone1"=>"", "resource1_phone2"=>"", "resource1_phone3"=>"", "resource1_website"=>"", "resource1_area"=>"", "answer2"=>"Tuesday", "answer2_follow"=>"no", "resource2_follow"=>"no", "resource2_name"=>"", "resource2_address1"=>"", "resource2_address2"=>"", "resource2_city"=>"", "resource2_zip"=>"", "resource2_phone1"=>"", "resource2_phone2"=>"", "resource2_phone3"=>"", "resource2_website"=>"", "resource2_area"=>"", "answer3"=>"Wednesday", "answer3_follow"=>"no", "resource3_follow"=>"no", "resource3_name"=>"", "resource3_address1"=>"", "resource3_address2"=>"", "resource3_city"=>"", "resource3_zip"=>"", "resource3_phone1"=>"", "resource3_phone2"=>"", "resource3_phone3"=>"", "resource3_website"=>"", "resource3_area"=>"", "answer4"=>"Thursday", "answer4_follow"=>"no", "resource4_follow"=>"no", "resource4_name"=>"", "resource4_address1"=>"", "resource4_address2"=>"", "resource4_city"=>"", "resource4_zip"=>"", "resource4_phone1"=>"", "resource4_phone2"=>"", "resource4_phone3"=>"", "resource4_website"=>"", "resource4_area"=>"", "answer5"=>"Friday", "answer5_follow"=>"no", "resource5_follow"=>"no", "resource5_name"=>"", "resource5_address1"=>"", "resource5_address2"=>"", "resource5_city"=>"", "resource5_zip"=>"", "resource5_phone1"=>"", "resource5_phone2"=>"", "resource5_phone3"=>"", "resource5_website"=>"", "resource5_area"=>"", "answer6"=>"Saturday", "answer6_follow"=>"no", "resource6_follow"=>"no", "resource6_name"=>"", "resource6_address1"=>"", "resource6_address2"=>"", "resource6_city"=>"", "resource6_zip"=>"", "resource6_phone1"=>"", "resource6_phone2"=>"", "resource6_phone3"=>"", "resource6_website"=>"", "resource6_area"=>"", "answer7"=>"Sunday", "answer7_follow"=>"no", "resource7_follow"=>"no", "resource7_name"=>"", "resource7_address1"=>"", "resource7_address2"=>"", "resource7_city"=>"", "resource7_zip"=>"", "resource7_phone1"=>"", "resource7_phone2"=>"", "resource7_phone3"=>"", "resource7_website"=>"", "resource7_area"=>"", "answer8"=>"Yes", "answer8_follow"=>"no", "resource8_follow"=>"no", "resource8_name"=>"", "resource8_address1"=>"", "resource8_address2"=>"", "resource8_city"=>"", "resource8_zip"=>"", "resource8_phone1"=>"", "resource8_phone2"=>"", "resource8_phone3"=>"", "resource8_website"=>"", "resource8_area"=>"", "commit"=>"Save"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "questions" ("a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8", "ask", "category", "created_at", "follow", "follows", "language", "order", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["a1", nil], ["a2", nil], ["a3", nil], ["a4", nil], ["a5", nil], ["a6", nil], ["a7", nil], ["a8", nil], ["ask", "What day is it?"], ["category", ""], ["created_at", Sat, 01 Dec 2012 22:24:53 UTC +00:00], ["follow", false], ["follows", nil], ["language", "English"], ["order", 1], ["updated_at", Sat, 01 Dec 2012 22:24:53 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 01 Dec 2012 22:24:53 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 3], ["reply", "Monday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:24:53 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 01 Dec 2012 22:24:53 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 3], ["reply", "Tuesday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:24:53 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 01 Dec 2012 22:24:53 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 3], ["reply", "Wednesday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:24:53 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 01 Dec 2012 22:24:53 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 3], ["reply", "Thursday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:24:53 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 01 Dec 2012 22:24:53 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 3], ["reply", "Friday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:24:53 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 01 Dec 2012 22:24:53 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 3], ["reply", "Saturday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:24:53 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 01 Dec 2012 22:24:53 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 3], ["reply", "Sunday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:24:53 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 01 Dec 2012 22:24:53 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 3], ["reply", "Yes"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:24:53 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/questions/main?follow=false&language=English
+Completed 302 Found in 55ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-12-01 14:24:53 -0800
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 37ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:24:53 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-12-01 14:24:56 -0800
+Processing by LoginController#main as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "patients" ("answers", "created_at", "entry", "exit", "updated_at") VALUES (?, ?, ?, ?, ?)  [["answers", ""], ["created_at", Sat, 01 Dec 2012 22:24:56 UTC +00:00], ["entry", nil], ["exit", nil], ["updated_at", Sat, 01 Dec 2012 22:24:56 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 19ms (Views: 15.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:24:56 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/survey/language?answer=0&follow=false&number=0&patient=4" for 127.0.0.1 at 2012-12-01 14:24:58 -0800
+Processing by SurveyController#language as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"4"}
+  Rendered survey/language.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:24:58 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&language=English&number=0&patient=4" for 127.0.0.1 at 2012-12-01 14:24:59 -0800
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "language"=>"English", "number"=>"0", "patient"=>"4"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  UPDATE "patients" SET "answers" = ':0', "updated_at" = '2012-12-01 22:24:59.494715' WHERE "patients"."id" = 4
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Order number: 1
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 2
+  Rendered survey/view.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 21ms (Views: 13.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:24:59 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-12-01 14:24:59 -0800
+Served asset /survey_questions.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (2.3ms)[0m  CREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" integer, "reply" varchar(255), "resource" integer, "followup" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "hasfq" boolean, "resource_bool" boolean) 
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "patients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "answers" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "entry" integer, "exit" integer) [0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ask" text, "follows" integer, "order" integer, "a1" integer, "a2" integer, "a3" integer, "a4" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "follow" boolean, "category" varchar(255), "language" varchar(255), "a5" integer, "a6" integer, "a7" integer, "a8" integer) 
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "address1" text, "address2" text, "city" text, "zipcode" text, "phone1" integer, "phone2" integer, "phone3" integer, "website" text, "instructions" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "answer_id" integer, "latitude" float, "longitude" float, "gmaps" boolean) [0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "start" integer, "end" integer, "end_time" integer, "entry" integer, "exit" integer) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35m (0.8ms)[0m  CREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_sessions_on_session_id')
+  [1m[36m (0.9ms)[0m  [1mCREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121201213906')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120907232722')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120907232921')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120910215729')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120911033303')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120911044831')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120927223527')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120927223652')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120927231337')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120928034357')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121015050901')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121015054857')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121017071025')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121201210736')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121201211629')
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateQuestions (20120907232722)
+Migrating to CreateAnswers (20120907232921)
+Migrating to AddFollowToQuestions (20120910215729)
+Migrating to AddSessionsTable (20120911033303)
+Migrating to AddHasfqToAnswers (20120911044831)
+Migrating to CreateResources (20120927223527)
+Migrating to AddAnswerIdToResources (20120927223652)
+Migrating to AddResourceBoolToAnswers (20120927231337)
+Migrating to AddGMapsToResources (20120928034357)
+Migrating to AddCategoryToQuestions (20121015050901)
+Migrating to CreatePatients (20121015054857)
+Migrating to AddLanguageToQuestions (20121017071025)
+Migrating to AddStuffToSessions (20121201210736)
+Migrating to AddTimeToPatients (20121201211629)
+Migrating to AddNewQuestionsToQuestions (20121201213906)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("answers")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("patients")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("questions")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("resources")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("sessions")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_sessions_on_session_id')
+
+
+Started GET "/login" for 127.0.0.1 at 2012-12-01 14:27:09 -0800
+Processing by LoginController#main as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "patients" ("answers", "created_at", "entry", "exit", "updated_at") VALUES (?, ?, ?, ?, ?)  [["answers", ""], ["created_at", Sat, 01 Dec 2012 22:27:09 UTC +00:00], ["entry", nil], ["exit", nil], ["updated_at", Sat, 01 Dec 2012 22:27:09 UTC +00:00]]
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 23ms (Views: 9.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:27:09 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/questions/language" for 127.0.0.1 at 2012-12-01 14:27:11 -0800
+Processing by QuestionsController#language as HTML
+  Rendered questions/language.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:27:11 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-12-01 14:27:12 -0800
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:27:12 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started POST "/questions/add" for 127.0.0.1 at 2012-12-01 14:27:35 -0800
+Processing by QuestionsController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/xvq2hmqsfLR4OzXlEOcPlKqI1IGpQa3odjA8LEPsFU=", "follow"=>"false", "language"=>"English", "quest"=>"What day is it?", "order"=>"1", "category"=>"", "answer1"=>"Monday", "answer1_follow"=>"no", "resource1_follow"=>"no", "resource1_name"=>"", "resource1_address1"=>"", "resource1_address2"=>"", "resource1_city"=>"", "resource1_zip"=>"", "resource1_phone1"=>"", "resource1_phone2"=>"", "resource1_phone3"=>"", "resource1_website"=>"", "resource1_area"=>"", "answer2"=>"Tuesday", "answer2_follow"=>"no", "resource2_follow"=>"no", "resource2_name"=>"", "resource2_address1"=>"", "resource2_address2"=>"", "resource2_city"=>"", "resource2_zip"=>"", "resource2_phone1"=>"", "resource2_phone2"=>"", "resource2_phone3"=>"", "resource2_website"=>"", "resource2_area"=>"", "answer3"=>"Wednesday", "answer3_follow"=>"no", "resource3_follow"=>"no", "resource3_name"=>"", "resource3_address1"=>"", "resource3_address2"=>"", "resource3_city"=>"", "resource3_zip"=>"", "resource3_phone1"=>"", "resource3_phone2"=>"", "resource3_phone3"=>"", "resource3_website"=>"", "resource3_area"=>"", "answer4"=>"Thursday", "answer4_follow"=>"no", "resource4_follow"=>"no", "resource4_name"=>"", "resource4_address1"=>"", "resource4_address2"=>"", "resource4_city"=>"", "resource4_zip"=>"", "resource4_phone1"=>"", "resource4_phone2"=>"", "resource4_phone3"=>"", "resource4_website"=>"", "resource4_area"=>"", "answer5"=>"Friday", "answer5_follow"=>"no", "resource5_follow"=>"no", "resource5_name"=>"", "resource5_address1"=>"", "resource5_address2"=>"", "resource5_city"=>"", "resource5_zip"=>"", "resource5_phone1"=>"", "resource5_phone2"=>"", "resource5_phone3"=>"", "resource5_website"=>"", "resource5_area"=>"", "answer6"=>"Saturday", "answer6_follow"=>"no", "resource6_follow"=>"no", "resource6_name"=>"", "resource6_address1"=>"", "resource6_address2"=>"", "resource6_city"=>"", "resource6_zip"=>"", "resource6_phone1"=>"", "resource6_phone2"=>"", "resource6_phone3"=>"", "resource6_website"=>"", "resource6_area"=>"", "answer7"=>"Sunday", "answer7_follow"=>"no", "resource7_follow"=>"no", "resource7_name"=>"", "resource7_address1"=>"", "resource7_address2"=>"", "resource7_city"=>"", "resource7_zip"=>"", "resource7_phone1"=>"", "resource7_phone2"=>"", "resource7_phone3"=>"", "resource7_website"=>"", "resource7_area"=>"", "answer8"=>"", "answer8_follow"=>"no", "resource8_follow"=>"no", "resource8_name"=>"", "resource8_address1"=>"", "resource8_address2"=>"", "resource8_city"=>"", "resource8_zip"=>"", "resource8_phone1"=>"", "resource8_phone2"=>"", "resource8_phone3"=>"", "resource8_website"=>"", "resource8_area"=>"", "commit"=>"Save"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "questions" ("a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8", "ask", "category", "created_at", "follow", "follows", "language", "order", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["a1", nil], ["a2", nil], ["a3", nil], ["a4", nil], ["a5", nil], ["a6", nil], ["a7", nil], ["a8", nil], ["ask", "What day is it?"], ["category", ""], ["created_at", Sat, 01 Dec 2012 22:27:35 UTC +00:00], ["follow", false], ["follows", nil], ["language", "English"], ["order", 1], ["updated_at", Sat, 01 Dec 2012 22:27:35 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 01 Dec 2012 22:27:35 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 1], ["reply", "Monday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:27:35 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 01 Dec 2012 22:27:35 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 1], ["reply", "Tuesday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:27:35 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 01 Dec 2012 22:27:35 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 1], ["reply", "Wednesday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:27:35 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 01 Dec 2012 22:27:35 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 1], ["reply", "Thursday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:27:35 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 01 Dec 2012 22:27:35 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 1], ["reply", "Friday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:27:35 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 01 Dec 2012 22:27:35 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 1], ["reply", "Saturday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:27:35 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 01 Dec 2012 22:27:35 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 1], ["reply", "Sunday"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 01 Dec 2012 22:27:35 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/questions/main?follow=false&language=English
+Completed 302 Found in 50ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2012-12-01 14:27:35 -0800
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:27:35 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-12-01 14:27:37 -0800
+Processing by LoginController#main as HTML
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "patients" ("answers", "created_at", "entry", "exit", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["answers", ""], ["created_at", Sat, 01 Dec 2012 22:27:37 UTC +00:00], ["entry", nil], ["exit", nil], ["updated_at", Sat, 01 Dec 2012 22:27:37 UTC +00:00]]
+  [1m[35m (3.1ms)[0m  commit transaction
+  Rendered login/main.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 15ms (Views: 10.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:27:37 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/survey/language?answer=0&follow=false&number=0&patient=2" for 127.0.0.1 at 2012-12-01 14:27:38 -0800
+Processing by SurveyController#language as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"2"}
+  Rendered survey/language.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:27:38 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&language=English&number=0&patient=2" for 127.0.0.1 at 2012-12-01 14:27:39 -0800
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "language"=>"English", "number"=>"0", "patient"=>"2"}
+  [1m[36mPatient Load (0.3ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "patients" SET "answers" = ':0', "updated_at" = '2012-12-01 22:27:39.077839' WHERE "patients"."id" = 2[0m
+  [1m[35m (1.3ms)[0m  commit transaction
+Order number: 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 1[0m
+  Rendered survey/view.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 21ms (Views: 15.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:27:39 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-12-01 14:27:39 -0800
+Served asset /survey_questions.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&language=English&number=0&patient=2" for 127.0.0.1 at 2012-12-01 14:29:38 -0800
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "language"=>"English", "number"=>"0", "patient"=>"2"}
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "patients" SET "answers" = ':0:0', "updated_at" = '2012-12-01 22:29:38.109573' WHERE "patients"."id" = 2
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Order number: 1
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 1
+  Rendered survey/view.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 26ms (Views: 20.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:29:38 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-12-01 14:29:38 -0800
+Served asset /survey_questions.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)

@@ -556,6 +556,158 @@ class QuestionsController < ApplicationController
         resource4.save
       end
     end
+    if (params[:answer5].length > 0) 
+      answer5 = Answer.new
+      answer5.reply = params[:answer5]
+      answer5.question = question.id
+      question.a5 = answer5.id
+      if params[:answer5_follow] == "yes"
+        answer5.hasfq = true
+        answer5.save
+        followUp = Hash.new
+        followUp[:question] = question.ask
+        followUp[:answerID] = answer5.id
+        followUp[:choice] = answer5.reply
+        followUps = followUps.append(followUp)
+      else
+        answer5.hasfq = false
+      end
+      if params[:resource5_follow] == "yes"
+        answer5.resource_bool = true
+      else
+        answer5.resource_bool = false
+      end
+      answer5.save
+      if params[:resource5_follow] == "yes"
+        resource5 = Resources.new
+        resource5.name = params[:resource5_name]
+        resource5.address1 = params[:resource5_address1]
+        resource5.address2 = params[:resource5_address2]
+        resource5.city = params[:resource5_city]
+        resource5.zipcode = params[:resource5_zip]  
+        resource5.phone1 = params[:resource5_phone1]
+        resource5.phone2 = params[:resource5_phone2] 
+        resource5.phone3 = params[:resource5_phone3] 
+        resource5.website = params[:resource5_website] 
+        resource5.instructions = params[:resource5_area] 
+        resource5.answer_id = answer5.id
+        resource5.save
+      end
+    end
+    if (params[:answer6].length > 0) 
+      answer6 = Answer.new
+      answer6.reply = params[:answer6]
+      answer6.question = question.id
+      question.a6 = answer6.id
+      if params[:answer6_follow] == "yes"
+        answer6.hasfq = true
+        answer6.save
+        followUp = Hash.new
+        followUp[:question] = question.ask
+        followUp[:answerID] = answer6.id
+        followUp[:choice] = answer6.reply
+        followUps = followUps.append(followUp)
+      else
+        answer6.hasfq = false
+      end
+      if params[:resource6_follow] == "yes"
+        answer6.resource_bool = true
+      else
+        answer6.resource_bool = false
+      end
+      answer6.save
+      if params[:resource6_follow] == "yes"
+        resource6 = Resources.new
+        resource6.name = params[:resource6_name]
+        resource6.address1 = params[:resource6_address1]
+        resource6.address2 = params[:resource6_address2]
+        resource6.city = params[:resource6_city]
+        resource6.zipcode = params[:resource6_zip]  
+        resource6.phone1 = params[:resource6_phone1]
+        resource6.phone2 = params[:resource6_phone2] 
+        resource6.phone3 = params[:resource6_phone3] 
+        resource6.website = params[:resource6_website] 
+        resource6.instructions = params[:resource6_area] 
+        resource6.answer_id = answer6.id
+        resource6.save
+      end
+    end
+    if (params[:answer7].length > 0) 
+      answer7 = Answer.new
+      answer7.reply = params[:answer7]
+      answer7.question = question.id
+      question.a7 = answer7.id
+      if params[:answer7_follow] == "yes"
+        answer7.hasfq = true
+        answer7.save
+        followUp = Hash.new
+        followUp[:question] = question.ask
+        followUp[:answerID] = answer7.id
+        followUp[:choice] = answer7.reply
+        followUps = followUps.append(followUp)
+      else
+        answer7.hasfq = false
+      end
+      if params[:resource7_follow] == "yes"
+        answer7.resource_bool = true
+      else
+        answer7.resource_bool = false
+      end
+      answer7.save
+      if params[:resource7_follow] == "yes"
+        resource7 = Resources.new
+        resource7.name = params[:resource7_name]
+        resource7.address1 = params[:resource7_address1]
+        resource7.address2 = params[:resource7_address2]
+        resource7.city = params[:resource7_city]
+        resource7.zipcode = params[:resource7_zip]  
+        resource7.phone1 = params[:resource7_phone1]
+        resource7.phone2 = params[:resource7_phone2] 
+        resource7.phone3 = params[:resource7_phone3] 
+        resource7.website = params[:resource7_website] 
+        resource7.instructions = params[:resource7_area] 
+        resource7.answer_id = answer7.id
+        resource7.save
+      end
+    end
+    if (params[:answer8].length > 0) 
+      answer8 = Answer.new
+      answer8.reply = params[:answer8]
+      answer8.question = question.id
+      question.a8 = answer8.id
+      if params[:answer8_follow] == "yes"
+        answer8.hasfq = true
+        answer8.save
+        followUp = Hash.new
+        followUp[:question] = question.ask
+        followUp[:answerID] = answer8.id
+        followUp[:choice] = answer8.reply
+        followUps = followUps.append(followUp)
+      else
+        answer8.hasfq = false
+      end
+      if params[:resource8_follow] == "yes"
+        answer8.resource_bool = true
+      else
+        answer8.resource_bool = false
+      end
+      answer8.save
+      if params[:resource8_follow] == "yes"
+        resource8 = Resources.new
+        resource8.name = params[:resource8_name]
+        resource8.address1 = params[:resource8_address1]
+        resource8.address2 = params[:resource8_address2]
+        resource8.city = params[:resource8_city]
+        resource8.zipcode = params[:resource8_zip]  
+        resource8.phone1 = params[:resource8_phone1]
+        resource8.phone2 = params[:resource8_phone2] 
+        resource8.phone3 = params[:resource8_phone3] 
+        resource8.website = params[:resource8_website] 
+        resource8.instructions = params[:resource8_area] 
+        resource8.answer_id = answer8.id
+        resource8.save
+      end
+    end
   	question.save
     if (followUps.length > 0)
       @masterFollow = followUps
