@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121130192829) do
+ActiveRecord::Schema.define(:version => 20121201205544) do
 
   create_table "answers", :force => true do |t|
     t.integer  "question"
@@ -71,6 +71,8 @@ ActiveRecord::Schema.define(:version => 20121130192829) do
     t.datetime "updated_at", :null => false
     t.integer  "start"
     t.integer  "end"
+    t.integer  "start_time"
+    t.integer  "end_time"
   end
 
   add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
