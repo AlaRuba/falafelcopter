@@ -1199,3 +1199,17 @@ SystemStackError (stack level too deep):
   Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
   Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
   Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.8ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/login" for 127.0.0.1 at 2012-12-01 13:31:14 -0800
+Processing by LoginController#main as HTML
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (8.8ms)[0m  INSERT INTO "patients" ("answers", "created_at", "updated_at") VALUES (?, ?, ?)  [["answers", ""], ["created_at", Sat, 01 Dec 2012 21:31:14 UTC +00:00], ["updated_at", Sat, 01 Dec 2012 21:31:14 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 146ms (Views: 99.7ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 13:31:14 -0800
+Served asset /limit_page.css - 200 OK (1ms)

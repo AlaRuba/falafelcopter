@@ -4,4 +4,8 @@ class Patient < ActiveRecord::Base
   def entry=(value)
   	@entry = value
   end
+
+  def exit=(value)
+  	@entry = value
+  end
 end
