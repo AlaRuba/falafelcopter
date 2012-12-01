@@ -58,6 +58,42 @@
 		<% end %>
 	<br>
 <% end %>
+<% if !@answers[4].nil?%>
+
+		<% if @answers[4].hasfq%>
+			<%= link_to @answers[4].reply, {:controller => "survey", :action => "view", :follow => true, :number => @number, :answer => @answers[4].id, :patient => @patient_id, :language => @language}  , :class=> "rounded_button color_button answer_button"%>
+		<% else %>
+			<%= link_to @answers[4].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[4].id, :patient => @patient_id, :language => @language}, :class=> "rounded_button color_button answer_button" %>
+		<% end %>
+	<br>
+<% end %>
+<% if !@answers[5].nil?%>
+
+		<% if @answers[5].hasfq%>
+			<%= link_to @answers[5].reply, {:controller => "survey", :action => "view", :follow => true, :number => @number, :answer => @answers[5].id, :patient => @patient_id, :language => @language}  , :class=> "rounded_button color_button answer_button"%>
+		<% else %>
+			<%= link_to @answers[5].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[5].id, :patient => @patient_id, :language => @language}, :class=> "rounded_button color_button answer_button" %>
+		<% end %>
+	<br>
+<% end %>
+<% if !@answers[6].nil?%>
+
+		<% if @answers[6].hasfq%>
+			<%= link_to @answers[6].reply, {:controller => "survey", :action => "view", :follow => true, :number => @number, :answer => @answers[6].id, :patient => @patient_id, :language => @language}  , :class=> "rounded_button color_button answer_button"%>
+		<% else %>
+			<%= link_to @answers[6].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[6].id, :patient => @patient_id, :language => @language}, :class=> "rounded_button color_button answer_button" %>
+		<% end %>
+	<br>
+<% end %>
+<% if !@answers[7].nil?%>
+
+		<% if @answers[7].hasfq%>
+			<%= link_to @answers[7].reply, {:controller => "survey", :action => "view", :follow => true, :number => @number, :answer => @answers[7].id, :patient => @patient_id, :language => @language}  , :class=> "rounded_button color_button answer_button"%>
+		<% else %>
+			<%= link_to @answers[7].reply, {:controller => "survey", :action => "view", :follow => false, :number => @number, :answer => @answers[7].id, :patient => @patient_id, :language => @language}, :class=> "rounded_button color_button answer_button" %>
+		<% end %>
+	<br>
+<% end %>
 </p>
 </div>
 
