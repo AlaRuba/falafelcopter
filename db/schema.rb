@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121201205544) do
+ActiveRecord::Schema.define(:version => 20121201213906) do
 
   create_table "answers", :force => true do |t|
     t.integer  "question"
@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(:version => 20121201205544) do
     t.string   "answers"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "entry"
+    t.integer  "exit"
   end
 
   create_table "questions", :force => true do |t|
@@ -43,6 +45,10 @@ ActiveRecord::Schema.define(:version => 20121201205544) do
     t.boolean  "follow"
     t.string   "category"
     t.string   "language"
+    t.integer  "a5"
+    t.integer  "a6"
+    t.integer  "a7"
+    t.integer  "a8"
   end
 
   create_table "resources", :force => true do |t|
@@ -71,8 +77,9 @@ ActiveRecord::Schema.define(:version => 20121201205544) do
     t.datetime "updated_at", :null => false
     t.integer  "start"
     t.integer  "end"
-    t.integer  "start_time"
     t.integer  "end_time"
+    t.integer  "entry"
+    t.integer  "exit"
   end
 
   add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
