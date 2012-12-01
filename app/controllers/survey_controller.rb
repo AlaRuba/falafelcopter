@@ -57,7 +57,7 @@ class SurveyController < ApplicationController
     @patient = params[:patient]
     @language = params[:language]
     history = Patient.find(@patient)
-    #history.finish = Time.now.to_i
+    history.exit = Time.now.to_i
     history.save
     answers = history.answers
     @numbers = answers.split(%r{:\s*})
