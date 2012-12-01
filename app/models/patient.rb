@@ -1,5 +1,3 @@
 class Patient < ActiveRecord::Base
-  attr_accessible :answers
-  attr_accessible :entry
-  attr_accessible :exit
+  attr_accessible :answers, :entry, :exit
 end
