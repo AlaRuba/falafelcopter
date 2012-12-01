@@ -3301,3 +3301,331 @@ ActionController::RoutingError (No route matches [GET] "/assets/survey_questions
 
 
   Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-12-01 14:54:44 -0800
+Processing by LoginController#main as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "patients" ("answers", "created_at", "entry", "exit", "updated_at") VALUES (?, ?, ?, ?, ?)  [["answers", ""], ["created_at", Sat, 01 Dec 2012 22:54:44 UTC +00:00], ["entry", nil], ["exit", nil], ["updated_at", Sat, 01 Dec 2012 22:54:44 UTC +00:00]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  Rendered login/main.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 16ms (Views: 11.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:54:44 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/survey/language?answer=0&follow=false&number=0&patient=3" for 127.0.0.1 at 2012-12-01 14:54:45 -0800
+Processing by SurveyController#language as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"3"}
+  Rendered survey/language.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:54:45 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&language=English&number=0&patient=3" for 127.0.0.1 at 2012-12-01 14:54:46 -0800
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "language"=>"English", "number"=>"0", "patient"=>"3"}
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "patients" SET "answers" = ':0', "updated_at" = '2012-12-01 22:54:46.621551' WHERE "patients"."id" = 3
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+Order number: 1
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 1
+  Rendered survey/view.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 19ms (Views: 13.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:54:46 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-12-01 14:54:46 -0800
+Served asset /survey_questions.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/survey/view?answer=4&follow=false&language=English&number=1&patient=3" for 127.0.0.1 at 2012-12-01 14:54:47 -0800
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"4", "follow"=>"false", "language"=>"English", "number"=>"1", "patient"=>"3"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "patients" SET "answers" = ':0:4', "updated_at" = '2012-12-01 22:54:47.212804' WHERE "patients"."id" = 3[0m
+  [1m[35m (2.2ms)[0m  commit transaction
+Order number: 2
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'[0m
+Redirected to http://localhost:3000/survey/limit?language=English&patient=3
+Completed 302 Found in 6ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/survey/limit?language=English&patient=3" for 127.0.0.1 at 2012-12-01 14:54:47 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"3"}
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:54:47 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/survey/physician?language=English&patient=3" for 127.0.0.1 at 2012-12-01 14:54:50 -0800
+Processing by SurveyController#physician as HTML
+  Parameters: {"language"=>"English", "patient"=>"3"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered survey/physician.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:54:50 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-12-01 14:54:50 -0800
+Served asset /survey_questions.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-12-01 14:56:25 -0800
+Processing by LoginController#main as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "patients" ("answers", "created_at", "entry", "exit", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["answers", ""], ["created_at", Sat, 01 Dec 2012 22:56:25 UTC +00:00], ["entry", nil], ["exit", nil], ["updated_at", Sat, 01 Dec 2012 22:56:25 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  Rendered login/main.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 15ms (Views: 11.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:56:25 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/survey/language?answer=0&follow=false&number=0&patient=4" for 127.0.0.1 at 2012-12-01 14:56:26 -0800
+Processing by SurveyController#language as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0", "patient"=>"4"}
+  Rendered survey/language.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:56:26 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&language=English&number=0&patient=4" for 127.0.0.1 at 2012-12-01 14:56:27 -0800
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "language"=>"English", "number"=>"0", "patient"=>"4"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "patients" SET "answers" = ':0', "updated_at" = '2012-12-01 22:56:27.563150' WHERE "patients"."id" = 4[0m
+  [1m[35m (2.3ms)[0m  commit transaction
+Order number: 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 1[0m
+  Rendered survey/view.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 20ms (Views: 13.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:56:27 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-12-01 14:56:27 -0800
+Served asset /survey_questions.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/survey/view?answer=4&follow=false&language=English&number=1&patient=4" for 127.0.0.1 at 2012-12-01 14:56:28 -0800
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"4", "follow"=>"false", "language"=>"English", "number"=>"1", "patient"=>"4"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "patients" SET "answers" = ':0:4', "updated_at" = '2012-12-01 22:56:28.149698' WHERE "patients"."id" = 4
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Order number: 2
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'
+Redirected to http://localhost:3000/survey/limit?language=English&patient=4
+Completed 302 Found in 6ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/survey/limit?language=English&patient=4" for 127.0.0.1 at 2012-12-01 14:56:28 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"4"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:56:28 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/survey/physician?language=English&patient=4" for 127.0.0.1 at 2012-12-01 14:56:28 -0800
+Processing by SurveyController#physician as HTML
+  Parameters: {"language"=>"English", "patient"=>"4"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/physician.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2012-12-01 14:56:28 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2012-12-01 14:56:28 -0800
+Served asset /survey_questions.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
