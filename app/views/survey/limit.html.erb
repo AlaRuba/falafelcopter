@@ -29,6 +29,7 @@ Based on your answers, your family can receive free help from the following plac
 			<%resourceArr = Resources.where(:answer_id => answer.id)%>
 		    <%resource = resourceArr[0]%>
 			<!-- ROW 1-->
+			<% puts resource.name%>
 			<% address = resource.address1.gsub(' ', '+') + ',' + resource.address2.gsub(' ', '+') + ',' + resource.city.gsub(' ', '+') + ',' + resource.zipcode%>
 			
 			<% question = Question.find(Integer(answer.question))%>
@@ -49,7 +50,6 @@ Based on your answers, your family can receive free help from the following plac
 						<%= question.category%>
 					</td>
 					<td><%=resource.name%></td>
-					<% puts resource.name%>
 					<td class = "image">
 						<% if address.length > 10%>
 						<% image_src = "https://maps.googleapis.com/maps/api/staticmap?center=" + address + "&zoom=14&size=300x300&markers=" + address + "&sensor=false"%>
