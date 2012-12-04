@@ -27,6 +27,8 @@ Based on your answers, your family can receive free help from the following plac
 		<!-- RUBY 2-->
 		<%if answer.resource_bool == true%>
 			<%puts answer.id%>
+			<%testanswer = Answer.find(:id => answer.id)%>
+			<%puts testanswer.reply%>
 			<%resourceArr = Resources.where(:answer_id => answer.id)%>
 		    <%resource = resourceArr[0]%>
 			<!-- ROW 1-->
