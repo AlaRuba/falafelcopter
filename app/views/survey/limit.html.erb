@@ -24,6 +24,10 @@ Based on your answers, your family can receive free help from the following plac
 	<% @numbers.each do |index|%>
 		<% id = Integer(index)%>
 		<% answer = Answer.find(id)%>
+		<%puts answer.reply%>
+			<%quest = Question.find(answer.question)%>
+			<%puts quest.ask%>
+			<%puts quest.order%>
 		<!-- RUBY 2-->
 		<%if answer.resource_bool == true%>
 			<%puts answer.reply%>
