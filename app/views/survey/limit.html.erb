@@ -30,6 +30,7 @@ Based on your answers, your family can receive free help from the following plac
 		    <%resource = resourceArr[0]%>
 			<!-- ROW 1-->
 			<% puts resource.name%>
+			<% puts resource.address1%>
 			<% address = resource.address1.gsub(' ', '+') + ',' + resource.address2.gsub(' ', '+') + ',' + resource.city.gsub(' ', '+') + ',' + resource.zipcode%>
 			
 			<% question = Question.find(Integer(answer.question))%>
