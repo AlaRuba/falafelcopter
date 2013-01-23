@@ -46,8 +46,11 @@ class SurveyController < ApplicationController
   end
 
   def language
-    id = params[:patient].to_i
-    @patient_id = id
+    patient = Patient.new
+    patient.entry = Time.now.to_i
+    patient.answers = ""
+    patient.save
+    @patient_id = patient.id
   end
 
   def next

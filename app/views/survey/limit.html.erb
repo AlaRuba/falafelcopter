@@ -12,7 +12,6 @@ Based on your answers, your family can receive free help from the following plac
 	<tr>
 		<td class = "table_header">Please Call ...</td>
 		<td class = "table_header"></td>
-		<td class = "table_header"></td>
 		<td class = "table_header">For Help With ...</td>
 		<td class = "table_header">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
 	</tr>
@@ -59,18 +58,6 @@ Based on your answers, your family can receive free help from the following plac
 						<%= question.category%>
 					</td>
 					<td><%=resource.name%></td>
-					<td class = "image">
-						<% if address.length > 10%>
-						<% image_src = "https://maps.googleapis.com/maps/api/staticmap?center=" + address + "&zoom=14&size=300x300&markers=" + address + "&sensor=false"%>
-						<%= image_tag(image_src, alt: "Rails", :class=> "left") %>
-						<br>
-						<%= resource.address1%>
-						<br>
-						<%= resource.address2%>
-						<br>
-						<%= resource.city%>
-						<%end%>
-					</td>
 					<td><% phone = "("+String(resource.phone1)+")"+String(resource.phone2)+"-"+String(resource.phone3)%>
 						<% if phone.length > 3%><%=phone%><br><% end %>
 						<% if resource.website.length > 3%><%=resource.website%><% end %>
