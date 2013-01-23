@@ -5,13 +5,7 @@ require 'digest/sha1'
 class LoginController < ApplicationController
   before_filter :save_login_state, :only => [:new, :create]
   def main
-  	patient = Patient.new
-  	patient.entry = Time.now.to_i
-  	patient.answers = ""
-  	patient.save
-  	@patient_id = patient.id
-  	render "asddsaads"
-  	render "questions/main"
+
   end
 
 	def login
@@ -19,7 +13,7 @@ class LoginController < ApplicationController
 		if authorized_user
 			session[:user_id] = authorized_user.id
 			flash[:notice] = "Wow Welcome again, you logged in as #{authorized_user.username}"
-			redirect_to(:action => 'home')
+			redirect_to(:action => 'edit', :controller => 'questions')
 		else
 			flash[:notice] = "Invalid Username or Password"
 			flash[:color]= "invalid"
@@ -31,8 +25,7 @@ class LoginController < ApplicationController
 		authorized_user = User.authenticate(params[:username_or_email],params[:login_password])
 		if authorized_user
 			flash[:notice] = "Wow Welcome again, you logged in as #{authorized_user.username}"
-			render "login/main"
-			#redirect_to(:action => 'main')
+			redirect_to(:action => 'edit', :controller => "questions")
 		else
 			flash[:notice] = "Invalid Username or Password"
 			flash[:color]= "invalid"

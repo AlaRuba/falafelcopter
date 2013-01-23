@@ -7,15 +7,14 @@ Stealthmode::Application.routes.draw do
   get "survey/limit"
 
 
-  root :to => "login#login"
   match "logout" => 'login#login'
   match "logout" => 'login#logout'
   match "register" => 'login#register'
   match "create" => 'login#create'
 
-
+  match "/main" => 'login#main'
   match "/" => 'login#main'
-  match "/login" => "login#login"
+  match "/login/login" => "login#login"
   match "/login/login_attempt" => "login#login_attempt"
 
   match "/login/main" => "login#main"
