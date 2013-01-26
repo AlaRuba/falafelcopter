@@ -8941,3 +8941,1760 @@ Served asset /sessions.css - 304 Not Modified (0ms)
 
 Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-23 01:26:24 -0800
 Served asset /sessions.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/main" for 127.0.0.1 at 2013-01-26 13:36:14 -0800
+Processing by LoginController#main as HTML
+  Rendered login/main.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 153ms (Views: 150.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 13:36:14 -0800
+Served asset /sessions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 13:36:14 -0800
+Served asset /limit_page.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 13:36:14 -0800
+Served asset /sessions.js - 304 Not Modified (2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-01-26 13:36:15 -0800
+Processing by LoginController#login as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  Rendered login/login.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 41ms (Views: 10.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 13:36:15 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 13:36:15 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 13:36:15 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started POST "/login/login_attempt" for 127.0.0.1 at 2013-01-26 13:36:20 -0800
+Processing by LoginController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7vkqZ47S6IFjDcLRBfBwXedEMAZ1Xd90+CLufm1AKU8=", "username_or_email"=>"gdykho", "login_password"=>"[FILTERED]", "commit"=>"Log In"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."username" = 'gdykho' LIMIT 1
+password50b4aa39134c596aff003bcef5fcf639395c1f74
+password$2a$10$QyH1eqGVpxVWVoRy0mZciOoqF.tj5pUChhcPmRwt7Nr/GVTP4z5m2
+  Rendered login/login.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 13:36:20 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 13:36:20 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 13:36:20 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2013-01-26 13:36:23 -0800
+Processing by LoginController#register as HTML
+  Rendered login/register.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 13:36:23 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 13:36:23 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 13:36:23 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started POST "/create" for 127.0.0.1 at 2013-01-26 13:36:27 -0800
+Processing by LoginController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ds3qIJd+piiuOOUtk147iJnOnw5iuolfGiyLVf8ATpA=", "username"=>"awesome", "password"=>"[FILTERED]", "password_repeat"=>"[FILTERED]", "commit"=>"Register"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password`
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("created_at", "password", "updated_at", "username") VALUES (?, ?, ?, ?)  [["created_at", Sat, 26 Jan 2013 21:36:27 UTC +00:00], ["password", "c6a10b79929eddd80cf8473f748c04c8c738e79f"], ["updated_at", Sat, 26 Jan 2013 21:36:27 UTC +00:00], ["username", "awesome"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  Rendered login/login.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 16ms (Views: 9.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 13:36:27 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 13:36:27 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 13:36:27 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started POST "/login/login_attempt" for 127.0.0.1 at 2013-01-26 13:36:30 -0800
+Processing by LoginController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"asjfisKUEBoow7cZ7VStYgu7O+fQHglqYZ//rWgruUM=", "username_or_email"=>"awesome", "login_password"=>"[FILTERED]", "commit"=>"Log In"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."username" = 'awesome' LIMIT 1
+passwordc6a10b79929eddd80cf8473f748c04c8c738e79f
+passwordc6a10b79929eddd80cf8473f748c04c8c738e79f
+Redirected to http://localhost:3000/questions/edit
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/questions/edit" for 127.0.0.1 at 2013-01-26 13:36:30 -0800
+Processing by QuestionsController#edit as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" >= 0) ORDER BY "questions"."id" ASC LIMIT 1000[0m
+  Rendered questions/edit.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 51ms (Views: 49.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 13:36:30 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 13:36:30 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 13:36:30 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 13:36:33 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered questions/change.html.erb within layouts/application (9.9ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Answers):
+    19:   <%= text_field_tag(:order, @question.order) %>
+    20:   <br>
+    21:   <br>
+    22:   <% answers  = Answers.all(:question => @question.id)%>
+    23:   Answer Length
+    24:   <%= answers.length %>
+    25:   Answers:
+  app/views/questions/change.html.erb:22:in `block in _app_views_questions_change_html_erb___3432097838331936752_70356715791460'
+  app/views/questions/change.html.erb:1:in `_app_views_questions_change_html_erb___3432097838331936752_70356715791460'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.3ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 13:37:06 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered questions/change.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Answers):
+    19:   <%= text_field_tag(:order, @question.order) %>
+    20:   <br>
+    21:   <br>
+    22:   <% answers  = Answers.all(:question => @question.id)%>
+    23:   Answer Length
+    24:   Answers:
+    25:   <br>
+  app/views/questions/change.html.erb:22:in `block in _app_views_questions_change_html_erb___3432097838331936752_70356704641680'
+  app/views/questions/change.html.erb:1:in `_app_views_questions_change_html_erb___3432097838331936752_70356704641680'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 13:37:34 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered questions/change.html.erb within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (Unknown key: question):
+    19:   <%= text_field_tag(:order, @question.order) %>
+    20:   <br>
+    21:   <br>
+    22:   <% answers  = Answer.all(:question => @question.id)%>
+    23:   Answer Length
+    24:   <%= answers.length %>
+    25:   Answers:
+  app/views/questions/change.html.erb:22:in `block in _app_views_questions_change_html_erb___3432097838331936752_70356705903460'
+  app/views/questions/change.html.erb:1:in `_app_views_questions_change_html_erb___3432097838331936752_70356705903460'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 13:38:44 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAnswer Load (1.7ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 2
+  Rendered questions/change.html.erb within layouts/application (40.4ms)
+Completed 200 OK in 49ms (Views: 46.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 13:38:44 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 13:38:44 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 13:38:44 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 13:51:10 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 13:51:10 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 13:51:10 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started POST "/login/login_attempt" for 127.0.0.1 at 2013-01-26 13:51:15 -0800
+Processing by LoginController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"asjfisKUEBoow7cZ7VStYgu7O+fQHglqYZ//rWgruUM=", "username_or_email"=>"awesome", "login_password"=>"[FILTERED]", "commit"=>"Log In"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = 'awesome' LIMIT 1[0m
+passwordc6a10b79929eddd80cf8473f748c04c8c738e79f
+passwordc6a10b79929eddd80cf8473f748c04c8c738e79f
+Redirected to http://localhost:3000/questions/edit
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/questions/edit" for 127.0.0.1 at 2013-01-26 13:51:15 -0800
+Processing by QuestionsController#edit as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" >= 0) ORDER BY "questions"."id" ASC LIMIT 1000
+  Rendered questions/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 13:51:15 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 13:51:15 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 13:51:15 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 13:51:27 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 2
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" IS NULL LIMIT 1[0m
+  Rendered questions/change.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `follows' for nil:NilClass):
+    32:         <%if answers.length > 0%>
+    33:           <%currentAnswer = Answer.find_by_id(@question.a1)%>
+    34:           Follows:
+    35:           <%= currentAnswer.follows%>
+    36:           <%= radio_button_tag :answer1_follow, "yes" %> Has follow-up
+    37:           <%= radio_button_tag :answer1_follow, "no", true %> No
+    38:           <br>
+  app/views/questions/change.html.erb:35:in `block in _app_views_questions_change_html_erb___3432097838331936752_70356710639780'
+  app/views/questions/change.html.erb:1:in `_app_views_questions_change_html_erb___3432097838331936752_70356710639780'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 13:51:55 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 2[0m
+  Rendered questions/change.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 9ms
+
+ActiveRecord::RecordNotFound (Couldn't find Answer without an ID):
+  app/views/questions/change.html.erb:33:in `block in _app_views_questions_change_html_erb___3432097838331936752_70356709165680'
+  app/views/questions/change.html.erb:1:in `_app_views_questions_change_html_erb___3432097838331936752_70356709165680'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.6ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 13:52:11 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 2[0m
+  Rendered questions/change.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (Unknown key: id):
+    30:       <%= text_field_tag(:answer1) %>
+    31:       <div class="answer1_follow">
+    32:         <%if answers.length > 0%>
+    33:           <%currentAnswer = Answer.find(:id => @question.a1)%>
+    34:           Follows:
+    35:           <%= currentAnswer.follows%>
+    36:           <%= radio_button_tag :answer1_follow, "yes" %> Has follow-up
+  app/views/questions/change.html.erb:33:in `block in _app_views_questions_change_html_erb___3432097838331936752_70356725073220'
+  app/views/questions/change.html.erb:1:in `_app_views_questions_change_html_erb___3432097838331936752_70356725073220'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 13:52:58 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 2[0m
+  Rendered questions/change.html.erb within layouts/application (28.7ms)
+Completed 500 Internal Server Error in 31ms
+
+ActionView::Template::Error (Unknown key: id):
+    32:         <%if answers.length > 0%>
+    33:           Question ID
+    34:           <%= @question.a1%>
+    35:           <%currentAnswer = Answer.find(:id => @question.a1)%>
+    36:           Follows:
+    37:           <%= currentAnswer.follows%>
+    38:           <%= radio_button_tag :answer1_follow, "yes" %> Has follow-up
+  app/views/questions/change.html.erb:35:in `block in _app_views_questions_change_html_erb___3432097838331936752_70356701782000'
+  app/views/questions/change.html.erb:1:in `_app_views_questions_change_html_erb___3432097838331936752_70356701782000'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.8ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 13:53:14 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 2[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" IS NULL
+  Rendered questions/change.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `follows' for []:ActiveRecord::Relation):
+    34:           <%= @question.a1%>
+    35:           <%currentAnswer = Answer.where(:id => @question.a1)%>
+    36:           Follows:
+    37:           <%= currentAnswer.follows%>
+    38:           <%= radio_button_tag :answer1_follow, "yes" %> Has follow-up
+    39:           <%= radio_button_tag :answer1_follow, "no", true %> No
+    40:           <br>
+  app/views/questions/change.html.erb:37:in `block in _app_views_questions_change_html_erb___3432097838331936752_70356706174220'
+  app/views/questions/change.html.erb:1:in `_app_views_questions_change_html_erb___3432097838331936752_70356706174220'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 13:53:25 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 2
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" IS NULL[0m
+  Rendered questions/change.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `follows' for nil:NilClass):
+    34:           <%= @question.a1%>
+    35:           <%currentAnswer = Answer.where(:id => @question.a1)%>
+    36:           Follows:
+    37:           <%= currentAnswer[0].follows%>
+    38:           <%= radio_button_tag :answer1_follow, "yes" %> Has follow-up
+    39:           <%= radio_button_tag :answer1_follow, "no", true %> No
+    40:           <br>
+  app/views/questions/change.html.erb:37:in `block in _app_views_questions_change_html_erb___3432097838331936752_70356699171720'
+  app/views/questions/change.html.erb:1:in `_app_views_questions_change_html_erb___3432097838331936752_70356699171720'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.9ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 13:53:36 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 2[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" IS NULL
+  Rendered questions/change.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 13:53:36 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 13:53:36 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 13:53:36 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 13:53:43 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 13:53:43 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 13:53:43 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/maian" for 127.0.0.1 at 2013-01-26 13:53:46 -0800
+
+ActionController::RoutingError (No route matches [GET] "/maian"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/main" for 127.0.0.1 at 2013-01-26 13:53:49 -0800
+Processing by LoginController#main as HTML
+  Rendered login/main.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 13:53:49 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 13:53:49 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 13:53:49 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/language?answer=0&follow=false&number=0" for 127.0.0.1 at 2013-01-26 13:53:49 -0800
+Processing by SurveyController#language as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "patients" ("answers", "created_at", "entry", "exit", "updated_at") VALUES (?, ?, ?, ?, ?)  [["answers", ""], ["created_at", Sat, 26 Jan 2013 21:53:49 UTC +00:00], ["entry", nil], ["exit", nil], ["updated_at", Sat, 26 Jan 2013 21:53:49 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  Rendered survey/language.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 46ms (Views: 10.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 13:53:50 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 13:53:50 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 13:53:50 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&language=English&number=0&patient=17" for 127.0.0.1 at 2013-01-26 13:53:51 -0800
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "language"=>"English", "number"=>"0", "patient"=>"17"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "patients" SET "answers" = ':0', "updated_at" = '2013-01-26 21:53:51.336418' WHERE "patients"."id" = 17
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Order number: 1
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 2
+  Rendered survey/view.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 23ms (Views: 15.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2013-01-26 13:53:51 -0800
+Served asset /survey_questions.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 13:53:51 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 13:53:51 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 13:53:51 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/view?answer=8&follow=false&language=English&number=1&patient=17" for 127.0.0.1 at 2013-01-26 13:53:52 -0800
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"8", "follow"=>"false", "language"=>"English", "number"=>"1", "patient"=>"17"}
+  [1m[36mPatient Load (0.2ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "patients" SET "answers" = ':0:8', "updated_at" = '2013-01-26 21:53:52.652990' WHERE "patients"."id" = 17[0m
+  [1m[35m (2.4ms)[0m  commit transaction
+Order number: 2
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 4[0m
+  Rendered survey/view.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 21ms (Views: 14.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 13:53:52 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 13:53:52 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 13:53:52 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2013-01-26 13:53:52 -0800
+Served asset /survey_questions.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/survey/view?answer=12&follow=false&language=English&number=2&patient=17" for 127.0.0.1 at 2013-01-26 13:53:53 -0800
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"12", "follow"=>"false", "language"=>"English", "number"=>"2", "patient"=>"17"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "patients" SET "answers" = ':0:8:12', "updated_at" = '2013-01-26 21:53:53.316389' WHERE "patients"."id" = 17
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Order number: 3
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 3 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'
+Redirected to http://localhost:3000/survey/limit?language=English&patient=17
+Completed 302 Found in 6ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/survey/limit?language=English&patient=17" for 127.0.0.1 at 2013-01-26 13:53:53 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"17"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.5ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 35ms (Views: 31.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 13:53:53 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 13:53:53 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 13:53:53 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-01-26 13:54:04 -0800
+Processing by LoginController#login as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  Rendered login/login.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 13:54:04 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 13:54:04 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 13:54:04 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started POST "/login/login_attempt" for 127.0.0.1 at 2013-01-26 13:54:08 -0800
+Processing by LoginController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XlugT6cRiXT2PBeakrYFcpHe4izTCFz1MCL8jGrZcso=", "username_or_email"=>"awesome", "login_password"=>"[FILTERED]", "commit"=>"Log In"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."username" = 'awesome' LIMIT 1
+passwordc6a10b79929eddd80cf8473f748c04c8c738e79f
+passwordc6a10b79929eddd80cf8473f748c04c8c738e79f
+Redirected to http://localhost:3000/questions/edit
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/questions/edit" for 127.0.0.1 at 2013-01-26 13:54:08 -0800
+Processing by QuestionsController#edit as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" >= 0) ORDER BY "questions"."id" ASC LIMIT 1000[0m
+  Rendered questions/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 13:54:08 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 13:54:08 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 13:54:08 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 13:54:09 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 2[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" IS NULL
+  Rendered questions/change.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 13:54:09 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 13:54:09 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 13:54:09 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 13:55:10 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 2
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" IS NULL[0m
+  Rendered questions/change.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 13:55:10 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 13:55:10 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 13:55:10 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 13:58:40 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 2[0m
+  Rendered questions/change.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `follows' for #<Answer:0x007ffa675ec068>):
+    33:           Question ID
+    34:           <%currentAnswer = answers[0]%>
+    35:           Follows:
+    36:           <%= currentAnswer.follows%>
+    37:           <%= radio_button_tag :answer1_follow, "yes" %> Has follow-up
+    38:           <%= radio_button_tag :answer1_follow, "no", true %> No
+    39:           <br>
+  app/views/questions/change.html.erb:36:in `block in _app_views_questions_change_html_erb___3432097838331936752_70356709133760'
+  app/views/questions/change.html.erb:1:in `_app_views_questions_change_html_erb___3432097838331936752_70356709133760'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.7ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 13:59:02 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 2[0m
+  Rendered questions/change.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 13:59:02 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 13:59:02 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 13:59:02 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 13:59:59 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+ERROR: compiling _app_views_questions_change_html_erb___3432097838331936752_70356707607980 RAISED /Users/alaruba/stealthmode/app/views/questions/change.html.erb:46: syntax error, unexpected keyword_else, expecting keyword_end
+/Users/alaruba/stealthmode/app/views/questions/change.html.erb:430: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_questions_change_html_erb___3432097838331936752_70356707607980(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "questions/change";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.append=  form_tag("/questions/save", :method => "post") do @output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <div style="margin:0;padding:0">
+    <input name="utf8" type="hidden" value="&#x2713;" />
+    <input name="authenticity_token" type="hidden" value="f755bb0ed134b76c432144748a6d4b7a7ddf2b71" />
+  </div>
+  ');@output_buffer.append= ( hidden_field_tag :id, @question.id);@output_buffer.safe_concat('
+');   if @follow == "true"
+@output_buffer.safe_concat('    This question is a follow-up to ');@output_buffer.append= ( @question.follows);@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( hidden_field_tag :followUps, @question.follows);@output_buffer.safe_concat('
+');   else 
+     hidden_field_tag 'follows', @question.follows
+   end 
+@output_buffer.safe_concat('  
+  <br>
+  ');@output_buffer.append= ( label_tag(:quest, "Question:") );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( text_field_tag(:quest, @question.ask) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <br>
+  Order
+  ');@output_buffer.append= ( text_field_tag(:order, @question.order) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <br>
+  <br>
+');   answers  = Answer.where(:question => @question.id)
+@output_buffer.safe_concat('  Answers:
+  <br>
+  <table>
+    <tr>
+      <td>
+      <br>
+      Answer 1
+      ');@output_buffer.append= ( text_field_tag(:answer1) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      <div class="answer1_follow">
+');        if answers.length > 0
+@output_buffer.safe_concat('          Question ID
+');          currentAnswer = answers[0]
+@output_buffer.safe_concat('          Follows:
+          <if currentAnswer.hasfq == true%>
+            ');@output_buffer.append= ( radio_button_tag :answer1_follow, "yes", true);@output_buffer.safe_concat(' Has follow-up
+            ');@output_buffer.append= ( radio_button_tag :answer1_follow, "no" );@output_buffer.safe_concat(' No
+');          else
+@output_buffer.safe_concat('            ');@output_buffer.append= ( radio_button_tag :answer1_follow, "yes");@output_buffer.safe_concat(' Has follow-up
+            ');@output_buffer.append= ( radio_button_tag :answer1_follow, "no", true);@output_buffer.safe_concat(' No
+');          end
+@output_buffer.safe_concat('          <br>
+          ');@output_buffer.append= ( radio_button_tag :resource1_follow, "yes" );@output_buffer.safe_concat(' Has resource
+          ');@output_buffer.append= ( radio_button_tag :resource1_follow, "no", true );@output_buffer.safe_concat(' No
+');        else
+@output_buffer.safe_concat('          ');@output_buffer.append= ( radio_button_tag :answer1_follow, "yes" );@output_buffer.safe_concat(' Has follow-up
+          ');@output_buffer.append= ( radio_button_tag :answer1_follow, "no", true );@output_buffer.safe_concat(' No
+          <br>
+          ');@output_buffer.append= ( radio_button_tag :resource1_follow, "yes" );@output_buffer.safe_concat(' Has resource
+          ');@output_buffer.append= ( radio_button_tag :resource1_follow, "no", true );@output_buffer.safe_concat(' No
+');        end
+@output_buffer.safe_concat('      </div>
+      </td>
+      <td>
+      <div class="resource1_follow">
+');      if answers.length > 0
+@output_buffer.safe_concat('        <br>
+        Name
+        ');@output_buffer.append= ( text_field_tag(:resource1_name) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        <br>
+        Address Line 1
+        ');@output_buffer.append= ( text_field_tag(:resource1_address1) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        <br>
+        Address Line 2
+        ');@output_buffer.append= ( text_field_tag(:resource1_address2) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        <br>
+        City
+        ');@output_buffer.append= ( text_field_tag(:resource1_city) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        <br>
+        Zipcode
+        ');@output_buffer.append= ( text_field_tag(:resource1_zip) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        <br>
+        Phone Number
+        ');@output_buffer.append= ( text_field_tag :resource1_phone1, nil, :maxlength =>3  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        ');@output_buffer.append= ( text_field_tag :resource1_phone2, nil, :maxlength =>3 );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        ');@output_buffer.append= ( text_field_tag :resource1_phone3, nil, :maxlength =>4  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        <br>
+        Website
+        ');@output_buffer.append= ( text_field_tag(:resource1_website) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        <br>
+        Optional Instructions
+        ');@output_buffer.append= ( text_area_tag(:resource1_area) );@output_buffer.safe_concat('
+');      else
+@output_buffer.safe_concat('        <br>
+        Name
+        ');@output_buffer.append= ( text_field_tag(:resource1_name) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        <br>
+        Address Line 1
+        ');@output_buffer.append= ( text_field_tag(:resource1_address1) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        <br>
+        Address Line 2
+        ');@output_buffer.append= ( text_field_tag(:resource1_address2) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        <br>
+        City
+        ');@output_buffer.append= ( text_field_tag(:resource1_city) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        <br>
+        Zipcode
+        ');@output_buffer.append= ( text_field_tag(:resource1_zip) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        <br>
+        Phone Number
+        ');@output_buffer.append= ( text_field_tag :resource1_phone1, nil, :maxlength =>3  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        ');@output_buffer.append= ( text_field_tag :resource1_phone2, nil, :maxlength =>3 );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        ');@output_buffer.append= ( text_field_tag :resource1_phone3, nil, :maxlength =>4  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        <br>
+        Website
+        ');@output_buffer.append= ( text_field_tag(:resource1_website) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        <br>
+        Optional Instructions
+        ');@output_buffer.append= ( text_area_tag(:resource1_area) );@output_buffer.safe_concat('
+');        end
+@output_buffer.safe_concat('      </div>
+    </td>
+    </tr>
+    <br>
+    <td>
+  Answer 2
+  ');@output_buffer.append= ( text_field_tag(:answer2) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <div class="answer2_follow">
+    ');@output_buffer.append= ( radio_button_tag :answer2_follow, "yes" );@output_buffer.safe_concat(' Has follow-up
+    ');@output_buffer.append= ( radio_button_tag :answer2_follow, "no", true );@output_buffer.safe_concat(' No
+    <br>
+    ');@output_buffer.append= ( radio_button_tag :resource2_follow, "yes" );@output_buffer.safe_concat(' Has resource
+    ');@output_buffer.append= ( radio_button_tag :resource2_follow, "no", true );@output_buffer.safe_concat(' No
+  </div>
+    </td>
+    <td>
+  <div class="resource1_follow">
+    <br>
+    Name
+    ');@output_buffer.append= ( text_field_tag(:resource2_name) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Address Line 1
+    ');@output_buffer.append= ( text_field_tag(:resource2_address1) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Address Line 2
+    ');@output_buffer.append= ( text_field_tag(:resource2_address2) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    City
+    ');@output_buffer.append= ( text_field_tag(:resource2_city) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Zipcode
+    ');@output_buffer.append= ( text_field_tag(:resource2_zip) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Phone Number
+    ');@output_buffer.append= ( text_field_tag :resource2_phone1, nil, :maxlength =>3  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( text_field_tag :resource2_phone2, nil, :maxlength =>3 );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( text_field_tag :resource2_phone3, nil, :maxlength =>4  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Website
+    ');@output_buffer.append= ( text_field_tag(:resource2_website) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Optional Instructions
+    ');@output_buffer.append= ( text_area_tag(:resource2_area) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+    </td>
+  </tr>
+  <br>
+  <tr>
+    <td>
+  Answer 3
+  ');@output_buffer.append= ( text_field_tag(:answer3)  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <div class="answer3_follow">
+    ');@output_buffer.append= ( radio_button_tag :answer3_follow, "yes" );@output_buffer.safe_concat(' Has follow-up
+    ');@output_buffer.append= ( radio_button_tag :answer3_follow, "no", true );@output_buffer.safe_concat(' No
+    <br>
+    ');@output_buffer.append= ( radio_button_tag :resource3_follow, "yes" );@output_buffer.safe_concat(' Has resource
+    ');@output_buffer.append= ( radio_button_tag :resource3_follow, "no", true );@output_buffer.safe_concat(' No
+  </div>
+    </td>
+    <td>
+  <div class="resource1_follow">
+    <br>
+    Name
+    ');@output_buffer.append= ( text_field_tag(:resource3_name) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Address Line 1
+    ');@output_buffer.append= ( text_field_tag(:resource3_address1) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Address Line 2
+    ');@output_buffer.append= ( text_field_tag(:resource3_address2) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    City
+    ');@output_buffer.append= ( text_field_tag(:resource3_city) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Zipcode
+    ');@output_buffer.append= ( text_field_tag(:resource3_zip) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Phone Number
+    ');@output_buffer.append= ( text_field_tag :resource3_phone1, nil, :maxlength =>3  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( text_field_tag :resource3_phone2, nil, :maxlength =>3 );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( text_field_tag :resource3_phone3, nil, :maxlength =>4  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Website
+    ');@output_buffer.append= ( text_field_tag(:resource3_website) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Optional Instructions
+    ');@output_buffer.append= ( text_area_tag(:resource3_area) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+    </td>
+    </tr>
+    <tr>
+    <td>
+  <br>
+  Answer 4
+  ');@output_buffer.append= ( text_field_tag(:answer4) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <br>
+  <div class="answer4_follow">
+    ');@output_buffer.append= ( radio_button_tag :answer4_follow, "yes" );@output_buffer.safe_concat(' Has follow-up
+    ');@output_buffer.append= ( radio_button_tag :answer4_follow, "no", true );@output_buffer.safe_concat(' No
+    <br>
+    ');@output_buffer.append= ( radio_button_tag :resource4_follow, "yes" );@output_buffer.safe_concat(' Has resource
+    ');@output_buffer.append= ( radio_button_tag :resource4_follow, "no", true );@output_buffer.safe_concat(' No
+  </div>
+    </td>
+    <td>
+  <div class="resource1_follow">
+    <br>
+    Name
+    ');@output_buffer.append= ( text_field_tag(:resource4_name) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Address Line 1
+    ');@output_buffer.append= ( text_field_tag(:resource4_address1) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Address Line 2
+    ');@output_buffer.append= ( text_field_tag(:resource4_address2) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    City
+    ');@output_buffer.append= ( text_field_tag(:resource4_city) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Zipcode
+    ');@output_buffer.append= ( text_field_tag(:resource4_zip) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Phone Number
+    ');@output_buffer.append= ( text_field_tag :resource4_phone1, nil, :maxlength =>3  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( text_field_tag :resource4_phone2, nil, :maxlength =>3 );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( text_field_tag :resource4_phone3, nil, :maxlength =>4  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Website
+    ');@output_buffer.append= ( text_field_tag(:resource4_website) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Optional Instructions
+    ');@output_buffer.append= ( text_area_tag(:resource4_area) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+  <br>
+  Answer 5
+  ');@output_buffer.append= ( text_field_tag(:answer5) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <br>
+  <div class="answer5_follow">
+    ');@output_buffer.append= ( radio_button_tag :answer5_follow, "yes" );@output_buffer.safe_concat(' Has follow-up
+    ');@output_buffer.append= ( radio_button_tag :answer5_follow, "no", true );@output_buffer.safe_concat(' No
+    <br>
+    ');@output_buffer.append= ( radio_button_tag :resource5_follow, "yes" );@output_buffer.safe_concat(' Has resource
+    ');@output_buffer.append= ( radio_button_tag :resource5_follow, "no", true );@output_buffer.safe_concat(' No
+  </div>
+    </td>
+    <td>
+  <div class="resource1_follow">
+    <br>
+    Name
+    ');@output_buffer.append= ( text_field_tag(:resource5_name) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Address Line 1
+    ');@output_buffer.append= ( text_field_tag(:resource5_address1) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Address Line 2
+    ');@output_buffer.append= ( text_field_tag(:resource5_address2) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    City
+    ');@output_buffer.append= ( text_field_tag(:resource5_city) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Zipcode
+    ');@output_buffer.append= ( text_field_tag(:resource5_zip) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Phone Number
+    ');@output_buffer.append= ( text_field_tag :resource5_phone1, nil, :maxlength =>3  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( text_field_tag :resource5_phone2, nil, :maxlength =>3 );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( text_field_tag :resource5_phone3, nil, :maxlength =>4  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Website
+    ');@output_buffer.append= ( text_field_tag(:resource5_website) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Optional Instructions
+    ');@output_buffer.append= ( text_area_tag(:resource5_area) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+  <br>
+  Answer 6
+  ');@output_buffer.append= ( text_field_tag(:answer6) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <br>
+  <div class="answer6_follow">
+    ');@output_buffer.append= ( radio_button_tag :answer6_follow, "yes" );@output_buffer.safe_concat(' Has follow-up
+    ');@output_buffer.append= ( radio_button_tag :answer6_follow, "no", true );@output_buffer.safe_concat(' No
+    <br>
+    ');@output_buffer.append= ( radio_button_tag :resource6_follow, "yes" );@output_buffer.safe_concat(' Has resource
+    ');@output_buffer.append= ( radio_button_tag :resource6_follow, "no", true );@output_buffer.safe_concat(' No
+  </div>
+    </td>
+    <td>
+  <div class="resource1_follow">
+    <br>
+    Name
+    ');@output_buffer.append= ( text_field_tag(:resource6_name) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Address Line 1
+    ');@output_buffer.append= ( text_field_tag(:resource6_address1) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Address Line 2
+    ');@output_buffer.append= ( text_field_tag(:resource6_address2) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    City
+    ');@output_buffer.append= ( text_field_tag(:resource6_city) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Zipcode
+    ');@output_buffer.append= ( text_field_tag(:resource6_zip) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Phone Number
+    ');@output_buffer.append= ( text_field_tag :resource6_phone1, nil, :maxlength =>3  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( text_field_tag :resource6_phone2, nil, :maxlength =>3 );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( text_field_tag :resource6_phone3, nil, :maxlength =>4  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Website
+    ');@output_buffer.append= ( text_field_tag(:resource6_website) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Optional Instructions
+    ');@output_buffer.append= ( text_area_tag(:resource6_area) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+  <br>
+  Answer 7
+  ');@output_buffer.append= ( text_field_tag(:answer7) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <br>
+  <div class="answer7_follow">
+    ');@output_buffer.append= ( radio_button_tag :answer7_follow, "yes" );@output_buffer.safe_concat(' Has follow-up
+    ');@output_buffer.append= ( radio_button_tag :answer7_follow, "no", true );@output_buffer.safe_concat(' No
+    <br>
+    ');@output_buffer.append= ( radio_button_tag :resource7_follow, "yes" );@output_buffer.safe_concat(' Has resource
+    ');@output_buffer.append= ( radio_button_tag :resource7_follow, "no", true );@output_buffer.safe_concat(' No
+  </div>
+    </td>
+    <td>
+  <div class="resource1_follow">
+    <br>
+    Name
+    ');@output_buffer.append= ( text_field_tag(:resource7_name) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Address Line 1
+    ');@output_buffer.append= ( text_field_tag(:resource7_address1) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Address Line 2
+    ');@output_buffer.append= ( text_field_tag(:resource7_address2) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    City
+    ');@output_buffer.append= ( text_field_tag(:resource7_city) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Zipcode
+    ');@output_buffer.append= ( text_field_tag(:resource7_zip) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Phone Number
+    ');@output_buffer.append= ( text_field_tag :resource7_phone1, nil, :maxlength =>3  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( text_field_tag :resource7_phone2, nil, :maxlength =>3 );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( text_field_tag :resource7_phone3, nil, :maxlength =>4  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Website
+    ');@output_buffer.append= ( text_field_tag(:resource7_website) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Optional Instructions
+    ');@output_buffer.append= ( text_area_tag(:resource7_area) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+  <br>
+  Answer 8
+  ');@output_buffer.append= ( text_field_tag(:answer8) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <br>
+  <div class="answer5_follow">
+    ');@output_buffer.append= ( radio_button_tag :answer8_follow, "yes" );@output_buffer.safe_concat(' Has follow-up
+    ');@output_buffer.append= ( radio_button_tag :answer8_follow, "no", true );@output_buffer.safe_concat(' No
+    <br>
+    ');@output_buffer.append= ( radio_button_tag :resource8_follow, "yes" );@output_buffer.safe_concat(' Has resource
+    ');@output_buffer.append= ( radio_button_tag :resource8_follow, "no", true );@output_buffer.safe_concat(' No
+  </div>
+    </td>
+    <td>
+  <div class="resource1_follow">
+    <br>
+    Name
+    ');@output_buffer.append= ( text_field_tag(:resource8_name) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Address Line 1
+    ');@output_buffer.append= ( text_field_tag(:resource8_address1) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Address Line 2
+    ');@output_buffer.append= ( text_field_tag(:resource8_address2) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    City
+    ');@output_buffer.append= ( text_field_tag(:resource8_city) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Zipcode
+    ');@output_buffer.append= ( text_field_tag(:resource8_zip) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Phone Number
+    ');@output_buffer.append= ( text_field_tag :resource8_phone1, nil, :maxlength =>3  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( text_field_tag :resource8_phone2, nil, :maxlength =>3 );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( text_field_tag :resource8_phone3, nil, :maxlength =>4  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Website
+    ');@output_buffer.append= ( text_field_tag(:resource8_website) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    Optional Instructions
+    ');@output_buffer.append= ( text_area_tag(:resource8_area) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+    </td>
+  </tr>
+</table>
+  ');@output_buffer.append= ( submit_tag("Save") );@output_buffer.safe_concat('
+'); end ;@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/template.rb:297:in `module_eval'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/template.rb:297:in `compile'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/template.rb:232:in `compile!'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/template.rb:144:in `block in render'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/notifications.rb:125:in `instrument'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/template.rb:143:in `render'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/notifications.rb:123:in `instrument'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/abstract_controller/rendering.rb:88:in `render'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/alaruba/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.8/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/callbacks.rb:414:in `_run__3563110110847542363__process_action__2249044654934713142__callbacks'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/notifications.rb:123:in `instrument'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.8/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/abstract_controller/base.rb:121:in `process'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal.rb:203:in `dispatch'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_controller/metal.rb:246:in `block in action'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/routing/route_set.rb:600:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/cookies.rb:339:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.8/lib/active_record/query_cache.rb:64:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/callbacks.rb:405:in `_run__879693956262014496__call__3520480374277529525__callbacks'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.8/lib/rails/rack/logger.rb:26:in `call_app'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.8/lib/rails/rack/logger.rb:16:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.8/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/static.rb:62:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.8/lib/rails/engine.rb:479:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.8/lib/rails/application.rb:223:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/thin-1.4.1/lib/thin/connection.rb:80:in `block in pre_process'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/thin-1.4.1/lib/thin/connection.rb:78:in `catch'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/thin-1.4.1/lib/thin/connection.rb:78:in `pre_process'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/thin-1.4.1/lib/thin/connection.rb:53:in `process'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/thin-1.4.1/lib/thin/connection.rb:38:in `receive_data'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/eventmachine-0.12.10/lib/eventmachine.rb:256:in `run_machine'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/eventmachine-0.12.10/lib/eventmachine.rb:256:in `run'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/thin-1.4.1/lib/thin/backends/base.rb:63:in `start'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/thin-1.4.1/lib/thin/server.rb:159:in `start'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/handler/thin.rb:13:in `run'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/server.rb:265:in `start'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.8/lib/rails/commands/server.rb:70:in `start'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.8/lib/rails/commands.rb:55:in `block in <top (required)>'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.8/lib/rails/commands.rb:50:in `tap'
+/Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.8/lib/rails/commands.rb:50:in `<top (required)>'
+script/rails:6:in `require'
+script/rails:6:in `<main>'
+  Rendered questions/change.html.erb within layouts/application (31.8ms)
+Completed 500 Internal Server Error in 34ms
+
+ActionView::Template::Error (/Users/alaruba/stealthmode/app/views/questions/change.html.erb:46: syntax error, unexpected keyword_else, expecting keyword_end
+/Users/alaruba/stealthmode/app/views/questions/change.html.erb:430: syntax error, unexpected keyword_ensure, expecting $end):
+    43:           <br>
+    44:           <%= radio_button_tag :resource1_follow, "yes" %> Has resource
+    45:           <%= radio_button_tag :resource1_follow, "no", true %> No
+    46:         <%else%>
+    47:           <%= radio_button_tag :answer1_follow, "yes" %> Has follow-up
+    48:           <%= radio_button_tag :answer1_follow, "no", true %> No
+    49:           <br>
+  actionpack (3.2.8) lib/action_view/template.rb:297:in `module_eval'
+  actionpack (3.2.8) lib/action_view/template.rb:297:in `compile'
+  actionpack (3.2.8) lib/action_view/template.rb:244:in `block in compile!'
+  <internal:prelude>:10:in `synchronize'
+  actionpack (3.2.8) lib/action_view/template.rb:232:in `compile!'
+  actionpack (3.2.8) lib/action_view/template.rb:144:in `block in render'
+  activesupport (3.2.8) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.8) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.8) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.8) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.8) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/alaruba/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:414:in `_run__3563110110847542363__process_action__2249044654934713142__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.8) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__879693956262014496__call__3520480374277529525__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 14:00:39 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 2
+  Rendered questions/change.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 14:00:39 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 14:00:39 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 14:00:39 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 14:05:29 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 2
+  Rendered questions/change.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 14:05:29 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 14:05:29 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 14:05:29 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 14:17:18 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 2
+  Rendered questions/change.html.erb within layouts/application (7.9ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Resource):
+    62:       <div class="resource1_follow">
+    63:       <%if answers.length > 0%>
+    64:         <%if currentAnswer.resource_bool == true%>
+    65:           <%resource = Resource.where(:answer_id => currentAnswer.id)%>
+    66:           <%currentResource = resource[0]%>
+    67:           <br>
+    68:           Name
+  app/views/questions/change.html.erb:65:in `block in _app_views_questions_change_html_erb___3432097838331936752_70356699361080'
+  app/views/questions/change.html.erb:1:in `_app_views_questions_change_html_erb___3432097838331936752_70356699361080'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 14:17:45 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 2
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  Rendered questions/change.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (wrong number of arguments (4 for 3)):
+    81:           <%= text_field_tag(:resource1_zip, currentResource.zipcode) %>
+    82:           <br>
+    83:           Phone Number
+    84:           <%= text_field_tag :resource1_phone1, nil, currentResource.phone1,:maxlength =>3  %>
+    85:           <%= text_field_tag :resource1_phone2, nil, currentResource.phone2,:maxlength =>3 %>
+    86:           <%= text_field_tag :resource1_phone3, nil, currentResource.phone3,:maxlength =>4  %>
+    87:           <br>
+  app/views/questions/change.html.erb:84:in `block in _app_views_questions_change_html_erb___3432097838331936752_70356717907000'
+  app/views/questions/change.html.erb:1:in `_app_views_questions_change_html_erb___3432097838331936752_70356717907000'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (24.1ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (30.2ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 14:18:09 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 2[0m
+  [1m[35mResources Load (0.1ms)[0m  SELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8
+  Rendered questions/change.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 14:18:10 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 14:18:10 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 14:18:10 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 14:18:29 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 2
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  Rendered questions/change.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 14:18:29 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 14:18:29 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 14:18:29 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 14:20:02 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 2[0m
+  [1m[35mResources Load (0.2ms)[0m  SELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8
+  Rendered questions/change.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 14:20:02 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 14:20:02 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 14:20:02 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 14:20:19 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 2
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  Rendered questions/change.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 14:20:19 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 14:20:19 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 14:20:19 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 14:20:39 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 2[0m
+  [1m[35mResources Load (0.2ms)[0m  SELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8
+  Rendered questions/change.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 47ms (Views: 45.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 14:20:40 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 14:20:40 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 14:20:40 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/change?id=2" for 127.0.0.1 at 2013-01-26 14:43:07 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 2
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  Rendered questions/change.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 14:43:07 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 14:43:07 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 14:43:07 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
