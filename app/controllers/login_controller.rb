@@ -13,7 +13,7 @@ class LoginController < ApplicationController
 		if authorized_user
 			session[:user_id] = authorized_user.id
 			flash[:notice] = "Wow Welcome again, you logged in as #{authorized_user.username}"
-			redirect_to(:action => 'edit', :controller => 'questions')
+			redirect_to(:action => 'language', :controller => 'questions')
 		else
 			flash[:notice] = "Invalid Username or Password"
 			flash[:color]= "invalid"
@@ -25,7 +25,7 @@ class LoginController < ApplicationController
 		authorized_user = User.authenticate(params[:username_or_email],params[:login_password])
 		if authorized_user
 			flash[:notice] = "Wow Welcome again, you logged in as #{authorized_user.username}"
-			redirect_to(:action => 'edit', :controller => "questions")
+			redirect_to(:action => 'language', :controller => "questions")
 		else
 			flash[:notice] = "Invalid Username or Password"
 			flash[:color]= "invalid"

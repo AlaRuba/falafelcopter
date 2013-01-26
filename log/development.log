@@ -10698,3 +10698,172 @@ Served asset /sessions.css - 304 Not Modified (0ms)
 
 Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 14:43:07 -0800
 Served asset /sessions.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/main" for 127.0.0.1 at 2013-01-26 15:30:27 -0800
+Processing by LoginController#main as HTML
+  Rendered login/main.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 103ms (Views: 101.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 15:30:27 -0800
+Served asset /limit_page.css - 200 OK (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 15:30:27 -0800
+Served asset /sessions.css - 200 OK (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 15:30:27 -0800
+Served asset /sessions.js - 200 OK (1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-01-26 15:30:30 -0800
+Processing by LoginController#login as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  Rendered login/login.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 36ms (Views: 9.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login/login_attempt" for 127.0.0.1 at 2013-01-26 15:30:35 -0800
+Processing by LoginController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/XHVOT3XS69KblWTawbfSEM68xSr1D4BoYA0xy46d74=", "username_or_email"=>"colonel", "login_password"=>"[FILTERED]", "commit"=>"Log In"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."username" = 'colonel' LIMIT 1
+  Rendered login/login.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login/login_attempt" for 127.0.0.1 at 2013-01-26 15:30:43 -0800
+Processing by LoginController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J2dujz6b1oPWBiupk7EnRxavtMKC/v7h98A5Y0b+gRI=", "username_or_email"=>"awesome", "login_password"=>"[FILTERED]", "commit"=>"Log In"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = 'awesome' LIMIT 1[0m
+passwordc6a10b79929eddd80cf8473f748c04c8c738e79f
+passwordc6a10b79929eddd80cf8473f748c04c8c738e79f
+Redirected to http://localhost:3000/questions/edit
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/questions/edit" for 127.0.0.1 at 2013-01-26 15:30:43 -0800
+Processing by QuestionsController#edit as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" >= 0) ORDER BY "questions"."id" ASC LIMIT 1000
+  Rendered questions/edit.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/questions/language" for 127.0.0.1 at 2013-01-26 15:32:08 -0800
+Processing by QuestionsController#language as HTML
+  Rendered questions/language.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 36ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2013-01-26 15:32:10 -0800
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login/login_attempt" for 127.0.0.1 at 2013-01-26 15:32:43 -0800
+Processing by LoginController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/XHVOT3XS69KblWTawbfSEM68xSr1D4BoYA0xy46d74=", "username_or_email"=>"colonel", "login_password"=>"[FILTERED]", "commit"=>"Log In"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = 'colonel' LIMIT 1[0m
+  Rendered login/login.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 13ms (Views: 8.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/login/login_attempt" for 127.0.0.1 at 2013-01-26 15:32:46 -0800
+Processing by LoginController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mum0WMeY/UGPhKi6F7qMrck0nklOGzMMXnDpSduiZZY=", "username_or_email"=>"awesome", "login_password"=>"[FILTERED]", "commit"=>"Log In"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."username" = 'awesome' LIMIT 1
+passwordc6a10b79929eddd80cf8473f748c04c8c738e79f
+passwordc6a10b79929eddd80cf8473f748c04c8c738e79f
+Redirected to http://localhost:3000/questions/language
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/questions/language" for 127.0.0.1 at 2013-01-26 15:32:46 -0800
+Processing by QuestionsController#language as HTML
+  Rendered questions/language.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/edit" for 127.0.0.1 at 2013-01-26 15:32:49 -0800
+Processing by QuestionsController#edit as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" >= 0) ORDER BY "questions"."id" ASC LIMIT 1000[0m
+  Rendered questions/edit.html.erb within layouts/application (40.3ms)
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2013-01-26 15:33:00 -0800
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/questions/add" for 127.0.0.1 at 2013-01-26 15:36:16 -0800
+Processing by QuestionsController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GdO2FRVHhFhP+VK4e2u9TFSeaJYG7dPMPCwnyTVM9xM=", "follow"=>"false", "language"=>"English", "quest"=>"How old are your children in need of care? ", "order"=>"", "category"=>"", "answer1"=>"0-3 years", "answer1_follow"=>"no", "resource1_follow"=>"yes", "resource1_name"=>"Early Headstart", "resource1_address1"=>"none", "resource1_address2"=>"", "resource1_city"=>"", "resource1_zip"=>"", "resource1_phone1"=>"650", "resource1_phone2"=>"872", "resource1_phone3"=>"0433", "resource1_website"=>"http://www.ihsdinc.org", "resource1_area"=>"Developmental services for infants and toddlers (under 3) ; social services for their families. ", "answer2"=>"3-5 years", "answer2_follow"=>"no", "resource2_follow"=>"yes", "resource2_name"=>"Headstart", "resource2_address1"=>"none", "resource2_address2"=>"", "resource2_city"=>"", "resource2_zip"=>"", "resource2_phone1"=>"650", "resource2_phone2"=>"872", "resource2_phone3"=>"0433", "resource2_website"=>"http://www.ihsdinc.org/", "resource2_area"=>"Free child developmental and educational programs (ages 3-5)", "answer3"=>"Older than 5 years", "answer3_follow"=>"no", "resource3_follow"=>"yes", "resource3_name"=>"4C's Childcare Coordinating Council", "resource3_address1"=>"none", "resource3_address2"=>"", "resource3_city"=>"", "resource3_zip"=>"", "resource3_phone1"=>"650", "resource3_phone2"=>"517", "resource3_phone3"=>"1400", "resource3_website"=>"http://sanmateo4cs.org/", "resource3_area"=>"", "answer4"=>"", "answer4_follow"=>"no", "resource4_follow"=>"no", "resource4_name"=>"", "resource4_address1"=>"", "resource4_address2"=>"", "resource4_city"=>"", "resource4_zip"=>"", "resource4_phone1"=>"", "resource4_phone2"=>"", "resource4_phone3"=>"", "resource4_website"=>"", "resource4_area"=>"", "answer5"=>"", "answer5_follow"=>"no", "resource5_follow"=>"no", "resource5_name"=>"", "resource5_address1"=>"", "resource5_address2"=>"", "resource5_city"=>"", "resource5_zip"=>"", "resource5_phone1"=>"", "resource5_phone2"=>"", "resource5_phone3"=>"", "resource5_website"=>"", "resource5_area"=>"", "answer6"=>"", "answer6_follow"=>"no", "resource6_follow"=>"no", "resource6_name"=>"", "resource6_address1"=>"", "resource6_address2"=>"", "resource6_city"=>"", "resource6_zip"=>"", "resource6_phone1"=>"", "resource6_phone2"=>"", "resource6_phone3"=>"", "resource6_website"=>"", "resource6_area"=>"", "answer7"=>"", "answer7_follow"=>"no", "resource7_follow"=>"no", "resource7_name"=>"", "resource7_address1"=>"", "resource7_address2"=>"", "resource7_city"=>"", "resource7_zip"=>"", "resource7_phone1"=>"", "resource7_phone2"=>"", "resource7_phone3"=>"", "resource7_website"=>"", "resource7_area"=>"", "answer8"=>"", "answer8_follow"=>"no", "resource8_follow"=>"no", "resource8_name"=>"", "resource8_address1"=>"", "resource8_address2"=>"", "resource8_city"=>"", "resource8_zip"=>"", "resource8_phone1"=>"", "resource8_phone2"=>"", "resource8_phone3"=>"", "resource8_website"=>"", "resource8_area"=>"", "commit"=>"Save"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8", "ask", "category", "created_at", "follow", "follows", "language", "order", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["a1", nil], ["a2", nil], ["a3", nil], ["a4", nil], ["a5", nil], ["a6", nil], ["a7", nil], ["a8", nil], ["ask", "How old are your children in need of care? "], ["category", ""], ["created_at", Sat, 26 Jan 2013 23:36:16 UTC +00:00], ["follow", false], ["follows", nil], ["language", "English"], ["order", nil], ["updated_at", Sat, 26 Jan 2013 23:36:16 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 26 Jan 2013 23:36:16 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 5], ["reply", "0-3 years"], ["resource", nil], ["resource_bool", true], ["updated_at", Sat, 26 Jan 2013 23:36:16 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "resources" ("address1", "address2", "answer_id", "city", "created_at", "gmaps", "instructions", "latitude", "longitude", "name", "phone1", "phone2", "phone3", "updated_at", "website", "zipcode") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address1", "none"], ["address2", ""], ["answer_id", 14], ["city", ""], ["created_at", Sat, 26 Jan 2013 23:36:16 UTC +00:00], ["gmaps", true], ["instructions", "Developmental services for infants and toddlers (under 3) ; social services for their families. "], ["latitude", 33.8499292], ["longitude", -88.4509873], ["name", "Early Headstart"], ["phone1", 650], ["phone2", 872], ["phone3", 433], ["updated_at", Sat, 26 Jan 2013 23:36:16 UTC +00:00], ["website", "http://www.ihsdinc.org"], ["zipcode", ""]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 26 Jan 2013 23:36:16 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 5], ["reply", "3-5 years"], ["resource", nil], ["resource_bool", true], ["updated_at", Sat, 26 Jan 2013 23:36:16 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "resources" ("address1", "address2", "answer_id", "city", "created_at", "gmaps", "instructions", "latitude", "longitude", "name", "phone1", "phone2", "phone3", "updated_at", "website", "zipcode") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address1", "none"], ["address2", ""], ["answer_id", 15], ["city", ""], ["created_at", Sat, 26 Jan 2013 23:36:17 UTC +00:00], ["gmaps", true], ["instructions", "Free child developmental and educational programs (ages 3-5)"], ["latitude", 33.8499292], ["longitude", -88.4509873], ["name", "Headstart"], ["phone1", 650], ["phone2", 872], ["phone3", 433], ["updated_at", Sat, 26 Jan 2013 23:36:17 UTC +00:00], ["website", "http://www.ihsdinc.org/"], ["zipcode", ""]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 26 Jan 2013 23:36:17 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 5], ["reply", "Older than 5 years"], ["resource", nil], ["resource_bool", true], ["updated_at", Sat, 26 Jan 2013 23:36:17 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "resources" ("address1", "address2", "answer_id", "city", "created_at", "gmaps", "instructions", "latitude", "longitude", "name", "phone1", "phone2", "phone3", "updated_at", "website", "zipcode") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address1", "none"], ["address2", ""], ["answer_id", 16], ["city", ""], ["created_at", Sat, 26 Jan 2013 23:36:17 UTC +00:00], ["gmaps", true], ["instructions", ""], ["latitude", 33.8499292], ["longitude", -88.4509873], ["name", "4C's Childcare Coordinating Council"], ["phone1", 650], ["phone2", 517], ["phone3", 1400], ["updated_at", Sat, 26 Jan 2013 23:36:17 UTC +00:00], ["website", "http://sanmateo4cs.org/"], ["zipcode", ""]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/questions/main?follow=false&language=English
+Completed 302 Found in 900ms (ActiveRecord: 14.7ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2013-01-26 15:36:17 -0800
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/language" for 127.0.0.1 at 2013-01-26 15:36:26 -0800
+Processing by QuestionsController#language as HTML
+  Rendered questions/language.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/edit" for 127.0.0.1 at 2013-01-26 15:36:27 -0800
+Processing by QuestionsController#edit as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" >= 0) ORDER BY "questions"."id" ASC LIMIT 1000[0m
+  Rendered questions/edit.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/questions/change?id=5" for 127.0.0.1 at 2013-01-26 15:36:29 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 5[0m
+  [1m[35mResources Load (0.1ms)[0m  SELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 14
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 15[0m
+  [1m[35mResources Load (0.1ms)[0m  SELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 16
+  Rendered questions/change.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.8ms)
