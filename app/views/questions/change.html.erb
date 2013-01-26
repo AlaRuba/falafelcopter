@@ -19,7 +19,9 @@
   <%= text_field_tag(:order, @question.order) %>
   <br>
   <br>
-
+  <% answers  = Answers.all(:question => @question.id)%>
+  Answer Length
+  <%= answers.length %>
   Answers:
   <br>
   <table>
