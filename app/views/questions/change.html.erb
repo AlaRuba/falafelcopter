@@ -68,6 +68,7 @@
           <%currentResource = resource[0]%>
           <br>
           Name
+
           <%= text_field_tag(:resource1_name, currentResource.name) %>
           <br>
           Address Line 1
@@ -192,7 +193,7 @@
       <%if answers.length > 1%>
         <%if currentAnswer.resource_bool == true%>
           <%resource = Resources.where(:answer_id => currentAnswer.id)%>
-          <%currentResource = resource[1]%>
+          <%currentResource = resource[0]%>
           <br>
           Name
           <%= text_field_tag(:resource2_name, currentResource.name) %>
@@ -319,7 +320,7 @@
       <%if answers.length > 2%>
         <%if currentAnswer.resource_bool == true%>
           <%resource = Resources.where(:answer_id => currentAnswer.id)%>
-          <%currentResource = resource[2]%>
+          <%currentResource = resource[0]%>
           <br>
           Name
           <%= text_field_tag(:resource3_name, currentResource.name) %>
@@ -446,7 +447,7 @@
       <%if answers.length > 3%>
         <%if currentAnswer.resource_bool == true%>
           <%resource = Resources.where(:answer_id => currentAnswer.id)%>
-          <%currentResource = resource[3]%>
+          <%currentResource = resource[0]%>
           <br>
           Name
           <%= text_field_tag(:resource4_name, currentResource.name) %>
@@ -573,7 +574,7 @@
       <%if answers.length > 4%>
         <%if currentAnswer.resource_bool == true%>
           <%resource = Resources.where(:answer_id => currentAnswer.id)%>
-          <%currentResource = resource[4]%>
+          <%currentResource = resource[0]%>
           <br>
           Name
           <%= text_field_tag(:resource5_name, currentResource.name) %>
@@ -700,7 +701,7 @@
       <%if answers.length > 5%>
         <%if currentAnswer.resource_bool == true%>
           <%resource = Resources.where(:answer_id => currentAnswer.id)%>
-          <%currentResource = resource[5]%>
+          <%currentResource = resource[0]%>
           <br>
           Name
           <%= text_field_tag(:resource6_name, currentResource.name) %>
@@ -827,7 +828,7 @@
       <%if answers.length > 6%>
         <%if currentAnswer.resource_bool == true%>
           <%resource = Resources.where(:answer_id => currentAnswer.id)%>
-          <%currentResource = resource[6]%>
+          <%currentResource = resource[0]%>
           <br>
           Name
           <%= text_field_tag(:resource7_name, currentResource.name) %>
@@ -954,7 +955,7 @@
       <%if answers.length > 7%>
         <%if currentAnswer.resource_bool == true%>
           <%resource = Resources.where(:answer_id => currentAnswer.id)%>
-          <%currentResource = resource[7]%>
+          <%currentResource = resource[0]%>
           <br>
           Name
           <%= text_field_tag(:resource8_name, currentResource.name) %>
