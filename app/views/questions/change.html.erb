@@ -20,6 +20,9 @@
   <br>
   <br>
   <% answers  = Answer.where(:question => @question.id)%>
+  <% if answers.nil%>
+  <%answers=[]%>
+  <%end%>
   Answers:
   <br>
   <table>
