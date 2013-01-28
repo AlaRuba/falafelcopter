@@ -10867,3 +10867,1865 @@ Processing by QuestionsController#change as HTML
   [1m[35mResources Load (0.1ms)[0m  SELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 16
   Rendered questions/change.html.erb within layouts/application (20.3ms)
 Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/main" for 127.0.0.1 at 2013-01-26 15:45:19 -0800
+Processing by LoginController#main as HTML
+  Rendered login/main.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 15:45:19 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 15:45:19 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 15:45:19 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-01-26 15:45:20 -0800
+Processing by LoginController#login as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  Rendered login/login.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 15:45:20 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 15:45:20 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 15:45:20 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started POST "/login/login_attempt" for 127.0.0.1 at 2013-01-26 15:45:25 -0800
+Processing by LoginController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"98tkJZsuX3xj4wgPaJf5duaCchaOIf+1j73+M41lWdM=", "username_or_email"=>"colonel", "login_password"=>"[FILTERED]", "commit"=>"Log In"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."username" = 'colonel' LIMIT 1
+  Rendered login/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 15:45:25 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 15:45:25 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 15:45:25 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started POST "/login/login_attempt" for 127.0.0.1 at 2013-01-26 15:45:31 -0800
+Processing by LoginController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"403+IfVTv5/r3wKiKR4CjISEgH8w+XwURU6gsWrwbiQ=", "username_or_email"=>"colonel", "login_password"=>"[FILTERED]", "commit"=>"Log In"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = 'colonel' LIMIT 1[0m
+  Rendered login/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 15:45:31 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 15:45:31 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 15:45:31 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2013-01-26 15:45:34 -0800
+Processing by LoginController#register as HTML
+  Rendered login/register.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 15:45:34 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 15:45:34 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 15:45:34 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started POST "/create" for 127.0.0.1 at 2013-01-26 15:45:37 -0800
+Processing by LoginController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a/c3gMtVCMAb4mHKZqSOnnd6PiA5W0Cj74w7kIv6Wxk=", "username"=>"col", "password"=>"[FILTERED]", "password_repeat"=>"[FILTERED]", "commit"=>"Register"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.0ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "password", "updated_at", "username") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 26 Jan 2013 23:45:37 UTC +00:00], ["password", "84a516841ba77a5b4648de2cd0dfcb30ea46dbb4"], ["updated_at", Sat, 26 Jan 2013 23:45:37 UTC +00:00], ["username", "col"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  Rendered login/login.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 18ms (Views: 11.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 15:45:37 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 15:45:37 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 15:45:37 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started POST "/login/login_attempt" for 127.0.0.1 at 2013-01-26 15:45:40 -0800
+Processing by LoginController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0+66SLURVevsjJryD48zj5+1yrZFIjh7DLuDASzFfVM=", "username_or_email"=>"col", "login_password"=>"[FILTERED]", "commit"=>"Log In"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = 'col' LIMIT 1[0m
+password84a516841ba77a5b4648de2cd0dfcb30ea46dbb4
+password84a516841ba77a5b4648de2cd0dfcb30ea46dbb4
+Redirected to http://localhost:3000/questions/language
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/questions/language" for 127.0.0.1 at 2013-01-26 15:45:40 -0800
+Processing by QuestionsController#language as HTML
+  Rendered questions/language.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 11ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 15:45:40 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 15:45:40 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 15:45:40 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2013-01-26 15:45:42 -0800
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 15:45:43 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 15:45:43 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 15:45:43 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started POST "/questions/add" for 127.0.0.1 at 2013-01-26 15:46:42 -0800
+Processing by QuestionsController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"POxEOeTUoh3PeYGpJWSDgg1GvEUwqdIsTUeLUobGEZg=", "follow"=>"false", "language"=>"English", "quest"=>"Do you have trouble finding affordable and reliable childcare or preschool?", "order"=>"5", "category"=>"", "answer1"=>"Yes", "answer1_follow"=>"yes", "resource1_follow"=>"no", "resource1_name"=>"", "resource1_address1"=>"", "resource1_address2"=>"", "resource1_city"=>"", "resource1_zip"=>"", "resource1_phone1"=>"", "resource1_phone2"=>"", "resource1_phone3"=>"", "resource1_website"=>"", "resource1_area"=>"", "answer2"=>"No", "answer2_follow"=>"no", "resource2_follow"=>"no", "resource2_name"=>"", "resource2_address1"=>"", "resource2_address2"=>"", "resource2_city"=>"", "resource2_zip"=>"", "resource2_phone1"=>"", "resource2_phone2"=>"", "resource2_phone3"=>"", "resource2_website"=>"", "resource2_area"=>"", "answer3"=>"", "answer3_follow"=>"no", "resource3_follow"=>"no", "resource3_name"=>"", "resource3_address1"=>"", "resource3_address2"=>"", "resource3_city"=>"", "resource3_zip"=>"", "resource3_phone1"=>"", "resource3_phone2"=>"", "resource3_phone3"=>"", "resource3_website"=>"", "resource3_area"=>"", "answer4"=>"", "answer4_follow"=>"no", "resource4_follow"=>"no", "resource4_name"=>"", "resource4_address1"=>"", "resource4_address2"=>"", "resource4_city"=>"", "resource4_zip"=>"", "resource4_phone1"=>"", "resource4_phone2"=>"", "resource4_phone3"=>"", "resource4_website"=>"", "resource4_area"=>"", "answer5"=>"", "answer5_follow"=>"no", "resource5_follow"=>"no", "resource5_name"=>"", "resource5_address1"=>"", "resource5_address2"=>"", "resource5_city"=>"", "resource5_zip"=>"", "resource5_phone1"=>"", "resource5_phone2"=>"", "resource5_phone3"=>"", "resource5_website"=>"", "resource5_area"=>"", "answer6"=>"", "answer6_follow"=>"no", "resource6_follow"=>"no", "resource6_name"=>"", "resource6_address1"=>"", "resource6_address2"=>"", "resource6_city"=>"", "resource6_zip"=>"", "resource6_phone1"=>"", "resource6_phone2"=>"", "resource6_phone3"=>"", "resource6_website"=>"", "resource6_area"=>"", "answer7"=>"", "answer7_follow"=>"no", "resource7_follow"=>"no", "resource7_name"=>"", "resource7_address1"=>"", "resource7_address2"=>"", "resource7_city"=>"", "resource7_zip"=>"", "resource7_phone1"=>"", "resource7_phone2"=>"", "resource7_phone3"=>"", "resource7_website"=>"", "resource7_area"=>"", "answer8"=>"", "answer8_follow"=>"no", "resource8_follow"=>"no", "resource8_name"=>"", "resource8_address1"=>"", "resource8_address2"=>"", "resource8_city"=>"", "resource8_zip"=>"", "resource8_phone1"=>"", "resource8_phone2"=>"", "resource8_phone3"=>"", "resource8_website"=>"", "resource8_area"=>"", "commit"=>"Save"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "questions" ("a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8", "ask", "category", "created_at", "follow", "follows", "language", "order", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["a1", nil], ["a2", nil], ["a3", nil], ["a4", nil], ["a5", nil], ["a6", nil], ["a7", nil], ["a8", nil], ["ask", "Do you have trouble finding affordable and reliable childcare or preschool?"], ["category", ""], ["created_at", Sat, 26 Jan 2013 23:46:42 UTC +00:00], ["follow", false], ["follows", nil], ["language", "English"], ["order", 5], ["updated_at", Sat, 26 Jan 2013 23:46:42 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 26 Jan 2013 23:46:42 UTC +00:00], ["followup", nil], ["hasfq", true], ["question", 6], ["reply", "Yes"], ["resource", nil], ["resource_bool", nil], ["updated_at", Sat, 26 Jan 2013 23:46:42 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "answers" SET "resource_bool" = 'f', "updated_at" = '2013-01-26 23:46:42.189230' WHERE "answers"."id" = 17[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 26 Jan 2013 23:46:42 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 6], ["reply", "No"], ["resource", nil], ["resource_bool", false], ["updated_at", Sat, 26 Jan 2013 23:46:42 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/questions/main?follow=true&followUps%5B%5D%5BanswerID%5D=17&followUps%5B%5D%5Bchoice%5D=Yes&followUps%5B%5D%5Bquestion%5D=Do+you+have+trouble+finding+affordable+and+reliable+childcare+or+preschool%3F&language=English
+Completed 302 Found in 16ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/questions/main?follow=true&followUps%5B%5D%5BanswerID%5D=17&followUps%5B%5D%5Bchoice%5D=Yes&followUps%5B%5D%5Bquestion%5D=Do+you+have+trouble+finding+affordable+and+reliable+childcare+or+preschool%3F&language=English" for 127.0.0.1 at 2013-01-26 15:46:42 -0800
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"true", "followUps"=>[{"answerID"=>"17", "choice"=>"Yes", "question"=>"Do you have trouble finding affordable and reliable childcare or preschool?"}], "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (36.4ms)
+Completed 200 OK in 45ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 15:46:42 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 15:46:42 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 15:46:42 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started POST "/questions/add" for 127.0.0.1 at 2013-01-26 15:49:17 -0800
+Processing by QuestionsController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"manh7fRsVeDqRazYudi855lUY4hoBsEqjtYvVAd54tk=", "follow"=>"true", "follows"=>"17", "followUps"=>"[]", "language"=>"English", "quest"=>"How old are your children in need of care?", "order"=>"", "category"=>"", "answer1"=>"0-3 years", "answer1_follow"=>"no", "resource1_follow"=>"yes", "resource1_name"=>"Early Headstart", "resource1_address1"=>"none", "resource1_address2"=>"", "resource1_city"=>"", "resource1_zip"=>"", "resource1_phone1"=>"650", "resource1_phone2"=>"872", "resource1_phone3"=>"0433", "resource1_website"=>"http://www.ihsdinc.org", "resource1_area"=>"Developmental services for infants and toddlers (under 3) social services for their families", "answer2"=>"3-5 years", "answer2_follow"=>"no", "resource2_follow"=>"yes", "resource2_name"=>"Headstart", "resource2_address1"=>"none", "resource2_address2"=>"", "resource2_city"=>"", "resource2_zip"=>"", "resource2_phone1"=>"650", "resource2_phone2"=>"872", "resource2_phone3"=>"0433", "resource2_website"=>"www.ihsdinc.org/", "resource2_area"=>"Free child developmental and educational programs (ages 3-5). ", "answer3"=>"Older than 5", "answer3_follow"=>"no", "resource3_follow"=>"yes", "resource3_name"=>"4C'S Childcare Coordinating Council", "resource3_address1"=>"none", "resource3_address2"=>"", "resource3_city"=>"", "resource3_zip"=>"", "resource3_phone1"=>"650", "resource3_phone2"=>"517", "resource3_phone3"=>"1400", "resource3_website"=>"http://sanmateo4cs.org/", "resource3_area"=>"", "answer4"=>"", "answer4_follow"=>"no", "resource4_follow"=>"no", "resource4_name"=>"", "resource4_address1"=>"", "resource4_address2"=>"", "resource4_city"=>"", "resource4_zip"=>"", "resource4_phone1"=>"", "resource4_phone2"=>"", "resource4_phone3"=>"", "resource4_website"=>"", "resource4_area"=>"", "answer5"=>"", "answer5_follow"=>"no", "resource5_follow"=>"no", "resource5_name"=>"", "resource5_address1"=>"", "resource5_address2"=>"", "resource5_city"=>"", "resource5_zip"=>"", "resource5_phone1"=>"", "resource5_phone2"=>"", "resource5_phone3"=>"", "resource5_website"=>"", "resource5_area"=>"", "answer6"=>"", "answer6_follow"=>"no", "resource6_follow"=>"no", "resource6_name"=>"", "resource6_address1"=>"", "resource6_address2"=>"", "resource6_city"=>"", "resource6_zip"=>"", "resource6_phone1"=>"", "resource6_phone2"=>"", "resource6_phone3"=>"", "resource6_website"=>"", "resource6_area"=>"", "answer7"=>"", "answer7_follow"=>"no", "resource7_follow"=>"no", "resource7_name"=>"", "resource7_address1"=>"", "resource7_address2"=>"", "resource7_city"=>"", "resource7_zip"=>"", "resource7_phone1"=>"", "resource7_phone2"=>"", "resource7_phone3"=>"", "resource7_website"=>"", "resource7_area"=>"", "answer8"=>"", "answer8_follow"=>"no", "resource8_follow"=>"no", "resource8_name"=>"", "resource8_address1"=>"", "resource8_address2"=>"", "resource8_city"=>"", "resource8_zip"=>"", "resource8_phone1"=>"", "resource8_phone2"=>"", "resource8_phone3"=>"", "resource8_website"=>"", "resource8_area"=>"", "commit"=>"Save"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8", "ask", "category", "created_at", "follow", "follows", "language", "order", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["a1", nil], ["a2", nil], ["a3", nil], ["a4", nil], ["a5", nil], ["a6", nil], ["a7", nil], ["a8", nil], ["ask", "How old are your children in need of care?"], ["category", ""], ["created_at", Sat, 26 Jan 2013 23:49:17 UTC +00:00], ["follow", true], ["follows", 17], ["language", "English"], ["order", nil], ["updated_at", Sat, 26 Jan 2013 23:49:17 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 26 Jan 2013 23:49:17 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 7], ["reply", "0-3 years"], ["resource", nil], ["resource_bool", true], ["updated_at", Sat, 26 Jan 2013 23:49:17 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "resources" ("address1", "address2", "answer_id", "city", "created_at", "gmaps", "instructions", "latitude", "longitude", "name", "phone1", "phone2", "phone3", "updated_at", "website", "zipcode") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address1", "none"], ["address2", ""], ["answer_id", 19], ["city", ""], ["created_at", Sat, 26 Jan 2013 23:49:18 UTC +00:00], ["gmaps", true], ["instructions", "Developmental services for infants and toddlers (under 3) social services for their families"], ["latitude", 33.8499292], ["longitude", -88.4509873], ["name", "Early Headstart"], ["phone1", 650], ["phone2", 872], ["phone3", 433], ["updated_at", Sat, 26 Jan 2013 23:49:18 UTC +00:00], ["website", "http://www.ihsdinc.org"], ["zipcode", ""]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 26 Jan 2013 23:49:18 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 7], ["reply", "3-5 years"], ["resource", nil], ["resource_bool", true], ["updated_at", Sat, 26 Jan 2013 23:49:18 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "resources" ("address1", "address2", "answer_id", "city", "created_at", "gmaps", "instructions", "latitude", "longitude", "name", "phone1", "phone2", "phone3", "updated_at", "website", "zipcode") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address1", "none"], ["address2", ""], ["answer_id", 20], ["city", ""], ["created_at", Sat, 26 Jan 2013 23:49:18 UTC +00:00], ["gmaps", true], ["instructions", "Free child developmental and educational programs (ages 3-5). "], ["latitude", 33.8499292], ["longitude", -88.4509873], ["name", "Headstart"], ["phone1", 650], ["phone2", 872], ["phone3", 433], ["updated_at", Sat, 26 Jan 2013 23:49:18 UTC +00:00], ["website", "www.ihsdinc.org/"], ["zipcode", ""]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 26 Jan 2013 23:49:18 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 7], ["reply", "Older than 5"], ["resource", nil], ["resource_bool", true], ["updated_at", Sat, 26 Jan 2013 23:49:18 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "resources" ("address1", "address2", "answer_id", "city", "created_at", "gmaps", "instructions", "latitude", "longitude", "name", "phone1", "phone2", "phone3", "updated_at", "website", "zipcode") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address1", "none"], ["address2", ""], ["answer_id", 21], ["city", ""], ["created_at", Sat, 26 Jan 2013 23:49:18 UTC +00:00], ["gmaps", true], ["instructions", ""], ["latitude", 33.8499292], ["longitude", -88.4509873], ["name", "4C'S Childcare Coordinating Council"], ["phone1", 650], ["phone2", 517], ["phone3", 1400], ["updated_at", Sat, 26 Jan 2013 23:49:18 UTC +00:00], ["website", "http://sanmateo4cs.org/"], ["zipcode", ""]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/questions/main?follow=false&language=English
+Completed 302 Found in 831ms (ActiveRecord: 14.5ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2013-01-26 15:49:18 -0800
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 15:49:18 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 15:49:18 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 15:49:18 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/edit" for 127.0.0.1 at 2013-01-26 15:49:30 -0800
+Processing by QuestionsController#edit as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" >= 0) ORDER BY "questions"."id" ASC LIMIT 1000[0m
+  Rendered questions/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 15:49:30 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 15:49:30 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 15:49:30 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/change?id=6" for 127.0.0.1 at 2013-01-26 15:49:33 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 6[0m
+  Rendered questions/change.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 15:49:33 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 15:49:33 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 15:49:33 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/change?id=7" for 127.0.0.1 at 2013-01-26 15:49:36 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 7[0m
+  [1m[35mResources Load (0.1ms)[0m  SELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 19
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 20[0m
+  [1m[35mResources Load (0.1ms)[0m  SELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 21
+  Rendered questions/change.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 15:49:36 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 15:49:36 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 15:49:36 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/change?id=5" for 127.0.0.1 at 2013-01-26 15:49:38 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 5
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 14[0m
+  [1m[35mResources Load (0.1ms)[0m  SELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 15
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 16[0m
+  Rendered questions/change.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 15:49:38 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 15:49:38 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 15:49:38 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/change?id=7" for 127.0.0.1 at 2013-01-26 15:49:48 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 7[0m
+  [1m[35mResources Load (0.1ms)[0m  SELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 19
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 20[0m
+  [1m[35mResources Load (0.1ms)[0m  SELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 21
+  Rendered questions/change.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 15:49:48 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 15:49:48 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 15:49:48 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/change?id=7" for 127.0.0.1 at 2013-01-26 15:51:47 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 7
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 19[0m
+  [1m[35mResources Load (0.1ms)[0m  SELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 20
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 21[0m
+  Rendered questions/change.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-26 15:51:47 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-26 15:51:47 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-26 15:51:47 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/main" for 127.0.0.1 at 2013-01-28 00:52:18 -0800
+Processing by LoginController#main as HTML
+  Rendered login/main.html.erb within layouts/application (65.9ms)
+Compiled survey_question.css  (8ms)  (pid 24952)
+Compiled application.css  (14ms)  (pid 24952)
+Completed 200 OK in 399ms (Views: 386.7ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/main" for 127.0.0.1 at 2013-01-28 00:52:42 -0800
+Processing by LoginController#main as HTML
+  Rendered login/main.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 143ms (Views: 140.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 00:52:42 -0800
+Served asset /limit_page.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 00:52:42 -0800
+Served asset /sessions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 00:52:42 -0800
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/survey/language?answer=0&follow=false&number=0" for 127.0.0.1 at 2013-01-28 00:52:43 -0800
+Processing by SurveyController#language as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "number"=>"0"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "patients" ("answers", "created_at", "entry", "exit", "updated_at") VALUES (?, ?, ?, ?, ?)  [["answers", ""], ["created_at", Mon, 28 Jan 2013 08:52:43 UTC +00:00], ["entry", nil], ["exit", nil], ["updated_at", Mon, 28 Jan 2013 08:52:43 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  Rendered survey/language.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 40ms (Views: 29.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 00:52:44 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 00:52:44 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 00:52:44 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/view?answer=0&follow=false&language=English&number=0&patient=18" for 127.0.0.1 at 2013-01-28 00:52:44 -0800
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"0", "follow"=>"false", "language"=>"English", "number"=>"0", "patient"=>"18"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "patients" SET "answers" = ':0', "updated_at" = '2013-01-28 08:52:44.933248' WHERE "patients"."id" = 18
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Order number: 1
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."order" = 1 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 2
+  Rendered survey/view.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 56ms (Views: 24.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 00:52:45 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 00:52:45 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 00:52:45 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2013-01-28 00:52:45 -0800
+Served asset /survey_questions.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/survey/view?answer=8&follow=false&language=English&number=1&patient=18" for 127.0.0.1 at 2013-01-28 00:52:45 -0800
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"8", "follow"=>"false", "language"=>"English", "number"=>"1", "patient"=>"18"}
+  [1m[36mPatient Load (0.2ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "patients" SET "answers" = ':0:8', "updated_at" = '2013-01-28 08:52:45.685907' WHERE "patients"."id" = 18[0m
+  [1m[35m (2.5ms)[0m  commit transaction
+Order number: 2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."order" = 2 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question" = 4[0m
+  Rendered survey/view.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 20ms (Views: 13.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 00:52:45 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 00:52:45 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 00:52:45 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2013-01-28 00:52:45 -0800
+Served asset /survey_questions.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/survey/view?answer=12&follow=false&language=English&number=2&patient=18" for 127.0.0.1 at 2013-01-28 00:52:46 -0800
+Processing by SurveyController#view as HTML
+  Parameters: {"answer"=>"12", "follow"=>"false", "language"=>"English", "number"=>"2", "patient"=>"18"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "patients" SET "answers" = ':0:8:12', "updated_at" = '2013-01-28 08:52:46.092885' WHERE "patients"."id" = 18
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Order number: 3
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."order" = 3 AND "questions"."follow" = 'f' AND "questions"."language" = 'English'
+Redirected to http://localhost:3000/survey/limit?language=English&patient=18
+Completed 302 Found in 6ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 00:52:46 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 00:52:46 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 00:52:46 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 00:52:46 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 00:52:51 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 00:52:51 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 00:52:51 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 00:52:51 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 00:53:45 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (4.0ms)
+Compiled survey_question.css  (0ms)  (pid 41972)
+Compiled application.css  (1ms)  (pid 41972)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 00:53:45 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 00:53:45 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 00:53:45 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 00:54:47 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (3.8ms)
+Compiled general.css  (0ms)  (pid 41972)
+Compiled survey_question.css  (0ms)  (pid 41972)
+Compiled application.css  (2ms)  (pid 41972)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 00:54:47 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 00:54:47 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 00:54:47 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 00:56:08 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (5.9ms)
+Compiled general.css  (0ms)  (pid 41972)
+Compiled questions.css  (0ms)  (pid 41972)
+Compiled application.css  (1ms)  (pid 41972)
+Completed 200 OK in 59ms (Views: 57.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 00:56:08 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 00:56:08 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 00:56:08 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 00:56:41 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.2ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Compiled limit_page.css  (0ms)  (pid 41972)
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (12.5ms)
+Compiled application.css  (1ms)  (pid 41972)
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 00:56:41 -0800
+Served asset /limit_page.css - 200 OK (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 00:56:41 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 00:56:41 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 00:56:43 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 00:56:43 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 00:56:43 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 00:56:43 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 00:57:08 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Compiled limit_page.css  (0ms)  (pid 41972)
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (11.9ms)
+Compiled application.css  (1ms)  (pid 41972)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 00:57:08 -0800
+Served asset /limit_page.css - 200 OK (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 00:57:08 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 00:57:08 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 00:57:28 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 00:57:28 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 00:57:28 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 00:57:28 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 00:57:47 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 00:57:47 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 00:57:47 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 00:57:47 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 00:58:09 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Compiled limit_page.css  (0ms)  (pid 41972)
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (12.4ms)
+Compiled application.css  (1ms)  (pid 41972)
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 00:58:09 -0800
+Served asset /limit_page.css - 200 OK (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 00:58:09 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 00:58:09 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 00:58:25 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Compiled limit_page.css  (0ms)  (pid 41972)
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (9.5ms)
+Compiled application.css  (2ms)  (pid 41972)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 00:58:25 -0800
+Served asset /limit_page.css - 200 OK (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 00:58:25 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 00:58:25 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 00:58:37 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Compiled limit_page.css  (0ms)  (pid 41972)
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (9.3ms)
+Compiled application.css  (2ms)  (pid 41972)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 00:58:37 -0800
+Served asset /limit_page.css - 200 OK (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 00:58:37 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 00:58:37 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 00:59:27 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Compiled limit_page.css  (0ms)  (pid 41972)
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (11.5ms)
+Compiled general.css  (0ms)  (pid 41972)
+Compiled application.css  (2ms)  (pid 41972)
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 00:59:27 -0800
+Served asset /limit_page.css - 200 OK (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 00:59:27 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 00:59:27 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:00:07 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (4.1ms)
+Compiled survey_question.css  (0ms)  (pid 41972)
+Compiled application.css  (1ms)  (pid 41972)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:00:07 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:00:07 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:00:07 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:00:14 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (3.7ms)
+Compiled survey_question.css  (0ms)  (pid 41972)
+Compiled application.css  (2ms)  (pid 41972)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:00:15 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:00:15 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:00:15 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/physician?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:00:29 -0800
+Processing by SurveyController#physician as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered survey/physician.html.erb within layouts/application (6.3ms)
+Compiled survey_question.css  (0ms)  (pid 41972)
+Compiled application.css  (1ms)  (pid 41972)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:00:29 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:00:29 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:00:29 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2013-01-28 01:00:29 -0800
+Served asset /survey_questions.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/survey/physician?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:01:03 -0800
+Processing by SurveyController#physician as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", "18"]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mResources Load (0.1ms)[0m  SELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered survey/physician.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:01:03 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:01:03 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:01:03 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/survey_questions.css" for 127.0.0.1 at 2013-01-28 01:01:03 -0800
+Served asset /survey_questions.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/survey_questions.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:01:08 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:01:08 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:01:08 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:01:08 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:01:29 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (6.0ms)
+Compiled survey_question.css  (0ms)  (pid 41972)
+Compiled application.css  (2ms)  (pid 41972)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:01:29 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:01:29 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:01:29 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:01:35 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (3.6ms)
+Compiled survey_question.css  (0ms)  (pid 41972)
+Compiled application.css  (2ms)  (pid 41972)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:01:35 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:01:35 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:01:35 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:02:06 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (3.7ms)
+Compiled survey_question.css  (0ms)  (pid 41972)
+Compiled application.css  (1ms)  (pid 41972)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:02:06 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:02:06 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:02:06 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:02:12 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (3.6ms)
+Compiled survey_question.css  (0ms)  (pid 41972)
+Compiled application.css  (2ms)  (pid 41972)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:02:13 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:02:13 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:02:13 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:02:17 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (3.6ms)
+Compiled survey_question.css  (0ms)  (pid 41972)
+Compiled application.css  (2ms)  (pid 41972)
+Completed 200 OK in 64ms (Views: 61.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:02:17 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:02:17 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:02:17 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:02:22 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (5.6ms)
+Compiled survey_question.css  (0ms)  (pid 41972)
+Compiled application.css  (1ms)  (pid 41972)
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:02:22 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:02:22 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:02:22 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:02:27 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (5.6ms)
+Compiled survey_question.css  (0ms)  (pid 41972)
+Compiled application.css  (1ms)  (pid 41972)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:02:27 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:02:27 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:02:27 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:02:42 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (3.6ms)
+Compiled survey_question.css  (0ms)  (pid 41972)
+Compiled application.css  (1ms)  (pid 41972)
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:02:43 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:02:43 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:02:43 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:02:50 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (5.6ms)
+Compiled survey_question.css  (0ms)  (pid 41972)
+Compiled application.css  (2ms)  (pid 41972)
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:02:50 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:02:51 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:02:51 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:02:56 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (4.0ms)
+Compiled survey_question.css  (0ms)  (pid 41972)
+Compiled application.css  (1ms)  (pid 41972)
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:02:56 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:02:56 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:02:56 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:03:12 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (5.5ms)
+Compiled survey_question.css  (0ms)  (pid 41972)
+Compiled application.css  (1ms)  (pid 41972)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:03:12 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:03:12 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:03:12 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:03:26 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (3.6ms)
+Compiled survey_question.css  (0ms)  (pid 41972)
+Compiled application.css  (2ms)  (pid 41972)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:03:26 -0800
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:03:26 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:03:26 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:03:38 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Compiled limit_page.css  (0ms)  (pid 41972)
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (10.2ms)
+Compiled survey_question.css  (0ms)  (pid 41972)
+Compiled application.css  (1ms)  (pid 41972)
+Completed 200 OK in 36ms (Views: 33.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:03:38 -0800
+Served asset /limit_page.css - 200 OK (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:03:38 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:03:38 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:03:48 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Compiled limit_page.css  (0ms)  (pid 41972)
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (12.6ms)
+Compiled application.css  (2ms)  (pid 41972)
+Completed 200 OK in 81ms (Views: 78.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:03:48 -0800
+Served asset /limit_page.css - 200 OK (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:03:48 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:03:48 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:03:55 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Compiled limit_page.css  (0ms)  (pid 41972)
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (11.9ms)
+Compiled application.css  (2ms)  (pid 41972)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:03:55 -0800
+Served asset /limit_page.css - 200 OK (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:03:55 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:03:55 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:04:02 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Compiled limit_page.css  (0ms)  (pid 41972)
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (9.9ms)
+Compiled application.css  (1ms)  (pid 41972)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:04:02 -0800
+Served asset /limit_page.css - 200 OK (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:04:03 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:04:03 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:04:08 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Compiled limit_page.css  (0ms)  (pid 41972)
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (9.8ms)
+Compiled application.css  (1ms)  (pid 41972)
+Completed 200 OK in 62ms (Views: 60.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:04:08 -0800
+Served asset /limit_page.css - 200 OK (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:04:08 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:04:08 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:04:13 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Compiled limit_page.css  (0ms)  (pid 41972)
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (10.4ms)
+Compiled application.css  (2ms)  (pid 41972)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:04:13 -0800
+Served asset /limit_page.css - 200 OK (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:04:13 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:04:13 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:04:20 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Compiled limit_page.css  (0ms)  (pid 41972)
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (9.6ms)
+Compiled application.css  (2ms)  (pid 41972)
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:04:20 -0800
+Served asset /limit_page.css - 200 OK (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:04:20 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:04:20 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/survey/limit?language=English&patient=18" for 127.0.0.1 at 2013-01-28 01:04:26 -0800
+Processing by SurveyController#limit as HTML
+  Parameters: {"language"=>"English", "patient"=>"18"}
+  [1m[36mPatient Load (0.1ms)[0m  [1mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Compiled limit_page.css  (0ms)  (pid 41972)
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered survey/limit.html.erb within layouts/application (9.2ms)
+Compiled application.css  (1ms)  (pid 41972)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-01-28 01:04:26 -0800
+Served asset /limit_page.css - 200 OK (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-28 01:04:26 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:04:26 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)

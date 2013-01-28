@@ -23,7 +23,7 @@
 }
 .centered{
 	display: table-cell;
-	text-align: center;
+	text-align: left;
 	vertical-align: middle;
 	min-height: 10em;
 }
