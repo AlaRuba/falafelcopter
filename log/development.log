@@ -12766,3 +12766,111 @@ Compiled general.css  (0ms)  (pid 32799)
   Rendered login/main.html.erb within layouts/application (7.0ms)
 Compiled application.css  (2ms)  (pid 32799)
 Completed 200 OK in 31ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/main" for 127.0.0.1 at 2013-02-07 00:11:01 -0800
+Processing by LoginController#main as HTML
+Compiled general.css  (0ms)  (pid 33176)
+  Rendered login/main.html.erb within layouts/application (13.3ms)
+Compiled application.css  (2ms)  (pid 33176)
+Completed 200 OK in 140ms (Views: 137.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-02-07 00:11:02 -0800
+Served asset /limit_page.css - 200 OK (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-07 00:11:02 -0800
+Served asset /sessions.css - 200 OK (2ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-07 00:11:02 -0800
+Served asset /sessions.js - 200 OK (1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-02-07 00:11:04 -0800
+Processing by LoginController#login as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  Rendered login/login.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 47ms (Views: 11.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/login/login_attempt" for 127.0.0.1 at 2013-02-07 00:11:08 -0800
+Processing by LoginController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fW1O2GXP9uiMFI4ZsZNCSiM7XLMc2VuaOpUizPL52yg=", "username_or_email"=>"fala", "login_password"=>"[FILTERED]", "commit"=>"Log In"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."username" = 'fala' LIMIT 1
+passworda752d6baccaffdaa2178d11679c5ab137b242097
+password$2a$10$j5A20q4InP.17k0HI4hsX.xhsXys55F/IGb8v7G9MHtEyOuAPeNGK
+  Rendered login/login.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 17ms (Views: 9.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login/login_attempt" for 127.0.0.1 at 2013-02-07 00:11:15 -0800
+Processing by LoginController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vZDiL81dRQuNNawDEn/7Puo4e9+9fu8TQhzoVDxMlmI=", "username_or_email"=>"awsome", "login_password"=>"[FILTERED]", "commit"=>"Log In"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = 'awsome' LIMIT 1[0m
+  Rendered login/login.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2013-02-07 00:11:17 -0800
+Processing by LoginController#register as HTML
+  Rendered login/register.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for 127.0.0.1 at 2013-02-07 00:11:21 -0800
+Processing by LoginController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RdyIp2kWX98ckcu1w6EEZwDXFQIdfhgo78IaVp+rOTo=", "username"=>"asd", "password"=>"[FILTERED]", "password_repeat"=>"[FILTERED]", "commit"=>"Register"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.0ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password`
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "password", "updated_at", "username") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 07 Feb 2013 08:11:21 UTC +00:00], ["password", "f10e2821bbbea527ea02200352313bc059445190"], ["updated_at", Thu, 07 Feb 2013 08:11:21 UTC +00:00], ["username", "asd"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  Rendered login/login.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 17ms (Views: 12.5ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/login/login_attempt" for 127.0.0.1 at 2013-02-07 00:11:24 -0800
+Processing by LoginController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9TL38UMI48cho4IP4wbHTOFJ2x3FzeR/MV8WMG+zZto=", "username_or_email"=>"asd", "login_password"=>"[FILTERED]", "commit"=>"Log In"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = 'asd' LIMIT 1[0m
+passwordf10e2821bbbea527ea02200352313bc059445190
+passwordf10e2821bbbea527ea02200352313bc059445190
+Redirected to http://localhost:3000/questions/language
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/questions/language" for 127.0.0.1 at 2013-02-07 00:11:24 -0800
+Processing by QuestionsController#language as HTML
+  Rendered questions/language.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/edit" for 127.0.0.1 at 2013-02-07 00:11:25 -0800
+Processing by QuestionsController#edit as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" >= 0) ORDER BY "questions"."id" ASC LIMIT 1000
+  Rendered questions/edit.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/questions/change?id=7" for 127.0.0.1 at 2013-02-07 00:11:26 -0800
+Processing by QuestionsController#change as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question" = 7
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 19[0m
+  [1m[35mResources Load (0.2ms)[0m  SELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 20
+  [1m[36mResources Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources" WHERE "resources"."answer_id" = 21[0m
+  Rendered questions/change.html.erb within layouts/application (80.0ms)
+Completed 200 OK in 92ms (Views: 89.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/main" for 127.0.0.1 at 2013-02-07 00:12:44 -0800
+Processing by LoginController#main as HTML
+  Rendered login/main.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)

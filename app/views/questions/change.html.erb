@@ -21,7 +21,7 @@
   <br>
   <% answers  = Answer.where(:question => @question.id)%>
   Answers:
-  SFKJDSJKSDKJD
+
   <br>
   <table>
     <tr>
@@ -307,7 +307,6 @@
         <%else%>
           <%= text_field_tag(:answer3) %>
           <br>
-
           <%= radio_button_tag :answer3_follow, "yes" %> Has follow-up
           <%= radio_button_tag :answer3_follow, "no", true %> No
           <br>
@@ -562,7 +561,6 @@
         <%else%>
           <%= text_field_tag(:answer5) %>
           <br>
-
           <%= radio_button_tag :answer5_follow, "yes" %> Has follow-up
           <%= radio_button_tag :answer5_follow, "no", true %> No
           <br>
@@ -818,7 +816,6 @@
         <%else%>
           <%= text_field_tag(:answer7) %>
           <br>
-
           <%= radio_button_tag :answer7_follow, "yes" %> Has follow-up
           <%= radio_button_tag :answer7_follow, "no", true %> No
           <br>
@@ -946,7 +943,6 @@
         <%else%>
           <%= text_field_tag(:answer8) %>
           <br>
-
           <%= radio_button_tag :answer8_follow, "yes" %> Has follow-up
           <%= radio_button_tag :answer8_follow, "no", true %> No
           <br>
