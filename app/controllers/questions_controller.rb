@@ -204,7 +204,6 @@ class QuestionsController < ApplicationController
       end
     end
     if (params[:answer5].length > 0) 
-      console.log("Hello")
       answer5 = Answer.new
       answer5.reply = params[:answer5]
       answer5.question = question.id

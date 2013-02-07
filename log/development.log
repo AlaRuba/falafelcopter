@@ -12729,3 +12729,40 @@ Served asset /sessions.css - 304 Not Modified (0ms)
 
 Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-28 01:04:26 -0800
 Served asset /sessions.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/main" for 127.0.0.1 at 2013-02-06 23:36:13 -0800
+Processing by LoginController#main as HTML
+Compiled general.css  (0ms)  (pid 32799)
+  Rendered login/main.html.erb within layouts/application (15.0ms)
+Compiled application.css  (2ms)  (pid 32799)
+Completed 200 OK in 190ms (Views: 187.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-02-06 23:36:13 -0800
+Served asset /limit_page.css - 200 OK (3ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-02-06 23:36:13 -0800
+Served asset /sessions.css - 200 OK (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-02-06 23:36:13 -0800
+Served asset /sessions.js - 200 OK (1ms)
+
+
+Started GET "/main" for 127.0.0.1 at 2013-02-06 23:36:21 -0800
+Processing by LoginController#main as HTML
+Compiled general.css  (0ms)  (pid 32799)
+  Rendered login/main.html.erb within layouts/application (32.2ms)
+Compiled application.css  (1ms)  (pid 32799)
+Completed 200 OK in 57ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/main" for 127.0.0.1 at 2013-02-06 23:36:40 -0800
+Processing by LoginController#main as HTML
+Compiled general.css  (0ms)  (pid 32799)
+  Rendered login/main.html.erb within layouts/application (7.0ms)
+Compiled application.css  (2ms)  (pid 32799)
+Completed 200 OK in 31ms (Views: 30.5ms | ActiveRecord: 0.0ms)
