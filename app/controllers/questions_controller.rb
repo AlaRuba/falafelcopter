@@ -1,4 +1,6 @@
+require 'rubygems'
 require "yaml"
+require 'CSV'
 
 class QuestionsController < ApplicationController
   @masterFollow = nil
@@ -11,6 +13,47 @@ class QuestionsController < ApplicationController
 
   def language
     
+  end
+
+  def download
+    questions = Question.where(:language => "English")
+    @outfile = "data.csv"
+    header =["User"]
+    base = {}
+    questions.each do |q|
+      base[q.id] = ""
+      header += [q.id]
+    end
+    responses = History.where(:language => "English")
+    CSV.open("./result.csv", "wb") do |csv|
+    file_path= "root/to/tmpfile.csv"
+      csv << header
+      responses.each do |resp|
+        answer = [resp.date]
+        replies = resp.responses
+        test = ActiveSupport::JSON.decode(replies)
+        answers = {}
+        test.each do |key, value|
+          theAnswer = Answer.where(:id => key)
+          theAnswer.each do |a|
+            answers[key.to_i] = value
+          end
+        end
+        result = base.merge(answers)
+        logger.debug("result")
+        logger.debug(result)
+        result.each do |key, value|
+          puts "Key " + key.to_s + ": Value :" + value.to_s
+          answer += [value]
+        end
+        csv << answer
+        logger.debug("csv")
+        logger.debug(answer)
+        logger.debug(csv)
+      end
+      send_file "./result.csv", :type=>'text/csv'   
+    end
+    #redirect_to :controller => "questions", :action => "language"
   end
 
   def edit

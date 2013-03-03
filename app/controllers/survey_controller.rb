@@ -66,6 +66,23 @@ class SurveyController < ApplicationController
     @numbers = answers.split(%r{:\s*})
     @numbers.delete("0")
     @numbers.delete("")
+    questions = Question.where(:language => @language)
+    @response = {"language"=> @language}
+    questions.each do |q|
+      @response[q.id] = ""
+    end
+    @numbers.each do |index|
+      id = Integer(index)
+      answer = Answer.find(id)
+      reply = answer.reply
+      @response[answer.question] = reply
+    end
+    responseSave = History.new
+    responseSave.date = Time.now.to_i
+    responseSave.responses = ActiveSupport::JSON.encode(@response)
+    responseSave.language = @language
+    responseSave.save
+    
   end
 
   def map
