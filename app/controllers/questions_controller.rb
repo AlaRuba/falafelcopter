@@ -1,6 +1,6 @@
 require 'rubygems'
 require "yaml"
-require 'CSV'
+require 'csv'
 
 class QuestionsController < ApplicationController
   @masterFollow = nil
