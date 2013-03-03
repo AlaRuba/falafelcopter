@@ -11,9 +11,7 @@ end
 group :production do
   gem 'pg'
 end
-gem 'mechanize'
 gem 'heroku'
-gem 'fastercsv'
 gem 'thin'
 gem 'gmaps4rails'
 # Gems used only for assets and not required
