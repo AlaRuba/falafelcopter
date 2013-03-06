@@ -11,7 +11,6 @@ end
 group :production do
   gem 'pg'
 end
-gem 'csv'
 gem 'heroku'
 gem 'thin'
 gem 'gmaps4rails'
