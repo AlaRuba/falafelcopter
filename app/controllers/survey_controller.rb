@@ -78,7 +78,7 @@ class SurveyController < ApplicationController
       @response[answer.question] = reply
     end
     responseSave = History.new
-    responseSave.date = Time.now.to_i
+    responseSave.date = Time.now
     responseSave.responses = ActiveSupport::JSON.encode(@response)
     responseSave.language = @language
     responseSave.save
