@@ -18000,3 +18000,382 @@ csv
 #<CSV:0x007ff0ff4beae0>
 Sent file ./result.csv (0.1ms)
 Completed 200 OK in 79ms (ActiveRecord: 2.5ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/questions/download" for 127.0.0.1 at 2013-03-06 23:23:20 -0800
+Processing by QuestionsController#download as HTML
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English'[0m
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" 
+Completed 500 Internal Server Error in 68ms
+
+NoMethodError (undefined method `timestamp' for #<Patient:0x007ffb9a160038>):
+  app/controllers/questions_controller.rb:32:in `block (2 levels) in download'
+  app/controllers/questions_controller.rb:31:in `each'
+  app/controllers/questions_controller.rb:31:in `block in download'
+  app/controllers/questions_controller.rb:28:in `download'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/questions/download" for 127.0.0.1 at 2013-03-06 23:24:04 -0800
+Processing by QuestionsController#download as HTML
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English'[0m
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" 
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>""}
+csv
+[1, nil, "", "", "", "", "", ""]
+#<CSV:0x007ffbe6059dc8>
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>""}
+csv
+[2, nil, "", "", "", "", "", ""]
+#<CSV:0x007ffbe6059dc8>
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 4
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>"", 1=>"Thursday"}
+csv
+[3, nil, "", "", "", "", "", "", "Thursday"]
+#<CSV:0x007ffbe6059dc8>
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 4[0m
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>"", 1=>"Thursday"}
+csv
+[4, nil, "", "", "", "", "", "", "Thursday"]
+#<CSV:0x007ffbe6059dc8>
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 4
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>"", 1=>"Thursday"}
+csv
+[5, nil, "", "", "", "", "", "", "Thursday"]
+#<CSV:0x007ffbe6059dc8>
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>""}
+csv
+[6, nil, "", "", "", "", "", ""]
+#<CSV:0x007ffbe6059dc8>
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 2[0m
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>"", 1=>"Tuesday"}
+csv
+[7, nil, "", "", "", "", "", "", "Tuesday"]
+#<CSV:0x007ffbe6059dc8>
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>""}
+csv
+[8, nil, "", "", "", "", "", ""]
+#<CSV:0x007ffbe6059dc8>
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>""}
+csv
+[9, nil, "", "", "", "", "", ""]
+#<CSV:0x007ffbe6059dc8>
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>""}
+csv
+[10, nil, "", "", "", "", "", ""]
+#<CSV:0x007ffbe6059dc8>
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 8
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 9[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 10
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 12[0m
+result
+{2=>"No", 3=>"Yes", 4=>"yes", 5=>"", 6=>"", 7=>""}
+csv
+[11, nil, "No", "Yes", "yes", "", "", ""]
+#<CSV:0x007ffbe6059dc8>
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>""}
+csv
+[12, nil, "", "", "", "", "", ""]
+#<CSV:0x007ffbe6059dc8>
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>""}
+csv
+[13, nil, "", "", "", "", "", ""]
+#<CSV:0x007ffbe6059dc8>
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 9
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 10[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 13
+result
+{2=>"No", 3=>"Yes", 4=>"no", 5=>"", 6=>"", 7=>""}
+csv
+[14, nil, "No", "Yes", "no", "", "", ""]
+#<CSV:0x007ffbe6059dc8>
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>""}
+csv
+[15, nil, "", "", "", "", "", ""]
+#<CSV:0x007ffbe6059dc8>
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>""}
+csv
+[16, nil, "", "", "", "", "", ""]
+#<CSV:0x007ffbe6059dc8>
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 12
+result
+{2=>"Yes", 3=>"", 4=>"yes", 5=>"", 6=>"", 7=>""}
+csv
+[17, nil, "Yes", "", "yes", "", "", ""]
+#<CSV:0x007ffbe6059dc8>
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 12
+result
+{2=>"Yes", 3=>"", 4=>"yes", 5=>"", 6=>"", 7=>""}
+csv
+[18, nil, "Yes", "", "yes", "", "", ""]
+#<CSV:0x007ffbe6059dc8>
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 12
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+result
+{2=>"Yes", 3=>"", 4=>"yes", 5=>"", 6=>"", 7=>""}
+csv
+[19, nil, "Yes", "", "yes", "", "", ""]
+#<CSV:0x007ffbe6059dc8>
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 8
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 12[0m
+result
+{2=>"Yes", 3=>"", 4=>"yes", 5=>"", 6=>"", 7=>""}
+csv
+[20, nil, "Yes", "", "yes", "", "", ""]
+#<CSV:0x007ffbe6059dc8>
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 8
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 13[0m
+result
+{2=>"Yes", 3=>"", 4=>"no", 5=>"", 6=>"", 7=>""}
+csv
+[21, nil, "Yes", "", "no", "", "", ""]
+#<CSV:0x007ffbe6059dc8>
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 8
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 13[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 12
+result
+{2=>"Yes", 3=>"", 4=>"yes", 5=>"", 6=>"", 7=>""}
+csv
+[22, nil, "Yes", "", "yes", "", "", ""]
+#<CSV:0x007ffbe6059dc8>
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 13
+result
+{2=>"Yes", 3=>"", 4=>"no", 5=>"", 6=>"", 7=>""}
+csv
+[23, nil, "Yes", "", "no", "", "", ""]
+#<CSV:0x007ffbe6059dc8>
+Sent file ./result.csv (0.1ms)
+Completed 200 OK in 96ms (ActiveRecord: 4.4ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/questions/download" for 127.0.0.1 at 2013-03-06 23:26:01 -0800
+Processing by QuestionsController#download as HTML
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English'[0m
+  [1m[35mPatient Load (0.1ms)[0m  SELECT "patients".* FROM "patients" 
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>""}
+csv
+[1, Sat, 01 Dec 2012 22:27:09 UTC +00:00, "", "", "", "", "", ""]
+#<CSV:0x007f8dcc71bd10>
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>""}
+csv
+[2, Sat, 01 Dec 2012 22:27:37 UTC +00:00, "", "", "", "", "", ""]
+#<CSV:0x007f8dcc71bd10>
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 4
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>"", 1=>"Thursday"}
+csv
+[3, Sat, 01 Dec 2012 22:54:44 UTC +00:00, "", "", "", "", "", "", "Thursday"]
+#<CSV:0x007f8dcc71bd10>
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 4[0m
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>"", 1=>"Thursday"}
+csv
+[4, Sat, 01 Dec 2012 22:56:25 UTC +00:00, "", "", "", "", "", "", "Thursday"]
+#<CSV:0x007f8dcc71bd10>
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 4
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>"", 1=>"Thursday"}
+csv
+[5, Sat, 01 Dec 2012 23:07:04 UTC +00:00, "", "", "", "", "", "", "Thursday"]
+#<CSV:0x007f8dcc71bd10>
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>""}
+csv
+[6, Sun, 02 Dec 2012 01:26:15 UTC +00:00, "", "", "", "", "", ""]
+#<CSV:0x007f8dcc71bd10>
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 2[0m
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>"", 1=>"Tuesday"}
+csv
+[7, Tue, 04 Dec 2012 00:52:56 UTC +00:00, "", "", "", "", "", "", "Tuesday"]
+#<CSV:0x007f8dcc71bd10>
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>""}
+csv
+[8, Tue, 04 Dec 2012 00:53:06 UTC +00:00, "", "", "", "", "", ""]
+#<CSV:0x007f8dcc71bd10>
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>""}
+csv
+[9, Tue, 04 Dec 2012 00:53:13 UTC +00:00, "", "", "", "", "", ""]
+#<CSV:0x007f8dcc71bd10>
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>""}
+csv
+[10, Tue, 04 Dec 2012 00:53:22 UTC +00:00, "", "", "", "", "", ""]
+#<CSV:0x007f8dcc71bd10>
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 8
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 9[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 10
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 12[0m
+result
+{2=>"No", 3=>"Yes", 4=>"yes", 5=>"", 6=>"", 7=>""}
+csv
+[11, Tue, 04 Dec 2012 00:59:09 UTC +00:00, "No", "Yes", "yes", "", "", ""]
+#<CSV:0x007f8dcc71bd10>
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>""}
+csv
+[12, Wed, 23 Jan 2013 07:29:05 UTC +00:00, "", "", "", "", "", ""]
+#<CSV:0x007f8dcc71bd10>
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>""}
+csv
+[13, Wed, 23 Jan 2013 08:38:09 UTC +00:00, "", "", "", "", "", ""]
+#<CSV:0x007f8dcc71bd10>
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 9
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 10[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 13
+result
+{2=>"No", 3=>"Yes", 4=>"no", 5=>"", 6=>"", 7=>""}
+csv
+[14, Wed, 23 Jan 2013 08:51:19 UTC +00:00, "No", "Yes", "no", "", "", ""]
+#<CSV:0x007f8dcc71bd10>
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>""}
+csv
+[15, Wed, 23 Jan 2013 09:24:37 UTC +00:00, "", "", "", "", "", ""]
+#<CSV:0x007f8dcc71bd10>
+result
+{2=>"", 3=>"", 4=>"", 5=>"", 6=>"", 7=>""}
+csv
+[16, Wed, 23 Jan 2013 09:24:40 UTC +00:00, "", "", "", "", "", ""]
+#<CSV:0x007f8dcc71bd10>
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 12
+result
+{2=>"Yes", 3=>"", 4=>"yes", 5=>"", 6=>"", 7=>""}
+csv
+[17, Sat, 26 Jan 2013 21:53:49 UTC +00:00, "Yes", "", "yes", "", "", ""]
+#<CSV:0x007f8dcc71bd10>
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 12
+result
+{2=>"Yes", 3=>"", 4=>"yes", 5=>"", 6=>"", 7=>""}
+csv
+[18, Mon, 28 Jan 2013 08:52:43 UTC +00:00, "Yes", "", "yes", "", "", ""]
+#<CSV:0x007f8dcc71bd10>
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 12
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+result
+{2=>"Yes", 3=>"", 4=>"yes", 5=>"", 6=>"", 7=>""}
+csv
+[19, Thu, 28 Feb 2013 07:32:44 UTC +00:00, "Yes", "", "yes", "", "", ""]
+#<CSV:0x007f8dcc71bd10>
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 8
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 12[0m
+result
+{2=>"Yes", 3=>"", 4=>"yes", 5=>"", 6=>"", 7=>""}
+csv
+[20, Thu, 28 Feb 2013 07:33:26 UTC +00:00, "Yes", "", "yes", "", "", ""]
+#<CSV:0x007f8dcc71bd10>
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 8
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 13[0m
+result
+{2=>"Yes", 3=>"", 4=>"no", 5=>"", 6=>"", 7=>""}
+csv
+[21, Thu, 28 Feb 2013 07:36:55 UTC +00:00, "Yes", "", "no", "", "", ""]
+#<CSV:0x007f8dcc71bd10>
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 8
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 13[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 12
+result
+{2=>"Yes", 3=>"", 4=>"yes", 5=>"", 6=>"", 7=>""}
+csv
+[22, Thu, 28 Feb 2013 07:41:24 UTC +00:00, "Yes", "", "yes", "", "", ""]
+#<CSV:0x007f8dcc71bd10>
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 13
+result
+{2=>"Yes", 3=>"", 4=>"no", 5=>"", 6=>"", 7=>""}
+csv
+[23, Wed, 06 Mar 2013 08:12:42 UTC +00:00, "Yes", "", "no", "", "", ""]
+#<CSV:0x007f8dcc71bd10>
+Sent file ./result.csv (0.2ms)
+Completed 200 OK in 97ms (ActiveRecord: 3.3ms)

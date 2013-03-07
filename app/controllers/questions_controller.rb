@@ -18,7 +18,7 @@ class QuestionsController < ApplicationController
   def download
     questions = Question.where(:language => "English")
     @outfile = "data.csv"
-    header =["User"]
+    header =["User", "Timestamp"]
     base = {}
     questions.each do |q|
       base[q.id.to_i] = ""
@@ -29,7 +29,7 @@ class QuestionsController < ApplicationController
     file_path= "root/to/tmpfile.csv"
       csv << header
       responses.each do |resp|
-        answer = [resp.id]
+        answer = [resp.id, resp.created_at]
         replies = resp.answers.split(%r{:\s*})
         answers = {}
         replies.each do |key|
