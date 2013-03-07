@@ -29,7 +29,11 @@ class QuestionsController < ApplicationController
     file_path= "root/to/tmpfile.csv"
       csv << header
       responses.each do |resp|
-        answer = [resp.id, resp.created_at]
+        time = Time.parse(resp.created_at.to_s)
+        
+        logger.debug("Time")
+        logger.debug(time.to_s)
+        answer = [resp.id, time.in_time_zone("Pacific Time (US & Canada)").to_s ]
         replies = resp.answers.split(%r{:\s*})
         answers = {}
         replies.each do |key|
@@ -39,14 +43,12 @@ class QuestionsController < ApplicationController
           end
         end
         result = base.merge(answers)
-        logger.debug("result")
-        logger.debug(result)
+        
         result.each do |key, value|
           answer += [value]
         end
         csv << answer
-        logger.debug("csv")
-        logger.debug(answer)
+        
         logger.debug(csv)
       end
       send_file "./result.csv", :type=>'text/csv'   
