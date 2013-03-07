@@ -19,6 +19,7 @@ class SurveyController < ApplicationController
     answerSoFar = patient.answers
     answerSoFar += ":" + params[:answer]
     patient.answers = answerSoFar
+    patient.language = @language
     patient.save
   	if params[:follow] == "false"
   		@number += 1
