@@ -21,29 +21,27 @@ class QuestionsController < ApplicationController
     header =["User"]
     base = {}
     questions.each do |q|
-      base[q.id] = ""
-      header += [q.id]
+      base[q.id.to_i] = ""
+      header += [q.ask]
     end
-    responses = History.where(:language => "English")
+    responses = Patient.all
     CSV.open("./result.csv", "wb") do |csv|
     file_path= "root/to/tmpfile.csv"
       csv << header
       responses.each do |resp|
-        answer = [resp.date]
-        replies = resp.responses
-        test = ActiveSupport::JSON.decode(replies)
+        answer = [resp.id]
+        replies = resp.answers.split(%r{:\s*})
         answers = {}
-        test.each do |key, value|
+        replies.each do |key|
           theAnswer = Answer.where(:id => key)
           theAnswer.each do |a|
-            answers[key.to_i] = value
+            answers[a.question.to_i] = a.reply
           end
         end
         result = base.merge(answers)
         logger.debug("result")
         logger.debug(result)
         result.each do |key, value|
-          puts "Key " + key.to_s + ": Value :" + value.to_s
           answer += [value]
         end
         csv << answer
