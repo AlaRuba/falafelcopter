@@ -39,7 +39,11 @@ class QuestionsController < ApplicationController
         replies.each do |key|
           theAnswer = Answer.where(:id => key)
           theAnswer.each do |a|
-            answers[a.question.to_i] = a.reply
+            validQuestion = Question.where(:id => a.question.to_i)
+            if validQuestion.size < 1 
+            else 
+              answers[a.question.to_i] = a.reply
+            end
           end
         end
         result = base.merge(answers)
