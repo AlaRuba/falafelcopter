@@ -40,7 +40,8 @@ class QuestionsController < ApplicationController
           theAnswer = Answer.where(:id => key)
           theAnswer.each do |a|
             validQuestion = Question.where(:id => a.question.to_i)
-            if validQuestion.size < 1 
+            if validQuestion.size == 0
+              logger.debug("No such question") 
             else 
               answers[a.question.to_i] = a.reply
             end
