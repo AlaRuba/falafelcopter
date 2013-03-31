@@ -24,6 +24,11 @@ class QuestionsController < ApplicationController
       base[q.id.to_i] = ""
       header += [q.ask]
     end
+    questions2 = Question.where(:language => "Spanish")
+    questions2.each do |q|
+      base[q.id.to_i] = ""
+      header += [q.ask]
+    end
     responses = Patient.all
     CSV.open("./result.csv", "wb") do |csv|
     file_path= "root/to/tmpfile.csv"
