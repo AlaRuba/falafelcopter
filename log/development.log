@@ -19936,3 +19936,220 @@ Time
 #<CSV:0x007fdfeebb9470>
 Sent file ./result.csv (0.1ms)
 Completed 200 OK in 34ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/questions/language" for 127.0.0.1 at 2013-03-31 19:47:02 -0700
+Processing by QuestionsController#language as HTML
+  Rendered questions/language.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 82ms (Views: 80.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-03-31 19:47:02 -0700
+Served asset /limit_page.css - 304 Not Modified (32ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-31 19:47:02 -0700
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-31 19:47:02 -0700
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/questions/download" for 127.0.0.1 at 2013-03-31 19:47:03 -0700
+Processing by QuestionsController#download as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."order" = 1[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."order" = 1
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" = 2[0m
+Completed 500 Internal Server Error in 17ms
+
+TypeError (can't convert Fixnum into String):
+  app/controllers/questions_controller.rb:39:in `+'
+  app/controllers/questions_controller.rb:39:in `block in download'
+  app/controllers/questions_controller.rb:25:in `download'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.7ms)
+
+
+Started GET "/questions/download" for 127.0.0.1 at 2013-03-31 19:47:20 -0700
+Processing by QuestionsController#download as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."order" = 1
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."order" = 1[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" = 2
+Debug2
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."order" = 2[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."order" = 2
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" = 4[0m
+Debug3
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."order" = 3
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'Spanish'[0m
+  [1m[35mPatient Load (0.3ms)[0m  SELECT "patients".* FROM "patients" 
+Time
+2012-12-01 22:27:09 UTC
+#<CSV:0x007fdfeaea6470>
+Time
+2012-12-01 22:27:37 UTC
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+#<CSV:0x007fdfeaea6470>
+Time
+2012-12-01 22:54:44 UTC
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 4
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 1[0m
+No such question
+#<CSV:0x007fdfeaea6470>
+Time
+2012-12-01 22:56:25 UTC
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 4
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 1[0m
+No such question
+#<CSV:0x007fdfeaea6470>
+Time
+2012-12-01 23:07:04 UTC
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 4
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 1[0m
+No such question
+#<CSV:0x007fdfeaea6470>
+Time
+2012-12-02 01:26:15 UTC
+#<CSV:0x007fdfeaea6470>
+Time
+2012-12-04 00:52:56 UTC
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 1[0m
+No such question
+#<CSV:0x007fdfeaea6470>
+Time
+2012-12-04 00:53:06 UTC
+#<CSV:0x007fdfeaea6470>
+Time
+2012-12-04 00:53:13 UTC
+#<CSV:0x007fdfeaea6470>
+Time
+2012-12-04 00:53:22 UTC
+#<CSV:0x007fdfeaea6470>
+Time
+2012-12-04 00:59:09 UTC
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 8
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 2[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 9
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 2[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 10
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 3[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 12
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 4[0m
+#<CSV:0x007fdfeaea6470>
+Time
+2013-01-23 07:29:05 UTC
+#<CSV:0x007fdfeaea6470>
+Time
+2013-01-23 08:38:09 UTC
+#<CSV:0x007fdfeaea6470>
+Time
+2013-01-23 08:51:19 UTC
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 9
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 2[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 10
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 3[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 13
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 4[0m
+#<CSV:0x007fdfeaea6470>
+Time
+2013-01-23 09:24:37 UTC
+#<CSV:0x007fdfeaea6470>
+Time
+2013-01-23 09:24:40 UTC
+#<CSV:0x007fdfeaea6470>
+Time
+2013-01-26 21:53:49 UTC
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 8
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 2[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 12
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 4[0m
+#<CSV:0x007fdfeaea6470>
+Time
+2013-01-28 08:52:43 UTC
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 8
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 2[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 12
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 4[0m
+#<CSV:0x007fdfeaea6470>
+Time
+2013-02-28 07:32:44 UTC
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 8
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 2[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 12
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 4[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+#<CSV:0x007fdfeaea6470>
+Time
+2013-02-28 07:33:26 UTC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 12[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 4
+#<CSV:0x007fdfeaea6470>
+Time
+2013-02-28 07:36:55 UTC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 13[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 4
+#<CSV:0x007fdfeaea6470>
+Time
+2013-02-28 07:41:24 UTC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 13[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 4
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 12[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 4
+#<CSV:0x007fdfeaea6470>
+Time
+2013-03-06 08:12:42 UTC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 13[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 4
+#<CSV:0x007fdfeaea6470>
+Time
+2013-03-30 00:56:45 UTC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 13[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 4
+#<CSV:0x007fdfeaea6470>
+Sent file ./result.csv (0.1ms)
+Completed 200 OK in 118ms (ActiveRecord: 4.2ms)

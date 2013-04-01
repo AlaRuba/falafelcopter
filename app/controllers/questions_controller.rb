@@ -36,7 +36,7 @@ class QuestionsController < ApplicationController
           end
         end
         order += 1
-        logger.debug("Debug" + order)
+        logger.debug("Debug" + order.to_s)
         questions = Question.where(:language => "English", :order => order)
       end
     end
