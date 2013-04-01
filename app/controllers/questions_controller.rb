@@ -25,364 +25,508 @@ class QuestionsController < ApplicationController
       questions.each do |q|
         base[q.id.to_i] = ""
         header += [q.ask]
-        follow = Question.where(:language => "English", :follows => q.a1)
-        follow.each do |f|
-          base[f.id.to_i] = ""
-          header += [f.ask]
-          follow2 = Question.where(:language => "English", :follows => f.a1)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a2)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a3)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a4)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a5)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a6)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a7)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a8)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-        end
-        follow = Question.where(:language => "English", :follows => q.a2)
-        follow.each do |f|
-          base[f.id.to_i] = ""
-          header += [f.ask]
-          follow2 = Question.where(:language => "English", :follows => f.a1)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a2)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a3)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a4)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a5)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a6)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a7)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a8)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
+        if q.a1 != nil 
+          follow = Question.where(:language => "English", :follows => q.a1)
+          follow.each do |f|
+            base[f.id.to_i] = ""
+            header += [f.ask]
+            if f.a1 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a1)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a2 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a2)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a3 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a3)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a4 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a5 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a6 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a7 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a8 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
           end
         end
-        follow = Question.where(:language => "English", :follows => q.a3)
-        follow.each do |f|
-          base[f.id.to_i] = ""
-          header += [f.ask]
-          follow2 = Question.where(:language => "English", :follows => f.a1)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a2)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a3)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a4)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a5)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a6)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a7)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a8)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-        end
-        follow = Question.where(:language => "English", :follows => q.a4)
-        follow.each do |f|
-          base[f.id.to_i] = ""
-          header += [f.ask]
-          follow2 = Question.where(:language => "English", :follows => f.a1)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a2)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a3)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a4)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a5)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a6)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a7)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a8)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
+        if q.a2 != nil 
+          follow = Question.where(:language => "English", :follows => q.a2)
+          follow.each do |f|
+            base[f.id.to_i] = ""
+            header += [f.ask]
+            if f.a1 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a1)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a2 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a2)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a3 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a3)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a4 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a5 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a6 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a7 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a8 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
           end
         end
-        follow = Question.where(:language => "English", :follows => q.a5)
-        follow.each do |f|
-          base[f.id.to_i] = ""
-          header += [f.ask]
-          follow2 = Question.where(:language => "English", :follows => f.a1)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a2)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a3)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a4)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a5)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a6)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a7)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a8)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-        end
-        follow = Question.where(:language => "English", :follows => q.a6)
-        follow.each do |f|
-          base[f.id.to_i] = ""
-          header += [f.ask]
-          follow2 = Question.where(:language => "English", :follows => f.a1)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a2)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a3)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a4)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a5)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a6)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a7)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a8)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
+        if q.a3 != nil 
+          follow = Question.where(:language => "English", :follows => q.a3)
+          follow.each do |f|
+            base[f.id.to_i] = ""
+            header += [f.ask]
+            if f.a1 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a1)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a2 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a2)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a3 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a3)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a4 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a5 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a6 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a7 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a8 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
           end
         end
-        follow = Question.where(:language => "English", :follows => q.a7)
-        follow.each do |f|
-          base[f.id.to_i] = ""
-          header += [f.ask]
-          follow2 = Question.where(:language => "English", :follows => f.a1)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a2)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a3)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a4)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a5)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a6)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a7)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a8)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
+        if q.a4 != nil 
+          follow = Question.where(:language => "English", :follows => q.a4)
+          follow.each do |f|
+            base[f.id.to_i] = ""
+            header += [f.ask]
+            if f.a1 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a1)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a2 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a2)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a3 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a3)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a4 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a5 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a6 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a7 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a8 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
           end
         end
-        follow = Question.where(:language => "English", :follows => q.a8)
-        follow.each do |f|
-          base[f.id.to_i] = ""
-          header += [f.ask]
-          follow2 = Question.where(:language => "English", :follows => f.a1)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
+        if q.a5 != nil 
+          follow = Question.where(:language => "English", :follows => q.a5)
+          follow.each do |f|
+            base[f.id.to_i] = ""
+            header += [f.ask]
+            if f.a1 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a1)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a2 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a2)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a3 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a3)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a4 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a5 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a6 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a7 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a8 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
           end
-          follow2 = Question.where(:language => "English", :follows => f.a2)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
+        end
+        if q.a6 != nil 
+          follow = Question.where(:language => "English", :follows => q.a6)
+          follow.each do |f|
+            base[f.id.to_i] = ""
+            header += [f.ask]
+            if f.a1 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a1)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a2 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a2)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a3 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a3)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a4 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a5 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a6 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a7 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a8 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
           end
-          follow2 = Question.where(:language => "English", :follows => f.a3)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
+        end
+        if q.a7 != nil 
+          follow = Question.where(:language => "English", :follows => q.a7)
+          follow.each do |f|
+            base[f.id.to_i] = ""
+            header += [f.ask]
+            if f.a1 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a1)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a2 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a2)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a3 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a3)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a4 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a5 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a6 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a7 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a8 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
           end
-          follow2 = Question.where(:language => "English", :follows => f.a4)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a5)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a6)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a7)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
-          end
-          follow2 = Question.where(:language => "English", :follows => f.a8)
-          follow2.each do |f2|
-            base[f2.id.to_i] = ""
-            header += [f2.ask]
+        end
+        if q.a8 != nil 
+          follow = Question.where(:language => "English", :follows => q.a8)
+          follow.each do |f|
+            base[f.id.to_i] = ""
+            header += [f.ask]
+            if f.a1 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a1)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a2 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a2)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a3 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a3)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a4 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a5 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a6 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a7 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
+            if f.a8 != nil
+              follow2 = Question.where(:language => "English", :follows => f.a4)
+              follow2.each do |f2|
+                base[f2.id.to_i] = ""
+                header += [f2.ask]
+              end
+            end
           end
         end
         order += 1
