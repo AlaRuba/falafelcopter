@@ -20153,3 +20153,1326 @@ Time
 #<CSV:0x007fdfeaea6470>
 Sent file ./result.csv (0.1ms)
 Completed 200 OK in 118ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2013-03-31 19:50:37 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-03-31 19:50:38 -0700
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-31 19:50:38 -0700
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-31 19:50:38 -0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started POST "/questions/add" for 127.0.0.1 at 2013-03-31 19:50:54 -0700
+Processing by QuestionsController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xkdz9ix5SK2a5YAqaQMCq1nbQkd3imFGW038x2mJoDM=", "follow"=>"false", "language"=>"English", "quest"=>"Hello", "order"=>"3", "category"=>"NA", "answer1"=>"YES", "answer1_follow"=>"yes", "resource1_follow"=>"no", "resource1_name"=>"", "resource1_address1"=>"", "resource1_address2"=>"", "resource1_city"=>"", "resource1_zip"=>"", "resource1_phone1"=>"", "resource1_phone2"=>"", "resource1_phone3"=>"", "resource1_website"=>"", "resource1_area"=>"", "answer2"=>"NO", "answer2_follow"=>"yes", "resource2_follow"=>"no", "resource2_name"=>"", "resource2_address1"=>"", "resource2_address2"=>"", "resource2_city"=>"", "resource2_zip"=>"", "resource2_phone1"=>"", "resource2_phone2"=>"", "resource2_phone3"=>"", "resource2_website"=>"", "resource2_area"=>"", "answer3"=>"", "answer3_follow"=>"no", "resource3_follow"=>"no", "resource3_name"=>"", "resource3_address1"=>"", "resource3_address2"=>"", "resource3_city"=>"", "resource3_zip"=>"", "resource3_phone1"=>"", "resource3_phone2"=>"", "resource3_phone3"=>"", "resource3_website"=>"", "resource3_area"=>"", "answer4"=>"", "answer4_follow"=>"no", "resource4_follow"=>"no", "resource4_name"=>"", "resource4_address1"=>"", "resource4_address2"=>"", "resource4_city"=>"", "resource4_zip"=>"", "resource4_phone1"=>"", "resource4_phone2"=>"", "resource4_phone3"=>"", "resource4_website"=>"", "resource4_area"=>"", "answer5"=>"", "answer5_follow"=>"no", "resource5_follow"=>"no", "resource5_name"=>"", "resource5_address1"=>"", "resource5_address2"=>"", "resource5_city"=>"", "resource5_zip"=>"", "resource5_phone1"=>"", "resource5_phone2"=>"", "resource5_phone3"=>"", "resource5_website"=>"", "resource5_area"=>"", "answer6"=>"", "answer6_follow"=>"no", "resource6_follow"=>"no", "resource6_name"=>"", "resource6_address1"=>"", "resource6_address2"=>"", "resource6_city"=>"", "resource6_zip"=>"", "resource6_phone1"=>"", "resource6_phone2"=>"", "resource6_phone3"=>"", "resource6_website"=>"", "resource6_area"=>"", "answer7"=>"", "answer7_follow"=>"no", "resource7_follow"=>"no", "resource7_name"=>"", "resource7_address1"=>"", "resource7_address2"=>"", "resource7_city"=>"", "resource7_zip"=>"", "resource7_phone1"=>"", "resource7_phone2"=>"", "resource7_phone3"=>"", "resource7_website"=>"", "resource7_area"=>"", "answer8"=>"", "answer8_follow"=>"no", "resource8_follow"=>"no", "resource8_name"=>"", "resource8_address1"=>"", "resource8_address2"=>"", "resource8_city"=>"", "resource8_zip"=>"", "resource8_phone1"=>"", "resource8_phone2"=>"", "resource8_phone3"=>"", "resource8_website"=>"", "resource8_area"=>"", "commit"=>"Save"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "questions" ("a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8", "ask", "category", "created_at", "follow", "follows", "language", "order", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["a1", nil], ["a2", nil], ["a3", nil], ["a4", nil], ["a5", nil], ["a6", nil], ["a7", nil], ["a8", nil], ["ask", "Hello"], ["category", "NA"], ["created_at", Mon, 01 Apr 2013 02:50:54 UTC +00:00], ["follow", false], ["follows", nil], ["language", "English"], ["order", 3], ["updated_at", Mon, 01 Apr 2013 02:50:54 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 01 Apr 2013 02:50:54 UTC +00:00], ["followup", nil], ["hasfq", true], ["question", 8], ["reply", "YES"], ["resource", nil], ["resource_bool", nil], ["updated_at", Mon, 01 Apr 2013 02:50:54 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "answers" SET "resource_bool" = 'f', "updated_at" = '2013-04-01 02:50:54.945340' WHERE "answers"."id" = 22
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 01 Apr 2013 02:50:54 UTC +00:00], ["followup", nil], ["hasfq", true], ["question", 8], ["reply", "NO"], ["resource", nil], ["resource_bool", nil], ["updated_at", Mon, 01 Apr 2013 02:50:54 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "answers" SET "resource_bool" = 'f', "updated_at" = '2013-04-01 02:50:54.950834' WHERE "answers"."id" = 23
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/questions/main?follow=true&followUps%5B%5D%5BanswerID%5D=22&followUps%5B%5D%5Bchoice%5D=YES&followUps%5B%5D%5Bquestion%5D=Hello&followUps%5B%5D%5BanswerID%5D=23&followUps%5B%5D%5Bchoice%5D=NO&followUps%5B%5D%5Bquestion%5D=Hello&language=English
+Completed 302 Found in 19ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/questions/main?follow=true&followUps%5B%5D%5BanswerID%5D=22&followUps%5B%5D%5Bchoice%5D=YES&followUps%5B%5D%5Bquestion%5D=Hello&followUps%5B%5D%5BanswerID%5D=23&followUps%5B%5D%5Bchoice%5D=NO&followUps%5B%5D%5Bquestion%5D=Hello&language=English" for 127.0.0.1 at 2013-03-31 19:50:54 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"true", "followUps"=>[{"answerID"=>"22", "choice"=>"YES", "question"=>"Hello"}, {"answerID"=>"23", "choice"=>"NO", "question"=>"Hello"}], "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-03-31 19:50:55 -0700
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-31 19:50:55 -0700
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-31 19:50:55 -0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started POST "/questions/add" for 127.0.0.1 at 2013-03-31 19:51:06 -0700
+Processing by QuestionsController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"62rs69JbAPhFRquS9hxe+nV6Kqb2ImP+yZT+jRk8LGk=", "follow"=>"true", "follows"=>"22", "followUps"=>"[{\"answerID\":\"23\",\"choice\":\"NO\",\"question\":\"Hello\"}]", "language"=>"English", "quest"=>"Something", "order"=>"", "category"=>"", "answer1"=>"Chao", "answer1_follow"=>"no", "resource1_follow"=>"no", "resource1_name"=>"", "resource1_address1"=>"", "resource1_address2"=>"", "resource1_city"=>"", "resource1_zip"=>"", "resource1_phone1"=>"", "resource1_phone2"=>"", "resource1_phone3"=>"", "resource1_website"=>"", "resource1_area"=>"", "answer2"=>"n", "answer2_follow"=>"no", "resource2_follow"=>"no", "resource2_name"=>"", "resource2_address1"=>"", "resource2_address2"=>"", "resource2_city"=>"", "resource2_zip"=>"", "resource2_phone1"=>"", "resource2_phone2"=>"", "resource2_phone3"=>"", "resource2_website"=>"", "resource2_area"=>"", "answer3"=>"", "answer3_follow"=>"no", "resource3_follow"=>"no", "resource3_name"=>"", "resource3_address1"=>"", "resource3_address2"=>"", "resource3_city"=>"", "resource3_zip"=>"", "resource3_phone1"=>"", "resource3_phone2"=>"", "resource3_phone3"=>"", "resource3_website"=>"", "resource3_area"=>"", "answer4"=>"", "answer4_follow"=>"no", "resource4_follow"=>"no", "resource4_name"=>"", "resource4_address1"=>"", "resource4_address2"=>"", "resource4_city"=>"", "resource4_zip"=>"", "resource4_phone1"=>"", "resource4_phone2"=>"", "resource4_phone3"=>"", "resource4_website"=>"", "resource4_area"=>"", "answer5"=>"", "answer5_follow"=>"no", "resource5_follow"=>"no", "resource5_name"=>"", "resource5_address1"=>"", "resource5_address2"=>"", "resource5_city"=>"", "resource5_zip"=>"", "resource5_phone1"=>"", "resource5_phone2"=>"", "resource5_phone3"=>"", "resource5_website"=>"", "resource5_area"=>"", "answer6"=>"", "answer6_follow"=>"no", "resource6_follow"=>"no", "resource6_name"=>"", "resource6_address1"=>"", "resource6_address2"=>"", "resource6_city"=>"", "resource6_zip"=>"", "resource6_phone1"=>"", "resource6_phone2"=>"", "resource6_phone3"=>"", "resource6_website"=>"", "resource6_area"=>"", "answer7"=>"", "answer7_follow"=>"no", "resource7_follow"=>"no", "resource7_name"=>"", "resource7_address1"=>"", "resource7_address2"=>"", "resource7_city"=>"", "resource7_zip"=>"", "resource7_phone1"=>"", "resource7_phone2"=>"", "resource7_phone3"=>"", "resource7_website"=>"", "resource7_area"=>"", "answer8"=>"", "answer8_follow"=>"no", "resource8_follow"=>"no", "resource8_name"=>"", "resource8_address1"=>"", "resource8_address2"=>"", "resource8_city"=>"", "resource8_zip"=>"", "resource8_phone1"=>"", "resource8_phone2"=>"", "resource8_phone3"=>"", "resource8_website"=>"", "resource8_area"=>"", "commit"=>"Save"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "questions" ("a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8", "ask", "category", "created_at", "follow", "follows", "language", "order", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["a1", nil], ["a2", nil], ["a3", nil], ["a4", nil], ["a5", nil], ["a6", nil], ["a7", nil], ["a8", nil], ["ask", "Something"], ["category", ""], ["created_at", Mon, 01 Apr 2013 02:51:06 UTC +00:00], ["follow", true], ["follows", 22], ["language", "English"], ["order", nil], ["updated_at", Mon, 01 Apr 2013 02:51:06 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Mon, 01 Apr 2013 02:51:06 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 9], ["reply", "Chao"], ["resource", nil], ["resource_bool", false], ["updated_at", Mon, 01 Apr 2013 02:51:06 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 01 Apr 2013 02:51:06 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 9], ["reply", "n"], ["resource", nil], ["resource_bool", false], ["updated_at", Mon, 01 Apr 2013 02:51:06 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/questions/main?follow=true&followUps%5B%5D%5BanswerID%5D=23&followUps%5B%5D%5Bchoice%5D=NO&followUps%5B%5D%5Bquestion%5D=Hello&language=English
+Completed 302 Found in 12ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/questions/main?follow=true&followUps%5B%5D%5BanswerID%5D=23&followUps%5B%5D%5Bchoice%5D=NO&followUps%5B%5D%5Bquestion%5D=Hello&language=English" for 127.0.0.1 at 2013-03-31 19:51:06 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"true", "followUps"=>[{"answerID"=>"23", "choice"=>"NO", "question"=>"Hello"}], "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-03-31 19:51:06 -0700
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-31 19:51:06 -0700
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-31 19:51:06 -0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started POST "/questions/add" for 127.0.0.1 at 2013-03-31 19:51:14 -0700
+Processing by QuestionsController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QnWIBg54buA+6SjlzPJRiAmGzoJ3r/EpQMwIIlfcgYo=", "follow"=>"true", "follows"=>"23", "followUps"=>"[]", "language"=>"English", "quest"=>"CHeese", "order"=>"", "category"=>"", "answer1"=>"Bruger", "answer1_follow"=>"no", "resource1_follow"=>"no", "resource1_name"=>"", "resource1_address1"=>"", "resource1_address2"=>"", "resource1_city"=>"", "resource1_zip"=>"", "resource1_phone1"=>"", "resource1_phone2"=>"", "resource1_phone3"=>"", "resource1_website"=>"", "resource1_area"=>"", "answer2"=>"King", "answer2_follow"=>"no", "resource2_follow"=>"no", "resource2_name"=>"", "resource2_address1"=>"", "resource2_address2"=>"", "resource2_city"=>"", "resource2_zip"=>"", "resource2_phone1"=>"", "resource2_phone2"=>"", "resource2_phone3"=>"", "resource2_website"=>"", "resource2_area"=>"", "answer3"=>"", "answer3_follow"=>"no", "resource3_follow"=>"no", "resource3_name"=>"", "resource3_address1"=>"", "resource3_address2"=>"", "resource3_city"=>"", "resource3_zip"=>"", "resource3_phone1"=>"", "resource3_phone2"=>"", "resource3_phone3"=>"", "resource3_website"=>"", "resource3_area"=>"", "answer4"=>"", "answer4_follow"=>"no", "resource4_follow"=>"no", "resource4_name"=>"", "resource4_address1"=>"", "resource4_address2"=>"", "resource4_city"=>"", "resource4_zip"=>"", "resource4_phone1"=>"", "resource4_phone2"=>"", "resource4_phone3"=>"", "resource4_website"=>"", "resource4_area"=>"", "answer5"=>"", "answer5_follow"=>"no", "resource5_follow"=>"no", "resource5_name"=>"", "resource5_address1"=>"", "resource5_address2"=>"", "resource5_city"=>"", "resource5_zip"=>"", "resource5_phone1"=>"", "resource5_phone2"=>"", "resource5_phone3"=>"", "resource5_website"=>"", "resource5_area"=>"", "answer6"=>"", "answer6_follow"=>"no", "resource6_follow"=>"no", "resource6_name"=>"", "resource6_address1"=>"", "resource6_address2"=>"", "resource6_city"=>"", "resource6_zip"=>"", "resource6_phone1"=>"", "resource6_phone2"=>"", "resource6_phone3"=>"", "resource6_website"=>"", "resource6_area"=>"", "answer7"=>"", "answer7_follow"=>"no", "resource7_follow"=>"no", "resource7_name"=>"", "resource7_address1"=>"", "resource7_address2"=>"", "resource7_city"=>"", "resource7_zip"=>"", "resource7_phone1"=>"", "resource7_phone2"=>"", "resource7_phone3"=>"", "resource7_website"=>"", "resource7_area"=>"", "answer8"=>"", "answer8_follow"=>"no", "resource8_follow"=>"no", "resource8_name"=>"", "resource8_address1"=>"", "resource8_address2"=>"", "resource8_city"=>"", "resource8_zip"=>"", "resource8_phone1"=>"", "resource8_phone2"=>"", "resource8_phone3"=>"", "resource8_website"=>"", "resource8_area"=>"", "commit"=>"Save"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "questions" ("a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8", "ask", "category", "created_at", "follow", "follows", "language", "order", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["a1", nil], ["a2", nil], ["a3", nil], ["a4", nil], ["a5", nil], ["a6", nil], ["a7", nil], ["a8", nil], ["ask", "CHeese"], ["category", ""], ["created_at", Mon, 01 Apr 2013 02:51:14 UTC +00:00], ["follow", true], ["follows", 23], ["language", "English"], ["order", nil], ["updated_at", Mon, 01 Apr 2013 02:51:14 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 01 Apr 2013 02:51:14 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 10], ["reply", "Bruger"], ["resource", nil], ["resource_bool", false], ["updated_at", Mon, 01 Apr 2013 02:51:14 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answers" ("created_at", "followup", "hasfq", "question", "reply", "resource", "resource_bool", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Mon, 01 Apr 2013 02:51:14 UTC +00:00], ["followup", nil], ["hasfq", false], ["question", 10], ["reply", "King"], ["resource", nil], ["resource_bool", false], ["updated_at", Mon, 01 Apr 2013 02:51:14 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/questions/main?follow=false&language=English
+Completed 302 Found in 11ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/questions/main?follow=false&language=English" for 127.0.0.1 at 2013-03-31 19:51:14 -0700
+Processing by QuestionsController#main as HTML
+  Parameters: {"follow"=>"false", "language"=>"English"}
+  Rendered questions/main.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 19ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-03-31 19:51:14 -0700
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-31 19:51:14 -0700
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-31 19:51:14 -0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/language" for 127.0.0.1 at 2013-03-31 19:59:47 -0700
+Processing by QuestionsController#language as HTML
+  Rendered questions/language.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-03-31 19:59:47 -0700
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-31 19:59:47 -0700
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-31 19:59:47 -0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/download" for 127.0.0.1 at 2013-03-31 19:59:48 -0700
+Processing by QuestionsController#download as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."order" = 1
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."order" = 1[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+Debug2
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."order" = 2
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."order" = 2[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+Debug3
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."order" = 3
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."order" = 3[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" IS NULL[0m
+Debug4
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."order" = 4
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'Spanish'[0m
+  [1m[35mPatient Load (0.2ms)[0m  SELECT "patients".* FROM "patients" 
+Time
+2012-12-01 22:27:09 UTC
+#<CSV:0x007fdfec92f6e8>
+Time
+2012-12-01 22:27:37 UTC
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+#<CSV:0x007fdfec92f6e8>
+Time
+2012-12-01 22:54:44 UTC
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 4
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 1[0m
+No such question
+#<CSV:0x007fdfec92f6e8>
+Time
+2012-12-01 22:56:25 UTC
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 4
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 1[0m
+No such question
+#<CSV:0x007fdfec92f6e8>
+Time
+2012-12-01 23:07:04 UTC
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 4
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 1[0m
+No such question
+#<CSV:0x007fdfec92f6e8>
+Time
+2012-12-02 01:26:15 UTC
+#<CSV:0x007fdfec92f6e8>
+Time
+2012-12-04 00:52:56 UTC
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 1[0m
+No such question
+#<CSV:0x007fdfec92f6e8>
+Time
+2012-12-04 00:53:06 UTC
+#<CSV:0x007fdfec92f6e8>
+Time
+2012-12-04 00:53:13 UTC
+#<CSV:0x007fdfec92f6e8>
+Time
+2012-12-04 00:53:22 UTC
+#<CSV:0x007fdfec92f6e8>
+Time
+2012-12-04 00:59:09 UTC
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 8
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 2[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 9
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 2[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 10
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 3[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 12
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 4[0m
+#<CSV:0x007fdfec92f6e8>
+Time
+2013-01-23 07:29:05 UTC
+#<CSV:0x007fdfec92f6e8>
+Time
+2013-01-23 08:38:09 UTC
+#<CSV:0x007fdfec92f6e8>
+Time
+2013-01-23 08:51:19 UTC
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 9
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 2[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 10
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 3[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 13
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 4[0m
+#<CSV:0x007fdfec92f6e8>
+Time
+2013-01-23 09:24:37 UTC
+#<CSV:0x007fdfec92f6e8>
+Time
+2013-01-23 09:24:40 UTC
+#<CSV:0x007fdfec92f6e8>
+Time
+2013-01-26 21:53:49 UTC
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 8
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 2[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 12
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 4[0m
+#<CSV:0x007fdfec92f6e8>
+Time
+2013-01-28 08:52:43 UTC
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 8
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 2[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 12
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 4[0m
+#<CSV:0x007fdfec92f6e8>
+Time
+2013-02-28 07:32:44 UTC
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 8
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 2[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 12
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 4[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+#<CSV:0x007fdfec92f6e8>
+Time
+2013-02-28 07:33:26 UTC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 12[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 4
+#<CSV:0x007fdfec92f6e8>
+Time
+2013-02-28 07:36:55 UTC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 13[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 4
+#<CSV:0x007fdfec92f6e8>
+Time
+2013-02-28 07:41:24 UTC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 13[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 4
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 12[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 4
+#<CSV:0x007fdfec92f6e8>
+Time
+2013-03-06 08:12:42 UTC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 13[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 4
+#<CSV:0x007fdfec92f6e8>
+Time
+2013-03-30 00:56:45 UTC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."id" = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."id" = 13[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."id" = 4
+#<CSV:0x007fdfec92f6e8>
+Sent file ./result.csv (0.1ms)
+Completed 200 OK in 803ms (ActiveRecord: 5.0ms)
