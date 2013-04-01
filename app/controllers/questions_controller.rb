@@ -21,7 +21,7 @@ class QuestionsController < ApplicationController
     @outfile = "data.csv"
     header =["User", "Timestamp"]
     base = {}
-    while questions.size > 0
+    while questions.length > 0
       questions.each do |q|
         base[q.id.to_i] = ""
         header += [q.ask]
@@ -36,9 +36,8 @@ class QuestionsController < ApplicationController
           end
         end
         order += 1
-        questions.size = Question.where(:language => "English", :order => order)
+        questions.length = Question.where(:language => "English", :order => order)
       end
-      
     end
     questions2 = Question.where(:language => "Spanish")
     questions2.each do |q|

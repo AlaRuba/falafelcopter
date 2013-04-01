@@ -19457,3 +19457,73 @@ Time
 #<CSV:0x007fd13987dd10>
 Sent file ./result.csv (0.1ms)
 Completed 200 OK in 80ms (ActiveRecord: 2.6ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/main" for 127.0.0.1 at 2013-03-31 17:16:39 -0700
+Processing by LoginController#main as HTML
+  Rendered login/main.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-03-31 17:16:39 -0700
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-31 17:16:39 -0700
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-31 17:16:39 -0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/language" for 127.0.0.1 at 2013-03-31 17:16:42 -0700
+Processing by QuestionsController#language as HTML
+  Rendered questions/language.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/limit_page.css?body=1" for 127.0.0.1 at 2013-03-31 17:16:42 -0700
+Served asset /limit_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-31 17:16:42 -0700
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-31 17:16:42 -0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/download" for 127.0.0.1 at 2013-03-31 17:16:43 -0700
+Processing by QuestionsController#download as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."order" = 1
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."order" = 1[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" = 2
+Completed 500 Internal Server Error in 46ms
+
+NoMethodError (undefined method `size=' for #<ActiveRecord::Relation:0x007fd13a29fbb8>):
+  app/controllers/questions_controller.rb:39:in `block in download'
+  app/controllers/questions_controller.rb:25:in `download'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.3ms)
+
+
+Started GET "/questions/download" for 127.0.0.1 at 2013-03-31 17:17:34 -0700
+Processing by QuestionsController#download as HTML
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."order" = 1[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."language" = 'English' AND "questions"."follows" = 2
+Completed 500 Internal Server Error in 17ms
+
+NoMethodError (undefined method `length=' for #<ActiveRecord::Relation:0x007fd13dbdb530>):
+  app/controllers/questions_controller.rb:39:in `block in download'
+  app/controllers/questions_controller.rb:25:in `download'
+
+
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/alaruba/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.5ms)
