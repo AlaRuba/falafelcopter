@@ -25,17 +25,18 @@ class QuestionsController < ApplicationController
       questions.each do |q|
         base[q.id.to_i] = ""
         header += [q.ask]
-        follow = Question.where(:language => "English", :follows => q.id.to_i)
+        follow = Question.where(:language => "English", :follows => q.id)
         follow.each do |f|
           base[f.id.to_i] = ""
           header += [f.ask]
-          follow2 = Question.where(:language => "English", :follows => f.id.to_i)
+          follow2 = Question.where(:language => "English", :follows => f.id)
           follow2.each do |f2|
             base[f2.id.to_i] = ""
             header += [f2.ask]
           end
         end
         order += 1
+        logger.debug("Debug" + order)
         questions = Question.where(:language => "English", :order => order)
       end
     end
